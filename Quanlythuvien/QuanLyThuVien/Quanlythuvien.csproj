@@ -82,26 +82,10 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine">
-      <Name>CrystalDecisions.CrystalReports.Engine</Name>
-      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
-      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource">
-      <Name>CrystalDecisions.ReportSource</Name>
-      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.ReportSource.dll</HintPath>
-      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="CrystalDecisions.Shared">
-      <Name>CrystalDecisions.Shared</Name>
-      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Shared.dll</HintPath>
-      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="CrystalDecisions.Windows.Forms">
-      <Name>CrystalDecisions.Windows.Forms</Name>
-      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Windows.Forms.dll</HintPath>
-      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalKeyCodeLib">
       <Name>CrystalKeyCodeLib</Name>
       <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalKeyCodeLib.dll</HintPath>
@@ -383,31 +367,31 @@
       <DependentUpon>frmTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDocGia.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDocGia.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptMuonSach.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptMuonSach.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptSach.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSach.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptSachTra.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSachTra.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptSachTre.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSachTre.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptTKDGMuon.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTKDGMuon.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptTKDGTre.rpt">
-      <Generator>CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator</Generator>
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTKDGTre.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="dtDocGia.xsx">
@@ -430,6 +414,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
     <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
   </ItemGroup>
   <ItemGroup>
