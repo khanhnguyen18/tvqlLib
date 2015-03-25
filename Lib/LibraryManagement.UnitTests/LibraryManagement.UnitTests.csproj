@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>12.0.21005.1</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{05322F9D-85F9-456E-ADC8-3D7653E5A1F1}</ProjectGuid>
+    <ProjectGuid>{646045C9-34BA-4538-B04B-FC3CF166079C}</ProjectGuid>
     <ProjectType>Local</ProjectType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OutputType>Library</OutputType>
     <ApplicationIcon>
     </ApplicationIcon>
@@ -90,10 +88,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
@@ -102,7 +96,7 @@
     <Reference Include="System.Drawing" />
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{4EFCA8DD-C260-41C3-8B10-511550EE4D85}</Project>
+      <Project>{96D914C9-AA6D-4D74-9520-DE4D0C7E7CB0}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <!-- check the GAC ? -->
@@ -112,17 +106,17 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{7CD1F6E1-A2D2-4270-8B11-EB6265ED961F}</Project>
+      <Project>{4CB53F99-EF2D-4690-9D9B-9B25B6637659}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">
       <Name>LibraryManagement.Dao.SqlClient</Name>
-      <Project>{6ABD4A2F-FE30-4C8B-85C5-98BE0D183D7F}</Project>
+      <Project>{0F642DBF-B074-4DB4-848C-556DFF087D8D}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Service\LibraryManagement.Service.csproj">
       <Name>LibraryManagement.Service</Name>
-      <Project>{7715127C-3047-41D5-AABC-0CA5AE5AC053}</Project>
+      <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
   </ItemGroup>
@@ -134,6 +128,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <!-- Custom code folder: C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\App_Code -->
+  <ItemGroup>
+    <Compile Include="App_Code\**\*.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
   <!-- Include any user files -->
   <ItemGroup>
     <Compile Include="**\*.user.*" Exclude="**\*.csproj.user;**\.svn\**">
@@ -141,12 +141,292 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookTest.cs">
+    <Compile Include="ReportsTest.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BookTest.generated.cs">
+    <Compile Include="ReportsTest.generated.cs">
       <SubType>Code</SubType>
-      <DependentUpon>BookTest.cs</DependentUpon>
+      <DependentUpon>ReportsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccountTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AccountTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StaffTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StaffTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PriceTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PriceTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StationsTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StationsTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StationsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MofSysTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MofSysTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MofSysTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentOrderTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentOrderTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PaymentOrderTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonPluTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NonPluTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>NonPluTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockInfoTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StockInfoTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StockInfoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnOrderTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnOrderTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>OnOrderTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>UnitTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StoreTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>StoreTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>UserTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrcodeTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrcodeTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TrcodeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserGrpTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserGrpTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>UserGrpTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysvarTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SysvarTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SysvarTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransValueTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransValueTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TransValueTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TransactionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModePaymentTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModePaymentTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ModePaymentTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransnumTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransnumTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TransnumTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercLocationTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MercLocationTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MercLocationTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurrencyTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CurrencyTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenusTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenusTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MenusTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustInfoTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustInfoTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CustInfoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsCardTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CsCardTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CsCardTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomerTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CustomerTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccTransTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccTransTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AccTransTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookAttrTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BookAttrTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BookAttrTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtrCodeTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AtrCodeTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AtrCodeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DateTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodeTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarcodeTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BarcodeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LanguageTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LanguageTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilesTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FilesTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FilesTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanTranTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoanTranTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LoanTranTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitInfoTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitInfoTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>KitInfoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocationTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LocationTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTypeTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FrmTypeTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FrmTypeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>KitTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>GoodsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilsTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UtilsTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>UtilsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsGrpTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsGrpTest.generated.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>GoodsGrpTest.cs</DependentUpon>
     </Compile>
     <Compile Include="..\AssemblyInfo.cs">
       <SubType>Code</SubType>

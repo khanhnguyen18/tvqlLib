@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>12.0.21005.1</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F294B5ED-CD8C-498E-9D22-4302413D0531}</ProjectGuid>
+    <ProjectGuid>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</ProjectGuid>
     <ProjectType>Local</ProjectType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OutputType>Library</OutputType>
     <ApplicationIcon>
     </ApplicationIcon>
@@ -90,10 +88,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
@@ -150,14 +144,20 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{4EFCA8DD-C260-41C3-8B10-511550EE4D85}</Project>
+      <Project>{96D914C9-AA6D-4D74-9520-DE4D0C7E7CB0}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{7CD1F6E1-A2D2-4270-8B11-EB6265ED961F}</Project>
+      <Project>{4CB53F99-EF2D-4690-9D9B-9B25B6637659}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
+  </ItemGroup>
+  <!-- Custom code folder: C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.Service\App_Code -->
+  <ItemGroup>
+    <Compile Include="App_Code\**\*.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <!-- Include any user files -->
   <ItemGroup>
@@ -166,11 +166,291 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookService.cs">
+    <Compile Include="ReportsService.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BookServiceBase.generated.cs">
-      <DependentUpon>BookService.cs</DependentUpon>
+    <Compile Include="ReportsServiceBase.generated.cs">
+      <DependentUpon>ReportsService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccountService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccountServiceBase.generated.cs">
+      <DependentUpon>AccountService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StaffService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StaffServiceBase.generated.cs">
+      <DependentUpon>StaffService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PriceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PriceServiceBase.generated.cs">
+      <DependentUpon>PriceService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StationsService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StationsServiceBase.generated.cs">
+      <DependentUpon>StationsService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MofSysService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MofSysServiceBase.generated.cs">
+      <DependentUpon>MofSysService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentOrderService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaymentOrderServiceBase.generated.cs">
+      <DependentUpon>PaymentOrderService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NonPluService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NonPluServiceBase.generated.cs">
+      <DependentUpon>NonPluService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StockInfoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StockInfoServiceBase.generated.cs">
+      <DependentUpon>StockInfoService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnOrderService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OnOrderServiceBase.generated.cs">
+      <DependentUpon>OnOrderService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitServiceBase.generated.cs">
+      <DependentUpon>UnitService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StoreService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StoreServiceBase.generated.cs">
+      <DependentUpon>StoreService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserServiceBase.generated.cs">
+      <DependentUpon>UserService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrcodeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrcodeServiceBase.generated.cs">
+      <DependentUpon>TrcodeService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserGrpService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserGrpServiceBase.generated.cs">
+      <DependentUpon>UserGrpService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SysvarService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SysvarServiceBase.generated.cs">
+      <DependentUpon>SysvarService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransValueService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransValueServiceBase.generated.cs">
+      <DependentUpon>TransValueService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionServiceBase.generated.cs">
+      <DependentUpon>TransactionService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModePaymentService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModePaymentServiceBase.generated.cs">
+      <DependentUpon>ModePaymentService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransnumService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransnumServiceBase.generated.cs">
+      <DependentUpon>TransnumService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MercLocationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MercLocationServiceBase.generated.cs">
+      <DependentUpon>MercLocationService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurrencyService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurrencyServiceBase.generated.cs">
+      <DependentUpon>CurrencyService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenusService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenusServiceBase.generated.cs">
+      <DependentUpon>MenusService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustInfoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustInfoServiceBase.generated.cs">
+      <DependentUpon>CustInfoService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CsCardService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CsCardServiceBase.generated.cs">
+      <DependentUpon>CsCardService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomerService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomerServiceBase.generated.cs">
+      <DependentUpon>CustomerService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccTransService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AccTransServiceBase.generated.cs">
+      <DependentUpon>AccTransService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BookAttrService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BookAttrServiceBase.generated.cs">
+      <DependentUpon>BookAttrService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AtrCodeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AtrCodeServiceBase.generated.cs">
+      <DependentUpon>AtrCodeService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DateServiceBase.generated.cs">
+      <DependentUpon>DateService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarcodeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BarcodeServiceBase.generated.cs">
+      <DependentUpon>BarcodeService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LanguageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LanguageServiceBase.generated.cs">
+      <DependentUpon>LanguageService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FilesService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FilesServiceBase.generated.cs">
+      <DependentUpon>FilesService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoanTranService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoanTranServiceBase.generated.cs">
+      <DependentUpon>LoanTranService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitInfoService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitInfoServiceBase.generated.cs">
+      <DependentUpon>KitInfoService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocationServiceBase.generated.cs">
+      <DependentUpon>LocationService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FrmTypeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FrmTypeServiceBase.generated.cs">
+      <DependentUpon>FrmTypeService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KitServiceBase.generated.cs">
+      <DependentUpon>KitService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsServiceBase.generated.cs">
+      <DependentUpon>GoodsService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UtilsService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UtilsServiceBase.generated.cs">
+      <DependentUpon>UtilsService.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsGrpService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoodsGrpServiceBase.generated.cs">
+      <DependentUpon>GoodsGrpService.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="..\AssemblyInfo.cs">
