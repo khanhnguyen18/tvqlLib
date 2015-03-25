@@ -1,0 +1,653 @@
+<NetTiersReport DALNameSpace="LibraryManagement.Dao" SolutionLink="file:\\\C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.sln" ConnectionString="Data Source=.\SQL2008R2;Initial Catalog=LibraryManagement;Persist Security Info=True;User ID=sa;Password=123456" FactoryType="LibraryManagement.Domain.EntityFactory">
+  <initialization startTime="130717425640720469" executionTime="00:00:02.5221443">
+    <Message level="0" startTime="130717425641120492" message="Validating parameters." />
+    <Message level="1" startTime="130717425642040545" message="Table STK_GL does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642040545" message="Table tblAdjust does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642040545" message="Table tblCardStk does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642040545" message="Table tblCashTrans does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642040545" message="Table tblCommiss does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblCounter does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblCsAccount does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblDepartList does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblDisc_Info does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblFn_order does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblFundCash does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblHisprice does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblIntime does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblKitLabel does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblKitLabelPrn does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblLabelPrn does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblLabels does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tbllog does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tbllog_info does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblNoteLabels does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblNotePrn does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblQueuemsg does not have a primary key, it will not be generated." />
+    <Message level="1" startTime="130717425642050545" message="Table tblSuspend does not have a primary key, it will not be generated." />
+    <Message level="2" startTime="130717425642160552" message="Generating .netTiers Entity Mapping" />
+    <Message level="0" startTime="130717425655321304" message="Loading templates." executionTime="00:00:00.8700498" />
+    <Message level="0" startTime="130717425664241814" message="Creating folders and copying dependencies." />
+  </initialization>
+  <customStoredProcedures includeCustoms="true" />
+  <common startTime="130717425665941912" executionTime="00:00:12.1686960">
+    <File name="ListBase.cs" startTime="130717425665951912" />
+    <File name="TList.cs" startTime="130717425672012259" />
+    <File name="VList.cs" startTime="130717425675542461" />
+    <File name="WeakRefDictionary.cs" startTime="130717425676922540" />
+    <File name="TestUtility.cs" startTime="130717425677452570" />
+    <File name="IEntity.cs" startTime="130717425678052604" />
+    <File name="IEntityId.cs" startTime="130717425678412625" />
+    <File name="IEntityKey.cs" startTime="130717425678462628" />
+    <File name="EntityFactory.cs" startTime="130717425678532632" />
+    <File name="EntityFactoryBase.cs" startTime="130717425678572634" />
+    <File name="IEntityFactory.cs" startTime="130717425680232729" />
+    <File name="IEntityCacheItem.cs" startTime="130717425680332735" />
+    <File name="EntityCache.cs" startTime="130717425680362737" />
+    <File name="EntityLocator.cs" startTime="130717425680722757" />
+    <File name="EntityManager.cs" startTime="130717425680992773" />
+    <File name="BrokenRule.cs" startTime="130717425682822877" />
+    <File name="BrokenRulesList.cs" startTime="130717425682922883" />
+    <File name="CommonRules.cs" startTime="130717425683082892" />
+    <File name="ValidationRuleArgs.cs" startTime="130717425686563091" />
+    <File name="ValidationRuleHandler.cs" startTime="130717425686703099" />
+    <File name="ValidationRuleInfo.cs" startTime="130717425686763103" />
+    <File name="ValidationRules.cs" startTime="130717425686933112" />
+    <File name="EntityBaseCore.generated.cs" startTime="130717425687643153" />
+    <File name="EntityBase.cs" startTime="130717425689803277" />
+    <File name="EntityKeyBaseCore.generated.cs" startTime="130717425689843279" />
+    <File name="EntityKeyBase.cs" startTime="130717425689953285" />
+    <File name="SecurityContext.cs" startTime="130717425689993287" />
+    <File name="SecurityContextBase.generated.cs" startTime="130717425690053291" />
+    <File name="ContextView.cs" startTime="130717425690223301" />
+    <File name="IProcessor.cs" startTime="130717425690403311" />
+    <File name="IProcessorResult.cs" startTime="130717425690493316" />
+    <File name="ProcessorBase.cs" startTime="130717425690573321" />
+    <File name="GenericProcessorResult.cs" startTime="130717425690763331" />
+    <File name="DomainUtil.cs" startTime="130717425690943342" />
+    <File name="IConnectionScope.cs" startTime="130717425691403368" />
+    <File name="ConnectionScope.cs" startTime="130717425691493373" />
+    <File name="ConnectionScopeBase.cs" startTime="130717425692273418" />
+    <File name="IComponentService.cs" startTime="130717425692453428" />
+    <File name="ServiceBase.cst.cs" startTime="130717425692543433" />
+    <File name="ServiceBaseCore.cst.cs" startTime="130717425692603437" />
+    <File name="ServiceViewBase.cst.cs" startTime="130717425694893568" />
+    <File name="ServiceViewBaseCore.cst.cs" startTime="130717425694943571" />
+    <File name="ServiceResult.cs" startTime="130717425696383653" />
+    <File name="EntityFilter.cs" startTime="130717425696583664" />
+    <File name="EntityPropertyComparer.cs" startTime="130717425700013861" />
+    <File name="GenericTypeConverter.cs" startTime="130717425700093865" />
+    <File name="Procedures.xml" startTime="130717425700173870" />
+    <File name="Unit test configuration files" startTime="130717425719234960" />
+    <File name="Enterprise Library v5_0 unit test configuration files" startTime="130717425719694986" />
+    <File name="Utility.cs" startTime="130717425719924999" />
+    <File name="ITransactionManager.cs" startTime="130717425722005118" />
+    <File name="TransactionManager.cs" startTime="130717425722165128" />
+    <File name="FileConfigurationSouce.cs" startTime="130717425722805164" />
+    <File name="FileConfigurationSouceElement.cs" startTime="130717425724265248" />
+    <File name="DataRepository.cs" startTime="130717425724345252" />
+    <File name="IEntityProvider.cs" startTime="130717425726225360" />
+    <File name="IEntityViewProvider.cs" startTime="130717425730095581" />
+    <File name="EntityProviderBase.cs" startTime="130717425730405599" />
+    <File name="EntityProviderBaseCore.generated.cs" startTime="130717425730465602" />
+    <File name="EntityViewProviderBase.cs" startTime="130717425743206331" />
+    <File name="EntityViewProviderBaseCore.generated.cs" startTime="130717425743266334" />
+    <File name="INetTiersProvider.cs" startTime="130717425746576524" />
+    <File name="NetTiersProvider.cs" startTime="130717425747646585" />
+    <File name="NetTiersProviderBase.cs" startTime="130717425747726590" />
+    <File name="NetTiersProviderCollection.cs" startTime="130717425749496691" />
+    <File name="NetTiersServiceSection.cs" startTime="130717425749566695" />
+    <File name="ExpressionParserBase.cs" startTime="130717425749626698" />
+    <File name="SqlExpressionParser.cs" startTime="130717425750376741" />
+    <File name="SqlStringBuilder.cs" startTime="130717425751686816" />
+    <File name="SqlUtil.cs" startTime="130717425765547609" />
+    <File name="StringTokenizer.cs" startTime="130717425768277765" />
+    <File name="SqlClient\SqlNetTiersProvider.cs" startTime="130717425769807853" />
+    <File name="StoredProcedureProvider.cs" startTime="130717425772357998" />
+    <File name="LibraryManagement.sln" startTime="130717425773418059" />
+    <File name="Service.csproj" startTime="130717425774288109" />
+    <File name="LibraryManagement.Domain.csproj" startTime="130717425779218391" />
+    <File name="LibraryManagement.Dao.Dao.csproj" startTime="130717425779508407" />
+    <File name="LibraryManagement.Domain.Dao.SqlClient.csproj" startTime="130717425779538409" />
+    <File name="LibraryManagement.UnitTests.csproj" startTime="130717425779558410" />
+    <File name="LibraryManagement.build" startTime="130717425779608413" />
+    <File name="EntityHelper.cs" startTime="130717425780088441" />
+    <File name="EntityUtil.cs" startTime="130717425782938604" />
+  </common>
+  <Table name="tblReports" startTime="130717425787628872" executionTime="00:00:02.9341678">
+    <File name="Reports.generated.cs" startTime="130717425787638872" executionTime="00:00:00.6300361" />
+    <File name="IReports.cs" startTime="130717425793949233" executionTime="00:00:00.0110007" />
+    <File name="Reports.cs" startTime="130717425794069240" executionTime="00:00:00.0050003" />
+    <File name="ReportsService.cs" startTime="130717425794129244" executionTime="00:00:00.0090005" />
+    <File name="ReportsServiceBase.generated.cs" startTime="130717425794219249" executionTime="00:00:00.8440483" />
+    <File name="ReportsProviderBase.generatedCore.cs" startTime="130717425802659732" executionTime="00:00:00.6590376" />
+    <File name="ReportsProviderBase.generated.cs" startTime="130717425809250108" executionTime="00:00:00.0060004" />
+    <File name="SqlClient\SqlReportsProviderBase.generated.cs" startTime="130717425809310112" executionTime="00:00:00.5650323" />
+    <File name="SqlClient\ReportsTest.cs" startTime="130717425814960435" executionTime="00:00:00.0090005" />
+    <File name="ReportsTest.cs" startTime="130717425815060441" executionTime="00:00:00.0560032" />
+    <File name="ReportsTest.generated.cs" startTime="130717425815630473" executionTime="00:00:00.1340077" />
+  </Table>
+  <Table name="tblAccount" startTime="130717425816970550" executionTime="00:00:00.0470027">
+    <File name="Account.generated.cs" startTime="130717425816980551" executionTime="00:00:00.0120007" />
+    <File name="IAccount.cs" startTime="130717425817110558" executionTime="00:00:00.0010001" />
+    <File name="Account.cs" startTime="130717425817120559" executionTime="00:00:00.0010000" />
+    <File name="AccountService.cs" startTime="130717425817130559" executionTime="00:00:00.0010001" />
+    <File name="AccountServiceBase.generated.cs" startTime="130717425817140560" executionTime="00:00:00.0160009" />
+    <File name="AccountProviderBase.generatedCore.cs" startTime="130717425817310570" executionTime="00:00:00.0030001" />
+    <File name="AccountProviderBase.generated.cs" startTime="130717425817340571" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlAccountProviderBase.generated.cs" startTime="130717425817350572" executionTime="00:00:00.0050003" />
+    <File name="SqlClient\AccountTest.cs" startTime="130717425817400575" executionTime="00:00:00.0010000" />
+    <File name="AccountTest.cs" startTime="130717425817410575" executionTime="00:00:00.0010001" />
+    <File name="AccountTest.generated.cs" startTime="130717425817420576" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblStaff" startTime="130717425817440577" executionTime="00:00:00.0370021">
+    <File name="Staff.generated.cs" startTime="130717425817440577" executionTime="00:00:00.0140008" />
+    <File name="IStaff.cs" startTime="130717425817580585" executionTime="00:00:00.0010001" />
+    <File name="Staff.cs" startTime="130717425817600586" executionTime="00:00:00" />
+    <File name="StaffService.cs" startTime="130717425817610587" executionTime="00:00:00" />
+    <File name="StaffServiceBase.generated.cs" startTime="130717425817620587" executionTime="00:00:00.0050003" />
+    <File name="StaffProviderBase.generatedCore.cs" startTime="130717425817680591" executionTime="00:00:00.0030001" />
+    <File name="StaffProviderBase.generated.cs" startTime="130717425817720593" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlStaffProviderBase.generated.cs" startTime="130717425817730594" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\StaffTest.cs" startTime="130717425817770596" executionTime="00:00:00.0010000" />
+    <File name="StaffTest.cs" startTime="130717425817780596" executionTime="00:00:00.0010001" />
+    <File name="StaffTest.generated.cs" startTime="130717425817790597" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblPrice" startTime="130717425817810598" executionTime="00:00:00.0430025">
+    <File name="Price.generated.cs" startTime="130717425817810598" executionTime="00:00:00.0110006" />
+    <File name="IPrice.cs" startTime="130717425817930605" executionTime="00:00:00.0010001" />
+    <File name="Price.cs" startTime="130717425817940606" executionTime="00:00:00.0010000" />
+    <File name="PriceService.cs" startTime="130717425817950606" executionTime="00:00:00.0010001" />
+    <File name="PriceServiceBase.generated.cs" startTime="130717425817960607" executionTime="00:00:00.0060003" />
+    <File name="PriceProviderBase.generatedCore.cs" startTime="130717425818020610" executionTime="00:00:00.0020001" />
+    <File name="PriceProviderBase.generated.cs" startTime="130717425818050612" executionTime="00:00:00.0100006" />
+    <File name="SqlClient\SqlPriceProviderBase.generated.cs" startTime="130717425818150618" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\PriceTest.cs" startTime="130717425818200620" executionTime="00:00:00" />
+    <File name="PriceTest.cs" startTime="130717425818210621" executionTime="00:00:00.0010001" />
+    <File name="PriceTest.generated.cs" startTime="130717425818220622" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblStations" startTime="130717425818240623" executionTime="00:00:00.0520029">
+    <File name="Stations.generated.cs" startTime="130717425818240623" executionTime="00:00:00.0270015" />
+    <File name="IStations.cs" startTime="130717425818520639" executionTime="00:00:00.0010000" />
+    <File name="Stations.cs" startTime="130717425818530639" executionTime="00:00:00.0010001" />
+    <File name="StationsService.cs" startTime="130717425818540640" executionTime="00:00:00.0010000" />
+    <File name="StationsServiceBase.generated.cs" startTime="130717425818550640" executionTime="00:00:00.0070004" />
+    <File name="StationsProviderBase.generatedCore.cs" startTime="130717425818620644" executionTime="00:00:00.0030002" />
+    <File name="StationsProviderBase.generated.cs" startTime="130717425818650646" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlStationsProviderBase.generated.cs" startTime="130717425818660647" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\StationsTest.cs" startTime="130717425818700649" executionTime="00:00:00.0010001" />
+    <File name="StationsTest.cs" startTime="130717425818710650" executionTime="00:00:00.0010000" />
+    <File name="StationsTest.generated.cs" startTime="130717425818720650" executionTime="00:00:00.0040002" />
+  </Table>
+  <Table name="tblMof_sys" startTime="130717425818760652" executionTime="00:00:00.0350020">
+    <File name="MofSys.generated.cs" startTime="130717425818760652" executionTime="00:00:00.0110007" />
+    <File name="IMofSys.cs" startTime="130717425818880659" executionTime="00:00:00.0010001" />
+    <File name="MofSys.cs" startTime="130717425818890660" executionTime="00:00:00.0010000" />
+    <File name="MofSysService.cs" startTime="130717425818900660" executionTime="00:00:00.0010001" />
+    <File name="MofSysServiceBase.generated.cs" startTime="130717425818910661" executionTime="00:00:00.0060003" />
+    <File name="MofSysProviderBase.generatedCore.cs" startTime="130717425818970664" executionTime="00:00:00.0040003" />
+    <File name="MofSysProviderBase.generated.cs" startTime="130717425819020667" executionTime="00:00:00" />
+    <File name="SqlClient\SqlMofSysProviderBase.generated.cs" startTime="130717425819030668" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\MofSysTest.cs" startTime="130717425819060670" executionTime="00:00:00.0010000" />
+    <File name="MofSysTest.cs" startTime="130717425819070670" executionTime="00:00:00.0010001" />
+    <File name="MofSysTest.generated.cs" startTime="130717425819090671" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblPaymentOrder" startTime="130717425819120673" executionTime="00:00:00.0490028">
+    <File name="PaymentOrder.generated.cs" startTime="130717425819120673" executionTime="00:00:00.0110006" />
+    <File name="IPaymentOrder.cs" startTime="130717425819230679" executionTime="00:00:00.0020001" />
+    <File name="PaymentOrder.cs" startTime="130717425819250680" executionTime="00:00:00.0010001" />
+    <File name="PaymentOrderService.cs" startTime="130717425819260681" executionTime="00:00:00.0010001" />
+    <File name="PaymentOrderServiceBase.generated.cs" startTime="130717425819270682" executionTime="00:00:00.0060003" />
+    <File name="PaymentOrderProviderBase.generatedCore.cs" startTime="130717425819330685" executionTime="00:00:00.0030002" />
+    <File name="PaymentOrderProviderBase.generated.cs" startTime="130717425819360687" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlPaymentOrderProviderBase.generated.cs" startTime="130717425819370687" executionTime="00:00:00.0050003" />
+    <File name="SqlClient\PaymentOrderTest.cs" startTime="130717425819430691" executionTime="00:00:00" />
+    <File name="PaymentOrderTest.cs" startTime="130717425819440691" executionTime="00:00:00.0150009" />
+    <File name="PaymentOrderTest.generated.cs" startTime="130717425819590700" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblNon_Plu" startTime="130717425819610701" executionTime="00:00:00.0260015">
+    <File name="NonPlu.generated.cs" startTime="130717425819610701" executionTime="00:00:00.0070004" />
+    <File name="INonPlu.cs" startTime="130717425819680705" executionTime="00:00:00.0010001" />
+    <File name="NonPlu.cs" startTime="130717425819690706" executionTime="00:00:00.0010000" />
+    <File name="NonPluService.cs" startTime="130717425819700706" executionTime="00:00:00.0010001" />
+    <File name="NonPluServiceBase.generated.cs" startTime="130717425819710707" executionTime="00:00:00.0060003" />
+    <File name="NonPluProviderBase.generatedCore.cs" startTime="130717425819770710" executionTime="00:00:00.0030002" />
+    <File name="NonPluProviderBase.generated.cs" startTime="130717425819800712" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlNonPluProviderBase.generated.cs" startTime="130717425819810713" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\NonPluTest.cs" startTime="130717425819840714" executionTime="00:00:00" />
+    <File name="NonPluTest.cs" startTime="130717425819850715" executionTime="00:00:00.0010000" />
+    <File name="NonPluTest.generated.cs" startTime="130717425819860715" executionTime="00:00:00.0010001" />
+  </Table>
+  <Table name="tblStockInfo" startTime="130717425819870716" executionTime="00:00:00.0510029">
+    <File name="StockInfo.generated.cs" startTime="130717425819870716" executionTime="00:00:00.0170010" />
+    <File name="IStockInfo.cs" startTime="130717425820040726" executionTime="00:00:00.0010000" />
+    <File name="StockInfo.cs" startTime="130717425820050726" executionTime="00:00:00.0010001" />
+    <File name="StockInfoService.cs" startTime="130717425820060727" executionTime="00:00:00.0010000" />
+    <File name="StockInfoServiceBase.generated.cs" startTime="130717425820070727" executionTime="00:00:00.0080005" />
+    <File name="StockInfoProviderBase.generatedCore.cs" startTime="130717425820150732" executionTime="00:00:00.0040002" />
+    <File name="StockInfoProviderBase.generated.cs" startTime="130717425820190734" executionTime="00:00:00.0080005" />
+    <File name="SqlClient\SqlStockInfoProviderBase.generated.cs" startTime="130717425820280739" executionTime="00:00:00.0040003" />
+    <File name="SqlClient\StockInfoTest.cs" startTime="130717425820320742" executionTime="00:00:00.0010000" />
+    <File name="StockInfoTest.cs" startTime="130717425820330742" executionTime="00:00:00.0010001" />
+    <File name="StockInfoTest.generated.cs" startTime="130717425820350743" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblOn_order" startTime="130717425820380745" executionTime="00:00:00.0490028">
+    <File name="OnOrder.generated.cs" startTime="130717425820380745" executionTime="00:00:00.0150009" />
+    <File name="IOnOrder.cs" startTime="130717425820530754" executionTime="00:00:00.0020001" />
+    <File name="OnOrder.cs" startTime="130717425820550755" executionTime="00:00:00.0090005" />
+    <File name="OnOrderService.cs" startTime="130717425820640760" executionTime="00:00:00.0010001" />
+    <File name="OnOrderServiceBase.generated.cs" startTime="130717425820650761" executionTime="00:00:00.0060003" />
+    <File name="OnOrderProviderBase.generatedCore.cs" startTime="130717425820710764" executionTime="00:00:00.0050003" />
+    <File name="OnOrderProviderBase.generated.cs" startTime="130717425820770767" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlOnOrderProviderBase.generated.cs" startTime="130717425820780768" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\OnOrderTest.cs" startTime="130717425820820770" executionTime="00:00:00.0010001" />
+    <File name="OnOrderTest.cs" startTime="130717425820830771" executionTime="00:00:00.0010000" />
+    <File name="OnOrderTest.generated.cs" startTime="130717425820840771" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblUnit" startTime="130717425820870773" executionTime="00:00:00.0270016">
+    <File name="Unit.generated.cs" startTime="130717425820880774" executionTime="00:00:00.0050003" />
+    <File name="IUnit.cs" startTime="130717425820930777" executionTime="00:00:00.0010000" />
+    <File name="Unit.cs" startTime="130717425820950778" executionTime="00:00:00" />
+    <File name="UnitService.cs" startTime="130717425820950778" executionTime="00:00:00.0010000" />
+    <File name="UnitServiceBase.generated.cs" startTime="130717425820960778" executionTime="00:00:00.0070004" />
+    <File name="UnitProviderBase.generatedCore.cs" startTime="130717425821030782" executionTime="00:00:00.0020001" />
+    <File name="UnitProviderBase.generated.cs" startTime="130717425821060784" executionTime="00:00:00" />
+    <File name="SqlClient\SqlUnitProviderBase.generated.cs" startTime="130717425821070785" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\UnitTest.cs" startTime="130717425821090786" executionTime="00:00:00.0010000" />
+    <File name="UnitTest.cs" startTime="130717425821100786" executionTime="00:00:00.0010001" />
+    <File name="UnitTest.generated.cs" startTime="130717425821110787" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblStore" startTime="130717425821140789" executionTime="00:00:00.0390022">
+    <File name="Store.generated.cs" startTime="130717425821140789" executionTime="00:00:00.0140008" />
+    <File name="IStore.cs" startTime="130717425821280797" executionTime="00:00:00.0010000" />
+    <File name="Store.cs" startTime="130717425821300798" executionTime="00:00:00" />
+    <File name="StoreService.cs" startTime="130717425821310798" executionTime="00:00:00" />
+    <File name="StoreServiceBase.generated.cs" startTime="130717425821320799" executionTime="00:00:00.0070004" />
+    <File name="StoreProviderBase.generatedCore.cs" startTime="130717425821390803" executionTime="00:00:00.0040002" />
+    <File name="StoreProviderBase.generated.cs" startTime="130717425821430805" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlStoreProviderBase.generated.cs" startTime="130717425821440806" executionTime="00:00:00.0050003" />
+    <File name="SqlClient\StoreTest.cs" startTime="130717425821490809" executionTime="00:00:00.0010000" />
+    <File name="StoreTest.cs" startTime="130717425821500809" executionTime="00:00:00.0010001" />
+    <File name="StoreTest.generated.cs" startTime="130717425821510810" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblUser" startTime="130717425821530811" executionTime="00:00:00.0310018">
+    <File name="User.generated.cs" startTime="130717425821540811" executionTime="00:00:00.0100006" />
+    <File name="IUser.cs" startTime="130717425821640817" executionTime="00:00:00.0010001" />
+    <File name="User.cs" startTime="130717425821650818" executionTime="00:00:00.0010000" />
+    <File name="UserService.cs" startTime="130717425821660818" executionTime="00:00:00.0010001" />
+    <File name="UserServiceBase.generated.cs" startTime="130717425821670819" executionTime="00:00:00.0060003" />
+    <File name="UserProviderBase.generatedCore.cs" startTime="130717425821730822" executionTime="00:00:00.0030002" />
+    <File name="UserProviderBase.generated.cs" startTime="130717425821760824" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlUserProviderBase.generated.cs" startTime="130717425821770825" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\UserTest.cs" startTime="130717425821800826" executionTime="00:00:00.0010001" />
+    <File name="UserTest.cs" startTime="130717425821810827" executionTime="00:00:00.0010000" />
+    <File name="UserTest.generated.cs" startTime="130717425821820827" executionTime="00:00:00.0020002" />
+  </Table>
+  <Table name="tblTrcode" startTime="130717425821840829" executionTime="00:00:00.0630036">
+    <File name="Trcode.generated.cs" startTime="130717425821840829" executionTime="00:00:00.0110006" />
+    <File name="ITrcode.cs" startTime="130717425821960836" executionTime="00:00:00.0010000" />
+    <File name="Trcode.cs" startTime="130717425821970836" executionTime="00:00:00.0010001" />
+    <File name="TrcodeService.cs" startTime="130717425821980837" executionTime="00:00:00.0010000" />
+    <File name="TrcodeServiceBase.generated.cs" startTime="130717425821990837" executionTime="00:00:00.0060004" />
+    <File name="TrcodeProviderBase.generatedCore.cs" startTime="130717425822050841" executionTime="00:00:00.0030001" />
+    <File name="TrcodeProviderBase.generated.cs" startTime="130717425822080842" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlTrcodeProviderBase.generated.cs" startTime="130717425822090843" executionTime="00:00:00.0110006" />
+    <File name="SqlClient\TrcodeTest.cs" startTime="130717425822200849" executionTime="00:00:00.0010001" />
+    <File name="TrcodeTest.cs" startTime="130717425822210850" executionTime="00:00:00.0010000" />
+    <File name="TrcodeTest.generated.cs" startTime="130717425822220850" executionTime="00:00:00.0250015" />
+  </Table>
+  <Table name="tblUserGrp" startTime="130717425822470865" executionTime="00:00:00.0500028">
+    <File name="UserGrp.generated.cs" startTime="130717425822470865" executionTime="00:00:00.0090005" />
+    <File name="IUserGrp.cs" startTime="130717425822560870" executionTime="00:00:00.0010000" />
+    <File name="UserGrp.cs" startTime="130717425822570870" executionTime="00:00:00.0010001" />
+    <File name="UserGrpService.cs" startTime="130717425822580871" executionTime="00:00:00.0010001" />
+    <File name="UserGrpServiceBase.generated.cs" startTime="130717425822590872" executionTime="00:00:00.0060003" />
+    <File name="UserGrpProviderBase.generatedCore.cs" startTime="130717425822650875" executionTime="00:00:00.0240014" />
+    <File name="UserGrpProviderBase.generated.cs" startTime="130717425822890889" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlUserGrpProviderBase.generated.cs" startTime="130717425822900889" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\UserGrpTest.cs" startTime="130717425822930891" executionTime="00:00:00.0010001" />
+    <File name="UserGrpTest.cs" startTime="130717425822940892" executionTime="00:00:00.0010000" />
+    <File name="UserGrpTest.generated.cs" startTime="130717425822950892" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblSysvar" startTime="130717425822970893" executionTime="00:00:00.0440025">
+    <File name="Sysvar.generated.cs" startTime="130717425822970893" executionTime="00:00:00.0080005" />
+    <File name="ISysvar.cs" startTime="130717425823060898" executionTime="00:00:00.0010001" />
+    <File name="Sysvar.cs" startTime="130717425823070899" executionTime="00:00:00.0010001" />
+    <File name="SysvarService.cs" startTime="130717425823080900" executionTime="00:00:00.0010000" />
+    <File name="SysvarServiceBase.generated.cs" startTime="130717425823090900" executionTime="00:00:00.0220013" />
+    <File name="SysvarProviderBase.generatedCore.cs" startTime="130717425823310913" executionTime="00:00:00.0030001" />
+    <File name="SysvarProviderBase.generated.cs" startTime="130717425823340914" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlSysvarProviderBase.generated.cs" startTime="130717425823350915" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\SysvarTest.cs" startTime="130717425823380917" executionTime="00:00:00" />
+    <File name="SysvarTest.cs" startTime="130717425823390917" executionTime="00:00:00.0010001" />
+    <File name="SysvarTest.generated.cs" startTime="130717425823400918" executionTime="00:00:00.0010000" />
+  </Table>
+  <Table name="tblTransValue" startTime="130717425823410918" executionTime="00:00:00.0840048">
+    <File name="TransValue.generated.cs" startTime="130717425823420919" executionTime="00:00:00.0610035" />
+    <File name="ITransValue.cs" startTime="130717425824040954" executionTime="00:00:00.0010001" />
+    <File name="TransValue.cs" startTime="130717425824050955" executionTime="00:00:00.0010001" />
+    <File name="TransValueService.cs" startTime="130717425824060956" executionTime="00:00:00.0010000" />
+    <File name="TransValueServiceBase.generated.cs" startTime="130717425824070956" executionTime="00:00:00.0070004" />
+    <File name="TransValueProviderBase.generatedCore.cs" startTime="130717425824140960" executionTime="00:00:00.0020001" />
+    <File name="TransValueProviderBase.generated.cs" startTime="130717425824170962" executionTime="00:00:00" />
+    <File name="SqlClient\SqlTransValueProviderBase.generated.cs" startTime="130717425824180962" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\TransValueTest.cs" startTime="130717425824210964" executionTime="00:00:00.0010001" />
+    <File name="TransValueTest.cs" startTime="130717425824230965" executionTime="00:00:00.0010001" />
+    <File name="TransValueTest.generated.cs" startTime="130717425824240966" executionTime="00:00:00.0010000" />
+  </Table>
+  <Table name="tblTransaction" startTime="130717425824250966" executionTime="00:00:00.0920053">
+    <File name="Transaction.generated.cs" startTime="130717425824260967" executionTime="00:00:00.0330019" />
+    <File name="ITransaction.cs" startTime="130717425824590986" executionTime="00:00:00.0020001" />
+    <File name="Transaction.cs" startTime="130717425824610987" executionTime="00:00:00.0010001" />
+    <File name="TransactionService.cs" startTime="130717425824620988" executionTime="00:00:00.0010000" />
+    <File name="TransactionServiceBase.generated.cs" startTime="130717425824630988" executionTime="00:00:00.0080005" />
+    <File name="TransactionProviderBase.generatedCore.cs" startTime="130717425824710993" executionTime="00:00:00.0060003" />
+    <File name="TransactionProviderBase.generated.cs" startTime="130717425824780997" executionTime="00:00:00" />
+    <File name="SqlClient\SqlTransactionProviderBase.generated.cs" startTime="130717425824790997" executionTime="00:00:00.0070004" />
+    <File name="SqlClient\TransactionTest.cs" startTime="130717425824861001" executionTime="00:00:00.0260015" />
+    <File name="TransactionTest.cs" startTime="130717425825121016" executionTime="00:00:00.0010001" />
+    <File name="TransactionTest.generated.cs" startTime="130717425825131017" executionTime="00:00:00.0040002" />
+  </Table>
+  <Table name="tblModePayment" startTime="130717425825171019" executionTime="00:00:00.0620036">
+    <File name="ModePayment.generated.cs" startTime="130717425825171019" executionTime="00:00:00.0100006" />
+    <File name="IModePayment.cs" startTime="130717425825271025" executionTime="00:00:00.0170010" />
+    <File name="ModePayment.cs" startTime="130717425825441035" executionTime="00:00:00.0010000" />
+    <File name="ModePaymentService.cs" startTime="130717425825451035" executionTime="00:00:00.0010001" />
+    <File name="ModePaymentServiceBase.generated.cs" startTime="130717425825461036" executionTime="00:00:00.0070004" />
+    <File name="ModePaymentProviderBase.generatedCore.cs" startTime="130717425825541040" executionTime="00:00:00.0030002" />
+    <File name="ModePaymentProviderBase.generated.cs" startTime="130717425825571042" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlModePaymentProviderBase.generated.cs" startTime="130717425825581043" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\ModePaymentTest.cs" startTime="130717425825611044" executionTime="00:00:00.0150009" />
+    <File name="ModePaymentTest.cs" startTime="130717425825761053" executionTime="00:00:00.0010000" />
+    <File name="ModePaymentTest.generated.cs" startTime="130717425825771053" executionTime="00:00:00.0020002" />
+  </Table>
+  <Table name="tblTransnum" startTime="130717425825791055" executionTime="00:00:00.0870049">
+    <File name="Transnum.generated.cs" startTime="130717425825791055" executionTime="00:00:00.0070004" />
+    <File name="ITransnum.cs" startTime="130717425825861059" executionTime="00:00:00.0010000" />
+    <File name="Transnum.cs" startTime="130717425825871059" executionTime="00:00:00.0010001" />
+    <File name="TransnumService.cs" startTime="130717425825881060" executionTime="00:00:00.0010000" />
+    <File name="TransnumServiceBase.generated.cs" startTime="130717425825891060" executionTime="00:00:00.0070004" />
+    <File name="TransnumProviderBase.generatedCore.cs" startTime="130717425825961064" executionTime="00:00:00.0450026" />
+    <File name="TransnumProviderBase.generated.cs" startTime="130717425826421091" executionTime="00:00:00" />
+    <File name="SqlClient\SqlTransnumProviderBase.generated.cs" startTime="130717425826431091" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\TransnumTest.cs" startTime="130717425826451092" executionTime="00:00:00.0010001" />
+    <File name="TransnumTest.cs" startTime="130717425826461093" executionTime="00:00:00.0180010" />
+    <File name="TransnumTest.generated.cs" startTime="130717425826641103" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblMercLocation" startTime="130717425826661104" executionTime="00:00:00.0740043">
+    <File name="MercLocation.generated.cs" startTime="130717425826661104" executionTime="00:00:00.0060004" />
+    <File name="IMercLocation.cs" startTime="130717425826731108" executionTime="00:00:00.0010001" />
+    <File name="MercLocation.cs" startTime="130717425826741109" executionTime="00:00:00.0010000" />
+    <File name="MercLocationService.cs" startTime="130717425826751109" executionTime="00:00:00.0010001" />
+    <File name="MercLocationServiceBase.generated.cs" startTime="130717425826761110" executionTime="00:00:00.0080005" />
+    <File name="MercLocationProviderBase.generatedCore.cs" startTime="130717425826841115" executionTime="00:00:00.0030001" />
+    <File name="MercLocationProviderBase.generated.cs" startTime="130717425826871116" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlMercLocationProviderBase.generated.cs" startTime="130717425826881117" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\MercLocationTest.cs" startTime="130717425826921119" executionTime="00:00:00.0010001" />
+    <File name="MercLocationTest.cs" startTime="130717425826931120" executionTime="00:00:00.0010000" />
+    <File name="MercLocationTest.generated.cs" startTime="130717425826941120" executionTime="00:00:00.0460027" />
+  </Table>
+  <Table name="tblCurrency" startTime="130717425827401147" executionTime="00:00:00.0280016">
+    <File name="Currency.generated.cs" startTime="130717425827401147" executionTime="00:00:00.0060003" />
+    <File name="ICurrency.cs" startTime="130717425827471151" executionTime="00:00:00.0010000" />
+    <File name="Currency.cs" startTime="130717425827481151" executionTime="00:00:00.0010001" />
+    <File name="CurrencyService.cs" startTime="130717425827491152" executionTime="00:00:00.0010000" />
+    <File name="CurrencyServiceBase.generated.cs" startTime="130717425827501152" executionTime="00:00:00.0070004" />
+    <File name="CurrencyProviderBase.generatedCore.cs" startTime="130717425827571156" executionTime="00:00:00.0030002" />
+    <File name="CurrencyProviderBase.generated.cs" startTime="130717425827601158" executionTime="00:00:00" />
+    <File name="SqlClient\SqlCurrencyProviderBase.generated.cs" startTime="130717425827611159" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\CurrencyTest.cs" startTime="130717425827631160" executionTime="00:00:00.0010000" />
+    <File name="CurrencyTest.cs" startTime="130717425827641160" executionTime="00:00:00.0010001" />
+    <File name="CurrencyTest.generated.cs" startTime="130717425827661162" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblMenus" startTime="130717425827681163" executionTime="00:00:00.0360020">
+    <File name="Menus.generated.cs" startTime="130717425827681163" executionTime="00:00:00.0130007" />
+    <File name="IMenus.cs" startTime="130717425827811170" executionTime="00:00:00.0010001" />
+    <File name="Menus.cs" startTime="130717425827831171" executionTime="00:00:00" />
+    <File name="MenusService.cs" startTime="130717425827841172" executionTime="00:00:00" />
+    <File name="MenusServiceBase.generated.cs" startTime="130717425827851172" executionTime="00:00:00.0050003" />
+    <File name="MenusProviderBase.generatedCore.cs" startTime="130717425827901175" executionTime="00:00:00.0030002" />
+    <File name="MenusProviderBase.generated.cs" startTime="130717425827941178" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlMenusProviderBase.generated.cs" startTime="130717425827951178" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\MenusTest.cs" startTime="130717425827991180" executionTime="00:00:00" />
+    <File name="MenusTest.cs" startTime="130717425828001181" executionTime="00:00:00.0010001" />
+    <File name="MenusTest.generated.cs" startTime="130717425828011182" executionTime="00:00:00.0030001" />
+  </Table>
+  <Table name="tblCust_info" startTime="130717425828041183" executionTime="00:00:00.0510029">
+    <File name="CustInfo.generated.cs" startTime="130717425828041183" executionTime="00:00:00.0110007" />
+    <File name="ICustInfo.cs" startTime="130717425828151190" executionTime="00:00:00.0010000" />
+    <File name="CustInfo.cs" startTime="130717425828171191" executionTime="00:00:00" />
+    <File name="CustInfoService.cs" startTime="130717425828181191" executionTime="00:00:00" />
+    <File name="CustInfoServiceBase.generated.cs" startTime="130717425828191192" executionTime="00:00:00.0070004" />
+    <File name="CustInfoProviderBase.generatedCore.cs" startTime="130717425828271196" executionTime="00:00:00.0030002" />
+    <File name="CustInfoProviderBase.generated.cs" startTime="130717425828301198" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlCustInfoProviderBase.generated.cs" startTime="130717425828311199" executionTime="00:00:00.0170009" />
+    <File name="SqlClient\CustInfoTest.cs" startTime="130717425828491209" executionTime="00:00:00.0010001" />
+    <File name="CustInfoTest.cs" startTime="130717425828501210" executionTime="00:00:00.0010000" />
+    <File name="CustInfoTest.generated.cs" startTime="130717425828511210" executionTime="00:00:00.0040002" />
+  </Table>
+  <Table name="tblCsCard" startTime="130717425828551212" executionTime="00:00:00.1200069">
+    <File name="CsCard.generated.cs" startTime="130717425828551212" executionTime="00:00:00.0170010" />
+    <File name="ICsCard.cs" startTime="130717425828721222" executionTime="00:00:00.0030002" />
+    <File name="CsCard.cs" startTime="130717425828751224" executionTime="00:00:00.0610035" />
+    <File name="CsCardService.cs" startTime="130717425829361259" executionTime="00:00:00.0010000" />
+    <File name="CsCardServiceBase.generated.cs" startTime="130717425829371259" executionTime="00:00:00.0210012" />
+    <File name="CsCardProviderBase.generatedCore.cs" startTime="130717425829591272" executionTime="00:00:00.0030002" />
+    <File name="CsCardProviderBase.generated.cs" startTime="130717425829631274" executionTime="00:00:00" />
+    <File name="SqlClient\SqlCsCardProviderBase.generated.cs" startTime="130717425829641275" executionTime="00:00:00.0050003" />
+    <File name="SqlClient\CsCardTest.cs" startTime="130717425829701278" executionTime="00:00:00.0010001" />
+    <File name="CsCardTest.cs" startTime="130717425829711279" executionTime="00:00:00.0010000" />
+    <File name="CsCardTest.generated.cs" startTime="130717425829721279" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblCustomer" startTime="130717425829751281" executionTime="00:00:00.0470027">
+    <File name="Customer.generated.cs" startTime="130717425829751281" executionTime="00:00:00.0190011" />
+    <File name="ICustomer.cs" startTime="130717425829941292" executionTime="00:00:00.0020001" />
+    <File name="Customer.cs" startTime="130717425829961293" executionTime="00:00:00.0010001" />
+    <File name="CustomerService.cs" startTime="130717425829971294" executionTime="00:00:00.0010000" />
+    <File name="CustomerServiceBase.generated.cs" startTime="130717425829981294" executionTime="00:00:00.0060004" />
+    <File name="CustomerProviderBase.generatedCore.cs" startTime="130717425830051298" executionTime="00:00:00.0050003" />
+    <File name="CustomerProviderBase.generated.cs" startTime="130717425830101301" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlCustomerProviderBase.generated.cs" startTime="130717425830111302" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\CustomerTest.cs" startTime="130717425830151304" executionTime="00:00:00.0010001" />
+    <File name="CustomerTest.cs" startTime="130717425830161305" executionTime="00:00:00.0030001" />
+    <File name="CustomerTest.generated.cs" startTime="130717425830191306" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblAccTrans" startTime="130717425830221308" executionTime="00:00:00.0540031">
+    <File name="AccTrans.generated.cs" startTime="130717425830221308" executionTime="00:00:00.0170010" />
+    <File name="IAccTrans.cs" startTime="130717425830391318" executionTime="00:00:00.0020001" />
+    <File name="AccTrans.cs" startTime="130717425830411319" executionTime="00:00:00.0010000" />
+    <File name="AccTransService.cs" startTime="130717425830421319" executionTime="00:00:00.0120007" />
+    <File name="AccTransServiceBase.generated.cs" startTime="130717425830541326" executionTime="00:00:00.0060004" />
+    <File name="AccTransProviderBase.generatedCore.cs" startTime="130717425830611330" executionTime="00:00:00.0050003" />
+    <File name="AccTransProviderBase.generated.cs" startTime="130717425830661333" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlAccTransProviderBase.generated.cs" startTime="130717425830671334" executionTime="00:00:00.0050003" />
+    <File name="SqlClient\AccTransTest.cs" startTime="130717425830721337" executionTime="00:00:00.0010000" />
+    <File name="AccTransTest.cs" startTime="130717425830731337" executionTime="00:00:00.0010001" />
+    <File name="AccTransTest.generated.cs" startTime="130717425830741338" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblBookAttr" startTime="130717425830771339" executionTime="00:00:00.0480028">
+    <File name="BookAttr.generated.cs" startTime="130717425830771339" executionTime="00:00:00.0120007" />
+    <File name="IBookAttr.cs" startTime="130717425830901347" executionTime="00:00:00.0010000" />
+    <File name="BookAttr.cs" startTime="130717425830911347" executionTime="00:00:00.0010001" />
+    <File name="BookAttrService.cs" startTime="130717425830921348" executionTime="00:00:00.0010001" />
+    <File name="BookAttrServiceBase.generated.cs" startTime="130717425830931349" executionTime="00:00:00.0060003" />
+    <File name="BookAttrProviderBase.generatedCore.cs" startTime="130717425830991352" executionTime="00:00:00.0160009" />
+    <File name="BookAttrProviderBase.generated.cs" startTime="130717425831161362" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlBookAttrProviderBase.generated.cs" startTime="130717425831181363" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\BookAttrTest.cs" startTime="130717425831211365" executionTime="00:00:00.0010000" />
+    <File name="BookAttrTest.cs" startTime="130717425831221365" executionTime="00:00:00.0010001" />
+    <File name="BookAttrTest.generated.cs" startTime="130717425831241366" executionTime="00:00:00.0010001" />
+  </Table>
+  <Table name="tblAtrCode" startTime="130717425831261367" executionTime="00:00:00.0400023">
+    <File name="AtrCode.generated.cs" startTime="130717425831261367" executionTime="00:00:00.0160010" />
+    <File name="IAtrCode.cs" startTime="130717425831421377" executionTime="00:00:00.0020001" />
+    <File name="AtrCode.cs" startTime="130717425831441378" executionTime="00:00:00.0010000" />
+    <File name="AtrCodeService.cs" startTime="130717425831451378" executionTime="00:00:00.0010001" />
+    <File name="AtrCodeServiceBase.generated.cs" startTime="130717425831461379" executionTime="00:00:00.0060003" />
+    <File name="AtrCodeProviderBase.generatedCore.cs" startTime="130717425831521382" executionTime="00:00:00.0040003" />
+    <File name="AtrCodeProviderBase.generated.cs" startTime="130717425831571385" executionTime="00:00:00" />
+    <File name="SqlClient\SqlAtrCodeProviderBase.generated.cs" startTime="130717425831581386" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\AtrCodeTest.cs" startTime="130717425831621388" executionTime="00:00:00" />
+    <File name="AtrCodeTest.cs" startTime="130717425831631389" executionTime="00:00:00.0010000" />
+    <File name="AtrCodeTest.generated.cs" startTime="130717425831641389" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblDate" startTime="130717425831661390" executionTime="00:00:00.0280016">
+    <File name="Date.generated.cs" startTime="130717425831661390" executionTime="00:00:00.0070004" />
+    <File name="IDate.cs" startTime="130717425831741395" executionTime="00:00:00.0010000" />
+    <File name="Date.cs" startTime="130717425831751395" executionTime="00:00:00.0010001" />
+    <File name="DateService.cs" startTime="130717425831761396" executionTime="00:00:00.0010001" />
+    <File name="DateServiceBase.generated.cs" startTime="130717425831771397" executionTime="00:00:00.0070004" />
+    <File name="DateProviderBase.generatedCore.cs" startTime="130717425831841401" executionTime="00:00:00.0030001" />
+    <File name="DateProviderBase.generated.cs" startTime="130717425831871402" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlDateProviderBase.generated.cs" startTime="130717425831881403" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\DateTest.cs" startTime="130717425831911405" executionTime="00:00:00" />
+    <File name="DateTest.cs" startTime="130717425831921405" executionTime="00:00:00.0010001" />
+    <File name="DateTest.generated.cs" startTime="130717425831931406" executionTime="00:00:00.0010000" />
+  </Table>
+  <Table name="tblBarcode" startTime="130717425831941406" executionTime="00:00:00.0460027">
+    <File name="Barcode.generated.cs" startTime="130717425831941406" executionTime="00:00:00.0260015" />
+    <File name="IBarcode.cs" startTime="130717425832211422" executionTime="00:00:00.0010000" />
+    <File name="Barcode.cs" startTime="130717425832221422" executionTime="00:00:00.0010001" />
+    <File name="BarcodeService.cs" startTime="130717425832231423" executionTime="00:00:00.0010001" />
+    <File name="BarcodeServiceBase.generated.cs" startTime="130717425832241424" executionTime="00:00:00.0050002" />
+    <File name="BarcodeProviderBase.generatedCore.cs" startTime="130717425832301427" executionTime="00:00:00.0030002" />
+    <File name="BarcodeProviderBase.generated.cs" startTime="130717425832331429" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlBarcodeProviderBase.generated.cs" startTime="130717425832341429" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\BarcodeTest.cs" startTime="130717425832361430" executionTime="00:00:00.0010001" />
+    <File name="BarcodeTest.cs" startTime="130717425832371431" executionTime="00:00:00.0010001" />
+    <File name="BarcodeTest.generated.cs" startTime="130717425832391432" executionTime="00:00:00.0010001" />
+  </Table>
+  <Table name="tblLanguage" startTime="130717425832401433" executionTime="00:00:00.0250014">
+    <File name="Language.generated.cs" startTime="130717425832401433" executionTime="00:00:00.0070004" />
+    <File name="ILanguage.cs" startTime="130717425832471437" executionTime="00:00:00.0010000" />
+    <File name="Language.cs" startTime="130717425832481437" executionTime="00:00:00.0010001" />
+    <File name="LanguageService.cs" startTime="130717425832491438" executionTime="00:00:00.0010000" />
+    <File name="LanguageServiceBase.generated.cs" startTime="130717425832501438" executionTime="00:00:00.0050003" />
+    <File name="LanguageProviderBase.generatedCore.cs" startTime="130717425832561442" executionTime="00:00:00.0020001" />
+    <File name="LanguageProviderBase.generated.cs" startTime="130717425832581443" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlLanguageProviderBase.generated.cs" startTime="130717425832591444" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\LanguageTest.cs" startTime="130717425832621445" executionTime="00:00:00.0010001" />
+    <File name="LanguageTest.cs" startTime="130717425832631446" executionTime="00:00:00.0010000" />
+    <File name="LanguageTest.generated.cs" startTime="130717425832641446" executionTime="00:00:00.0010001" />
+  </Table>
+  <Table name="tblFiles" startTime="130717425832651447" executionTime="00:00:00.0290017">
+    <File name="Files.generated.cs" startTime="130717425832661448" executionTime="00:00:00.0070004" />
+    <File name="IFiles.cs" startTime="130717425832741452" executionTime="00:00:00.0010001" />
+    <File name="Files.cs" startTime="130717425832751453" executionTime="00:00:00.0010000" />
+    <File name="FilesService.cs" startTime="130717425832761453" executionTime="00:00:00.0010001" />
+    <File name="FilesServiceBase.generated.cs" startTime="130717425832771454" executionTime="00:00:00.0060003" />
+    <File name="FilesProviderBase.generatedCore.cs" startTime="130717425832841458" executionTime="00:00:00.0020001" />
+    <File name="FilesProviderBase.generated.cs" startTime="130717425832861459" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlFilesProviderBase.generated.cs" startTime="130717425832871460" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\FilesTest.cs" startTime="130717425832911462" executionTime="00:00:00" />
+    <File name="FilesTest.cs" startTime="130717425832921462" executionTime="00:00:00.0010001" />
+    <File name="FilesTest.generated.cs" startTime="130717425832931463" executionTime="00:00:00.0010001" />
+  </Table>
+  <Table name="tblLoanTran" startTime="130717425832941464" executionTime="00:00:00.0510029">
+    <File name="LoanTran.generated.cs" startTime="130717425832951464" executionTime="00:00:00.0130008" />
+    <File name="ILoanTran.cs" startTime="130717425833091472" executionTime="00:00:00.0010001" />
+    <File name="LoanTran.cs" startTime="130717425833101473" executionTime="00:00:00.0010000" />
+    <File name="LoanTranService.cs" startTime="130717425833111473" executionTime="00:00:00.0120007" />
+    <File name="LoanTranServiceBase.generated.cs" startTime="130717425833231480" executionTime="00:00:00.0070004" />
+    <File name="LoanTranProviderBase.generatedCore.cs" startTime="130717425833301484" executionTime="00:00:00.0050003" />
+    <File name="LoanTranProviderBase.generated.cs" startTime="130717425833351487" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlLoanTranProviderBase.generated.cs" startTime="130717425833361488" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\LoanTranTest.cs" startTime="130717425833401490" executionTime="00:00:00.0010000" />
+    <File name="LoanTranTest.cs" startTime="130717425833411490" executionTime="00:00:00.0010001" />
+    <File name="LoanTranTest.generated.cs" startTime="130717425833421491" executionTime="00:00:00.0030002" />
+  </Table>
+  <Table name="tblKit_info" startTime="130717425833451493" executionTime="00:00:00.0640036">
+    <File name="KitInfo.generated.cs" startTime="130717425833451493" executionTime="00:00:00.0060003" />
+    <File name="IKitInfo.cs" startTime="130717425833521497" executionTime="00:00:00.0010000" />
+    <File name="KitInfo.cs" startTime="130717425833531497" executionTime="00:00:00.0010001" />
+    <File name="KitInfoService.cs" startTime="130717425833551498" executionTime="00:00:00.0010001" />
+    <File name="KitInfoServiceBase.generated.cs" startTime="130717425833561499" executionTime="00:00:00.0060003" />
+    <File name="KitInfoProviderBase.generatedCore.cs" startTime="130717425833621502" executionTime="00:00:00.0030002" />
+    <File name="KitInfoProviderBase.generated.cs" startTime="130717425833651504" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlKitInfoProviderBase.generated.cs" startTime="130717425833671505" executionTime="00:00:00.0230013" />
+    <File name="SqlClient\KitInfoTest.cs" startTime="130717425833901518" executionTime="00:00:00.0010001" />
+    <File name="KitInfoTest.cs" startTime="130717425833911519" executionTime="00:00:00.0160009" />
+    <File name="KitInfoTest.generated.cs" startTime="130717425834081529" executionTime="00:00:00.0010000" />
+  </Table>
+  <Table name="tblLocation" startTime="130717425834091529" executionTime="00:00:00.0290017">
+    <File name="Location.generated.cs" startTime="130717425834091529" executionTime="00:00:00.0080005" />
+    <File name="ILocation.cs" startTime="130717425834171534" executionTime="00:00:00.0010000" />
+    <File name="Location.cs" startTime="130717425834181534" executionTime="00:00:00.0010001" />
+    <File name="LocationService.cs" startTime="130717425834191535" executionTime="00:00:00.0010001" />
+    <File name="LocationServiceBase.generated.cs" startTime="130717425834201536" executionTime="00:00:00.0060003" />
+    <File name="LocationProviderBase.generatedCore.cs" startTime="130717425834261539" executionTime="00:00:00.0040002" />
+    <File name="LocationProviderBase.generated.cs" startTime="130717425834301541" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlLocationProviderBase.generated.cs" startTime="130717425834311542" executionTime="00:00:00.0030002" />
+    <File name="SqlClient\LocationTest.cs" startTime="130717425834341544" executionTime="00:00:00.0010000" />
+    <File name="LocationTest.cs" startTime="130717425834351544" executionTime="00:00:00.0010001" />
+    <File name="LocationTest.generated.cs" startTime="130717425834361545" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblFrmType" startTime="130717425834381546" executionTime="00:00:00.0380022">
+    <File name="FrmType.generated.cs" startTime="130717425834381546" executionTime="00:00:00.0070004" />
+    <File name="IFrmType.cs" startTime="130717425834451550" executionTime="00:00:00.0010001" />
+    <File name="FrmType.cs" startTime="130717425834471551" executionTime="00:00:00" />
+    <File name="FrmTypeService.cs" startTime="130717425834481552" executionTime="00:00:00" />
+    <File name="FrmTypeServiceBase.generated.cs" startTime="130717425834491552" executionTime="00:00:00.0160009" />
+    <File name="FrmTypeProviderBase.generatedCore.cs" startTime="130717425834661562" executionTime="00:00:00.0020001" />
+    <File name="FrmTypeProviderBase.generated.cs" startTime="130717425834681563" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlFrmTypeProviderBase.generated.cs" startTime="130717425834691564" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\FrmTypeTest.cs" startTime="130717425834721565" executionTime="00:00:00.0010001" />
+    <File name="FrmTypeTest.cs" startTime="130717425834731566" executionTime="00:00:00.0010001" />
+    <File name="FrmTypeTest.generated.cs" startTime="130717425834741567" executionTime="00:00:00.0020001" />
+  </Table>
+  <Table name="tblKit" startTime="130717425834761568" executionTime="00:00:00.0310017">
+    <File name="Kit.generated.cs" startTime="130717425834761568" executionTime="00:00:00.0090005" />
+    <File name="IKit.cs" startTime="130717425834851573" executionTime="00:00:00.0010000" />
+    <File name="Kit.cs" startTime="130717425834861573" executionTime="00:00:00.0020002" />
+    <File name="KitService.cs" startTime="130717425834881575" executionTime="00:00:00.0010000" />
+    <File name="KitServiceBase.generated.cs" startTime="130717425834891575" executionTime="00:00:00.0060004" />
+    <File name="KitProviderBase.generatedCore.cs" startTime="130717425834951579" executionTime="00:00:00.0030001" />
+    <File name="KitProviderBase.generated.cs" startTime="130717425834981580" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlKitProviderBase.generated.cs" startTime="130717425834991581" executionTime="00:00:00.0040002" />
+    <File name="SqlClient\KitTest.cs" startTime="130717425835031583" executionTime="00:00:00.0010001" />
+    <File name="KitTest.cs" startTime="130717425835041584" executionTime="00:00:00.0010000" />
+    <File name="KitTest.generated.cs" startTime="130717425835061585" executionTime="00:00:00.0010000" />
+  </Table>
+  <Table name="tblGoods" startTime="130717425835071585" executionTime="00:00:00.0440026">
+    <File name="Goods.generated.cs" startTime="130717425835081586" executionTime="00:00:00.0170010" />
+    <File name="IGoods.cs" startTime="130717425835251596" executionTime="00:00:00.0010000" />
+    <File name="Goods.cs" startTime="130717425835271597" executionTime="00:00:00" />
+    <File name="GoodsService.cs" startTime="130717425835281597" executionTime="00:00:00" />
+    <File name="GoodsServiceBase.generated.cs" startTime="130717425835291598" executionTime="00:00:00.0070004" />
+    <File name="GoodsProviderBase.generatedCore.cs" startTime="130717425835361602" executionTime="00:00:00.0050003" />
+    <File name="GoodsProviderBase.generated.cs" startTime="130717425835411605" executionTime="00:00:00.0010000" />
+    <File name="SqlClient\SqlGoodsProviderBase.generated.cs" startTime="130717425835421605" executionTime="00:00:00.0040003" />
+    <File name="SqlClient\GoodsTest.cs" startTime="130717425835461608" executionTime="00:00:00.0010000" />
+    <File name="GoodsTest.cs" startTime="130717425835471608" executionTime="00:00:00.0010001" />
+    <File name="GoodsTest.generated.cs" startTime="130717425835491609" executionTime="00:00:00.0020002" />
+  </Table>
+  <Table name="tblUtils" startTime="130717425835511611" executionTime="00:00:00.0310017">
+    <File name="Utils.generated.cs" startTime="130717425835511611" executionTime="00:00:00.0090005" />
+    <File name="IUtils.cs" startTime="130717425835611616" executionTime="00:00:00.0010001" />
+    <File name="Utils.cs" startTime="130717425835621617" executionTime="00:00:00.0010000" />
+    <File name="UtilsService.cs" startTime="130717425835631617" executionTime="00:00:00.0010001" />
+    <File name="UtilsServiceBase.generated.cs" startTime="130717425835641618" executionTime="00:00:00.0050003" />
+    <File name="UtilsProviderBase.generatedCore.cs" startTime="130717425835701621" executionTime="00:00:00.0020002" />
+    <File name="UtilsProviderBase.generated.cs" startTime="130717425835731623" executionTime="00:00:00.0010001" />
+    <File name="SqlClient\SqlUtilsProviderBase.generated.cs" startTime="130717425835741624" executionTime="00:00:00.0030001" />
+    <File name="SqlClient\UtilsTest.cs" startTime="130717425835771625" executionTime="00:00:00.0010001" />
+    <File name="UtilsTest.cs" startTime="130717425835781626" executionTime="00:00:00.0010001" />
+    <File name="UtilsTest.generated.cs" startTime="130717425835791627" executionTime="00:00:00.0030001" />
+  </Table>
+  <Table name="tblGoodsGrp" startTime="130717425835821628" executionTime="00:00:00.0440025">
+    <File name="GoodsGrp.generated.cs" startTime="130717425835821628" executionTime="00:00:00.0060004" />
+    <File name="IGoodsGrp.cs" startTime="130717425835881632" executionTime="00:00:00.0010000" />
+    <File name="GoodsGrp.cs" startTime="130717425835891632" executionTime="00:00:00.0010001" />
+    <File name="GoodsGrpService.cs" startTime="130717425835901633" executionTime="00:00:00.0010000" />
+    <File name="GoodsGrpServiceBase.generated.cs" startTime="130717425835911633" executionTime="00:00:00.0070004" />
+    <File name="GoodsGrpProviderBase.generatedCore.cs" startTime="130717425835981637" executionTime="00:00:00.0020002" />
+    <File name="GoodsGrpProviderBase.generated.cs" startTime="130717425836011639" executionTime="00:00:00" />
+    <File name="SqlClient\SqlGoodsGrpProviderBase.generated.cs" startTime="130717425836021640" executionTime="00:00:00.0020001" />
+    <File name="SqlClient\GoodsGrpTest.cs" startTime="130717425836041641" executionTime="00:00:00.0010000" />
+    <File name="GoodsGrpTest.cs" startTime="130717425836051641" executionTime="00:00:00.0010001" />
+    <File name="GoodsGrpTest.generated.cs" startTime="130717425836071643" executionTime="00:00:00.0190010" />
+  </Table>
+  <summary>
+    <objectCount>532</objectCount>
+    <messageCount>23</messageCount>
+  </summary>
+</NetTiersReport>
