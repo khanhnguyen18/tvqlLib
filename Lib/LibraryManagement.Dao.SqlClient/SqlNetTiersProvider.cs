@@ -191,40 +191,1600 @@ namespace LibraryManagement.Dao.SqlClient
 		}
 
 		
-		#region "BookProvider"
+		#region "ReportsProvider"
 			
-		private SqlBookProvider innerSqlBookProvider;
+		private SqlReportsProvider innerSqlReportsProvider;
 
 		///<summary>
-		/// This class is the Data Access Logic Component for the <see cref="Book"/> business entity.
+		/// This class is the Data Access Logic Component for the <see cref="Reports"/> business entity.
 		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
 		///</summary>
 		/// <value></value>
-		public override BookProviderBase BookProvider
+		public override ReportsProviderBase ReportsProvider
 		{
 			get
 			{
-				if (innerSqlBookProvider == null) 
+				if (innerSqlReportsProvider == null) 
 				{
 					lock (syncRoot) 
 					{
-						if (innerSqlBookProvider == null)
+						if (innerSqlReportsProvider == null)
 						{
-							this.innerSqlBookProvider = new SqlBookProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+							this.innerSqlReportsProvider = new SqlReportsProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
 						}
 					}
 				}
-				return innerSqlBookProvider;
+				return innerSqlReportsProvider;
 			}
 		}
 		
 		/// <summary>
-		/// Gets the current <see cref="SqlBookProvider"/>.
+		/// Gets the current <see cref="SqlReportsProvider"/>.
 		/// </summary>
 		/// <value></value>
-		public SqlBookProvider SqlBookProvider
+		public SqlReportsProvider SqlReportsProvider
 		{
-			get {return BookProvider as SqlBookProvider;}
+			get {return ReportsProvider as SqlReportsProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "AccountProvider"
+			
+		private SqlAccountProvider innerSqlAccountProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Account"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override AccountProviderBase AccountProvider
+		{
+			get
+			{
+				if (innerSqlAccountProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlAccountProvider == null)
+						{
+							this.innerSqlAccountProvider = new SqlAccountProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlAccountProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlAccountProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlAccountProvider SqlAccountProvider
+		{
+			get {return AccountProvider as SqlAccountProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "StaffProvider"
+			
+		private SqlStaffProvider innerSqlStaffProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Staff"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override StaffProviderBase StaffProvider
+		{
+			get
+			{
+				if (innerSqlStaffProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlStaffProvider == null)
+						{
+							this.innerSqlStaffProvider = new SqlStaffProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlStaffProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlStaffProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlStaffProvider SqlStaffProvider
+		{
+			get {return StaffProvider as SqlStaffProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "PriceProvider"
+			
+		private SqlPriceProvider innerSqlPriceProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Price"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override PriceProviderBase PriceProvider
+		{
+			get
+			{
+				if (innerSqlPriceProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlPriceProvider == null)
+						{
+							this.innerSqlPriceProvider = new SqlPriceProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlPriceProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlPriceProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlPriceProvider SqlPriceProvider
+		{
+			get {return PriceProvider as SqlPriceProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "StationsProvider"
+			
+		private SqlStationsProvider innerSqlStationsProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Stations"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override StationsProviderBase StationsProvider
+		{
+			get
+			{
+				if (innerSqlStationsProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlStationsProvider == null)
+						{
+							this.innerSqlStationsProvider = new SqlStationsProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlStationsProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlStationsProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlStationsProvider SqlStationsProvider
+		{
+			get {return StationsProvider as SqlStationsProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "MofSysProvider"
+			
+		private SqlMofSysProvider innerSqlMofSysProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="MofSys"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override MofSysProviderBase MofSysProvider
+		{
+			get
+			{
+				if (innerSqlMofSysProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlMofSysProvider == null)
+						{
+							this.innerSqlMofSysProvider = new SqlMofSysProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlMofSysProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlMofSysProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlMofSysProvider SqlMofSysProvider
+		{
+			get {return MofSysProvider as SqlMofSysProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "PaymentOrderProvider"
+			
+		private SqlPaymentOrderProvider innerSqlPaymentOrderProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="PaymentOrder"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override PaymentOrderProviderBase PaymentOrderProvider
+		{
+			get
+			{
+				if (innerSqlPaymentOrderProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlPaymentOrderProvider == null)
+						{
+							this.innerSqlPaymentOrderProvider = new SqlPaymentOrderProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlPaymentOrderProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlPaymentOrderProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlPaymentOrderProvider SqlPaymentOrderProvider
+		{
+			get {return PaymentOrderProvider as SqlPaymentOrderProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "NonPluProvider"
+			
+		private SqlNonPluProvider innerSqlNonPluProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="NonPlu"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override NonPluProviderBase NonPluProvider
+		{
+			get
+			{
+				if (innerSqlNonPluProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlNonPluProvider == null)
+						{
+							this.innerSqlNonPluProvider = new SqlNonPluProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlNonPluProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlNonPluProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlNonPluProvider SqlNonPluProvider
+		{
+			get {return NonPluProvider as SqlNonPluProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "StockInfoProvider"
+			
+		private SqlStockInfoProvider innerSqlStockInfoProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="StockInfo"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override StockInfoProviderBase StockInfoProvider
+		{
+			get
+			{
+				if (innerSqlStockInfoProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlStockInfoProvider == null)
+						{
+							this.innerSqlStockInfoProvider = new SqlStockInfoProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlStockInfoProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlStockInfoProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlStockInfoProvider SqlStockInfoProvider
+		{
+			get {return StockInfoProvider as SqlStockInfoProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "OnOrderProvider"
+			
+		private SqlOnOrderProvider innerSqlOnOrderProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="OnOrder"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override OnOrderProviderBase OnOrderProvider
+		{
+			get
+			{
+				if (innerSqlOnOrderProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlOnOrderProvider == null)
+						{
+							this.innerSqlOnOrderProvider = new SqlOnOrderProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlOnOrderProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlOnOrderProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlOnOrderProvider SqlOnOrderProvider
+		{
+			get {return OnOrderProvider as SqlOnOrderProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "UnitProvider"
+			
+		private SqlUnitProvider innerSqlUnitProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Unit"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override UnitProviderBase UnitProvider
+		{
+			get
+			{
+				if (innerSqlUnitProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlUnitProvider == null)
+						{
+							this.innerSqlUnitProvider = new SqlUnitProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlUnitProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlUnitProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlUnitProvider SqlUnitProvider
+		{
+			get {return UnitProvider as SqlUnitProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "StoreProvider"
+			
+		private SqlStoreProvider innerSqlStoreProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Store"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override StoreProviderBase StoreProvider
+		{
+			get
+			{
+				if (innerSqlStoreProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlStoreProvider == null)
+						{
+							this.innerSqlStoreProvider = new SqlStoreProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlStoreProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlStoreProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlStoreProvider SqlStoreProvider
+		{
+			get {return StoreProvider as SqlStoreProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "UserProvider"
+			
+		private SqlUserProvider innerSqlUserProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="User"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override UserProviderBase UserProvider
+		{
+			get
+			{
+				if (innerSqlUserProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlUserProvider == null)
+						{
+							this.innerSqlUserProvider = new SqlUserProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlUserProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlUserProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlUserProvider SqlUserProvider
+		{
+			get {return UserProvider as SqlUserProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "TrcodeProvider"
+			
+		private SqlTrcodeProvider innerSqlTrcodeProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Trcode"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override TrcodeProviderBase TrcodeProvider
+		{
+			get
+			{
+				if (innerSqlTrcodeProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlTrcodeProvider == null)
+						{
+							this.innerSqlTrcodeProvider = new SqlTrcodeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlTrcodeProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlTrcodeProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlTrcodeProvider SqlTrcodeProvider
+		{
+			get {return TrcodeProvider as SqlTrcodeProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "UserGrpProvider"
+			
+		private SqlUserGrpProvider innerSqlUserGrpProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="UserGrp"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override UserGrpProviderBase UserGrpProvider
+		{
+			get
+			{
+				if (innerSqlUserGrpProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlUserGrpProvider == null)
+						{
+							this.innerSqlUserGrpProvider = new SqlUserGrpProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlUserGrpProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlUserGrpProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlUserGrpProvider SqlUserGrpProvider
+		{
+			get {return UserGrpProvider as SqlUserGrpProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "SysvarProvider"
+			
+		private SqlSysvarProvider innerSqlSysvarProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Sysvar"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override SysvarProviderBase SysvarProvider
+		{
+			get
+			{
+				if (innerSqlSysvarProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlSysvarProvider == null)
+						{
+							this.innerSqlSysvarProvider = new SqlSysvarProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlSysvarProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlSysvarProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlSysvarProvider SqlSysvarProvider
+		{
+			get {return SysvarProvider as SqlSysvarProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "TransValueProvider"
+			
+		private SqlTransValueProvider innerSqlTransValueProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="TransValue"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override TransValueProviderBase TransValueProvider
+		{
+			get
+			{
+				if (innerSqlTransValueProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlTransValueProvider == null)
+						{
+							this.innerSqlTransValueProvider = new SqlTransValueProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlTransValueProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlTransValueProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlTransValueProvider SqlTransValueProvider
+		{
+			get {return TransValueProvider as SqlTransValueProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "TransactionProvider"
+			
+		private SqlTransactionProvider innerSqlTransactionProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Transaction"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override TransactionProviderBase TransactionProvider
+		{
+			get
+			{
+				if (innerSqlTransactionProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlTransactionProvider == null)
+						{
+							this.innerSqlTransactionProvider = new SqlTransactionProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlTransactionProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlTransactionProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlTransactionProvider SqlTransactionProvider
+		{
+			get {return TransactionProvider as SqlTransactionProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "ModePaymentProvider"
+			
+		private SqlModePaymentProvider innerSqlModePaymentProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="ModePayment"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override ModePaymentProviderBase ModePaymentProvider
+		{
+			get
+			{
+				if (innerSqlModePaymentProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlModePaymentProvider == null)
+						{
+							this.innerSqlModePaymentProvider = new SqlModePaymentProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlModePaymentProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlModePaymentProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlModePaymentProvider SqlModePaymentProvider
+		{
+			get {return ModePaymentProvider as SqlModePaymentProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "TransnumProvider"
+			
+		private SqlTransnumProvider innerSqlTransnumProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Transnum"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override TransnumProviderBase TransnumProvider
+		{
+			get
+			{
+				if (innerSqlTransnumProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlTransnumProvider == null)
+						{
+							this.innerSqlTransnumProvider = new SqlTransnumProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlTransnumProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlTransnumProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlTransnumProvider SqlTransnumProvider
+		{
+			get {return TransnumProvider as SqlTransnumProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "MercLocationProvider"
+			
+		private SqlMercLocationProvider innerSqlMercLocationProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="MercLocation"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override MercLocationProviderBase MercLocationProvider
+		{
+			get
+			{
+				if (innerSqlMercLocationProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlMercLocationProvider == null)
+						{
+							this.innerSqlMercLocationProvider = new SqlMercLocationProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlMercLocationProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlMercLocationProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlMercLocationProvider SqlMercLocationProvider
+		{
+			get {return MercLocationProvider as SqlMercLocationProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "CurrencyProvider"
+			
+		private SqlCurrencyProvider innerSqlCurrencyProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Currency"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override CurrencyProviderBase CurrencyProvider
+		{
+			get
+			{
+				if (innerSqlCurrencyProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlCurrencyProvider == null)
+						{
+							this.innerSqlCurrencyProvider = new SqlCurrencyProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlCurrencyProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlCurrencyProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlCurrencyProvider SqlCurrencyProvider
+		{
+			get {return CurrencyProvider as SqlCurrencyProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "MenusProvider"
+			
+		private SqlMenusProvider innerSqlMenusProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Menus"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override MenusProviderBase MenusProvider
+		{
+			get
+			{
+				if (innerSqlMenusProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlMenusProvider == null)
+						{
+							this.innerSqlMenusProvider = new SqlMenusProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlMenusProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlMenusProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlMenusProvider SqlMenusProvider
+		{
+			get {return MenusProvider as SqlMenusProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "CustInfoProvider"
+			
+		private SqlCustInfoProvider innerSqlCustInfoProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="CustInfo"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override CustInfoProviderBase CustInfoProvider
+		{
+			get
+			{
+				if (innerSqlCustInfoProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlCustInfoProvider == null)
+						{
+							this.innerSqlCustInfoProvider = new SqlCustInfoProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlCustInfoProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlCustInfoProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlCustInfoProvider SqlCustInfoProvider
+		{
+			get {return CustInfoProvider as SqlCustInfoProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "CsCardProvider"
+			
+		private SqlCsCardProvider innerSqlCsCardProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="CsCard"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override CsCardProviderBase CsCardProvider
+		{
+			get
+			{
+				if (innerSqlCsCardProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlCsCardProvider == null)
+						{
+							this.innerSqlCsCardProvider = new SqlCsCardProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlCsCardProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlCsCardProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlCsCardProvider SqlCsCardProvider
+		{
+			get {return CsCardProvider as SqlCsCardProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "CustomerProvider"
+			
+		private SqlCustomerProvider innerSqlCustomerProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Customer"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override CustomerProviderBase CustomerProvider
+		{
+			get
+			{
+				if (innerSqlCustomerProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlCustomerProvider == null)
+						{
+							this.innerSqlCustomerProvider = new SqlCustomerProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlCustomerProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlCustomerProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlCustomerProvider SqlCustomerProvider
+		{
+			get {return CustomerProvider as SqlCustomerProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "AccTransProvider"
+			
+		private SqlAccTransProvider innerSqlAccTransProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="AccTrans"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override AccTransProviderBase AccTransProvider
+		{
+			get
+			{
+				if (innerSqlAccTransProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlAccTransProvider == null)
+						{
+							this.innerSqlAccTransProvider = new SqlAccTransProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlAccTransProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlAccTransProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlAccTransProvider SqlAccTransProvider
+		{
+			get {return AccTransProvider as SqlAccTransProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "BookAttrProvider"
+			
+		private SqlBookAttrProvider innerSqlBookAttrProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="BookAttr"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override BookAttrProviderBase BookAttrProvider
+		{
+			get
+			{
+				if (innerSqlBookAttrProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlBookAttrProvider == null)
+						{
+							this.innerSqlBookAttrProvider = new SqlBookAttrProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlBookAttrProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlBookAttrProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlBookAttrProvider SqlBookAttrProvider
+		{
+			get {return BookAttrProvider as SqlBookAttrProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "AtrCodeProvider"
+			
+		private SqlAtrCodeProvider innerSqlAtrCodeProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="AtrCode"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override AtrCodeProviderBase AtrCodeProvider
+		{
+			get
+			{
+				if (innerSqlAtrCodeProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlAtrCodeProvider == null)
+						{
+							this.innerSqlAtrCodeProvider = new SqlAtrCodeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlAtrCodeProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlAtrCodeProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlAtrCodeProvider SqlAtrCodeProvider
+		{
+			get {return AtrCodeProvider as SqlAtrCodeProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "DateProvider"
+			
+		private SqlDateProvider innerSqlDateProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Date"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override DateProviderBase DateProvider
+		{
+			get
+			{
+				if (innerSqlDateProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlDateProvider == null)
+						{
+							this.innerSqlDateProvider = new SqlDateProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlDateProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlDateProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlDateProvider SqlDateProvider
+		{
+			get {return DateProvider as SqlDateProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "BarcodeProvider"
+			
+		private SqlBarcodeProvider innerSqlBarcodeProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Barcode"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override BarcodeProviderBase BarcodeProvider
+		{
+			get
+			{
+				if (innerSqlBarcodeProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlBarcodeProvider == null)
+						{
+							this.innerSqlBarcodeProvider = new SqlBarcodeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlBarcodeProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlBarcodeProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlBarcodeProvider SqlBarcodeProvider
+		{
+			get {return BarcodeProvider as SqlBarcodeProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "LanguageProvider"
+			
+		private SqlLanguageProvider innerSqlLanguageProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Language"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override LanguageProviderBase LanguageProvider
+		{
+			get
+			{
+				if (innerSqlLanguageProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlLanguageProvider == null)
+						{
+							this.innerSqlLanguageProvider = new SqlLanguageProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlLanguageProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlLanguageProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlLanguageProvider SqlLanguageProvider
+		{
+			get {return LanguageProvider as SqlLanguageProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "FilesProvider"
+			
+		private SqlFilesProvider innerSqlFilesProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Files"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override FilesProviderBase FilesProvider
+		{
+			get
+			{
+				if (innerSqlFilesProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlFilesProvider == null)
+						{
+							this.innerSqlFilesProvider = new SqlFilesProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlFilesProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlFilesProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlFilesProvider SqlFilesProvider
+		{
+			get {return FilesProvider as SqlFilesProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "LoanTranProvider"
+			
+		private SqlLoanTranProvider innerSqlLoanTranProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="LoanTran"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override LoanTranProviderBase LoanTranProvider
+		{
+			get
+			{
+				if (innerSqlLoanTranProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlLoanTranProvider == null)
+						{
+							this.innerSqlLoanTranProvider = new SqlLoanTranProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlLoanTranProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlLoanTranProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlLoanTranProvider SqlLoanTranProvider
+		{
+			get {return LoanTranProvider as SqlLoanTranProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "KitInfoProvider"
+			
+		private SqlKitInfoProvider innerSqlKitInfoProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="KitInfo"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override KitInfoProviderBase KitInfoProvider
+		{
+			get
+			{
+				if (innerSqlKitInfoProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlKitInfoProvider == null)
+						{
+							this.innerSqlKitInfoProvider = new SqlKitInfoProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlKitInfoProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlKitInfoProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlKitInfoProvider SqlKitInfoProvider
+		{
+			get {return KitInfoProvider as SqlKitInfoProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "LocationProvider"
+			
+		private SqlLocationProvider innerSqlLocationProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Location"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override LocationProviderBase LocationProvider
+		{
+			get
+			{
+				if (innerSqlLocationProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlLocationProvider == null)
+						{
+							this.innerSqlLocationProvider = new SqlLocationProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlLocationProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlLocationProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlLocationProvider SqlLocationProvider
+		{
+			get {return LocationProvider as SqlLocationProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "FrmTypeProvider"
+			
+		private SqlFrmTypeProvider innerSqlFrmTypeProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="FrmType"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override FrmTypeProviderBase FrmTypeProvider
+		{
+			get
+			{
+				if (innerSqlFrmTypeProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlFrmTypeProvider == null)
+						{
+							this.innerSqlFrmTypeProvider = new SqlFrmTypeProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlFrmTypeProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlFrmTypeProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlFrmTypeProvider SqlFrmTypeProvider
+		{
+			get {return FrmTypeProvider as SqlFrmTypeProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "KitProvider"
+			
+		private SqlKitProvider innerSqlKitProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Kit"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override KitProviderBase KitProvider
+		{
+			get
+			{
+				if (innerSqlKitProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlKitProvider == null)
+						{
+							this.innerSqlKitProvider = new SqlKitProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlKitProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlKitProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlKitProvider SqlKitProvider
+		{
+			get {return KitProvider as SqlKitProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "GoodsProvider"
+			
+		private SqlGoodsProvider innerSqlGoodsProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Goods"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override GoodsProviderBase GoodsProvider
+		{
+			get
+			{
+				if (innerSqlGoodsProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlGoodsProvider == null)
+						{
+							this.innerSqlGoodsProvider = new SqlGoodsProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlGoodsProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlGoodsProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlGoodsProvider SqlGoodsProvider
+		{
+			get {return GoodsProvider as SqlGoodsProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "UtilsProvider"
+			
+		private SqlUtilsProvider innerSqlUtilsProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="Utils"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override UtilsProviderBase UtilsProvider
+		{
+			get
+			{
+				if (innerSqlUtilsProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlUtilsProvider == null)
+						{
+							this.innerSqlUtilsProvider = new SqlUtilsProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlUtilsProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlUtilsProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlUtilsProvider SqlUtilsProvider
+		{
+			get {return UtilsProvider as SqlUtilsProvider;}
+		}
+		
+		#endregion
+		
+		
+		#region "GoodsGrpProvider"
+			
+		private SqlGoodsGrpProvider innerSqlGoodsGrpProvider;
+
+		///<summary>
+		/// This class is the Data Access Logic Component for the <see cref="GoodsGrp"/> business entity.
+		/// It exposes CRUD methods as well as selecting on index, foreign keys and custom stored procedures.
+		///</summary>
+		/// <value></value>
+		public override GoodsGrpProviderBase GoodsGrpProvider
+		{
+			get
+			{
+				if (innerSqlGoodsGrpProvider == null) 
+				{
+					lock (syncRoot) 
+					{
+						if (innerSqlGoodsGrpProvider == null)
+						{
+							this.innerSqlGoodsGrpProvider = new SqlGoodsGrpProvider(_connectionString, _useStoredProcedure, _providerInvariantName);
+						}
+					}
+				}
+				return innerSqlGoodsGrpProvider;
+			}
+		}
+		
+		/// <summary>
+		/// Gets the current <see cref="SqlGoodsGrpProvider"/>.
+		/// </summary>
+		/// <value></value>
+		public SqlGoodsGrpProvider SqlGoodsGrpProvider
+		{
+			get {return GoodsGrpProvider as SqlGoodsGrpProvider;}
 		}
 		
 		#endregion
