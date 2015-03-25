@@ -27,7 +27,3 @@ D:\Project\Quanlythuvien\QLTV\obj\Debug\Quanlythuvien.frmTraSach.resources
 D:\Project\Quanlythuvien\QLTV\obj\Debug\Quanlythuvien.csproj.GenerateResource.Cache
 D:\Project\Quanlythuvien\QLTV\bin\Debug\Quanlythuvien.exe
 D:\Project\Quanlythuvien\QLTV\bin\Debug\Quanlythuvien.pdb
-C:\Users\khanh\Documents\GitHub\tvqlLib\Quanlythuvien\QLTV\obj\Debug\Quanlythuvien.exe
-C:\Users\khanh\Documents\GitHub\tvqlLib\Quanlythuvien\QLTV\obj\Debug\Quanlythuvien.pdb
-C:\Users\khanh\Documents\GitHub\tvqlLib\Quanlythuvien\QuanLyThuVien\obj\Debug\Quanlythuvien.exe
-C:\Users\khanh\Documents\GitHub\tvqlLib\Quanlythuvien\QuanLyThuVien\obj\Debug\Quanlythuvien.pdb
