@@ -1,11 +1,13 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>12.0.21005.1</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0F642DBF-B074-4DB4-848C-556DFF087D8D}</ProjectGuid>
+    <ProjectGuid>{6BE20E56-490D-4206-99CD-4295E9B1B4D1}</ProjectGuid>
     <ProjectType>Local</ProjectType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OutputType>Library</OutputType>
     <ApplicationIcon>
     </ApplicationIcon>
@@ -88,6 +90,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
@@ -112,20 +118,14 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{96D914C9-AA6D-4D74-9520-DE4D0C7E7CB0}</Project>
+      <Project>{4EFCA8DD-C260-41C3-8B10-511550EE4D85}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{4CB53F99-EF2D-4690-9D9B-9B25B6637659}</Project>
+      <Project>{7CD1F6E1-A2D2-4270-8B11-EB6265ED961F}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
-  </ItemGroup>
-  <!-- Custom code folder: C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.Dao.SqlClient\App_Code -->
-  <ItemGroup>
-    <Compile Include="App_Code\**\*.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <!-- Include any user files -->
   <ItemGroup>
@@ -134,291 +134,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SqlReportsProvider.cs">
+    <Compile Include="SqlBookProvider.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SqlReportsProviderBase.generated.cs">
-      <DependentUpon>SqlReportsProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAccountProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAccountProviderBase.generated.cs">
-      <DependentUpon>SqlAccountProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStaffProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStaffProviderBase.generated.cs">
-      <DependentUpon>SqlStaffProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlPriceProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlPriceProviderBase.generated.cs">
-      <DependentUpon>SqlPriceProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStationsProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStationsProviderBase.generated.cs">
-      <DependentUpon>SqlStationsProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMofSysProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMofSysProviderBase.generated.cs">
-      <DependentUpon>SqlMofSysProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlPaymentOrderProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlPaymentOrderProviderBase.generated.cs">
-      <DependentUpon>SqlPaymentOrderProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlNonPluProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlNonPluProviderBase.generated.cs">
-      <DependentUpon>SqlNonPluProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStockInfoProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStockInfoProviderBase.generated.cs">
-      <DependentUpon>SqlStockInfoProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlOnOrderProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlOnOrderProviderBase.generated.cs">
-      <DependentUpon>SqlOnOrderProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUnitProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUnitProviderBase.generated.cs">
-      <DependentUpon>SqlUnitProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStoreProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlStoreProviderBase.generated.cs">
-      <DependentUpon>SqlStoreProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUserProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUserProviderBase.generated.cs">
-      <DependentUpon>SqlUserProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTrcodeProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTrcodeProviderBase.generated.cs">
-      <DependentUpon>SqlTrcodeProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUserGrpProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUserGrpProviderBase.generated.cs">
-      <DependentUpon>SqlUserGrpProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlSysvarProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlSysvarProviderBase.generated.cs">
-      <DependentUpon>SqlSysvarProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransValueProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransValueProviderBase.generated.cs">
-      <DependentUpon>SqlTransValueProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransactionProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransactionProviderBase.generated.cs">
-      <DependentUpon>SqlTransactionProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlModePaymentProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlModePaymentProviderBase.generated.cs">
-      <DependentUpon>SqlModePaymentProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransnumProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlTransnumProviderBase.generated.cs">
-      <DependentUpon>SqlTransnumProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMercLocationProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMercLocationProviderBase.generated.cs">
-      <DependentUpon>SqlMercLocationProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCurrencyProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCurrencyProviderBase.generated.cs">
-      <DependentUpon>SqlCurrencyProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMenusProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlMenusProviderBase.generated.cs">
-      <DependentUpon>SqlMenusProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCustInfoProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCustInfoProviderBase.generated.cs">
-      <DependentUpon>SqlCustInfoProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCsCardProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCsCardProviderBase.generated.cs">
-      <DependentUpon>SqlCsCardProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCustomerProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlCustomerProviderBase.generated.cs">
-      <DependentUpon>SqlCustomerProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAccTransProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAccTransProviderBase.generated.cs">
-      <DependentUpon>SqlAccTransProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlBookAttrProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlBookAttrProviderBase.generated.cs">
-      <DependentUpon>SqlBookAttrProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAtrCodeProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlAtrCodeProviderBase.generated.cs">
-      <DependentUpon>SqlAtrCodeProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlDateProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlDateProviderBase.generated.cs">
-      <DependentUpon>SqlDateProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlBarcodeProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlBarcodeProviderBase.generated.cs">
-      <DependentUpon>SqlBarcodeProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLanguageProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLanguageProviderBase.generated.cs">
-      <DependentUpon>SqlLanguageProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlFilesProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlFilesProviderBase.generated.cs">
-      <DependentUpon>SqlFilesProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLoanTranProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLoanTranProviderBase.generated.cs">
-      <DependentUpon>SqlLoanTranProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlKitInfoProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlKitInfoProviderBase.generated.cs">
-      <DependentUpon>SqlKitInfoProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLocationProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlLocationProviderBase.generated.cs">
-      <DependentUpon>SqlLocationProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlFrmTypeProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlFrmTypeProviderBase.generated.cs">
-      <DependentUpon>SqlFrmTypeProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlKitProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlKitProviderBase.generated.cs">
-      <DependentUpon>SqlKitProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlGoodsProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlGoodsProviderBase.generated.cs">
-      <DependentUpon>SqlGoodsProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUtilsProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlUtilsProviderBase.generated.cs">
-      <DependentUpon>SqlUtilsProvider.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlGoodsGrpProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SqlGoodsGrpProviderBase.generated.cs">
-      <DependentUpon>SqlGoodsGrpProvider.cs</DependentUpon>
+    <Compile Include="SqlBookProviderBase.generated.cs">
+      <DependentUpon>SqlBookProvider.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="..\AssemblyInfo.cs">

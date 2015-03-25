@@ -90,6 +90,51 @@ namespace LibraryManagement.Domain
 		/// <value>A string array that holds the columns names.</value>
 		string[] TableColumns {get;}
 		
+		/// <summary>
+		/// 
+		/// </summary>
+		System.Int64 BookId{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String BookCode{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String BookName{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String Author{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String PublisherId{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String BookCategoryId{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String YearPublisher{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.Int32? Quantity{ get; }
+
+		/// <summary>
+		/// 
+		/// </summary>
+		System.String Description{ get; }
+
 		
 		/// <summary>
 		///     Gets or sets the object that contains supplemental data about this object.

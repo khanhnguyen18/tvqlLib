@@ -15,10 +15,10 @@
       <property name="IncludeWCFDataAttributes">False</property>
       <property name="SerializeEntityState">False</property>
       <property name="EntLibVersion">v5_0</property>
-      <property name="VisualStudioVersion">v2005</property>
-      <property name="DotNetVersion">v2</property>
+      <property name="VisualStudioVersion">v2013</property>
+      <property name="DotNetVersion">v4</property>
       <property name="IncludeXmlAttributes">False</property>
-      <property name="CustomCodeFolderName">App_Code</property>
+      <property name="CustomCodeFolderName" />
       <property name="EqualitySemantics">Value</property>
       <property name="TimeStandard">Local</property>
       <property name="IsConnectionStringAzure">False</property>
@@ -103,167 +103,7 @@
         <tableList>
       <table>
         <owner>dbo</owner>
-        <name>tblReports</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblAccount</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblStaff</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblPrice</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblStations</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblMof_sys</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblPaymentOrder</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblNon_Plu</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblStockInfo</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblOn_order</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblUnit</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblStore</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblUser</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblTrcode</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblUserGrp</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblSysvar</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblTransValue</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblTransaction</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblModePayment</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblTransnum</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblMercLocation</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblCurrency</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblMenus</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblCust_info</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblCsCard</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblCustomer</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblAccTrans</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblBookAttr</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblAtrCode</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblDate</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblBarcode</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblLanguage</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblFiles</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblLoanTran</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblKit_info</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblLocation</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblFrmType</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblKit</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblGoods</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblUtils</name>
-      </table>
-      <table>
-        <owner>dbo</owner>
-        <name>tblGoodsGrp</name>
+        <name>Book</name>
       </table>
     </tableList>
       </property>
@@ -288,9 +128,10 @@
       <property name="ComparerClassNameFormat">{0}Comparer</property>
       <property name="EventHandlerClassNameFormat">{0}EventHandler</property>
       <property name="EventArgsClassNameFormat">{0}EventArgs</property>
-      <property name="ParseDbColDefaultVal">True</property>
+      <property name="ParseDbColDefaultVal">False</property>
       <property name="ChangeUnderscoreToPascalCase">True</property>
       <property name="UsePascalCasing">Style2</property>
+      <property name="AliasFilePath" />
       <property name="ProcedurePrefix" />
       <property name="CustomProcedureStartsWith">_{0}_</property>
       <property name="CSPUseDefaultValForNonNullableTypes">False</property>

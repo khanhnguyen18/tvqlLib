@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Collections;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
+using System.ComponentModel.DataAnnotations;
 #endregion
 
 namespace LibraryManagement.Domain
@@ -36,7 +37,7 @@ namespace LibraryManagement.Domain
 	    /// Determines whether the entity is being tracked by the Locator.
 	    /// </summary>
 		[NonSerialized]
-		
+		[Display(AutoGenerateField = false)]
 		private bool isEntityTracked = false;
 
 		/// <summary>
@@ -44,7 +45,7 @@ namespace LibraryManagement.Domain
 		/// useful when loading the entities from the database.
 		/// </summary>
 	    [NonSerialized] 
-		
+		[Display(AutoGenerateField = false)]
 		private bool suppressEntityEvents = false;
 		
 		
@@ -53,7 +54,7 @@ namespace LibraryManagement.Domain
 		/// Indicates that we are in the middle of an IBinding insert transaction.
 		/// </summary>
 		[NonSerialized]
-		
+		[Display(AutoGenerateField = false)]
 		protected bool bindingIsNew = true;
 	
 		///<summary>
@@ -64,14 +65,14 @@ namespace LibraryManagement.Domain
 		/// <summary>
 		///	The name of the underlying database table.
 		/// </summary>
-		
+		[Display(AutoGenerateField = false)]
 		public abstract string TableName { get;}
 		
 		/// <summary>
 		///		The name of the underlying database table's columns.
 		/// </summary>
 		/// <value>A string array that holds the columns names.</value>
-		
+		[Display(AutoGenerateField = false)]
 		public abstract string[] TableColumns {get;}
 
 		//private bool _isDeleted = false;
@@ -79,7 +80,7 @@ namespace LibraryManagement.Domain
 		/// 	True if object has been <see cref="MarkToDelete"/>. ReadOnly.
 		/// </summary>
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public virtual bool IsDeleted
 		{
 			get { return this.EntityState == EntityState.Deleted; }
@@ -91,7 +92,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		/// <remarks>True if object has been modified from its original state; otherwise False;</remarks>
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public virtual bool IsDirty
 		{
 			get { return this.EntityState != EntityState.Unchanged; }
@@ -104,7 +105,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		/// <remarks>True if objectis new; otherwise False;</remarks>
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public virtual bool IsNew
 		{
 			get { return this.EntityState == EntityState.Added; }
@@ -117,7 +118,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		/// <remarks>0=Unchanged, 1=Added, 2=Changed</remarks>
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public abstract EntityState EntityState { get; set; }
 		
 		/// <summary>
@@ -169,6 +170,60 @@ namespace LibraryManagement.Domain
 		public abstract object ParentCollection{get;set;}
 		
 		#region Common Columns
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "BookId is Required")]
+		public abstract System.Int64 BookId {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "BookCode is Required")]
+		public abstract System.String BookCode {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "BookName is Required")]
+		public abstract System.String BookName {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "Author is Required")]
+		public abstract System.String Author {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "PublisherId is Required")]
+		public abstract System.String PublisherId {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "BookCategoryId is Required")]
+		public abstract System.String BookCategoryId {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "YearPublisher is Required")]
+		public abstract System.String YearPublisher {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "Quantity is Required")]
+		public abstract System.Int32? Quantity {get;set;}
+		/// <summary>
+		/// 
+		/// </summary>
+		
+		[Required(ErrorMessage =  "Description is Required")]
+		public abstract System.String Description {get;set;}
 		#endregion		
 				
 		/// <summary>
@@ -213,7 +268,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		[System.ComponentModel.Bindable(false)]
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public bool IsEntityTracked 
 		{	
 			get
@@ -232,7 +287,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		[System.ComponentModel.Bindable(false)]
 		[BrowsableAttribute(false), XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public bool SuppressEntityEvents
 		{	
 			get
@@ -249,7 +304,7 @@ namespace LibraryManagement.Domain
 		/// Provides the tracking key for the <see cref="EntityLocator"/>
 		///</summary>
 		[XmlIgnoreAttribute(), BrowsableAttribute(false)]
-		
+		[Display(AutoGenerateField = false)]
 		public abstract string EntityTrackingKey {	get; set; }
 		
 		///<summary>
@@ -350,7 +405,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		/// <value></value>
 		/// <returns>An error message indicating what is wrong with this object. The default is an empty string ("").</returns>      
-		
+		[Display(AutoGenerateField = false)]
 		public string Error
 		{
 			get 
@@ -424,7 +479,7 @@ namespace LibraryManagement.Domain
 		/// </summary>
 		/// <returns><see cref="Validation.BrokenRulesList" /></returns>
 		[XmlIgnoreAttribute()]
-		
+		[Display(AutoGenerateField = false)]
 		public virtual Validation.BrokenRulesList BrokenRulesList
 		{
 			get
@@ -466,7 +521,7 @@ namespace LibraryManagement.Domain
 		/// <see langword="false" /> if the object validation rules that have indicated failure. 
 		/// </summary>
 		[Browsable(false)]
-		
+		[Display(AutoGenerateField = false)]
 		public virtual bool IsValid
 		{
 			get

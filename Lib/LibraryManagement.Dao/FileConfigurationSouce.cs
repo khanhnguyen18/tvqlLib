@@ -68,8 +68,7 @@ namespace LibraryManagement.Dao
             : base(GetRootedCurrentConfigurationFile(configurationFilepath), refresh, refreshInterval)
         {
             this.cachedConfigurationLock = new object();
-            this.fileMap = new ExeConfigurationFileMap();
-              this.fileMap.ExeConfigFilename = this.ConfigurationFilePath;
+            this.fileMap = new ExeConfigurationFileMap() { ExeConfigFilename = this.ConfigurationFilePath };
         }
 
 
@@ -94,9 +93,8 @@ namespace LibraryManagement.Dao
         {
             if (string.IsNullOrEmpty(sectionName)) throw new ArgumentException(Resources.ExceptionStringNullOrEmpty, "sectionName");
 
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-            fileMap.ExeConfigFilename = ConfigurationFilePath;
-            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+            var fileMap = new ExeConfigurationFileMap() { ExeConfigFilename = ConfigurationFilePath};
+            var config = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
 
             if (config.Sections.Get(sectionName) != null)
             {
@@ -232,10 +230,8 @@ namespace LibraryManagement.Dao
 
         private void InternalSave(string fileName, string section, ConfigurationSection configurationSection, string protectionProvider)
         {
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap(); 
-            fileMap.ExeConfigFilename = fileName;
-
-            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+            var fileMap = new ExeConfigurationFileMap { ExeConfigFilename = fileName };
+            var config = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
 
             if (typeof(ConnectionStringsSection) == configurationSection.GetType())
             {
@@ -361,7 +357,7 @@ namespace LibraryManagement.Dao
             string path = Path.IsPathRooted(configurationFile)
                             ? configurationFile
                             : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, configurationFile);
-
+                            
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException(
