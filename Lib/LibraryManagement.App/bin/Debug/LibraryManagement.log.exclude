@@ -1,0 +1,142 @@
+----------------------------------------
+Exceptions Error: 100 : Timestamp: 26/03/2015 4:04:37 PM
+Message: <Exception handlingInstanceId="f20f2a32-c687-4e40-b9aa-63153ed3beaa">
+  <Description>An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.</Description>
+  <DateTime>2015-03-26 23:04:37Z</DateTime>
+  <ExceptionType>System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ExceptionType>
+  <Message>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)</Message>
+  <Source>.Net SqlClient Data Provider</Source>
+  <HelpLink />
+  <Property name="Errors">System.Data.SqlClient.SqlErrorCollection</Property>
+  <Property name="Class">20</Property>
+  <Property name="LineNumber">0</Property>
+  <Property name="Number">-1</Property>
+  <Property name="Procedure">&lt;undefined value&gt;</Property>
+  <Property name="Server" />
+  <Property name="State">0</Property>
+  <Property name="ErrorCode">-2146232060</Property>
+  <Property name="Data">System.Collections.ListDictionaryInternal</Property>
+  <Property name="TargetSite">Void OnError(System.Data.SqlClient.SqlException, Boolean)</Property>
+  <StackTrace>   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetNewOpenConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetWrappedConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetOpenConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at LibraryManagement.Dao.Utility.ExecuteDataSet(Database database, DbCommand dbCommand) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\Utility.cs:line 461
+   at LibraryManagement.Dao.SqlClient.SqlGoodsProviderBase.GetListBook(TransactionManager transactionManager, Int32 start, Int32 pageLength) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\SqlGoodsProviderBase.generated.cs:line 1017
+   at LibraryManagement.Dao.Bases.GoodsProviderBaseCore.GetListBook(TransactionManager transactionManager) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\Bases\GoodsProviderBase.generatedCore.cs:line 194
+   at LibraryManagement.Service.GoodsServiceBase.GetListBook() in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\GoodsServiceBase.generated.cs:line 1335</StackTrace>
+  <additionalInfo>
+    <info name="MachineName" value="KHANH-NGUYEN-PC" />
+    <info name="TimeStamp" value="26/03/2015 4:04:37 PM" />
+    <info name="FullName" value="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <info name="AppDomainName" value="LibraryManagement.App.vshost.exe" />
+    <info name="ThreadIdentity" value="" />
+    <info name="WindowsIdentity" value="khanh-nguyen-pc\khanh" />
+  </additionalInfo>
+</Exception>
+Category: Exceptions
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Service Layer Exception Handling
+Machine: KHANH-NGUYEN-PC
+App Domain: LibraryManagement.App.vshost.exe
+ProcessId: 5068
+Process Name: C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.App.vshost.exe
+Thread Name: 
+Win32 ThreadId:920
+Extended Properties: HelpLink.ProdName - Microsoft SQL Server
+HelpLink.EvtSrc - MSSQLServer
+HelpLink.EvtID - -1
+HelpLink.BaseHelpUrl - http://go.microsoft.com/fwlink
+HelpLink.LinkId - 20476
+
+----------------------------------------
+----------------------------------------
+Exceptions Error: 100 : Timestamp: 26/03/2015 4:05:53 PM
+Message: <Exception handlingInstanceId="5cb9d41d-1f88-4115-ad6f-6bced60ea64a">
+  <Description>An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.</Description>
+  <DateTime>2015-03-26 23:05:53Z</DateTime>
+  <ExceptionType>System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ExceptionType>
+  <Message>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)</Message>
+  <Source>.Net SqlClient Data Provider</Source>
+  <HelpLink />
+  <Property name="Errors">System.Data.SqlClient.SqlErrorCollection</Property>
+  <Property name="Class">20</Property>
+  <Property name="LineNumber">0</Property>
+  <Property name="Number">-1</Property>
+  <Property name="Procedure">&lt;undefined value&gt;</Property>
+  <Property name="Server" />
+  <Property name="State">0</Property>
+  <Property name="ErrorCode">-2146232060</Property>
+  <Property name="Data">System.Collections.ListDictionaryInternal</Property>
+  <Property name="TargetSite">Void OnError(System.Data.SqlClient.SqlException, Boolean)</Property>
+  <StackTrace>   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetNewOpenConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetWrappedConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.GetOpenConnection()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at LibraryManagement.Dao.Utility.ExecuteDataSet(Database database, DbCommand dbCommand) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\Utility.cs:line 461
+   at LibraryManagement.Dao.SqlClient.SqlGoodsProviderBase.GetListBook(TransactionManager transactionManager, Int32 start, Int32 pageLength) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\SqlGoodsProviderBase.generated.cs:line 1017
+   at LibraryManagement.Dao.Bases.GoodsProviderBaseCore.GetListBook(TransactionManager transactionManager) in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\Bases\GoodsProviderBase.generatedCore.cs:line 194
+   at LibraryManagement.Service.GoodsServiceBase.GetListBook() in C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\GoodsServiceBase.generated.cs:line 1335</StackTrace>
+  <additionalInfo>
+    <info name="MachineName" value="KHANH-NGUYEN-PC" />
+    <info name="TimeStamp" value="26/03/2015 4:05:53 PM" />
+    <info name="FullName" value="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <info name="AppDomainName" value="LibraryManagement.App.vshost.exe" />
+    <info name="ThreadIdentity" value="" />
+    <info name="WindowsIdentity" value="khanh-nguyen-pc\khanh" />
+  </additionalInfo>
+</Exception>
+Category: Exceptions
+Priority: 0
+EventId: 100
+Severity: Error
+Title:Service Layer Exception Handling
+Machine: KHANH-NGUYEN-PC
+App Domain: LibraryManagement.App.vshost.exe
+ProcessId: 1204
+Process Name: C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.App.vshost.exe
+Thread Name: 
+Win32 ThreadId:4816
+Extended Properties: HelpLink.ProdName - Microsoft SQL Server
+HelpLink.EvtSrc - MSSQLServer
+HelpLink.EvtID - -1
+HelpLink.BaseHelpUrl - http://go.microsoft.com/fwlink
+HelpLink.LinkId - 20476
+
+----------------------------------------
