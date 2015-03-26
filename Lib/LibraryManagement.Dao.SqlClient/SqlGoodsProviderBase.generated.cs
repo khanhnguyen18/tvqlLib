@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _goodsId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Goods>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -392,7 +392,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Find_Dynamic", typeof(GoodsColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Find_Dynamic", typeof(GoodsColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -465,7 +465,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Goods> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -527,7 +527,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Goods> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -614,7 +614,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Goods GetByGoodsId(TransactionManager transactionManager, System.String _goodsId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_GetByGoodsId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_GetByGoodsId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
 			
@@ -862,7 +862,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Goods entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
             database.AddInParameter(commandWrapper, "@Barcode", DbType.AnsiString, entity.Barcode );
@@ -928,7 +928,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Goods entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblGoods_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblGoods_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
 			database.AddInParameter(commandWrapper, "@OriginalGoodsId", DbType.AnsiStringFixedLength, entity.OriginalGoodsId);
@@ -985,6 +985,47 @@ namespace LibraryManagement.Dao.SqlClient
 		
 		#region Custom Methods
 	
+
+		#region usp_tblGoods_GetListBook
+					
+		/// <summary>
+		///	This method wraps the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>	
+		/// <param name="start">Row number at which to start reading.</param>
+		/// <param name="pageLength">Number of rows to return.</param>
+		/// <param name="transactionManager"><see cref="TransactionManager"/> object.</param>
+		/// <remark>This method is generated from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public override DataSet GetListBook(TransactionManager transactionManager, int start, int pageLength )
+		{
+			SqlDatabase database = new SqlDatabase(this._connectionString);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usp_tblGoods_GetListBook", true);
+			
+	
+			
+			DataSet ds = null;
+			
+			//Provider Data Requesting Command Event
+			OnDataRequesting(new CommandEventArgs(commandWrapper, "GetListBook", (IEntity)null));
+
+			if (transactionManager != null)
+			{	
+				ds = Utility.ExecuteDataSet(transactionManager, commandWrapper);
+			}
+			else
+			{
+				ds = Utility.ExecuteDataSet(database, commandWrapper);
+			}
+			
+			//Provider Data Requested Command Event
+			OnDataRequested(new CommandEventArgs(commandWrapper, "GetListBook", (IEntity)null));
+
+			
+
+			
+			return ds;	
+		}
+		#endregion
 		#endregion
 	}//end class
 } // end namespace

@@ -17,8 +17,9 @@ namespace LibraryManagement.App
 
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new MainForm());
+            Application.Run(new BookListForm());
         }
     }
 }

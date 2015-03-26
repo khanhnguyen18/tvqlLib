@@ -96,7 +96,7 @@
     <Reference Include="System.Drawing" />
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{96D914C9-AA6D-4D74-9520-DE4D0C7E7CB0}</Project>
+      <Project>{9837870B-231D-4BF4-AD54-8ABDEA95091B}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <!-- check the GAC ? -->
@@ -106,17 +106,17 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{4CB53F99-EF2D-4690-9D9B-9B25B6637659}</Project>
+      <Project>{660B1A26-7E6E-48D9-A722-CDCCD543F3A2}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">
       <Name>LibraryManagement.Dao.SqlClient</Name>
-      <Project>{0F642DBF-B074-4DB4-848C-556DFF087D8D}</Project>
+      <Project>{D2E0935F-6B77-4929-8514-7DE843674831}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Service\LibraryManagement.Service.csproj">
       <Name>LibraryManagement.Service</Name>
-      <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
+      <Project>{123B1EDC-BB10-4BE5-9EC5-988C76DBADC9}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
   </ItemGroup>
@@ -435,6 +435,9 @@
       <SubType>Code</SubType>
     </Compile>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
   <PropertyGroup>

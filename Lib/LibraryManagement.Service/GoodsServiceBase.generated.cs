@@ -1305,6 +1305,97 @@ namespace LibraryManagement.Service
 		#endregion	N2N Relationships
 
 		#region Custom Methods
+		
+		#region usp_tblGoods_GetListBook
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public virtual  DataSet GetListBook()
+		{
+			#region Security check
+			// throws security exception if not authorized
+			SecurityContext.IsAuthorized("GetListBook");
+			#endregion Security check
+		
+			#region Initialisation
+			bool isBorrowedTransaction = false;
+			DataSet result = null; 
+			TransactionManager transactionManager = null; 
+			NetTiersProvider dataProvider = null;
+			#endregion Initialisation
+			
+			try
+            {
+				isBorrowedTransaction = ConnectionScope.Current.HasTransaction;				
+				
+				transactionManager = ConnectionScope.ValidateOrCreateTransaction(noTranByDefault);
+				dataProvider = ConnectionScope.Current.DataProvider;
+				result = dataProvider.GoodsProvider.GetListBook(transactionManager );
+	        
+			}
+            catch (Exception exc)
+            {
+				#region Handle transaction rollback and exception
+                if (transactionManager != null && transactionManager.IsOpen) 
+					transactionManager.Rollback();
+				
+				//Handle exception based on policy
+                if (DomainUtil.HandleException(exc, layerExceptionPolicy)) 
+					throw;
+				#endregion Handle transaction rollback and exception
+            }
+			
+			return result;		
+		}
+	
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <param name="start">Row number at which to start reading.</param>
+		/// <param name="pageLength">Number of rows to return.</param>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public virtual  DataSet GetListBook( int start, int pageLength)
+		{
+			#region Security check
+			// throws security exception if not authorized
+			SecurityContext.IsAuthorized("GetListBook");
+			#endregion Security check
+		
+			#region Initialisation
+			bool isBorrowedTransaction = false;
+			DataSet result = null; 
+			TransactionManager transactionManager = null; 
+			NetTiersProvider dataProvider = null;
+			#endregion Initialisation
+			
+			try
+            {
+				isBorrowedTransaction = ConnectionScope.Current.HasTransaction;				
+				
+				transactionManager = ConnectionScope.ValidateOrCreateTransaction(noTranByDefault);
+				dataProvider = ConnectionScope.Current.DataProvider;
+                
+				result = dataProvider.GoodsProvider.GetListBook(transactionManager, start, pageLength );
+	        
+			}
+            catch (Exception exc)
+            {
+				#region Handle transaction rollback and exception
+                if (transactionManager != null && transactionManager.IsOpen) 
+					transactionManager.Rollback();
+				
+				//Handle exception based on policy
+                if (DomainUtil.HandleException(exc, layerExceptionPolicy)) 
+					throw;
+				#endregion Handle transaction rollback and exception
+            }
+			
+			return result;
+		}
+		#endregion 
 		#endregion
 		
 		#region DeepLoad

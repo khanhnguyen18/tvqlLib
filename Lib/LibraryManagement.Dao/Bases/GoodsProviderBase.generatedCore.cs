@@ -159,6 +159,53 @@ namespace LibraryManagement.Dao.Bases
 		#region Custom Methods
 		
 		
+		#region usp_tblGoods_GetListBook 
+		
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public DataSet GetListBook()
+		{
+			return GetListBook(null, 0, int.MaxValue );
+		}
+		
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <param name="start">Row number at which to start reading, the first row is 0.</param>
+		/// <param name="pageLength">Number of rows to return.</param>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public DataSet GetListBook(int start, int pageLength)
+		{
+			return GetListBook(null, start, pageLength );
+		}
+				
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <param name="transactionManager"><see cref="TransactionManager"/> object</param>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public DataSet GetListBook(TransactionManager transactionManager)
+		{
+			return GetListBook(transactionManager, 0, int.MaxValue );
+		}
+		
+		/// <summary>
+		///	This method wrap the 'usp_tblGoods_GetListBook' stored procedure. 
+		/// </summary>
+		/// <param name="start">Row number at which to start reading, the first row is 0.</param>
+		/// <param name="pageLength">Number of rows to return.</param>
+		/// <param name="transactionManager"><see cref="TransactionManager"/> object</param>
+		/// <remark>This method is generate from a stored procedure.</remark>
+		/// <returns>A <see cref="DataSet"/> instance.</returns>
+		public abstract DataSet GetListBook(TransactionManager transactionManager, int start, int pageLength );
+		
+		#endregion
+		
 		#endregion
 
 		#region Helper Functions	

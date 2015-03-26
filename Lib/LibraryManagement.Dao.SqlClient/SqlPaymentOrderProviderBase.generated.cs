@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _transNum)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@TransNum", DbType.StringFixedLength, _transNum);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<PaymentOrder>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -329,7 +329,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Find_Dynamic", typeof(PaymentOrderColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Find_Dynamic", typeof(PaymentOrderColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -402,7 +402,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<PaymentOrder> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -464,7 +464,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<PaymentOrder> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -551,7 +551,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.PaymentOrder GetByTransNum(TransactionManager transactionManager, System.String _transNum, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_GetByTransNum", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_GetByTransNum", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@TransNum", DbType.StringFixedLength, _transNum);
 			
@@ -745,7 +745,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.PaymentOrder entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TransNum", DbType.StringFixedLength, entity.TransNum );
             database.AddInParameter(commandWrapper, "@Payer", DbType.String, entity.Payer );
@@ -802,7 +802,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.PaymentOrder entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPaymentOrder_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPaymentOrder_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TransNum", DbType.StringFixedLength, entity.TransNum );
 			database.AddInParameter(commandWrapper, "@OriginalTransNum", DbType.StringFixedLength, entity.OriginalTransNum);

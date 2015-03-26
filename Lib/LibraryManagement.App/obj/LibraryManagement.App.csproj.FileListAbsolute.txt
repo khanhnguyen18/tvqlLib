@@ -32,3 +32,5 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\Libr
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.xml
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.SqlClient.pdb
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.SqlClient.xml
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.RefForm.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.BookListForm.resources

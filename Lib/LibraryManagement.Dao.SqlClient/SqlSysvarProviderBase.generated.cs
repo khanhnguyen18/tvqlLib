@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _mCode)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@MCode", DbType.String, _mCode);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Sysvar>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -294,7 +294,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Find_Dynamic", typeof(SysvarColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Find_Dynamic", typeof(SysvarColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -367,7 +367,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Sysvar> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -429,7 +429,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Sysvar> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -516,7 +516,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Sysvar GetByMCode(TransactionManager transactionManager, System.String _mCode, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_GetByMCode", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_GetByMCode", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@MCode", DbType.String, _mCode);
 			
@@ -680,7 +680,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Sysvar entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@MCode", DbType.String, entity.MCode );
             database.AddInParameter(commandWrapper, "@MType", DbType.AnsiStringFixedLength, entity.MType );
@@ -732,7 +732,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Sysvar entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblSysvar_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblSysvar_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@MCode", DbType.String, entity.MCode );
 			database.AddInParameter(commandWrapper, "@OriginalMCode", DbType.String, entity.OriginalMCode);

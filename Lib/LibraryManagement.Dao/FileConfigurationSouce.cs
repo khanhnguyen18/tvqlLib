@@ -69,7 +69,7 @@ namespace LibraryManagement.Dao
         {
             this.cachedConfigurationLock = new object();
             this.fileMap = new ExeConfigurationFileMap();
-              this.fileMap.ExeConfigFilename = this.ConfigurationFilePath;
+            this.fileMap.ExeConfigFilename = this.ConfigurationFilePath;
         }
 
 
@@ -234,9 +234,8 @@ namespace LibraryManagement.Dao
         {
             ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap(); 
             fileMap.ExeConfigFilename = fileName;
-
             Configuration config = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
-
+            
             if (typeof(ConnectionStringsSection) == configurationSection.GetType())
             {
                 config.Sections.Remove(section);
@@ -361,7 +360,7 @@ namespace LibraryManagement.Dao
             string path = Path.IsPathRooted(configurationFile)
                             ? configurationFile
                             : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, configurationFile);
-
+                            
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException(
