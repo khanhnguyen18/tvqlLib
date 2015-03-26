@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _barcode)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Barcode", DbType.AnsiString, _barcode);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Barcode>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -273,7 +273,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Find_Dynamic", typeof(BarcodeColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Find_Dynamic", typeof(BarcodeColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -346,7 +346,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Barcode> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -408,7 +408,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Barcode> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -495,7 +495,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Barcode GetByBarcode(TransactionManager transactionManager, System.String _barcode, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_GetByBarcode", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_GetByBarcode", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Barcode", DbType.AnsiString, _barcode);
 			
@@ -641,7 +641,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Barcode entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Barcode", DbType.AnsiString, entity.Barcode );
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
@@ -690,7 +690,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Barcode entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblBarcode_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblBarcode_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Barcode", DbType.AnsiString, entity.Barcode );
 			database.AddInParameter(commandWrapper, "@OriginalBarcode", DbType.AnsiString, entity.OriginalBarcode);

@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.Decimal _idx)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Idx", DbType.Decimal, _idx);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<MercLocation>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -294,7 +294,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Find_Dynamic", typeof(MercLocationColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Find_Dynamic", typeof(MercLocationColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -367,7 +367,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<MercLocation> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -429,7 +429,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<MercLocation> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -516,7 +516,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.MercLocation GetByIdx(TransactionManager transactionManager, System.Decimal _idx, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_GetByIdx", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_GetByIdx", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Idx", DbType.Decimal, _idx);
 			
@@ -680,7 +680,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.MercLocation entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Insert", _useStoredProcedure);
 			
 			database.AddOutParameter(commandWrapper, "@Idx", DbType.Decimal, 9);
             database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, entity.StkId );
@@ -733,7 +733,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.MercLocation entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMercLocation_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMercLocation_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Idx", DbType.Decimal, entity.Idx );
             database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, entity.StkId );

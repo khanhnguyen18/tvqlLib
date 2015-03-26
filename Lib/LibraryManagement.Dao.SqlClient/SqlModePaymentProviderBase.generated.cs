@@ -113,7 +113,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _pmtMode, System.String _forex)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@PmtMode", DbType.StringFixedLength, _pmtMode);
 			database.AddInParameter(commandWrapper, "@Forex", DbType.StringFixedLength, _forex);
 			
@@ -169,7 +169,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<ModePayment>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -303,7 +303,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Find_Dynamic", typeof(ModePaymentColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Find_Dynamic", typeof(ModePaymentColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -376,7 +376,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<ModePayment> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -438,7 +438,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<ModePayment> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -526,7 +526,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.ModePayment GetByPmtModeForex(TransactionManager transactionManager, System.String _pmtMode, System.String _forex, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_GetByPmtModeForex", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_GetByPmtModeForex", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@PmtMode", DbType.StringFixedLength, _pmtMode);
 				database.AddInParameter(commandWrapper, "@Forex", DbType.StringFixedLength, _forex);
@@ -697,7 +697,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.ModePayment entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@PmtMode", DbType.StringFixedLength, entity.PmtMode );
             database.AddInParameter(commandWrapper, "@Description", DbType.String, entity.Description );
@@ -751,7 +751,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.ModePayment entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblModePayment_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblModePayment_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@PmtMode", DbType.StringFixedLength, entity.PmtMode );
 			database.AddInParameter(commandWrapper, "@OriginalPmtMode", DbType.StringFixedLength, entity.OriginalPmtMode);

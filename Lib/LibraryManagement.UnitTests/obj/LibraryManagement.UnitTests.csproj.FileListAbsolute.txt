@@ -1,4 +1,35 @@
-C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.dll.config
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\entlib.config
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.pdb
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.xml
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.SqlClient.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Domain.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Service.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Domain.xml
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.SqlClient.pdb
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.SqlClient.xml
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.pdb
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.xml
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Service.pdb
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Service.xml
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\obj\Debug\LibraryManagement.UnitTests.dll
+C:\Users\khanh\Documents\CodeSmith Generator\Templates\NetTiers\Output\LibraryManagement.UnitTests\obj\Debug\LibraryManagement.UnitTests.pdb
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.dll.config
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\entlib.config
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.UnitTests.dll
@@ -28,5 +59,6 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debu
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Dao.xml
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Service.pdb
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\LibraryManagement.Service.xml
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Debug\LibraryManagement.UnitTests.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Debug\LibraryManagement.UnitTests.pdb

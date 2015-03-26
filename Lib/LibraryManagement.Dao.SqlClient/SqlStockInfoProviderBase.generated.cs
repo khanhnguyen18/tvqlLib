@@ -113,7 +113,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _id, System.String _goodsId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Id", DbType.AnsiStringFixedLength, _id);
 			database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
 			
@@ -169,7 +169,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<StockInfo>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -359,7 +359,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Find_Dynamic", typeof(StockInfoColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Find_Dynamic", typeof(StockInfoColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -432,7 +432,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<StockInfo> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -494,7 +494,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<StockInfo> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -582,7 +582,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.StockInfo GetByIdGoodsId(TransactionManager transactionManager, System.String _id, System.String _goodsId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_GetByIdGoodsId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_GetByIdGoodsId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Id", DbType.AnsiStringFixedLength, _id);
 				database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
@@ -801,7 +801,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.StockInfo entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Id", DbType.AnsiStringFixedLength, entity.Id );
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
@@ -863,7 +863,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.StockInfo entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblStockInfo_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblStockInfo_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Id", DbType.AnsiStringFixedLength, entity.Id );
 			database.AddInParameter(commandWrapper, "@OriginalId", DbType.AnsiStringFixedLength, entity.OriginalId);

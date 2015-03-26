@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _trCode)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@TrCode", DbType.AnsiStringFixedLength, _trCode);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Trcode>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -322,7 +322,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Find_Dynamic", typeof(TrcodeColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Find_Dynamic", typeof(TrcodeColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -395,7 +395,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Trcode> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -457,7 +457,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Trcode> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -544,7 +544,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Trcode GetByTrCode(TransactionManager transactionManager, System.String _trCode, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_GetByTrCode", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_GetByTrCode", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@TrCode", DbType.AnsiStringFixedLength, _trCode);
 			
@@ -732,7 +732,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Trcode entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TrCode", DbType.AnsiStringFixedLength, entity.TrCode );
             database.AddInParameter(commandWrapper, "@TrName", DbType.String, entity.TrName );
@@ -788,7 +788,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Trcode entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTrcode_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTrcode_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TrCode", DbType.AnsiStringFixedLength, entity.TrCode );
 			database.AddInParameter(commandWrapper, "@OriginalTrCode", DbType.AnsiStringFixedLength, entity.OriginalTrCode);

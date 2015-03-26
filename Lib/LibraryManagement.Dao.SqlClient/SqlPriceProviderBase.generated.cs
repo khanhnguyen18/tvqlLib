@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _goodsId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Price>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -322,7 +322,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Find_Dynamic", typeof(PriceColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Find_Dynamic", typeof(PriceColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -395,7 +395,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Price> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -457,7 +457,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Price> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -544,7 +544,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Price GetByGoodsId(TransactionManager transactionManager, System.String _goodsId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_GetByGoodsId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_GetByGoodsId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, _goodsId);
 			
@@ -732,7 +732,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Price entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
 			database.AddInParameter(commandWrapper, "@Rtprice", DbType.Decimal, (entity.Rtprice.HasValue ? (object) entity.Rtprice  : System.DBNull.Value));
@@ -788,7 +788,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Price entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblPrice_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblPrice_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.AnsiStringFixedLength, entity.GoodsId );
 			database.AddInParameter(commandWrapper, "@OriginalGoodsId", DbType.AnsiStringFixedLength, entity.OriginalGoodsId);

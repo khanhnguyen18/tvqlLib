@@ -141,7 +141,7 @@ namespace LibraryManagement.App
             this.Lbl_IpAddress.Name = "Lbl_IpAddress";
             this.Lbl_IpAddress.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // bar_1
+            // menuBar
             // 
             this.menuBar.BarName = "Custom 4";
             this.menuBar.DockCol = 0;
@@ -340,6 +340,7 @@ namespace LibraryManagement.App
             this.iLoan.Caption = "Phiếu cho mượn sách";
             this.iLoan.Name = "iLoan";
             this.iLoan.SmallImageIndex = 17;
+            this.iLoan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iLoan_LinkClicked);
             // 
             // iReturn
             // 

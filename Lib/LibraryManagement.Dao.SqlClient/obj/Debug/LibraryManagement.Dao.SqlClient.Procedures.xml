@@ -4,7 +4,7 @@
 <database includeDrop="true">LibraryManagement</database>
 <procedures>
 		
-		<procedure owner="dbo" name="tblReports_Get_List" >
+		<procedure owner="dbo" name="usptblReports_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblReports_GetPaged" >
+		<procedure owner="dbo" name="usptblReports_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -113,7 +113,7 @@
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblReports_Insert" grant="">
+		<procedure owner="dbo" name="usptblReports_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -160,7 +160,7 @@
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblReports_Update" grant="">
+		<procedure owner="dbo" name="usptblReports_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -200,7 +200,7 @@
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblReports_Delete" grant="">
+		<procedure owner="dbo" name="usptblReports_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -219,7 +219,7 @@
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblReports_GetByIdx" >
+		<procedure owner="dbo" name="usptblReports_GetByIdx" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -250,7 +250,7 @@
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblReports_Find" >
+		<procedure owner="dbo" name="usptblReports_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -324,7 +324,7 @@
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblReports_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblReports_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -372,7 +372,7 @@
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAccount_Get_List" >
+		<procedure owner="dbo" name="usptblAccount_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -405,7 +405,7 @@
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAccount_GetPaged" >
+		<procedure owner="dbo" name="usptblAccount_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -486,7 +486,7 @@
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblAccount_Insert" grant="">
+		<procedure owner="dbo" name="usptblAccount_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -545,7 +545,7 @@
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccount_Update" grant="">
+		<procedure owner="dbo" name="usptblAccount_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -595,7 +595,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccount_Delete" grant="">
+		<procedure owner="dbo" name="usptblAccount_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -616,7 +616,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccount_GetByBranchAccountId" >
+		<procedure owner="dbo" name="usptblAccount_GetByBranchAccountId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -653,7 +653,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblAccount_Find" >
+		<procedure owner="dbo" name="usptblAccount_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -747,7 +747,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblAccount_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblAccount_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -796,7 +796,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStaff_Get_List" >
+		<procedure owner="dbo" name="usptblStaff_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -831,7 +831,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStaff_GetPaged" >
+		<procedure owner="dbo" name="usptblStaff_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -911,7 +911,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblStaff_Insert" grant="">
+		<procedure owner="dbo" name="usptblStaff_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -976,7 +976,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStaff_Update" grant="">
+		<procedure owner="dbo" name="usptblStaff_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1028,7 +1028,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStaff_Delete" grant="">
+		<procedure owner="dbo" name="usptblStaff_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1047,7 +1047,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStaff_GetById" >
+		<procedure owner="dbo" name="usptblStaff_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1084,7 +1084,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblStaff_Find" >
+		<procedure owner="dbo" name="usptblStaff_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1188,7 +1188,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblStaff_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblStaff_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1236,7 +1236,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblPrice_Get_List" >
+		<procedure owner="dbo" name="usptblPrice_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1266,7 +1266,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblPrice_GetPaged" >
+		<procedure owner="dbo" name="usptblPrice_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1346,7 +1346,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblPrice_Insert" grant="">
+		<procedure owner="dbo" name="usptblPrice_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1396,7 +1396,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPrice_Update" grant="">
+		<procedure owner="dbo" name="usptblPrice_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1438,7 +1438,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPrice_Delete" grant="">
+		<procedure owner="dbo" name="usptblPrice_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1457,7 +1457,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPrice_GetByGoodsId" >
+		<procedure owner="dbo" name="usptblPrice_GetByGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1489,7 +1489,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblPrice_Find" >
+		<procedure owner="dbo" name="usptblPrice_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1568,7 +1568,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblPrice_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblPrice_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1616,7 +1616,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStations_Get_List" >
+		<procedure owner="dbo" name="usptblStations_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1648,7 +1648,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStations_GetPaged" >
+		<procedure owner="dbo" name="usptblStations_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1728,7 +1728,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblStations_Insert" grant="">
+		<procedure owner="dbo" name="usptblStations_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1784,7 +1784,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStations_Update" grant="">
+		<procedure owner="dbo" name="usptblStations_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1830,7 +1830,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStations_Delete" grant="">
+		<procedure owner="dbo" name="usptblStations_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1849,7 +1849,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStations_GetById" >
+		<procedure owner="dbo" name="usptblStations_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1883,7 +1883,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblStations_Find" >
+		<procedure owner="dbo" name="usptblStations_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -1972,7 +1972,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblStations_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblStations_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2020,7 +2020,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMof_sys_Get_List" >
+		<procedure owner="dbo" name="usptblMof_sys_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2051,7 +2051,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMof_sys_GetPaged" >
+		<procedure owner="dbo" name="usptblMof_sys_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2131,7 +2131,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblMof_sys_Insert" grant="">
+		<procedure owner="dbo" name="usptblMof_sys_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2184,7 +2184,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMof_sys_Update" grant="">
+		<procedure owner="dbo" name="usptblMof_sys_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2226,7 +2226,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMof_sys_Delete" grant="">
+		<procedure owner="dbo" name="usptblMof_sys_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2245,7 +2245,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMof_sys_GetById" >
+		<procedure owner="dbo" name="usptblMof_sys_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2278,7 +2278,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblMof_sys_Find" >
+		<procedure owner="dbo" name="usptblMof_sys_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2362,7 +2362,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblMof_sys_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblMof_sys_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2410,7 +2410,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblPaymentOrder_Get_List" >
+		<procedure owner="dbo" name="usptblPaymentOrder_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2441,7 +2441,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblPaymentOrder_GetPaged" >
+		<procedure owner="dbo" name="usptblPaymentOrder_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2521,7 +2521,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblPaymentOrder_Insert" grant="">
+		<procedure owner="dbo" name="usptblPaymentOrder_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2574,7 +2574,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPaymentOrder_Update" grant="">
+		<procedure owner="dbo" name="usptblPaymentOrder_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2618,7 +2618,7 @@ AND [account_id] = @OriginalAccountId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPaymentOrder_Delete" grant="">
+		<procedure owner="dbo" name="usptblPaymentOrder_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2637,7 +2637,7 @@ AND [account_id] = @OriginalAccountId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblPaymentOrder_GetByTransNum" >
+		<procedure owner="dbo" name="usptblPaymentOrder_GetByTransNum" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2670,7 +2670,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblPaymentOrder_Find" >
+		<procedure owner="dbo" name="usptblPaymentOrder_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2754,7 +2754,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblPaymentOrder_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblPaymentOrder_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2802,7 +2802,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblNon_Plu_Get_List" >
+		<procedure owner="dbo" name="usptblNon_Plu_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2825,7 +2825,7 @@ AND [account_id] = @OriginalAccountId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblNon_Plu_GetPaged" >
+		<procedure owner="dbo" name="usptblNon_Plu_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2906,7 +2906,7 @@ AND [account_id] = @OriginalAccountId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblNon_Plu_Insert" grant="">
+		<procedure owner="dbo" name="usptblNon_Plu_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2935,7 +2935,7 @@ AND [account_id] = @OriginalAccountId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblNon_Plu_Update" grant="">
+		<procedure owner="dbo" name="usptblNon_Plu_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2965,7 +2965,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblNon_Plu_Delete" grant="">
+		<procedure owner="dbo" name="usptblNon_Plu_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -2986,7 +2986,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblNon_Plu_GetByNpluCodeGoodsId" >
+		<procedure owner="dbo" name="usptblNon_Plu_GetByNpluCodeGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3013,7 +3013,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblNon_Plu_Find" >
+		<procedure owner="dbo" name="usptblNon_Plu_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3057,7 +3057,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblNon_Plu_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblNon_Plu_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3106,7 +3106,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStockInfo_Get_List" >
+		<procedure owner="dbo" name="usptblStockInfo_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3141,7 +3141,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStockInfo_GetPaged" >
+		<procedure owner="dbo" name="usptblStockInfo_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3222,7 +3222,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblStockInfo_Insert" grant="">
+		<procedure owner="dbo" name="usptblStockInfo_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3287,7 +3287,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStockInfo_Update" grant="">
+		<procedure owner="dbo" name="usptblStockInfo_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3341,7 +3341,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStockInfo_Delete" grant="">
+		<procedure owner="dbo" name="usptblStockInfo_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3362,7 +3362,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStockInfo_GetByIdGoodsId" >
+		<procedure owner="dbo" name="usptblStockInfo_GetByIdGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3401,7 +3401,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblStockInfo_Find" >
+		<procedure owner="dbo" name="usptblStockInfo_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3505,7 +3505,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblStockInfo_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblStockInfo_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3554,7 +3554,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblOn_order_Get_List" >
+		<procedure owner="dbo" name="usptblOn_order_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3591,7 +3591,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblOn_order_GetPaged" >
+		<procedure owner="dbo" name="usptblOn_order_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3672,7 +3672,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblOn_order_Insert" grant="">
+		<procedure owner="dbo" name="usptblOn_order_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3743,7 +3743,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblOn_order_Update" grant="">
+		<procedure owner="dbo" name="usptblOn_order_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3801,7 +3801,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblOn_order_Delete" grant="">
+		<procedure owner="dbo" name="usptblOn_order_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3822,7 +3822,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblOn_order_GetByTransNumGoodsId" >
+		<procedure owner="dbo" name="usptblOn_order_GetByTransNumGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3863,7 +3863,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblOn_order_Find" >
+		<procedure owner="dbo" name="usptblOn_order_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -3977,7 +3977,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblOn_order_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblOn_order_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4026,7 +4026,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUnit_Get_List" >
+		<procedure owner="dbo" name="usptblUnit_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4050,7 +4050,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUnit_GetPaged" >
+		<procedure owner="dbo" name="usptblUnit_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4130,7 +4130,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblUnit_Insert" grant="">
+		<procedure owner="dbo" name="usptblUnit_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4162,7 +4162,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUnit_Update" grant="">
+		<procedure owner="dbo" name="usptblUnit_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4192,7 +4192,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUnit_Delete" grant="">
+		<procedure owner="dbo" name="usptblUnit_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4211,7 +4211,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUnit_GetById" >
+		<procedure owner="dbo" name="usptblUnit_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4237,7 +4237,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblUnit_Find" >
+		<procedure owner="dbo" name="usptblUnit_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4286,7 +4286,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblUnit_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblUnit_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4334,7 +4334,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStore_Get_List" >
+		<procedure owner="dbo" name="usptblStore_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4370,7 +4370,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblStore_GetPaged" >
+		<procedure owner="dbo" name="usptblStore_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4450,7 +4450,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblStore_Insert" grant="">
+		<procedure owner="dbo" name="usptblStore_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4518,7 +4518,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStore_Update" grant="">
+		<procedure owner="dbo" name="usptblStore_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4572,7 +4572,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStore_Delete" grant="">
+		<procedure owner="dbo" name="usptblStore_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4591,7 +4591,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblStore_GetById" >
+		<procedure owner="dbo" name="usptblStore_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4629,7 +4629,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblStore_Find" >
+		<procedure owner="dbo" name="usptblStore_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4738,7 +4738,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblStore_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblStore_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4786,7 +4786,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUser_Get_List" >
+		<procedure owner="dbo" name="usptblUser_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4815,7 +4815,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUser_GetPaged" >
+		<procedure owner="dbo" name="usptblUser_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4895,7 +4895,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblUser_Insert" grant="">
+		<procedure owner="dbo" name="usptblUser_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4942,7 +4942,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUser_Update" grant="">
+		<procedure owner="dbo" name="usptblUser_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -4982,7 +4982,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUser_Delete" grant="">
+		<procedure owner="dbo" name="usptblUser_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5001,7 +5001,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUser_GetById" >
+		<procedure owner="dbo" name="usptblUser_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5032,7 +5032,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblUser_Find" >
+		<procedure owner="dbo" name="usptblUser_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5106,7 +5106,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblUser_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblUser_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5154,7 +5154,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTrcode_Get_List" >
+		<procedure owner="dbo" name="usptblTrcode_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5184,7 +5184,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTrcode_GetPaged" >
+		<procedure owner="dbo" name="usptblTrcode_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5264,7 +5264,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblTrcode_Insert" grant="">
+		<procedure owner="dbo" name="usptblTrcode_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5314,7 +5314,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTrcode_Update" grant="">
+		<procedure owner="dbo" name="usptblTrcode_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5356,7 +5356,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTrcode_Delete" grant="">
+		<procedure owner="dbo" name="usptblTrcode_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5375,7 +5375,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTrcode_GetByTrCode" >
+		<procedure owner="dbo" name="usptblTrcode_GetByTrCode" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5407,7 +5407,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblTrcode_Find" >
+		<procedure owner="dbo" name="usptblTrcode_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5486,7 +5486,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblTrcode_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblTrcode_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5534,7 +5534,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUserGrp_Get_List" >
+		<procedure owner="dbo" name="usptblUserGrp_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5561,7 +5561,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUserGrp_GetPaged" >
+		<procedure owner="dbo" name="usptblUserGrp_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5641,7 +5641,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblUserGrp_Insert" grant="">
+		<procedure owner="dbo" name="usptblUserGrp_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5682,7 +5682,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUserGrp_Update" grant="">
+		<procedure owner="dbo" name="usptblUserGrp_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5718,7 +5718,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUserGrp_Delete" grant="">
+		<procedure owner="dbo" name="usptblUserGrp_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5737,7 +5737,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUserGrp_GetById" >
+		<procedure owner="dbo" name="usptblUserGrp_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5766,7 +5766,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblUserGrp_Find" >
+		<procedure owner="dbo" name="usptblUserGrp_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5830,7 +5830,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblUserGrp_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblUserGrp_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5878,7 +5878,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblSysvar_Get_List" >
+		<procedure owner="dbo" name="usptblSysvar_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5904,7 +5904,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblSysvar_GetPaged" >
+		<procedure owner="dbo" name="usptblSysvar_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -5984,7 +5984,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblSysvar_Insert" grant="">
+		<procedure owner="dbo" name="usptblSysvar_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6022,7 +6022,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblSysvar_Update" grant="">
+		<procedure owner="dbo" name="usptblSysvar_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6056,7 +6056,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblSysvar_Delete" grant="">
+		<procedure owner="dbo" name="usptblSysvar_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6075,7 +6075,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblSysvar_GetByMCode" >
+		<procedure owner="dbo" name="usptblSysvar_GetByMCode" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6103,7 +6103,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblSysvar_Find" >
+		<procedure owner="dbo" name="usptblSysvar_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6162,7 +6162,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblSysvar_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblSysvar_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6210,7 +6210,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransValue_Get_List" >
+		<procedure owner="dbo" name="usptblTransValue_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6235,7 +6235,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransValue_GetPaged" >
+		<procedure owner="dbo" name="usptblTransValue_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6315,7 +6315,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblTransValue_Insert" grant="">
+		<procedure owner="dbo" name="usptblTransValue_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6350,7 +6350,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransValue_Update" grant="">
+		<procedure owner="dbo" name="usptblTransValue_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6382,7 +6382,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransValue_Delete" grant="">
+		<procedure owner="dbo" name="usptblTransValue_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6401,7 +6401,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransValue_GetByTransNum" >
+		<procedure owner="dbo" name="usptblTransValue_GetByTransNum" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6428,7 +6428,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblTransValue_Find" >
+		<procedure owner="dbo" name="usptblTransValue_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6482,7 +6482,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblTransValue_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblTransValue_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6530,7 +6530,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransaction_Get_List" >
+		<procedure owner="dbo" name="usptblTransaction_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6592,7 +6592,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransaction_GetPaged" >
+		<procedure owner="dbo" name="usptblTransaction_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6672,7 +6672,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblTransaction_Insert" grant="">
+		<procedure owner="dbo" name="usptblTransaction_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6818,7 +6818,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransaction_Update" grant="">
+		<procedure owner="dbo" name="usptblTransaction_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6922,7 +6922,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransaction_Delete" grant="">
+		<procedure owner="dbo" name="usptblTransaction_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -6941,7 +6941,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransaction_GetByIdx" >
+		<procedure owner="dbo" name="usptblTransaction_GetByIdx" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7005,7 +7005,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblTransaction_Find" >
+		<procedure owner="dbo" name="usptblTransaction_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7244,7 +7244,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblTransaction_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblTransaction_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7292,7 +7292,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblModePayment_Get_List" >
+		<procedure owner="dbo" name="usptblModePayment_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7319,7 +7319,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblModePayment_GetPaged" >
+		<procedure owner="dbo" name="usptblModePayment_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7400,7 +7400,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblModePayment_Insert" grant="">
+		<procedure owner="dbo" name="usptblModePayment_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7441,7 +7441,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblModePayment_Update" grant="">
+		<procedure owner="dbo" name="usptblModePayment_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7479,7 +7479,7 @@ AND [forex] = @OriginalForex
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblModePayment_Delete" grant="">
+		<procedure owner="dbo" name="usptblModePayment_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7500,7 +7500,7 @@ AND [forex] = @OriginalForex
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblModePayment_GetByPmtModeForex" >
+		<procedure owner="dbo" name="usptblModePayment_GetByPmtModeForex" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7531,7 +7531,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblModePayment_Find" >
+		<procedure owner="dbo" name="usptblModePayment_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7595,7 +7595,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblModePayment_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblModePayment_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7644,7 +7644,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransnum_Get_List" >
+		<procedure owner="dbo" name="usptblTransnum_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7668,7 +7668,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblTransnum_GetPaged" >
+		<procedure owner="dbo" name="usptblTransnum_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7748,7 +7748,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblTransnum_Insert" grant="">
+		<procedure owner="dbo" name="usptblTransnum_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7780,7 +7780,7 @@ AND [forex] = @OriginalForex
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransnum_Update" grant="">
+		<procedure owner="dbo" name="usptblTransnum_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7810,7 +7810,7 @@ AND [forex] = @OriginalForex
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransnum_Delete" grant="">
+		<procedure owner="dbo" name="usptblTransnum_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7829,7 +7829,7 @@ AND [forex] = @OriginalForex
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblTransnum_GetByTransType" >
+		<procedure owner="dbo" name="usptblTransnum_GetByTransType" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7855,7 +7855,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblTransnum_Find" >
+		<procedure owner="dbo" name="usptblTransnum_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7904,7 +7904,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblTransnum_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblTransnum_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7952,7 +7952,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMercLocation_Get_List" >
+		<procedure owner="dbo" name="usptblMercLocation_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -7978,7 +7978,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMercLocation_GetPaged" >
+		<procedure owner="dbo" name="usptblMercLocation_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8058,7 +8058,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblMercLocation_Insert" grant="">
+		<procedure owner="dbo" name="usptblMercLocation_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8096,7 +8096,7 @@ AND [forex] = @OriginalForex
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMercLocation_Update" grant="">
+		<procedure owner="dbo" name="usptblMercLocation_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8128,7 +8128,7 @@ AND [forex] = @OriginalForex
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMercLocation_Delete" grant="">
+		<procedure owner="dbo" name="usptblMercLocation_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8147,7 +8147,7 @@ AND [forex] = @OriginalForex
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMercLocation_GetByIdx" >
+		<procedure owner="dbo" name="usptblMercLocation_GetByIdx" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8175,7 +8175,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblMercLocation_Find" >
+		<procedure owner="dbo" name="usptblMercLocation_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8234,7 +8234,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblMercLocation_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblMercLocation_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8282,7 +8282,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCurrency_Get_List" >
+		<procedure owner="dbo" name="usptblCurrency_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8307,7 +8307,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCurrency_GetPaged" >
+		<procedure owner="dbo" name="usptblCurrency_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8387,7 +8387,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblCurrency_Insert" grant="">
+		<procedure owner="dbo" name="usptblCurrency_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8422,7 +8422,7 @@ AND [forex] = @OriginalForex
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCurrency_Update" grant="">
+		<procedure owner="dbo" name="usptblCurrency_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8454,7 +8454,7 @@ AND [forex] = @OriginalForex
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCurrency_Delete" grant="">
+		<procedure owner="dbo" name="usptblCurrency_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8473,7 +8473,7 @@ AND [forex] = @OriginalForex
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCurrency_GetById" >
+		<procedure owner="dbo" name="usptblCurrency_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8500,7 +8500,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblCurrency_Find" >
+		<procedure owner="dbo" name="usptblCurrency_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8554,7 +8554,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblCurrency_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblCurrency_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8602,7 +8602,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMenus_Get_List" >
+		<procedure owner="dbo" name="usptblMenus_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8635,7 +8635,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblMenus_GetPaged" >
+		<procedure owner="dbo" name="usptblMenus_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8715,7 +8715,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblMenus_Insert" grant="">
+		<procedure owner="dbo" name="usptblMenus_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8774,7 +8774,7 @@ AND [forex] = @OriginalForex
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMenus_Update" grant="">
+		<procedure owner="dbo" name="usptblMenus_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8820,7 +8820,7 @@ AND [forex] = @OriginalForex
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMenus_Delete" grant="">
+		<procedure owner="dbo" name="usptblMenus_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8839,7 +8839,7 @@ AND [forex] = @OriginalForex
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblMenus_GetById" >
+		<procedure owner="dbo" name="usptblMenus_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8874,7 +8874,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblMenus_Find" >
+		<procedure owner="dbo" name="usptblMenus_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -8968,7 +8968,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblMenus_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblMenus_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9016,7 +9016,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCust_info_Get_List" >
+		<procedure owner="dbo" name="usptblCust_info_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9045,7 +9045,7 @@ AND [forex] = @OriginalForex
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCust_info_GetPaged" >
+		<procedure owner="dbo" name="usptblCust_info_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9126,7 +9126,7 @@ AND [forex] = @OriginalForex
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblCust_info_Insert" grant="">
+		<procedure owner="dbo" name="usptblCust_info_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9173,7 +9173,7 @@ AND [forex] = @OriginalForex
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCust_info_Update" grant="">
+		<procedure owner="dbo" name="usptblCust_info_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9215,7 +9215,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCust_info_Delete" grant="">
+		<procedure owner="dbo" name="usptblCust_info_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9236,7 +9236,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCust_info_GetByCustIdGoodsId" >
+		<procedure owner="dbo" name="usptblCust_info_GetByCustIdGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9269,7 +9269,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblCust_info_Find" >
+		<procedure owner="dbo" name="usptblCust_info_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9343,7 +9343,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblCust_info_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblCust_info_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9392,7 +9392,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCsCard_Get_List" >
+		<procedure owner="dbo" name="usptblCsCard_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9432,7 +9432,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCsCard_GetPaged" >
+		<procedure owner="dbo" name="usptblCsCard_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9512,7 +9512,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblCsCard_Insert" grant="">
+		<procedure owner="dbo" name="usptblCsCard_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9592,7 +9592,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCsCard_Update" grant="">
+		<procedure owner="dbo" name="usptblCsCard_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9654,7 +9654,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCsCard_Delete" grant="">
+		<procedure owner="dbo" name="usptblCsCard_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9673,7 +9673,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCsCard_GetByCardId" >
+		<procedure owner="dbo" name="usptblCsCard_GetByCardId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9715,7 +9715,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblCsCard_Find" >
+		<procedure owner="dbo" name="usptblCsCard_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9842,7 +9842,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblCsCard_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblCsCard_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9890,7 +9890,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCustomer_Get_List" >
+		<procedure owner="dbo" name="usptblCustomer_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -9930,7 +9930,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblCustomer_GetPaged" >
+		<procedure owner="dbo" name="usptblCustomer_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10010,7 +10010,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblCustomer_Insert" grant="">
+		<procedure owner="dbo" name="usptblCustomer_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10090,7 +10090,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCustomer_Update" grant="">
+		<procedure owner="dbo" name="usptblCustomer_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10152,7 +10152,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCustomer_Delete" grant="">
+		<procedure owner="dbo" name="usptblCustomer_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10171,7 +10171,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblCustomer_GetById" >
+		<procedure owner="dbo" name="usptblCustomer_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10213,7 +10213,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblCustomer_Find" >
+		<procedure owner="dbo" name="usptblCustomer_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10340,7 +10340,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblCustomer_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblCustomer_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10388,7 +10388,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAccTrans_Get_List" >
+		<procedure owner="dbo" name="usptblAccTrans_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10428,7 +10428,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAccTrans_GetPaged" >
+		<procedure owner="dbo" name="usptblAccTrans_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10508,7 +10508,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblAccTrans_Insert" grant="">
+		<procedure owner="dbo" name="usptblAccTrans_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10588,7 +10588,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccTrans_Update" grant="">
+		<procedure owner="dbo" name="usptblAccTrans_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10648,7 +10648,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccTrans_Delete" grant="">
+		<procedure owner="dbo" name="usptblAccTrans_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10667,7 +10667,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAccTrans_GetById" >
+		<procedure owner="dbo" name="usptblAccTrans_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10709,7 +10709,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblAccTrans_Find" >
+		<procedure owner="dbo" name="usptblAccTrans_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10838,7 +10838,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblAccTrans_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblAccTrans_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10886,7 +10886,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblBookAttr_Get_List" >
+		<procedure owner="dbo" name="usptblBookAttr_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10919,7 +10919,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblBookAttr_GetPaged" >
+		<procedure owner="dbo" name="usptblBookAttr_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -10999,7 +10999,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblBookAttr_Insert" grant="">
+		<procedure owner="dbo" name="usptblBookAttr_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11058,7 +11058,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBookAttr_Update" grant="">
+		<procedure owner="dbo" name="usptblBookAttr_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11106,7 +11106,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBookAttr_Delete" grant="">
+		<procedure owner="dbo" name="usptblBookAttr_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11125,7 +11125,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBookAttr_GetByGoodsId" >
+		<procedure owner="dbo" name="usptblBookAttr_GetByGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11160,7 +11160,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblBookAttr_Find" >
+		<procedure owner="dbo" name="usptblBookAttr_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11254,7 +11254,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblBookAttr_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblBookAttr_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11302,7 +11302,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAtrCode_Get_List" >
+		<procedure owner="dbo" name="usptblAtrCode_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11337,7 +11337,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblAtrCode_GetPaged" >
+		<procedure owner="dbo" name="usptblAtrCode_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11417,7 +11417,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblAtrCode_Insert" grant="">
+		<procedure owner="dbo" name="usptblAtrCode_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11482,7 +11482,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAtrCode_Update" grant="">
+		<procedure owner="dbo" name="usptblAtrCode_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11534,7 +11534,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAtrCode_Delete" grant="">
+		<procedure owner="dbo" name="usptblAtrCode_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11553,7 +11553,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblAtrCode_GetByTransCode" >
+		<procedure owner="dbo" name="usptblAtrCode_GetByTransCode" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11590,7 +11590,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblAtrCode_Find" >
+		<procedure owner="dbo" name="usptblAtrCode_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11694,7 +11694,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblAtrCode_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblAtrCode_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11742,7 +11742,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblDate_Get_List" >
+		<procedure owner="dbo" name="usptblDate_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11766,7 +11766,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblDate_GetPaged" >
+		<procedure owner="dbo" name="usptblDate_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11846,7 +11846,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblDate_Insert" grant="">
+		<procedure owner="dbo" name="usptblDate_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11878,7 +11878,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblDate_Update" grant="">
+		<procedure owner="dbo" name="usptblDate_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11908,7 +11908,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblDate_Delete" grant="">
+		<procedure owner="dbo" name="usptblDate_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11927,7 +11927,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblDate_GetById" >
+		<procedure owner="dbo" name="usptblDate_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -11953,7 +11953,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblDate_Find" >
+		<procedure owner="dbo" name="usptblDate_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12002,7 +12002,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblDate_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblDate_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12050,7 +12050,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblBarcode_Get_List" >
+		<procedure owner="dbo" name="usptblBarcode_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12073,7 +12073,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblBarcode_GetPaged" >
+		<procedure owner="dbo" name="usptblBarcode_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12153,7 +12153,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblBarcode_Insert" grant="">
+		<procedure owner="dbo" name="usptblBarcode_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12182,7 +12182,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBarcode_Update" grant="">
+		<procedure owner="dbo" name="usptblBarcode_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12210,7 +12210,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBarcode_Delete" grant="">
+		<procedure owner="dbo" name="usptblBarcode_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12229,7 +12229,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblBarcode_GetByBarcode" >
+		<procedure owner="dbo" name="usptblBarcode_GetByBarcode" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12254,7 +12254,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblBarcode_Find" >
+		<procedure owner="dbo" name="usptblBarcode_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12298,7 +12298,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblBarcode_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblBarcode_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12346,7 +12346,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLanguage_Get_List" >
+		<procedure owner="dbo" name="usptblLanguage_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12370,7 +12370,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLanguage_GetPaged" >
+		<procedure owner="dbo" name="usptblLanguage_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12450,7 +12450,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblLanguage_Insert" grant="">
+		<procedure owner="dbo" name="usptblLanguage_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12482,7 +12482,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLanguage_Update" grant="">
+		<procedure owner="dbo" name="usptblLanguage_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12512,7 +12512,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLanguage_Delete" grant="">
+		<procedure owner="dbo" name="usptblLanguage_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12531,7 +12531,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLanguage_GetById" >
+		<procedure owner="dbo" name="usptblLanguage_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12557,7 +12557,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblLanguage_Find" >
+		<procedure owner="dbo" name="usptblLanguage_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12606,7 +12606,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblLanguage_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblLanguage_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12654,7 +12654,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblFiles_Get_List" >
+		<procedure owner="dbo" name="usptblFiles_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12680,7 +12680,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblFiles_GetPaged" >
+		<procedure owner="dbo" name="usptblFiles_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12760,7 +12760,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblFiles_Insert" grant="">
+		<procedure owner="dbo" name="usptblFiles_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12798,7 +12798,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFiles_Update" grant="">
+		<procedure owner="dbo" name="usptblFiles_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12830,7 +12830,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFiles_Delete" grant="">
+		<procedure owner="dbo" name="usptblFiles_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12849,7 +12849,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFiles_GetById" >
+		<procedure owner="dbo" name="usptblFiles_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12877,7 +12877,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblFiles_Find" >
+		<procedure owner="dbo" name="usptblFiles_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12934,7 +12934,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblFiles_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblFiles_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -12982,7 +12982,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLoanTran_Get_List" >
+		<procedure owner="dbo" name="usptblLoanTran_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13016,7 +13016,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLoanTran_GetPaged" >
+		<procedure owner="dbo" name="usptblLoanTran_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13097,7 +13097,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblLoanTran_Insert" grant="">
+		<procedure owner="dbo" name="usptblLoanTran_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13159,7 +13159,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLoanTran_Update" grant="">
+		<procedure owner="dbo" name="usptblLoanTran_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13211,7 +13211,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLoanTran_Delete" grant="">
+		<procedure owner="dbo" name="usptblLoanTran_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13232,7 +13232,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLoanTran_GetByTransNumGoodsId" >
+		<procedure owner="dbo" name="usptblLoanTran_GetByTransNumGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13270,7 +13270,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblLoanTran_Find" >
+		<procedure owner="dbo" name="usptblLoanTran_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13369,7 +13369,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblLoanTran_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblLoanTran_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13418,7 +13418,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblKit_info_Get_List" >
+		<procedure owner="dbo" name="usptblKit_info_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13442,7 +13442,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblKit_info_GetPaged" >
+		<procedure owner="dbo" name="usptblKit_info_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13523,7 +13523,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblKit_info_Insert" grant="">
+		<procedure owner="dbo" name="usptblKit_info_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13555,7 +13555,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_info_Update" grant="">
+		<procedure owner="dbo" name="usptblKit_info_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13587,7 +13587,7 @@ AND [goods_id] = @OriginalGoodsId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_info_Delete" grant="">
+		<procedure owner="dbo" name="usptblKit_info_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13608,7 +13608,7 @@ AND [goods_id] = @OriginalGoodsId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_info_GetByKitIdGoodsId" >
+		<procedure owner="dbo" name="usptblKit_info_GetByKitIdGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13636,7 +13636,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblKit_info_Find" >
+		<procedure owner="dbo" name="usptblKit_info_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13685,7 +13685,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblKit_info_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblKit_info_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13734,7 +13734,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLocation_Get_List" >
+		<procedure owner="dbo" name="usptblLocation_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13759,7 +13759,7 @@ AND [goods_id] = @OriginalGoodsId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblLocation_GetPaged" >
+		<procedure owner="dbo" name="usptblLocation_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13840,7 +13840,7 @@ AND [goods_id] = @OriginalGoodsId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblLocation_Insert" grant="">
+		<procedure owner="dbo" name="usptblLocation_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13875,7 +13875,7 @@ AND [goods_id] = @OriginalGoodsId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLocation_Update" grant="">
+		<procedure owner="dbo" name="usptblLocation_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13909,7 +13909,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLocation_Delete" grant="">
+		<procedure owner="dbo" name="usptblLocation_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13930,7 +13930,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblLocation_GetByStkIdLocId" >
+		<procedure owner="dbo" name="usptblLocation_GetByStkIdLocId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -13959,7 +13959,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblLocation_Find" >
+		<procedure owner="dbo" name="usptblLocation_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14013,7 +14013,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblLocation_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblLocation_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14062,7 +14062,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblFrmType_Get_List" >
+		<procedure owner="dbo" name="usptblFrmType_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14086,7 +14086,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblFrmType_GetPaged" >
+		<procedure owner="dbo" name="usptblFrmType_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14166,7 +14166,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblFrmType_Insert" grant="">
+		<procedure owner="dbo" name="usptblFrmType_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14198,7 +14198,7 @@ AND [loc_id] = @OriginalLocId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFrmType_Update" grant="">
+		<procedure owner="dbo" name="usptblFrmType_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14228,7 +14228,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFrmType_Delete" grant="">
+		<procedure owner="dbo" name="usptblFrmType_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14247,7 +14247,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblFrmType_GetById" >
+		<procedure owner="dbo" name="usptblFrmType_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14273,7 +14273,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblFrmType_Find" >
+		<procedure owner="dbo" name="usptblFrmType_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14322,7 +14322,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblFrmType_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblFrmType_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14370,7 +14370,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblKit_Get_List" >
+		<procedure owner="dbo" name="usptblKit_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14397,7 +14397,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblKit_GetPaged" >
+		<procedure owner="dbo" name="usptblKit_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14477,7 +14477,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblKit_Insert" grant="">
+		<procedure owner="dbo" name="usptblKit_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14518,7 +14518,7 @@ AND [loc_id] = @OriginalLocId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_Update" grant="">
+		<procedure owner="dbo" name="usptblKit_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14554,7 +14554,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_Delete" grant="">
+		<procedure owner="dbo" name="usptblKit_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14573,7 +14573,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblKit_GetById" >
+		<procedure owner="dbo" name="usptblKit_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14602,7 +14602,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblKit_Find" >
+		<procedure owner="dbo" name="usptblKit_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14666,7 +14666,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblKit_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblKit_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14714,7 +14714,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblGoods_Get_List" >
+		<procedure owner="dbo" name="usptblGoods_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14754,7 +14754,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblGoods_GetPaged" >
+		<procedure owner="dbo" name="usptblGoods_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14834,7 +14834,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblGoods_Insert" grant="">
+		<procedure owner="dbo" name="usptblGoods_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14914,7 +14914,7 @@ AND [loc_id] = @OriginalLocId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoods_Update" grant="">
+		<procedure owner="dbo" name="usptblGoods_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14976,7 +14976,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoods_Delete" grant="">
+		<procedure owner="dbo" name="usptblGoods_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -14995,7 +14995,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoods_GetByGoodsId" >
+		<procedure owner="dbo" name="usptblGoods_GetByGoodsId" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15037,7 +15037,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblGoods_Find" >
+		<procedure owner="dbo" name="usptblGoods_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15164,7 +15164,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblGoods_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblGoods_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15211,8 +15211,34 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
+				
+		<procedure owner="dbo" name="usp_tblGoods_GetListBook"  skip="true">
+			<comment><![CDATA[
+/*
+----------------------------------------------------------------------------------------------------
+
+-- Created By:  ()
+-- Purpose: Gets all records from the tblGoods table
+----------------------------------------------------------------------------------------------------
+*/
+
+
+]]></comment>
+			<parameters>
+			</parameters>
+			<body><![CDATA[
+				
+lang ON attr.language = lang.id
+
+					
+				SELECT @@ROWCOUNT
+			
+
+
+			]]></body>
+					</procedure>
 		
-		<procedure owner="dbo" name="tblUtils_Get_List" >
+		<procedure owner="dbo" name="usptblUtils_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15238,7 +15264,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblUtils_GetPaged" >
+		<procedure owner="dbo" name="usptblUtils_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15318,7 +15344,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblUtils_Insert" grant="">
+		<procedure owner="dbo" name="usptblUtils_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15356,7 +15382,7 @@ AND [loc_id] = @OriginalLocId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUtils_Update" grant="">
+		<procedure owner="dbo" name="usptblUtils_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15390,7 +15416,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUtils_Delete" grant="">
+		<procedure owner="dbo" name="usptblUtils_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15409,7 +15435,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblUtils_GetById" >
+		<procedure owner="dbo" name="usptblUtils_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15437,7 +15463,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblUtils_Find" >
+		<procedure owner="dbo" name="usptblUtils_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15496,7 +15522,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblUtils_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblUtils_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15544,7 +15570,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblGoodsGrp_Get_List" >
+		<procedure owner="dbo" name="usptblGoodsGrp_Get_List" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15568,7 +15594,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 		
 		
-		<procedure owner="dbo" name="tblGoodsGrp_GetPaged" >
+		<procedure owner="dbo" name="usptblGoodsGrp_GetPaged" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15648,7 +15674,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 		</procedure>
 		
-		<procedure owner="dbo" name="tblGoodsGrp_Insert" grant="">
+		<procedure owner="dbo" name="usptblGoodsGrp_Insert" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15680,7 +15706,7 @@ AND [loc_id] = @OriginalLocId
 							
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoodsGrp_Update" grant="">
+		<procedure owner="dbo" name="usptblGoodsGrp_Update" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15710,7 +15736,7 @@ AND [loc_id] = @OriginalLocId
 				
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoodsGrp_Delete" grant="">
+		<procedure owner="dbo" name="usptblGoodsGrp_Delete" grant="">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15729,7 +15755,7 @@ AND [loc_id] = @OriginalLocId
 					
 			]]></body>
 		</procedure>
-		<procedure owner="dbo" name="tblGoodsGrp_GetById" >
+		<procedure owner="dbo" name="usptblGoodsGrp_GetById" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15755,7 +15781,7 @@ AND [loc_id] = @OriginalLocId
 			]]></body>
 			
 		</procedure>
-		<procedure owner="dbo" name="tblGoodsGrp_Find" >
+		<procedure owner="dbo" name="usptblGoodsGrp_Find" >
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 
@@ -15804,7 +15830,7 @@ AND [loc_id] = @OriginalLocId
 		</procedure>
 
 		
-		<procedure owner="dbo" name="tblGoodsGrp_Find_Dynamic"  skip="true">
+		<procedure owner="dbo" name="usptblGoodsGrp_Find_Dynamic"  skip="true">
 			<comment><![CDATA[/*
 ----------------------------------------------------------------------------------------------------
 

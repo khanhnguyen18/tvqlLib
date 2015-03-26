@@ -100,5 +100,13 @@ namespace LibraryManagement.App
                 }
             }
         }
+
+        //EVENT------------------------------------------------------
+        #region NAVIGATE BAR
+        private void iLoan_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
