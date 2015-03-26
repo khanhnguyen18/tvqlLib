@@ -32,3 +32,5 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\Libr
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.xml
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.SqlClient.pdb
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.SqlClient.xml
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll
