@@ -34,3 +34,16 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\Libr
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\bin\Debug\LibraryManagement.Dao.SqlClient.xml
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.RefForm.resources
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.BookListForm.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmLoanInfo.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmBrowse.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmReaderDef.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmBookDef.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmMsgbox.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmGetAmount.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmFastSlow.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmAdjust_grp.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmAtrCode.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmAtrList.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmBalance.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmBookRb.resources
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.App\obj\Debug\LibraryManagement.App.FrmBooksGrp.resources

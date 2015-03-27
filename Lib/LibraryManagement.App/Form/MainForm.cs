@@ -105,8 +105,49 @@ namespace LibraryManagement.App
         #region NAVIGATE BAR
         private void iLoan_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            BindToParentForm(new FrmLoanInfo(), this);
+        }
+        private void iBookFinder_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            BindToParentForm(new BookListForm(), this);
+        }
+
+       
+        private void iReturn_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void iLoanList_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            
+        }
+        private void iCardDef_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            BindToParentForm(new FrmLoanInfo(), this);
+        }
+
+        private void iReaderList_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void iReaderInfo_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
 
         }
         #endregion
+
+        public static void BindToParentForm(Form childForm, Form parentForm)
+        {
+            childForm.MdiParent = parentForm;
+            childForm.Show();
+        }
+
+      
+
+       
+
+       
     }
 }

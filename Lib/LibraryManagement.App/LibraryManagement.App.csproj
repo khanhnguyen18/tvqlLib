@@ -29,14 +29,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -45,14 +53,109 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormOld\FrmFastSlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmFastSlow.Designer.cs">
+      <DependentUpon>FrmFastSlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdjust_grp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdjust_grp.Designer.cs">
+      <DependentUpon>FrmAdjust_grp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAtrCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAtrCode.Designer.cs">
+      <DependentUpon>FrmAtrCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAtrList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAtrList.Designer.cs">
+      <DependentUpon>FrmAtrList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAutoOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutoOrder.Designer.cs">
+      <DependentUpon>FrmAutoOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBalance.Designer.cs">
+      <DependentUpon>FrmBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookRb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookRb.Designer.cs">
+      <DependentUpon>FrmBookRb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBooksGrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBooksGrp.Designer.cs">
+      <DependentUpon>FrmBooksGrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\mercinstock_grp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\mercinstock_supp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_diary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_gl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_glmof.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_glmof2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_info.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmReports.Designer.cs">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmAcountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmAcountList.Designer.cs">
+      <DependentUpon>FrmAcountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\lst_postrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lst_stktrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_detail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_detail.Designer.cs">
+      <DependentUpon>acc_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +168,84 @@
     <Compile Include="Form\BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOld\FrmBookDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmBookDef.Designer.cs">
+      <DependentUpon>FrmBookDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmBrowse.Designer.cs">
+      <DependentUpon>FrmBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmGetDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmGetDates.Designer.cs">
+      <DependentUpon>FrmGetDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmLanguage.Designer.cs">
+      <DependentUpon>FrmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmLoanInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmLoanInfo.Designer.cs">
+      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmMsgbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmMsgbox.Designer.cs">
+      <DependentUpon>FrmMsgbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmReaderDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmReaderDef.Designer.cs">
+      <DependentUpon>FrmReaderDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmUnits.Designer.cs">
+      <DependentUpon>FrmUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmAccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmAccountInfo.Designer.cs">
+      <DependentUpon>FrmAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\loan_inv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotProcess\Class0.cs" />
+    <Compile Include="NotProcess\Class1.cs" />
+    <Compile Include="NotProcess\Class10.cs" />
+    <Compile Include="NotProcess\Class11.cs" />
+    <Compile Include="NotProcess\Class12.cs" />
+    <Compile Include="NotProcess\Class13.cs" />
+    <Compile Include="NotProcess\Class14.cs" />
+    <Compile Include="NotProcess\Class15.cs" />
+    <Compile Include="NotProcess\Class17.cs" />
+    <Compile Include="NotProcess\Class2.cs" />
+    <Compile Include="NotProcess\Class3.cs" />
+    <Compile Include="NotProcess\Class6.cs" />
+    <Compile Include="NotProcess\Class7.cs" />
+    <Compile Include="NotProcess\Class8.cs" />
+    <Compile Include="NotProcess\Class9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\MainForm.resx">
@@ -74,6 +255,58 @@
     <EmbeddedResource Include="Form\BookListForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmBookDef.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBookDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmBrowse.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmGetAmount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmLoanInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmMsgbox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMsgbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmReaderDef.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReaderDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOld\FrmFastSlow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFastSlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdjust_grp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAdjust_grp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAtrCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAtrCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAtrList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAtrList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBalance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookRb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBookRb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBooksGrp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBooksGrp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,6 +341,30 @@
     </Compile>
     <Compile Include="RefForm.Designer.cs">
       <DependentUpon>RefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOld\FrmGetAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOld\FrmGetAmount.Designer.cs">
+      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\return_book.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\saledetail_grp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\saledetail_supp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\saledetail_taxcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\stk_history.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\sumsaler.cs">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

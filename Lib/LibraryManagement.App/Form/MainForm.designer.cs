@@ -37,7 +37,7 @@ namespace LibraryManagement.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Alerter.AlertButton alertButton1 = new DevExpress.XtraBars.Alerter.AlertButton();
+            DevExpress.XtraBars.Alerter.AlertButton alertButton3 = new DevExpress.XtraBars.Alerter.AlertButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar_0 = new DevExpress.XtraBars.Bar();
@@ -281,9 +281,9 @@ namespace LibraryManagement.App
             // alertControl_0
             // 
             this.alertControl_0.AutoFormDelay = 9000;
-            alertButton1.Hint = "Đóng";
-            alertButton1.Name = "close";
-            this.alertControl_0.Buttons.Add(alertButton1);
+            alertButton3.Hint = "Đóng";
+            alertButton3.Name = "close";
+            this.alertControl_0.Buttons.Add(alertButton3);
             // 
             // imageList2
             // 
@@ -347,18 +347,21 @@ namespace LibraryManagement.App
             this.iReturn.Caption = "Phiếu nhận trả sách";
             this.iReturn.Name = "iReturn";
             this.iReturn.SmallImageIndex = 16;
+            this.iReturn.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iReturn_LinkClicked);
             // 
             // iLoanList
             // 
             this.iLoanList.Caption = "Danh sách phiếu";
             this.iLoanList.Name = "iLoanList";
             this.iLoanList.SmallImageIndex = 22;
+            this.iLoanList.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iLoanList_LinkClicked);
             // 
             // iBookFinder
             // 
             this.iBookFinder.Caption = "Tìm kiếm sách nhanh";
             this.iBookFinder.Name = "iBookFinder";
             this.iBookFinder.SmallImageIndex = 18;
+            this.iBookFinder.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iBookFinder_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -376,18 +379,21 @@ namespace LibraryManagement.App
             this.iCardDef.Caption = "Đăng ký thẻ thư viện";
             this.iCardDef.Name = "iCardDef";
             this.iCardDef.SmallImageIndex = 23;
+            this.iCardDef.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iCardDef_LinkClicked);
             // 
             // iReaderList
             // 
             this.iReaderList.Caption = "Danh sách bạn đọc";
             this.iReaderList.Name = "iReaderList";
             this.iReaderList.SmallImageIndex = 7;
+            this.iReaderList.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iReaderList_LinkClicked);
             // 
             // iReaderInfo
             // 
             this.iReaderInfo.Caption = "Tra cứu thông tin bạn đọc";
             this.iReaderInfo.Name = "iReaderInfo";
             this.iReaderInfo.SmallImageIndex = 20;
+            this.iReaderInfo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iReaderInfo_LinkClicked);
             // 
             // navBarItem7
             // 
