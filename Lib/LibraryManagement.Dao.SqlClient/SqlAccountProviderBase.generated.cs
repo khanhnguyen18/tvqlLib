@@ -113,7 +113,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.Decimal _branch, System.String _accountId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Branch", DbType.Decimal, _branch);
 			database.AddInParameter(commandWrapper, "@AccountId", DbType.AnsiStringFixedLength, _accountId);
 			
@@ -169,7 +169,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Account>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -345,7 +345,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Find_Dynamic", typeof(AccountColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Find_Dynamic", typeof(AccountColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -418,7 +418,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Account> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -480,7 +480,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Account> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -568,7 +568,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Account GetByBranchAccountId(TransactionManager transactionManager, System.Decimal _branch, System.String _accountId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_GetByBranchAccountId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_GetByBranchAccountId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Branch", DbType.Decimal, _branch);
 				database.AddInParameter(commandWrapper, "@AccountId", DbType.AnsiStringFixedLength, _accountId);
@@ -775,7 +775,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Account entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Branch", DbType.Decimal, entity.Branch );
             database.AddInParameter(commandWrapper, "@AccountId", DbType.AnsiStringFixedLength, entity.AccountId );
@@ -835,7 +835,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Account entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblAccount_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblAccount_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Branch", DbType.Decimal, entity.Branch );
 			database.AddInParameter(commandWrapper, "@OriginalBranch", DbType.Decimal, entity.OriginalBranch);

@@ -112,7 +112,7 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{9837870B-231D-4BF4-AD54-8ABDEA95091B}</Project>
+      <Project>{591AB408-FBFC-4C2A-9436-D0C2AD994E95}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
   </ItemGroup>

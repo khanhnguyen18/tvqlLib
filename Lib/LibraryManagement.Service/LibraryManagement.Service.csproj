@@ -144,12 +144,12 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{9837870B-231D-4BF4-AD54-8ABDEA95091B}</Project>
+      <Project>{591AB408-FBFC-4C2A-9436-D0C2AD994E95}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{660B1A26-7E6E-48D9-A722-CDCCD543F3A2}</Project>
+      <Project>{526733E6-293E-429B-B5A3-68893F6A9089}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
   </ItemGroup>

@@ -96,7 +96,7 @@
     <Reference Include="System.Drawing" />
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
-      <Project>{9837870B-231D-4BF4-AD54-8ABDEA95091B}</Project>
+      <Project>{591AB408-FBFC-4C2A-9436-D0C2AD994E95}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <!-- check the GAC ? -->
@@ -106,17 +106,17 @@
     </Reference>
     <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
       <Name>LibraryManagement.Dao</Name>
-      <Project>{660B1A26-7E6E-48D9-A722-CDCCD543F3A2}</Project>
+      <Project>{526733E6-293E-429B-B5A3-68893F6A9089}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">
       <Name>LibraryManagement.Dao.SqlClient</Name>
-      <Project>{D2E0935F-6B77-4929-8514-7DE843674831}</Project>
+      <Project>{B88D69C6-7831-447E-8239-8BA1F0D19113}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
     </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Service\LibraryManagement.Service.csproj">
       <Name>LibraryManagement.Service</Name>
-      <Project>{123B1EDC-BB10-4BE5-9EC5-988C76DBADC9}</Project>
+      <Project>{53E295E8-A37D-466B-B7A1-CDEF76F74453}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"</Package>
     </ProjectReference>
   </ItemGroup>

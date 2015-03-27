@@ -113,7 +113,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _stkId, System.String _locId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, _stkId);
 			database.AddInParameter(commandWrapper, "@LocId", DbType.StringFixedLength, _locId);
 			
@@ -169,7 +169,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Location>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -289,7 +289,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Find_Dynamic", typeof(LocationColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Find_Dynamic", typeof(LocationColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -362,7 +362,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Location> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -424,7 +424,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Location> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -512,7 +512,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Location GetByStkIdLocId(TransactionManager transactionManager, System.String _stkId, System.String _locId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_GetByStkIdLocId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_GetByStkIdLocId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, _stkId);
 				database.AddInParameter(commandWrapper, "@LocId", DbType.StringFixedLength, _locId);
@@ -671,7 +671,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Location entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, entity.StkId );
             database.AddInParameter(commandWrapper, "@LocId", DbType.StringFixedLength, entity.LocId );
@@ -723,7 +723,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Location entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblLocation_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblLocation_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@StkId", DbType.StringFixedLength, entity.StkId );
 			database.AddInParameter(commandWrapper, "@OriginalStkId", DbType.StringFixedLength, entity.OriginalStkId);

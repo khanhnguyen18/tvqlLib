@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _transType)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@TransType", DbType.AnsiStringFixedLength, _transType);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Transnum>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -280,7 +280,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Find_Dynamic", typeof(TransnumColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Find_Dynamic", typeof(TransnumColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -353,7 +353,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Transnum> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -415,7 +415,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Transnum> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -502,7 +502,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Transnum GetByTransType(TransactionManager transactionManager, System.String _transType, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_GetByTransType", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_GetByTransType", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@TransType", DbType.AnsiStringFixedLength, _transType);
 			
@@ -654,7 +654,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Transnum entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TransType", DbType.AnsiStringFixedLength, entity.TransType );
             database.AddInParameter(commandWrapper, "@LastNum", DbType.Decimal, entity.LastNum );
@@ -704,7 +704,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Transnum entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblTransnum_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblTransnum_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@TransType", DbType.AnsiStringFixedLength, entity.TransType );
 			database.AddInParameter(commandWrapper, "@OriginalTransType", DbType.AnsiStringFixedLength, entity.OriginalTransType);

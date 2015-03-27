@@ -8,9 +8,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_Get_List
+-- Drop the dbo.tblReports_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_Get_List
 GO
 
 /*
@@ -22,7 +22,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_Get_List
+CREATE PROCEDURE dbo.tblReports_Get_List
 
 AS
 
@@ -53,9 +53,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_GetPaged
+-- Drop the dbo.tblReports_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_GetPaged
 GO
 
 /*
@@ -67,7 +67,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_GetPaged
+CREATE PROCEDURE dbo.tblReports_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -154,9 +154,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_Insert
+-- Drop the dbo.tblReports_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_Insert
 GO
 
 /*
@@ -168,7 +168,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_Insert
+CREATE PROCEDURE dbo.tblReports_Insert
 (
 
 	@Idx int   ,
@@ -227,9 +227,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_Update
+-- Drop the dbo.tblReports_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_Update
 GO
 
 /*
@@ -241,7 +241,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_Update
+CREATE PROCEDURE dbo.tblReports_Update
 (
 
 	@Idx int   ,
@@ -294,9 +294,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_Delete
+-- Drop the dbo.tblReports_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_Delete
 GO
 
 /*
@@ -308,7 +308,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_Delete
+CREATE PROCEDURE dbo.tblReports_Delete
 (
 
 	@Idx int   
@@ -332,9 +332,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_GetByIdx procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_GetByIdx
+-- Drop the dbo.tblReports_GetByIdx procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_GetByIdx
 GO
 
 /*
@@ -346,7 +346,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_GetByIdx
+CREATE PROCEDURE dbo.tblReports_GetByIdx
 (
 
 	@Idx int   
@@ -381,9 +381,9 @@ GO
 
 	
 
--- Drop the dbo.usptblReports_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblReports_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblReports_Find
+-- Drop the dbo.tblReports_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblReports_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblReports_Find
 GO
 
 /*
@@ -395,7 +395,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblReports_Find
+CREATE PROCEDURE dbo.tblReports_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -480,9 +480,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_Get_List
+-- Drop the dbo.tblAccount_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_Get_List
 GO
 
 /*
@@ -494,7 +494,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_Get_List
+CREATE PROCEDURE dbo.tblAccount_Get_List
 
 AS
 
@@ -529,9 +529,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_GetPaged
+-- Drop the dbo.tblAccount_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_GetPaged
 GO
 
 /*
@@ -543,7 +543,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_GetPaged
+CREATE PROCEDURE dbo.tblAccount_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -631,9 +631,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_Insert
+-- Drop the dbo.tblAccount_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_Insert
 GO
 
 /*
@@ -645,7 +645,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_Insert
+CREATE PROCEDURE dbo.tblAccount_Insert
 (
 
 	@Branch numeric (2, 0)  ,
@@ -720,9 +720,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_Update
+-- Drop the dbo.tblAccount_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_Update
 GO
 
 /*
@@ -734,7 +734,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_Update
+CREATE PROCEDURE dbo.tblAccount_Update
 (
 
 	@Branch numeric (2, 0)  ,
@@ -802,9 +802,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_Delete
+-- Drop the dbo.tblAccount_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_Delete
 GO
 
 /*
@@ -816,7 +816,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_Delete
+CREATE PROCEDURE dbo.tblAccount_Delete
 (
 
 	@Branch numeric (2, 0)  ,
@@ -843,9 +843,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_GetByBranchAccountId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_GetByBranchAccountId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_GetByBranchAccountId
+-- Drop the dbo.tblAccount_GetByBranchAccountId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_GetByBranchAccountId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_GetByBranchAccountId
 GO
 
 /*
@@ -857,7 +857,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_GetByBranchAccountId
+CREATE PROCEDURE dbo.tblAccount_GetByBranchAccountId
 (
 
 	@Branch numeric (2, 0)  ,
@@ -899,9 +899,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccount_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccount_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccount_Find
+-- Drop the dbo.tblAccount_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccount_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccount_Find
 GO
 
 /*
@@ -913,7 +913,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccount_Find
+CREATE PROCEDURE dbo.tblAccount_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -1022,9 +1022,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_Get_List
+-- Drop the dbo.tblStaff_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_Get_List
 GO
 
 /*
@@ -1036,7 +1036,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_Get_List
+CREATE PROCEDURE dbo.tblStaff_Get_List
 
 AS
 
@@ -1073,9 +1073,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_GetPaged
+-- Drop the dbo.tblStaff_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_GetPaged
 GO
 
 /*
@@ -1087,7 +1087,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_GetPaged
+CREATE PROCEDURE dbo.tblStaff_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -1174,9 +1174,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_Insert
+-- Drop the dbo.tblStaff_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_Insert
 GO
 
 /*
@@ -1188,7 +1188,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_Insert
+CREATE PROCEDURE dbo.tblStaff_Insert
 (
 
 	@Id nchar (7)  ,
@@ -1271,9 +1271,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_Update
+-- Drop the dbo.tblStaff_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_Update
 GO
 
 /*
@@ -1285,7 +1285,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_Update
+CREATE PROCEDURE dbo.tblStaff_Update
 (
 
 	@Id nchar (7)  ,
@@ -1356,9 +1356,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_Delete
+-- Drop the dbo.tblStaff_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_Delete
 GO
 
 /*
@@ -1370,7 +1370,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_Delete
+CREATE PROCEDURE dbo.tblStaff_Delete
 (
 
 	@Id nchar (7)  
@@ -1394,9 +1394,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_GetById
+-- Drop the dbo.tblStaff_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_GetById
 GO
 
 /*
@@ -1408,7 +1408,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_GetById
+CREATE PROCEDURE dbo.tblStaff_GetById
 (
 
 	@Id nchar (7)  
@@ -1449,9 +1449,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStaff_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStaff_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStaff_Find
+-- Drop the dbo.tblStaff_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStaff_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStaff_Find
 GO
 
 /*
@@ -1463,7 +1463,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStaff_Find
+CREATE PROCEDURE dbo.tblStaff_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -1584,9 +1584,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_Get_List
+-- Drop the dbo.tblPrice_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_Get_List
 GO
 
 /*
@@ -1598,7 +1598,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_Get_List
+CREATE PROCEDURE dbo.tblPrice_Get_List
 
 AS
 
@@ -1630,9 +1630,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_GetPaged
+-- Drop the dbo.tblPrice_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_GetPaged
 GO
 
 /*
@@ -1644,7 +1644,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_GetPaged
+CREATE PROCEDURE dbo.tblPrice_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -1731,9 +1731,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_Insert
+-- Drop the dbo.tblPrice_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_Insert
 GO
 
 /*
@@ -1745,7 +1745,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_Insert
+CREATE PROCEDURE dbo.tblPrice_Insert
 (
 
 	@GoodsId char (6)  ,
@@ -1808,9 +1808,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_Update
+-- Drop the dbo.tblPrice_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_Update
 GO
 
 /*
@@ -1822,7 +1822,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_Update
+CREATE PROCEDURE dbo.tblPrice_Update
 (
 
 	@GoodsId char (6)  ,
@@ -1878,9 +1878,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_Delete
+-- Drop the dbo.tblPrice_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_Delete
 GO
 
 /*
@@ -1892,7 +1892,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_Delete
+CREATE PROCEDURE dbo.tblPrice_Delete
 (
 
 	@GoodsId char (6)  
@@ -1916,9 +1916,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_GetByGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_GetByGoodsId
+-- Drop the dbo.tblPrice_GetByGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_GetByGoodsId
 GO
 
 /*
@@ -1930,7 +1930,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_GetByGoodsId
+CREATE PROCEDURE dbo.tblPrice_GetByGoodsId
 (
 
 	@GoodsId char (6)  
@@ -1966,9 +1966,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPrice_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPrice_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPrice_Find
+-- Drop the dbo.tblPrice_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPrice_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPrice_Find
 GO
 
 /*
@@ -1980,7 +1980,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPrice_Find
+CREATE PROCEDURE dbo.tblPrice_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -2071,9 +2071,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_Get_List
+-- Drop the dbo.tblStations_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_Get_List
 GO
 
 /*
@@ -2085,7 +2085,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_Get_List
+CREATE PROCEDURE dbo.tblStations_Get_List
 
 AS
 
@@ -2119,9 +2119,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_GetPaged
+-- Drop the dbo.tblStations_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_GetPaged
 GO
 
 /*
@@ -2133,7 +2133,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_GetPaged
+CREATE PROCEDURE dbo.tblStations_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -2220,9 +2220,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_Insert
+-- Drop the dbo.tblStations_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_Insert
 GO
 
 /*
@@ -2234,7 +2234,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_Insert
+CREATE PROCEDURE dbo.tblStations_Insert
 (
 
 	@Id int   ,
@@ -2305,9 +2305,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_Update
+-- Drop the dbo.tblStations_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_Update
 GO
 
 /*
@@ -2319,7 +2319,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_Update
+CREATE PROCEDURE dbo.tblStations_Update
 (
 
 	@Id int   ,
@@ -2381,9 +2381,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_Delete
+-- Drop the dbo.tblStations_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_Delete
 GO
 
 /*
@@ -2395,7 +2395,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_Delete
+CREATE PROCEDURE dbo.tblStations_Delete
 (
 
 	@Id int   
@@ -2419,9 +2419,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_GetById
+-- Drop the dbo.tblStations_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_GetById
 GO
 
 /*
@@ -2433,7 +2433,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_GetById
+CREATE PROCEDURE dbo.tblStations_GetById
 (
 
 	@Id int   
@@ -2471,9 +2471,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStations_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStations_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStations_Find
+-- Drop the dbo.tblStations_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStations_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStations_Find
 GO
 
 /*
@@ -2485,7 +2485,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStations_Find
+CREATE PROCEDURE dbo.tblStations_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -2588,9 +2588,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_Get_List
+-- Drop the dbo.tblMof_sys_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_Get_List
 GO
 
 /*
@@ -2602,7 +2602,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_Get_List
+CREATE PROCEDURE dbo.tblMof_sys_Get_List
 
 AS
 
@@ -2635,9 +2635,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_GetPaged
+-- Drop the dbo.tblMof_sys_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_GetPaged
 GO
 
 /*
@@ -2649,7 +2649,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_GetPaged
+CREATE PROCEDURE dbo.tblMof_sys_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -2736,9 +2736,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_Insert
+-- Drop the dbo.tblMof_sys_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_Insert
 GO
 
 /*
@@ -2750,7 +2750,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_Insert
+CREATE PROCEDURE dbo.tblMof_sys_Insert
 (
 
 	@Id numeric (18, 0)   OUTPUT,
@@ -2817,9 +2817,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_Update
+-- Drop the dbo.tblMof_sys_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_Update
 GO
 
 /*
@@ -2831,7 +2831,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_Update
+CREATE PROCEDURE dbo.tblMof_sys_Update
 (
 
 	@Id numeric (18, 0)  ,
@@ -2887,9 +2887,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_Delete
+-- Drop the dbo.tblMof_sys_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_Delete
 GO
 
 /*
@@ -2901,7 +2901,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_Delete
+CREATE PROCEDURE dbo.tblMof_sys_Delete
 (
 
 	@Id numeric (18, 0)  
@@ -2925,9 +2925,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_GetById
+-- Drop the dbo.tblMof_sys_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_GetById
 GO
 
 /*
@@ -2939,7 +2939,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_GetById
+CREATE PROCEDURE dbo.tblMof_sys_GetById
 (
 
 	@Id numeric (18, 0)  
@@ -2976,9 +2976,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMof_sys_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMof_sys_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMof_sys_Find
+-- Drop the dbo.tblMof_sys_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMof_sys_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMof_sys_Find
 GO
 
 /*
@@ -2990,7 +2990,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMof_sys_Find
+CREATE PROCEDURE dbo.tblMof_sys_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -3087,9 +3087,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_Get_List
+-- Drop the dbo.tblPaymentOrder_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_Get_List
 GO
 
 /*
@@ -3101,7 +3101,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_Get_List
+CREATE PROCEDURE dbo.tblPaymentOrder_Get_List
 
 AS
 
@@ -3134,9 +3134,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_GetPaged
+-- Drop the dbo.tblPaymentOrder_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_GetPaged
 GO
 
 /*
@@ -3148,7 +3148,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_GetPaged
+CREATE PROCEDURE dbo.tblPaymentOrder_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -3235,9 +3235,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_Insert
+-- Drop the dbo.tblPaymentOrder_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_Insert
 GO
 
 /*
@@ -3249,7 +3249,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_Insert
+CREATE PROCEDURE dbo.tblPaymentOrder_Insert
 (
 
 	@TransNum nchar (12)  ,
@@ -3316,9 +3316,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_Update
+-- Drop the dbo.tblPaymentOrder_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_Update
 GO
 
 /*
@@ -3330,7 +3330,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_Update
+CREATE PROCEDURE dbo.tblPaymentOrder_Update
 (
 
 	@TransNum nchar (12)  ,
@@ -3389,9 +3389,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_Delete
+-- Drop the dbo.tblPaymentOrder_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_Delete
 GO
 
 /*
@@ -3403,7 +3403,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_Delete
+CREATE PROCEDURE dbo.tblPaymentOrder_Delete
 (
 
 	@TransNum nchar (12)  
@@ -3427,9 +3427,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_GetByTransNum procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_GetByTransNum') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_GetByTransNum
+-- Drop the dbo.tblPaymentOrder_GetByTransNum procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_GetByTransNum') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_GetByTransNum
 GO
 
 /*
@@ -3441,7 +3441,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_GetByTransNum
+CREATE PROCEDURE dbo.tblPaymentOrder_GetByTransNum
 (
 
 	@TransNum nchar (12)  
@@ -3478,9 +3478,9 @@ GO
 
 	
 
--- Drop the dbo.usptblPaymentOrder_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblPaymentOrder_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblPaymentOrder_Find
+-- Drop the dbo.tblPaymentOrder_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblPaymentOrder_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblPaymentOrder_Find
 GO
 
 /*
@@ -3492,7 +3492,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblPaymentOrder_Find
+CREATE PROCEDURE dbo.tblPaymentOrder_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -3589,9 +3589,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_Get_List
+-- Drop the dbo.tblNon_Plu_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_Get_List
 GO
 
 /*
@@ -3603,7 +3603,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_Get_List
+CREATE PROCEDURE dbo.tblNon_Plu_Get_List
 
 AS
 
@@ -3628,9 +3628,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_GetPaged
+-- Drop the dbo.tblNon_Plu_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_GetPaged
 GO
 
 /*
@@ -3642,7 +3642,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_GetPaged
+CREATE PROCEDURE dbo.tblNon_Plu_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -3730,9 +3730,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_Insert
+-- Drop the dbo.tblNon_Plu_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_Insert
 GO
 
 /*
@@ -3744,7 +3744,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_Insert
+CREATE PROCEDURE dbo.tblNon_Plu_Insert
 (
 
 	@NpluCode char (4)  ,
@@ -3779,9 +3779,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_Update
+-- Drop the dbo.tblNon_Plu_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_Update
 GO
 
 /*
@@ -3793,7 +3793,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_Update
+CREATE PROCEDURE dbo.tblNon_Plu_Update
 (
 
 	@NpluCode char (4)  ,
@@ -3831,9 +3831,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_Delete
+-- Drop the dbo.tblNon_Plu_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_Delete
 GO
 
 /*
@@ -3845,7 +3845,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_Delete
+CREATE PROCEDURE dbo.tblNon_Plu_Delete
 (
 
 	@NpluCode char (4)  ,
@@ -3872,9 +3872,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_GetByNpluCodeGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_GetByNpluCodeGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_GetByNpluCodeGoodsId
+-- Drop the dbo.tblNon_Plu_GetByNpluCodeGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_GetByNpluCodeGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_GetByNpluCodeGoodsId
 GO
 
 /*
@@ -3886,7 +3886,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_GetByNpluCodeGoodsId
+CREATE PROCEDURE dbo.tblNon_Plu_GetByNpluCodeGoodsId
 (
 
 	@NpluCode char (4)  ,
@@ -3918,9 +3918,9 @@ GO
 
 	
 
--- Drop the dbo.usptblNon_Plu_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblNon_Plu_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblNon_Plu_Find
+-- Drop the dbo.tblNon_Plu_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblNon_Plu_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblNon_Plu_Find
 GO
 
 /*
@@ -3932,7 +3932,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblNon_Plu_Find
+CREATE PROCEDURE dbo.tblNon_Plu_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -3981,9 +3981,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_Get_List
+-- Drop the dbo.tblStockInfo_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_Get_List
 GO
 
 /*
@@ -3995,7 +3995,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_Get_List
+CREATE PROCEDURE dbo.tblStockInfo_Get_List
 
 AS
 
@@ -4032,9 +4032,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_GetPaged
+-- Drop the dbo.tblStockInfo_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_GetPaged
 GO
 
 /*
@@ -4046,7 +4046,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_GetPaged
+CREATE PROCEDURE dbo.tblStockInfo_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -4134,9 +4134,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_Insert
+-- Drop the dbo.tblStockInfo_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_Insert
 GO
 
 /*
@@ -4148,7 +4148,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_Insert
+CREATE PROCEDURE dbo.tblStockInfo_Insert
 (
 
 	@Id char (5)  ,
@@ -4231,9 +4231,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_Update
+-- Drop the dbo.tblStockInfo_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_Update
 GO
 
 /*
@@ -4245,7 +4245,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_Update
+CREATE PROCEDURE dbo.tblStockInfo_Update
 (
 
 	@Id char (5)  ,
@@ -4319,9 +4319,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_Delete
+-- Drop the dbo.tblStockInfo_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_Delete
 GO
 
 /*
@@ -4333,7 +4333,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_Delete
+CREATE PROCEDURE dbo.tblStockInfo_Delete
 (
 
 	@Id char (5)  ,
@@ -4360,9 +4360,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_GetByIdGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_GetByIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_GetByIdGoodsId
+-- Drop the dbo.tblStockInfo_GetByIdGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_GetByIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_GetByIdGoodsId
 GO
 
 /*
@@ -4374,7 +4374,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_GetByIdGoodsId
+CREATE PROCEDURE dbo.tblStockInfo_GetByIdGoodsId
 (
 
 	@Id char (5)  ,
@@ -4418,9 +4418,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStockInfo_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStockInfo_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStockInfo_Find
+-- Drop the dbo.tblStockInfo_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStockInfo_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStockInfo_Find
 GO
 
 /*
@@ -4432,7 +4432,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStockInfo_Find
+CREATE PROCEDURE dbo.tblStockInfo_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -4553,9 +4553,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_Get_List
+-- Drop the dbo.tblOn_order_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_Get_List
 GO
 
 /*
@@ -4567,7 +4567,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_Get_List
+CREATE PROCEDURE dbo.tblOn_order_Get_List
 
 AS
 
@@ -4606,9 +4606,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_GetPaged
+-- Drop the dbo.tblOn_order_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_GetPaged
 GO
 
 /*
@@ -4620,7 +4620,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_GetPaged
+CREATE PROCEDURE dbo.tblOn_order_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -4708,9 +4708,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_Insert
+-- Drop the dbo.tblOn_order_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_Insert
 GO
 
 /*
@@ -4722,7 +4722,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_Insert
+CREATE PROCEDURE dbo.tblOn_order_Insert
 (
 
 	@TranDate datetime   ,
@@ -4813,9 +4813,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_Update
+-- Drop the dbo.tblOn_order_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_Update
 GO
 
 /*
@@ -4827,7 +4827,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_Update
+CREATE PROCEDURE dbo.tblOn_order_Update
 (
 
 	@TranDate datetime   ,
@@ -4907,9 +4907,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_Delete
+-- Drop the dbo.tblOn_order_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_Delete
 GO
 
 /*
@@ -4921,7 +4921,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_Delete
+CREATE PROCEDURE dbo.tblOn_order_Delete
 (
 
 	@TransNum char (12)  ,
@@ -4948,9 +4948,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_GetByTransNumGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_GetByTransNumGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_GetByTransNumGoodsId
+-- Drop the dbo.tblOn_order_GetByTransNumGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_GetByTransNumGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_GetByTransNumGoodsId
 GO
 
 /*
@@ -4962,7 +4962,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_GetByTransNumGoodsId
+CREATE PROCEDURE dbo.tblOn_order_GetByTransNumGoodsId
 (
 
 	@TransNum char (12)  ,
@@ -5008,9 +5008,9 @@ GO
 
 	
 
--- Drop the dbo.usptblOn_order_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblOn_order_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblOn_order_Find
+-- Drop the dbo.tblOn_order_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblOn_order_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblOn_order_Find
 GO
 
 /*
@@ -5022,7 +5022,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblOn_order_Find
+CREATE PROCEDURE dbo.tblOn_order_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -5155,9 +5155,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_Get_List
+-- Drop the dbo.tblUnit_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_Get_List
 GO
 
 /*
@@ -5169,7 +5169,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_Get_List
+CREATE PROCEDURE dbo.tblUnit_Get_List
 
 AS
 
@@ -5195,9 +5195,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_GetPaged
+-- Drop the dbo.tblUnit_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_GetPaged
 GO
 
 /*
@@ -5209,7 +5209,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_GetPaged
+CREATE PROCEDURE dbo.tblUnit_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -5296,9 +5296,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_Insert
+-- Drop the dbo.tblUnit_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_Insert
 GO
 
 /*
@@ -5310,7 +5310,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_Insert
+CREATE PROCEDURE dbo.tblUnit_Insert
 (
 
 	@Id char (3)  ,
@@ -5349,9 +5349,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_Update
+-- Drop the dbo.tblUnit_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_Update
 GO
 
 /*
@@ -5363,7 +5363,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_Update
+CREATE PROCEDURE dbo.tblUnit_Update
 (
 
 	@Id char (3)  ,
@@ -5401,9 +5401,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_Delete
+-- Drop the dbo.tblUnit_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_Delete
 GO
 
 /*
@@ -5415,7 +5415,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_Delete
+CREATE PROCEDURE dbo.tblUnit_Delete
 (
 
 	@Id char (3)  
@@ -5439,9 +5439,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_GetById
+-- Drop the dbo.tblUnit_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_GetById
 GO
 
 /*
@@ -5453,7 +5453,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_GetById
+CREATE PROCEDURE dbo.tblUnit_GetById
 (
 
 	@Id char (3)  
@@ -5483,9 +5483,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUnit_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUnit_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUnit_Find
+-- Drop the dbo.tblUnit_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUnit_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUnit_Find
 GO
 
 /*
@@ -5497,7 +5497,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUnit_Find
+CREATE PROCEDURE dbo.tblUnit_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -5552,9 +5552,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_Get_List
+-- Drop the dbo.tblStore_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_Get_List
 GO
 
 /*
@@ -5566,7 +5566,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_Get_List
+CREATE PROCEDURE dbo.tblStore_Get_List
 
 AS
 
@@ -5604,9 +5604,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_GetPaged
+-- Drop the dbo.tblStore_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_GetPaged
 GO
 
 /*
@@ -5618,7 +5618,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_GetPaged
+CREATE PROCEDURE dbo.tblStore_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -5705,9 +5705,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_Insert
+-- Drop the dbo.tblStore_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_Insert
 GO
 
 /*
@@ -5719,7 +5719,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_Insert
+CREATE PROCEDURE dbo.tblStore_Insert
 (
 
 	@Id char (5)  ,
@@ -5806,9 +5806,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_Update
+-- Drop the dbo.tblStore_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_Update
 GO
 
 /*
@@ -5820,7 +5820,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_Update
+CREATE PROCEDURE dbo.tblStore_Update
 (
 
 	@Id char (5)  ,
@@ -5894,9 +5894,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_Delete
+-- Drop the dbo.tblStore_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_Delete
 GO
 
 /*
@@ -5908,7 +5908,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_Delete
+CREATE PROCEDURE dbo.tblStore_Delete
 (
 
 	@Id char (5)  
@@ -5932,9 +5932,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_GetById
+-- Drop the dbo.tblStore_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_GetById
 GO
 
 /*
@@ -5946,7 +5946,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_GetById
+CREATE PROCEDURE dbo.tblStore_GetById
 (
 
 	@Id char (5)  
@@ -5988,9 +5988,9 @@ GO
 
 	
 
--- Drop the dbo.usptblStore_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblStore_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblStore_Find
+-- Drop the dbo.tblStore_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblStore_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblStore_Find
 GO
 
 /*
@@ -6002,7 +6002,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblStore_Find
+CREATE PROCEDURE dbo.tblStore_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -6129,9 +6129,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_Get_List
+-- Drop the dbo.tblUser_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_Get_List
 GO
 
 /*
@@ -6143,7 +6143,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_Get_List
+CREATE PROCEDURE dbo.tblUser_Get_List
 
 AS
 
@@ -6174,9 +6174,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_GetPaged
+-- Drop the dbo.tblUser_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_GetPaged
 GO
 
 /*
@@ -6188,7 +6188,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_GetPaged
+CREATE PROCEDURE dbo.tblUser_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -6275,9 +6275,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_Insert
+-- Drop the dbo.tblUser_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_Insert
 GO
 
 /*
@@ -6289,7 +6289,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_Insert
+CREATE PROCEDURE dbo.tblUser_Insert
 (
 
 	@Id int   ,
@@ -6348,9 +6348,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_Update
+-- Drop the dbo.tblUser_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_Update
 GO
 
 /*
@@ -6362,7 +6362,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_Update
+CREATE PROCEDURE dbo.tblUser_Update
 (
 
 	@Id int   ,
@@ -6415,9 +6415,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_Delete
+-- Drop the dbo.tblUser_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_Delete
 GO
 
 /*
@@ -6429,7 +6429,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_Delete
+CREATE PROCEDURE dbo.tblUser_Delete
 (
 
 	@Id int   
@@ -6453,9 +6453,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_GetById
+-- Drop the dbo.tblUser_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_GetById
 GO
 
 /*
@@ -6467,7 +6467,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_GetById
+CREATE PROCEDURE dbo.tblUser_GetById
 (
 
 	@Id int   
@@ -6502,9 +6502,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUser_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUser_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUser_Find
+-- Drop the dbo.tblUser_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUser_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUser_Find
 GO
 
 /*
@@ -6516,7 +6516,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUser_Find
+CREATE PROCEDURE dbo.tblUser_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -6601,9 +6601,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_Get_List
+-- Drop the dbo.tblTrcode_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_Get_List
 GO
 
 /*
@@ -6615,7 +6615,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_Get_List
+CREATE PROCEDURE dbo.tblTrcode_Get_List
 
 AS
 
@@ -6647,9 +6647,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_GetPaged
+-- Drop the dbo.tblTrcode_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_GetPaged
 GO
 
 /*
@@ -6661,7 +6661,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_GetPaged
+CREATE PROCEDURE dbo.tblTrcode_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -6748,9 +6748,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_Insert
+-- Drop the dbo.tblTrcode_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_Insert
 GO
 
 /*
@@ -6762,7 +6762,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_Insert
+CREATE PROCEDURE dbo.tblTrcode_Insert
 (
 
 	@TrCode char (2)  ,
@@ -6825,9 +6825,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_Update
+-- Drop the dbo.tblTrcode_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_Update
 GO
 
 /*
@@ -6839,7 +6839,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_Update
+CREATE PROCEDURE dbo.tblTrcode_Update
 (
 
 	@TrCode char (2)  ,
@@ -6895,9 +6895,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_Delete
+-- Drop the dbo.tblTrcode_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_Delete
 GO
 
 /*
@@ -6909,7 +6909,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_Delete
+CREATE PROCEDURE dbo.tblTrcode_Delete
 (
 
 	@TrCode char (2)  
@@ -6933,9 +6933,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_GetByTrCode procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_GetByTrCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_GetByTrCode
+-- Drop the dbo.tblTrcode_GetByTrCode procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_GetByTrCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_GetByTrCode
 GO
 
 /*
@@ -6947,7 +6947,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_GetByTrCode
+CREATE PROCEDURE dbo.tblTrcode_GetByTrCode
 (
 
 	@TrCode char (2)  
@@ -6983,9 +6983,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTrcode_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTrcode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTrcode_Find
+-- Drop the dbo.tblTrcode_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTrcode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTrcode_Find
 GO
 
 /*
@@ -6997,7 +6997,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTrcode_Find
+CREATE PROCEDURE dbo.tblTrcode_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -7088,9 +7088,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_Get_List
+-- Drop the dbo.tblUserGrp_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_Get_List
 GO
 
 /*
@@ -7102,7 +7102,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_Get_List
+CREATE PROCEDURE dbo.tblUserGrp_Get_List
 
 AS
 
@@ -7131,9 +7131,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_GetPaged
+-- Drop the dbo.tblUserGrp_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_GetPaged
 GO
 
 /*
@@ -7145,7 +7145,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_GetPaged
+CREATE PROCEDURE dbo.tblUserGrp_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -7232,9 +7232,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_Insert
+-- Drop the dbo.tblUserGrp_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_Insert
 GO
 
 /*
@@ -7246,7 +7246,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_Insert
+CREATE PROCEDURE dbo.tblUserGrp_Insert
 (
 
 	@Id char (2)  ,
@@ -7297,9 +7297,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_Update
+-- Drop the dbo.tblUserGrp_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_Update
 GO
 
 /*
@@ -7311,7 +7311,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_Update
+CREATE PROCEDURE dbo.tblUserGrp_Update
 (
 
 	@Id char (2)  ,
@@ -7358,9 +7358,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_Delete
+-- Drop the dbo.tblUserGrp_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_Delete
 GO
 
 /*
@@ -7372,7 +7372,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_Delete
+CREATE PROCEDURE dbo.tblUserGrp_Delete
 (
 
 	@Id char (2)  
@@ -7396,9 +7396,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_GetById
+-- Drop the dbo.tblUserGrp_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_GetById
 GO
 
 /*
@@ -7410,7 +7410,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_GetById
+CREATE PROCEDURE dbo.tblUserGrp_GetById
 (
 
 	@Id char (2)  
@@ -7443,9 +7443,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUserGrp_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUserGrp_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUserGrp_Find
+-- Drop the dbo.tblUserGrp_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUserGrp_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUserGrp_Find
 GO
 
 /*
@@ -7457,7 +7457,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUserGrp_Find
+CREATE PROCEDURE dbo.tblUserGrp_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -7530,9 +7530,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_Get_List
+-- Drop the dbo.tblSysvar_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_Get_List
 GO
 
 /*
@@ -7544,7 +7544,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_Get_List
+CREATE PROCEDURE dbo.tblSysvar_Get_List
 
 AS
 
@@ -7572,9 +7572,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_GetPaged
+-- Drop the dbo.tblSysvar_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_GetPaged
 GO
 
 /*
@@ -7586,7 +7586,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_GetPaged
+CREATE PROCEDURE dbo.tblSysvar_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -7673,9 +7673,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_Insert
+-- Drop the dbo.tblSysvar_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_Insert
 GO
 
 /*
@@ -7687,7 +7687,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_Insert
+CREATE PROCEDURE dbo.tblSysvar_Insert
 (
 
 	@MCode nvarchar (50)  ,
@@ -7734,9 +7734,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_Update
+-- Drop the dbo.tblSysvar_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_Update
 GO
 
 /*
@@ -7748,7 +7748,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_Update
+CREATE PROCEDURE dbo.tblSysvar_Update
 (
 
 	@MCode nvarchar (50)  ,
@@ -7792,9 +7792,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_Delete
+-- Drop the dbo.tblSysvar_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_Delete
 GO
 
 /*
@@ -7806,7 +7806,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_Delete
+CREATE PROCEDURE dbo.tblSysvar_Delete
 (
 
 	@MCode nvarchar (50)  
@@ -7830,9 +7830,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_GetByMCode procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_GetByMCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_GetByMCode
+-- Drop the dbo.tblSysvar_GetByMCode procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_GetByMCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_GetByMCode
 GO
 
 /*
@@ -7844,7 +7844,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_GetByMCode
+CREATE PROCEDURE dbo.tblSysvar_GetByMCode
 (
 
 	@MCode nvarchar (50)  
@@ -7876,9 +7876,9 @@ GO
 
 	
 
--- Drop the dbo.usptblSysvar_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblSysvar_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblSysvar_Find
+-- Drop the dbo.tblSysvar_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblSysvar_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblSysvar_Find
 GO
 
 /*
@@ -7890,7 +7890,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblSysvar_Find
+CREATE PROCEDURE dbo.tblSysvar_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -7957,9 +7957,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_Get_List
+-- Drop the dbo.tblTransValue_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_Get_List
 GO
 
 /*
@@ -7971,7 +7971,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_Get_List
+CREATE PROCEDURE dbo.tblTransValue_Get_List
 
 AS
 
@@ -7998,9 +7998,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_GetPaged
+-- Drop the dbo.tblTransValue_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_GetPaged
 GO
 
 /*
@@ -8012,7 +8012,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_GetPaged
+CREATE PROCEDURE dbo.tblTransValue_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -8099,9 +8099,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_Insert
+-- Drop the dbo.tblTransValue_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_Insert
 GO
 
 /*
@@ -8113,7 +8113,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_Insert
+CREATE PROCEDURE dbo.tblTransValue_Insert
 (
 
 	@TransNum nchar (12)  ,
@@ -8156,9 +8156,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_Update
+-- Drop the dbo.tblTransValue_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_Update
 GO
 
 /*
@@ -8170,7 +8170,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_Update
+CREATE PROCEDURE dbo.tblTransValue_Update
 (
 
 	@TransNum nchar (12)  ,
@@ -8211,9 +8211,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_Delete
+-- Drop the dbo.tblTransValue_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_Delete
 GO
 
 /*
@@ -8225,7 +8225,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_Delete
+CREATE PROCEDURE dbo.tblTransValue_Delete
 (
 
 	@TransNum nchar (12)  
@@ -8249,9 +8249,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_GetByTransNum procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_GetByTransNum') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_GetByTransNum
+-- Drop the dbo.tblTransValue_GetByTransNum procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_GetByTransNum') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_GetByTransNum
 GO
 
 /*
@@ -8263,7 +8263,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_GetByTransNum
+CREATE PROCEDURE dbo.tblTransValue_GetByTransNum
 (
 
 	@TransNum nchar (12)  
@@ -8294,9 +8294,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransValue_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransValue_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransValue_Find
+-- Drop the dbo.tblTransValue_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransValue_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransValue_Find
 GO
 
 /*
@@ -8308,7 +8308,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransValue_Find
+CREATE PROCEDURE dbo.tblTransValue_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -8369,9 +8369,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_Get_List
+-- Drop the dbo.tblTransaction_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_Get_List
 GO
 
 /*
@@ -8383,7 +8383,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_Get_List
+CREATE PROCEDURE dbo.tblTransaction_Get_List
 
 AS
 
@@ -8447,9 +8447,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_GetPaged
+-- Drop the dbo.tblTransaction_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_GetPaged
 GO
 
 /*
@@ -8461,7 +8461,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_GetPaged
+CREATE PROCEDURE dbo.tblTransaction_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -8548,9 +8548,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_Insert
+-- Drop the dbo.tblTransaction_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_Insert
 GO
 
 /*
@@ -8562,7 +8562,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_Insert
+CREATE PROCEDURE dbo.tblTransaction_Insert
 (
 
 	@Idx numeric (18, 0)   OUTPUT,
@@ -8753,9 +8753,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_Update
+-- Drop the dbo.tblTransaction_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_Update
 GO
 
 /*
@@ -8767,7 +8767,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_Update
+CREATE PROCEDURE dbo.tblTransaction_Update
 (
 
 	@Idx numeric (18, 0)  ,
@@ -8916,9 +8916,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_Delete
+-- Drop the dbo.tblTransaction_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_Delete
 GO
 
 /*
@@ -8930,7 +8930,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_Delete
+CREATE PROCEDURE dbo.tblTransaction_Delete
 (
 
 	@Idx numeric (18, 0)  
@@ -8954,9 +8954,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_GetByIdx procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_GetByIdx
+-- Drop the dbo.tblTransaction_GetByIdx procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_GetByIdx
 GO
 
 /*
@@ -8968,7 +8968,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_GetByIdx
+CREATE PROCEDURE dbo.tblTransaction_GetByIdx
 (
 
 	@Idx numeric (18, 0)  
@@ -9036,9 +9036,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransaction_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransaction_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransaction_Find
+-- Drop the dbo.tblTransaction_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransaction_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransaction_Find
 GO
 
 /*
@@ -9050,7 +9050,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransaction_Find
+CREATE PROCEDURE dbo.tblTransaction_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -9333,9 +9333,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_Get_List
+-- Drop the dbo.tblModePayment_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_Get_List
 GO
 
 /*
@@ -9347,7 +9347,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_Get_List
+CREATE PROCEDURE dbo.tblModePayment_Get_List
 
 AS
 
@@ -9376,9 +9376,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_GetPaged
+-- Drop the dbo.tblModePayment_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_GetPaged
 GO
 
 /*
@@ -9390,7 +9390,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_GetPaged
+CREATE PROCEDURE dbo.tblModePayment_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -9478,9 +9478,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_Insert
+-- Drop the dbo.tblModePayment_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_Insert
 GO
 
 /*
@@ -9492,7 +9492,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_Insert
+CREATE PROCEDURE dbo.tblModePayment_Insert
 (
 
 	@PmtMode nchar (10)  ,
@@ -9543,9 +9543,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_Update
+-- Drop the dbo.tblModePayment_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_Update
 GO
 
 /*
@@ -9557,7 +9557,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_Update
+CREATE PROCEDURE dbo.tblModePayment_Update
 (
 
 	@PmtMode nchar (10)  ,
@@ -9607,9 +9607,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_Delete
+-- Drop the dbo.tblModePayment_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_Delete
 GO
 
 /*
@@ -9621,7 +9621,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_Delete
+CREATE PROCEDURE dbo.tblModePayment_Delete
 (
 
 	@PmtMode nchar (10)  ,
@@ -9648,9 +9648,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_GetByPmtModeForex procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_GetByPmtModeForex') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_GetByPmtModeForex
+-- Drop the dbo.tblModePayment_GetByPmtModeForex procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_GetByPmtModeForex') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_GetByPmtModeForex
 GO
 
 /*
@@ -9662,7 +9662,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_GetByPmtModeForex
+CREATE PROCEDURE dbo.tblModePayment_GetByPmtModeForex
 (
 
 	@PmtMode nchar (10)  ,
@@ -9698,9 +9698,9 @@ GO
 
 	
 
--- Drop the dbo.usptblModePayment_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblModePayment_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblModePayment_Find
+-- Drop the dbo.tblModePayment_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblModePayment_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblModePayment_Find
 GO
 
 /*
@@ -9712,7 +9712,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblModePayment_Find
+CREATE PROCEDURE dbo.tblModePayment_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -9785,9 +9785,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_Get_List
+-- Drop the dbo.tblTransnum_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_Get_List
 GO
 
 /*
@@ -9799,7 +9799,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_Get_List
+CREATE PROCEDURE dbo.tblTransnum_Get_List
 
 AS
 
@@ -9825,9 +9825,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_GetPaged
+-- Drop the dbo.tblTransnum_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_GetPaged
 GO
 
 /*
@@ -9839,7 +9839,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_GetPaged
+CREATE PROCEDURE dbo.tblTransnum_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -9926,9 +9926,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_Insert
+-- Drop the dbo.tblTransnum_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_Insert
 GO
 
 /*
@@ -9940,7 +9940,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_Insert
+CREATE PROCEDURE dbo.tblTransnum_Insert
 (
 
 	@TransType char (4)  ,
@@ -9979,9 +9979,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_Update
+-- Drop the dbo.tblTransnum_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_Update
 GO
 
 /*
@@ -9993,7 +9993,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_Update
+CREATE PROCEDURE dbo.tblTransnum_Update
 (
 
 	@TransType char (4)  ,
@@ -10031,9 +10031,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_Delete
+-- Drop the dbo.tblTransnum_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_Delete
 GO
 
 /*
@@ -10045,7 +10045,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_Delete
+CREATE PROCEDURE dbo.tblTransnum_Delete
 (
 
 	@TransType char (4)  
@@ -10069,9 +10069,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_GetByTransType procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_GetByTransType') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_GetByTransType
+-- Drop the dbo.tblTransnum_GetByTransType procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_GetByTransType') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_GetByTransType
 GO
 
 /*
@@ -10083,7 +10083,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_GetByTransType
+CREATE PROCEDURE dbo.tblTransnum_GetByTransType
 (
 
 	@TransType char (4)  
@@ -10113,9 +10113,9 @@ GO
 
 	
 
--- Drop the dbo.usptblTransnum_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblTransnum_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblTransnum_Find
+-- Drop the dbo.tblTransnum_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblTransnum_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblTransnum_Find
 GO
 
 /*
@@ -10127,7 +10127,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblTransnum_Find
+CREATE PROCEDURE dbo.tblTransnum_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -10182,9 +10182,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_Get_List
+-- Drop the dbo.tblMercLocation_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_Get_List
 GO
 
 /*
@@ -10196,7 +10196,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_Get_List
+CREATE PROCEDURE dbo.tblMercLocation_Get_List
 
 AS
 
@@ -10224,9 +10224,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_GetPaged
+-- Drop the dbo.tblMercLocation_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_GetPaged
 GO
 
 /*
@@ -10238,7 +10238,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_GetPaged
+CREATE PROCEDURE dbo.tblMercLocation_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -10325,9 +10325,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_Insert
+-- Drop the dbo.tblMercLocation_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_Insert
 GO
 
 /*
@@ -10339,7 +10339,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_Insert
+CREATE PROCEDURE dbo.tblMercLocation_Insert
 (
 
 	@Idx numeric (18, 0)   OUTPUT,
@@ -10386,9 +10386,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_Update
+-- Drop the dbo.tblMercLocation_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_Update
 GO
 
 /*
@@ -10400,7 +10400,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_Update
+CREATE PROCEDURE dbo.tblMercLocation_Update
 (
 
 	@Idx numeric (18, 0)  ,
@@ -10441,9 +10441,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_Delete
+-- Drop the dbo.tblMercLocation_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_Delete
 GO
 
 /*
@@ -10455,7 +10455,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_Delete
+CREATE PROCEDURE dbo.tblMercLocation_Delete
 (
 
 	@Idx numeric (18, 0)  
@@ -10479,9 +10479,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_GetByIdx procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_GetByIdx
+-- Drop the dbo.tblMercLocation_GetByIdx procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_GetByIdx') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_GetByIdx
 GO
 
 /*
@@ -10493,7 +10493,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_GetByIdx
+CREATE PROCEDURE dbo.tblMercLocation_GetByIdx
 (
 
 	@Idx numeric (18, 0)  
@@ -10525,9 +10525,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMercLocation_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMercLocation_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMercLocation_Find
+-- Drop the dbo.tblMercLocation_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMercLocation_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMercLocation_Find
 GO
 
 /*
@@ -10539,7 +10539,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMercLocation_Find
+CREATE PROCEDURE dbo.tblMercLocation_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -10606,9 +10606,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_Get_List
+-- Drop the dbo.tblCurrency_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_Get_List
 GO
 
 /*
@@ -10620,7 +10620,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_Get_List
+CREATE PROCEDURE dbo.tblCurrency_Get_List
 
 AS
 
@@ -10647,9 +10647,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_GetPaged
+-- Drop the dbo.tblCurrency_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_GetPaged
 GO
 
 /*
@@ -10661,7 +10661,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_GetPaged
+CREATE PROCEDURE dbo.tblCurrency_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -10748,9 +10748,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_Insert
+-- Drop the dbo.tblCurrency_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_Insert
 GO
 
 /*
@@ -10762,7 +10762,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_Insert
+CREATE PROCEDURE dbo.tblCurrency_Insert
 (
 
 	@Id nvarchar (3)  ,
@@ -10805,9 +10805,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_Update
+-- Drop the dbo.tblCurrency_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_Update
 GO
 
 /*
@@ -10819,7 +10819,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_Update
+CREATE PROCEDURE dbo.tblCurrency_Update
 (
 
 	@Id nvarchar (3)  ,
@@ -10860,9 +10860,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_Delete
+-- Drop the dbo.tblCurrency_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_Delete
 GO
 
 /*
@@ -10874,7 +10874,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_Delete
+CREATE PROCEDURE dbo.tblCurrency_Delete
 (
 
 	@Id nvarchar (3)  
@@ -10898,9 +10898,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_GetById
+-- Drop the dbo.tblCurrency_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_GetById
 GO
 
 /*
@@ -10912,7 +10912,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_GetById
+CREATE PROCEDURE dbo.tblCurrency_GetById
 (
 
 	@Id nvarchar (3)  
@@ -10943,9 +10943,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCurrency_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCurrency_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCurrency_Find
+-- Drop the dbo.tblCurrency_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCurrency_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCurrency_Find
 GO
 
 /*
@@ -10957,7 +10957,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCurrency_Find
+CREATE PROCEDURE dbo.tblCurrency_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -11018,9 +11018,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_Get_List
+-- Drop the dbo.tblMenus_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_Get_List
 GO
 
 /*
@@ -11032,7 +11032,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_Get_List
+CREATE PROCEDURE dbo.tblMenus_Get_List
 
 AS
 
@@ -11067,9 +11067,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_GetPaged
+-- Drop the dbo.tblMenus_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_GetPaged
 GO
 
 /*
@@ -11081,7 +11081,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_GetPaged
+CREATE PROCEDURE dbo.tblMenus_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -11168,9 +11168,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_Insert
+-- Drop the dbo.tblMenus_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_Insert
 GO
 
 /*
@@ -11182,7 +11182,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_Insert
+CREATE PROCEDURE dbo.tblMenus_Insert
 (
 
 	@Id int    OUTPUT,
@@ -11257,9 +11257,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_Update
+-- Drop the dbo.tblMenus_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_Update
 GO
 
 /*
@@ -11271,7 +11271,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_Update
+CREATE PROCEDURE dbo.tblMenus_Update
 (
 
 	@Id int   ,
@@ -11333,9 +11333,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_Delete
+-- Drop the dbo.tblMenus_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_Delete
 GO
 
 /*
@@ -11347,7 +11347,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_Delete
+CREATE PROCEDURE dbo.tblMenus_Delete
 (
 
 	@Id int   
@@ -11371,9 +11371,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_GetById
+-- Drop the dbo.tblMenus_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_GetById
 GO
 
 /*
@@ -11385,7 +11385,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_GetById
+CREATE PROCEDURE dbo.tblMenus_GetById
 (
 
 	@Id int   
@@ -11424,9 +11424,9 @@ GO
 
 	
 
--- Drop the dbo.usptblMenus_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblMenus_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblMenus_Find
+-- Drop the dbo.tblMenus_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblMenus_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblMenus_Find
 GO
 
 /*
@@ -11438,7 +11438,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblMenus_Find
+CREATE PROCEDURE dbo.tblMenus_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -11547,9 +11547,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_Get_List
+-- Drop the dbo.tblCust_info_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_Get_List
 GO
 
 /*
@@ -11561,7 +11561,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_Get_List
+CREATE PROCEDURE dbo.tblCust_info_Get_List
 
 AS
 
@@ -11592,9 +11592,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_GetPaged
+-- Drop the dbo.tblCust_info_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_GetPaged
 GO
 
 /*
@@ -11606,7 +11606,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_GetPaged
+CREATE PROCEDURE dbo.tblCust_info_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -11694,9 +11694,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_Insert
+-- Drop the dbo.tblCust_info_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_Insert
 GO
 
 /*
@@ -11708,7 +11708,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_Insert
+CREATE PROCEDURE dbo.tblCust_info_Insert
 (
 
 	@CustId nchar (5)  ,
@@ -11767,9 +11767,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_Update
+-- Drop the dbo.tblCust_info_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_Update
 GO
 
 /*
@@ -11781,7 +11781,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_Update
+CREATE PROCEDURE dbo.tblCust_info_Update
 (
 
 	@CustId nchar (5)  ,
@@ -11837,9 +11837,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_Delete
+-- Drop the dbo.tblCust_info_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_Delete
 GO
 
 /*
@@ -11851,7 +11851,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_Delete
+CREATE PROCEDURE dbo.tblCust_info_Delete
 (
 
 	@CustId nchar (5)  ,
@@ -11878,9 +11878,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_GetByCustIdGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_GetByCustIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_GetByCustIdGoodsId
+-- Drop the dbo.tblCust_info_GetByCustIdGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_GetByCustIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_GetByCustIdGoodsId
 GO
 
 /*
@@ -11892,7 +11892,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_GetByCustIdGoodsId
+CREATE PROCEDURE dbo.tblCust_info_GetByCustIdGoodsId
 (
 
 	@CustId nchar (5)  ,
@@ -11930,9 +11930,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCust_info_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCust_info_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCust_info_Find
+-- Drop the dbo.tblCust_info_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCust_info_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCust_info_Find
 GO
 
 /*
@@ -11944,7 +11944,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCust_info_Find
+CREATE PROCEDURE dbo.tblCust_info_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -12029,9 +12029,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_Get_List
+-- Drop the dbo.tblCsCard_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_Get_List
 GO
 
 /*
@@ -12043,7 +12043,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_Get_List
+CREATE PROCEDURE dbo.tblCsCard_Get_List
 
 AS
 
@@ -12085,9 +12085,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_GetPaged
+-- Drop the dbo.tblCsCard_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_GetPaged
 GO
 
 /*
@@ -12099,7 +12099,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_GetPaged
+CREATE PROCEDURE dbo.tblCsCard_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -12186,9 +12186,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_Insert
+-- Drop the dbo.tblCsCard_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_Insert
 GO
 
 /*
@@ -12200,7 +12200,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_Insert
+CREATE PROCEDURE dbo.tblCsCard_Insert
 (
 
 	@CardId char (8)  ,
@@ -12303,9 +12303,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_Update
+-- Drop the dbo.tblCsCard_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_Update
 GO
 
 /*
@@ -12317,7 +12317,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_Update
+CREATE PROCEDURE dbo.tblCsCard_Update
 (
 
 	@CardId char (8)  ,
@@ -12403,9 +12403,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_Delete
+-- Drop the dbo.tblCsCard_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_Delete
 GO
 
 /*
@@ -12417,7 +12417,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_Delete
+CREATE PROCEDURE dbo.tblCsCard_Delete
 (
 
 	@CardId char (8)  
@@ -12441,9 +12441,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_GetByCardId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_GetByCardId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_GetByCardId
+-- Drop the dbo.tblCsCard_GetByCardId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_GetByCardId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_GetByCardId
 GO
 
 /*
@@ -12455,7 +12455,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_GetByCardId
+CREATE PROCEDURE dbo.tblCsCard_GetByCardId
 (
 
 	@CardId char (8)  
@@ -12501,9 +12501,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCsCard_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCsCard_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCsCard_Find
+-- Drop the dbo.tblCsCard_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCsCard_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCsCard_Find
 GO
 
 /*
@@ -12515,7 +12515,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCsCard_Find
+CREATE PROCEDURE dbo.tblCsCard_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -12664,9 +12664,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_Get_List
+-- Drop the dbo.tblCustomer_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_Get_List
 GO
 
 /*
@@ -12678,7 +12678,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_Get_List
+CREATE PROCEDURE dbo.tblCustomer_Get_List
 
 AS
 
@@ -12720,9 +12720,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_GetPaged
+-- Drop the dbo.tblCustomer_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_GetPaged
 GO
 
 /*
@@ -12734,7 +12734,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_GetPaged
+CREATE PROCEDURE dbo.tblCustomer_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -12821,9 +12821,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_Insert
+-- Drop the dbo.tblCustomer_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_Insert
 GO
 
 /*
@@ -12835,7 +12835,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_Insert
+CREATE PROCEDURE dbo.tblCustomer_Insert
 (
 
 	@Id char (8)  ,
@@ -12938,9 +12938,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_Update
+-- Drop the dbo.tblCustomer_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_Update
 GO
 
 /*
@@ -12952,7 +12952,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_Update
+CREATE PROCEDURE dbo.tblCustomer_Update
 (
 
 	@Id char (8)  ,
@@ -13038,9 +13038,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_Delete
+-- Drop the dbo.tblCustomer_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_Delete
 GO
 
 /*
@@ -13052,7 +13052,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_Delete
+CREATE PROCEDURE dbo.tblCustomer_Delete
 (
 
 	@Id char (8)  
@@ -13076,9 +13076,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_GetById
+-- Drop the dbo.tblCustomer_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_GetById
 GO
 
 /*
@@ -13090,7 +13090,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_GetById
+CREATE PROCEDURE dbo.tblCustomer_GetById
 (
 
 	@Id char (8)  
@@ -13136,9 +13136,9 @@ GO
 
 	
 
--- Drop the dbo.usptblCustomer_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblCustomer_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblCustomer_Find
+-- Drop the dbo.tblCustomer_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblCustomer_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblCustomer_Find
 GO
 
 /*
@@ -13150,7 +13150,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblCustomer_Find
+CREATE PROCEDURE dbo.tblCustomer_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -13299,9 +13299,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_Get_List
+-- Drop the dbo.tblAccTrans_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_Get_List
 GO
 
 /*
@@ -13313,7 +13313,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_Get_List
+CREATE PROCEDURE dbo.tblAccTrans_Get_List
 
 AS
 
@@ -13355,9 +13355,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_GetPaged
+-- Drop the dbo.tblAccTrans_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_GetPaged
 GO
 
 /*
@@ -13369,7 +13369,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_GetPaged
+CREATE PROCEDURE dbo.tblAccTrans_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -13456,9 +13456,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_Insert
+-- Drop the dbo.tblAccTrans_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_Insert
 GO
 
 /*
@@ -13470,7 +13470,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_Insert
+CREATE PROCEDURE dbo.tblAccTrans_Insert
 (
 
 	@Id numeric (18, 0)   OUTPUT,
@@ -13573,9 +13573,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_Update
+-- Drop the dbo.tblAccTrans_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_Update
 GO
 
 /*
@@ -13587,7 +13587,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_Update
+CREATE PROCEDURE dbo.tblAccTrans_Update
 (
 
 	@Id numeric (18, 0)  ,
@@ -13670,9 +13670,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_Delete
+-- Drop the dbo.tblAccTrans_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_Delete
 GO
 
 /*
@@ -13684,7 +13684,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_Delete
+CREATE PROCEDURE dbo.tblAccTrans_Delete
 (
 
 	@Id numeric (18, 0)  
@@ -13708,9 +13708,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_GetById
+-- Drop the dbo.tblAccTrans_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_GetById
 GO
 
 /*
@@ -13722,7 +13722,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_GetById
+CREATE PROCEDURE dbo.tblAccTrans_GetById
 (
 
 	@Id numeric (18, 0)  
@@ -13768,9 +13768,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAccTrans_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAccTrans_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAccTrans_Find
+-- Drop the dbo.tblAccTrans_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAccTrans_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAccTrans_Find
 GO
 
 /*
@@ -13782,7 +13782,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAccTrans_Find
+CREATE PROCEDURE dbo.tblAccTrans_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -13933,9 +13933,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_Get_List
+-- Drop the dbo.tblBookAttr_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_Get_List
 GO
 
 /*
@@ -13947,7 +13947,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_Get_List
+CREATE PROCEDURE dbo.tblBookAttr_Get_List
 
 AS
 
@@ -13982,9 +13982,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_GetPaged
+-- Drop the dbo.tblBookAttr_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_GetPaged
 GO
 
 /*
@@ -13996,7 +13996,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_GetPaged
+CREATE PROCEDURE dbo.tblBookAttr_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -14083,9 +14083,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_Insert
+-- Drop the dbo.tblBookAttr_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_Insert
 GO
 
 /*
@@ -14097,7 +14097,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_Insert
+CREATE PROCEDURE dbo.tblBookAttr_Insert
 (
 
 	@GoodsId nchar (6)  ,
@@ -14172,9 +14172,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_Update
+-- Drop the dbo.tblBookAttr_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_Update
 GO
 
 /*
@@ -14186,7 +14186,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_Update
+CREATE PROCEDURE dbo.tblBookAttr_Update
 (
 
 	@GoodsId nchar (6)  ,
@@ -14251,9 +14251,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_Delete
+-- Drop the dbo.tblBookAttr_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_Delete
 GO
 
 /*
@@ -14265,7 +14265,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_Delete
+CREATE PROCEDURE dbo.tblBookAttr_Delete
 (
 
 	@GoodsId nchar (6)  
@@ -14289,9 +14289,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_GetByGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_GetByGoodsId
+-- Drop the dbo.tblBookAttr_GetByGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_GetByGoodsId
 GO
 
 /*
@@ -14303,7 +14303,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_GetByGoodsId
+CREATE PROCEDURE dbo.tblBookAttr_GetByGoodsId
 (
 
 	@GoodsId nchar (6)  
@@ -14342,9 +14342,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBookAttr_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBookAttr_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBookAttr_Find
+-- Drop the dbo.tblBookAttr_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBookAttr_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBookAttr_Find
 GO
 
 /*
@@ -14356,7 +14356,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBookAttr_Find
+CREATE PROCEDURE dbo.tblBookAttr_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -14465,9 +14465,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_Get_List
+-- Drop the dbo.tblAtrCode_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_Get_List
 GO
 
 /*
@@ -14479,7 +14479,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_Get_List
+CREATE PROCEDURE dbo.tblAtrCode_Get_List
 
 AS
 
@@ -14516,9 +14516,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_GetPaged
+-- Drop the dbo.tblAtrCode_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_GetPaged
 GO
 
 /*
@@ -14530,7 +14530,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_GetPaged
+CREATE PROCEDURE dbo.tblAtrCode_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -14617,9 +14617,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_Insert
+-- Drop the dbo.tblAtrCode_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_Insert
 GO
 
 /*
@@ -14631,7 +14631,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_Insert
+CREATE PROCEDURE dbo.tblAtrCode_Insert
 (
 
 	@TransCode nvarchar (2)  ,
@@ -14714,9 +14714,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_Update
+-- Drop the dbo.tblAtrCode_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_Update
 GO
 
 /*
@@ -14728,7 +14728,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_Update
+CREATE PROCEDURE dbo.tblAtrCode_Update
 (
 
 	@TransCode nvarchar (2)  ,
@@ -14799,9 +14799,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_Delete
+-- Drop the dbo.tblAtrCode_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_Delete
 GO
 
 /*
@@ -14813,7 +14813,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_Delete
+CREATE PROCEDURE dbo.tblAtrCode_Delete
 (
 
 	@TransCode nvarchar (2)  
@@ -14837,9 +14837,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_GetByTransCode procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_GetByTransCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_GetByTransCode
+-- Drop the dbo.tblAtrCode_GetByTransCode procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_GetByTransCode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_GetByTransCode
 GO
 
 /*
@@ -14851,7 +14851,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_GetByTransCode
+CREATE PROCEDURE dbo.tblAtrCode_GetByTransCode
 (
 
 	@TransCode nvarchar (2)  
@@ -14892,9 +14892,9 @@ GO
 
 	
 
--- Drop the dbo.usptblAtrCode_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblAtrCode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblAtrCode_Find
+-- Drop the dbo.tblAtrCode_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblAtrCode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblAtrCode_Find
 GO
 
 /*
@@ -14906,7 +14906,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblAtrCode_Find
+CREATE PROCEDURE dbo.tblAtrCode_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -15027,9 +15027,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_Get_List
+-- Drop the dbo.tblDate_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_Get_List
 GO
 
 /*
@@ -15041,7 +15041,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_Get_List
+CREATE PROCEDURE dbo.tblDate_Get_List
 
 AS
 
@@ -15067,9 +15067,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_GetPaged
+-- Drop the dbo.tblDate_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_GetPaged
 GO
 
 /*
@@ -15081,7 +15081,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_GetPaged
+CREATE PROCEDURE dbo.tblDate_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -15168,9 +15168,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_Insert
+-- Drop the dbo.tblDate_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_Insert
 GO
 
 /*
@@ -15182,7 +15182,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_Insert
+CREATE PROCEDURE dbo.tblDate_Insert
 (
 
 	@Id int   ,
@@ -15221,9 +15221,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_Update
+-- Drop the dbo.tblDate_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_Update
 GO
 
 /*
@@ -15235,7 +15235,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_Update
+CREATE PROCEDURE dbo.tblDate_Update
 (
 
 	@Id int   ,
@@ -15273,9 +15273,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_Delete
+-- Drop the dbo.tblDate_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_Delete
 GO
 
 /*
@@ -15287,7 +15287,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_Delete
+CREATE PROCEDURE dbo.tblDate_Delete
 (
 
 	@Id int   
@@ -15311,9 +15311,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_GetById
+-- Drop the dbo.tblDate_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_GetById
 GO
 
 /*
@@ -15325,7 +15325,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_GetById
+CREATE PROCEDURE dbo.tblDate_GetById
 (
 
 	@Id int   
@@ -15355,9 +15355,9 @@ GO
 
 	
 
--- Drop the dbo.usptblDate_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblDate_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblDate_Find
+-- Drop the dbo.tblDate_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblDate_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblDate_Find
 GO
 
 /*
@@ -15369,7 +15369,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblDate_Find
+CREATE PROCEDURE dbo.tblDate_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -15424,9 +15424,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_Get_List
+-- Drop the dbo.tblBarcode_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_Get_List
 GO
 
 /*
@@ -15438,7 +15438,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_Get_List
+CREATE PROCEDURE dbo.tblBarcode_Get_List
 
 AS
 
@@ -15463,9 +15463,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_GetPaged
+-- Drop the dbo.tblBarcode_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_GetPaged
 GO
 
 /*
@@ -15477,7 +15477,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_GetPaged
+CREATE PROCEDURE dbo.tblBarcode_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -15564,9 +15564,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_Insert
+-- Drop the dbo.tblBarcode_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_Insert
 GO
 
 /*
@@ -15578,7 +15578,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_Insert
+CREATE PROCEDURE dbo.tblBarcode_Insert
 (
 
 	@Barcode varchar (20)  ,
@@ -15613,9 +15613,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_Update
+-- Drop the dbo.tblBarcode_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_Update
 GO
 
 /*
@@ -15627,7 +15627,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_Update
+CREATE PROCEDURE dbo.tblBarcode_Update
 (
 
 	@Barcode varchar (20)  ,
@@ -15662,9 +15662,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_Delete
+-- Drop the dbo.tblBarcode_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_Delete
 GO
 
 /*
@@ -15676,7 +15676,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_Delete
+CREATE PROCEDURE dbo.tblBarcode_Delete
 (
 
 	@Barcode varchar (20)  
@@ -15700,9 +15700,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_GetByBarcode procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_GetByBarcode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_GetByBarcode
+-- Drop the dbo.tblBarcode_GetByBarcode procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_GetByBarcode') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_GetByBarcode
 GO
 
 /*
@@ -15714,7 +15714,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_GetByBarcode
+CREATE PROCEDURE dbo.tblBarcode_GetByBarcode
 (
 
 	@Barcode varchar (20)  
@@ -15743,9 +15743,9 @@ GO
 
 	
 
--- Drop the dbo.usptblBarcode_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblBarcode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblBarcode_Find
+-- Drop the dbo.tblBarcode_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblBarcode_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblBarcode_Find
 GO
 
 /*
@@ -15757,7 +15757,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblBarcode_Find
+CREATE PROCEDURE dbo.tblBarcode_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -15806,9 +15806,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_Get_List
+-- Drop the dbo.tblLanguage_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_Get_List
 GO
 
 /*
@@ -15820,7 +15820,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_Get_List
+CREATE PROCEDURE dbo.tblLanguage_Get_List
 
 AS
 
@@ -15846,9 +15846,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_GetPaged
+-- Drop the dbo.tblLanguage_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_GetPaged
 GO
 
 /*
@@ -15860,7 +15860,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_GetPaged
+CREATE PROCEDURE dbo.tblLanguage_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -15947,9 +15947,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_Insert
+-- Drop the dbo.tblLanguage_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_Insert
 GO
 
 /*
@@ -15961,7 +15961,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_Insert
+CREATE PROCEDURE dbo.tblLanguage_Insert
 (
 
 	@Id numeric (18, 0)  ,
@@ -16000,9 +16000,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_Update
+-- Drop the dbo.tblLanguage_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_Update
 GO
 
 /*
@@ -16014,7 +16014,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_Update
+CREATE PROCEDURE dbo.tblLanguage_Update
 (
 
 	@Id numeric (18, 0)  ,
@@ -16052,9 +16052,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_Delete
+-- Drop the dbo.tblLanguage_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_Delete
 GO
 
 /*
@@ -16066,7 +16066,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_Delete
+CREATE PROCEDURE dbo.tblLanguage_Delete
 (
 
 	@Id numeric (18, 0)  
@@ -16090,9 +16090,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_GetById
+-- Drop the dbo.tblLanguage_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_GetById
 GO
 
 /*
@@ -16104,7 +16104,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_GetById
+CREATE PROCEDURE dbo.tblLanguage_GetById
 (
 
 	@Id numeric (18, 0)  
@@ -16134,9 +16134,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLanguage_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLanguage_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLanguage_Find
+-- Drop the dbo.tblLanguage_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLanguage_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLanguage_Find
 GO
 
 /*
@@ -16148,7 +16148,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLanguage_Find
+CREATE PROCEDURE dbo.tblLanguage_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -16203,9 +16203,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_Get_List
+-- Drop the dbo.tblFiles_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_Get_List
 GO
 
 /*
@@ -16217,7 +16217,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_Get_List
+CREATE PROCEDURE dbo.tblFiles_Get_List
 
 AS
 
@@ -16245,9 +16245,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_GetPaged
+-- Drop the dbo.tblFiles_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_GetPaged
 GO
 
 /*
@@ -16259,7 +16259,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_GetPaged
+CREATE PROCEDURE dbo.tblFiles_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -16346,9 +16346,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_Insert
+-- Drop the dbo.tblFiles_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_Insert
 GO
 
 /*
@@ -16360,7 +16360,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_Insert
+CREATE PROCEDURE dbo.tblFiles_Insert
 (
 
 	@Id numeric (18, 0)   OUTPUT,
@@ -16407,9 +16407,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_Update
+-- Drop the dbo.tblFiles_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_Update
 GO
 
 /*
@@ -16421,7 +16421,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_Update
+CREATE PROCEDURE dbo.tblFiles_Update
 (
 
 	@Id numeric (18, 0)  ,
@@ -16462,9 +16462,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_Delete
+-- Drop the dbo.tblFiles_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_Delete
 GO
 
 /*
@@ -16476,7 +16476,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_Delete
+CREATE PROCEDURE dbo.tblFiles_Delete
 (
 
 	@Id numeric (18, 0)  
@@ -16500,9 +16500,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_GetById
+-- Drop the dbo.tblFiles_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_GetById
 GO
 
 /*
@@ -16514,7 +16514,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_GetById
+CREATE PROCEDURE dbo.tblFiles_GetById
 (
 
 	@Id numeric (18, 0)  
@@ -16546,9 +16546,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFiles_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFiles_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFiles_Find
+-- Drop the dbo.tblFiles_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFiles_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFiles_Find
 GO
 
 /*
@@ -16560,7 +16560,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFiles_Find
+CREATE PROCEDURE dbo.tblFiles_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -16625,9 +16625,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_Get_List
+-- Drop the dbo.tblLoanTran_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_Get_List
 GO
 
 /*
@@ -16639,7 +16639,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_Get_List
+CREATE PROCEDURE dbo.tblLoanTran_Get_List
 
 AS
 
@@ -16675,9 +16675,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_GetPaged
+-- Drop the dbo.tblLoanTran_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_GetPaged
 GO
 
 /*
@@ -16689,7 +16689,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_GetPaged
+CREATE PROCEDURE dbo.tblLoanTran_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -16777,9 +16777,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_Insert
+-- Drop the dbo.tblLoanTran_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_Insert
 GO
 
 /*
@@ -16791,7 +16791,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_Insert
+CREATE PROCEDURE dbo.tblLoanTran_Insert
 (
 
 	@TransNum nchar (12)  ,
@@ -16870,9 +16870,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_Update
+-- Drop the dbo.tblLoanTran_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_Update
 GO
 
 /*
@@ -16884,7 +16884,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_Update
+CREATE PROCEDURE dbo.tblLoanTran_Update
 (
 
 	@TransNum nchar (12)  ,
@@ -16955,9 +16955,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_Delete
+-- Drop the dbo.tblLoanTran_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_Delete
 GO
 
 /*
@@ -16969,7 +16969,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_Delete
+CREATE PROCEDURE dbo.tblLoanTran_Delete
 (
 
 	@TransNum nchar (12)  ,
@@ -16996,9 +16996,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_GetByTransNumGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_GetByTransNumGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_GetByTransNumGoodsId
+-- Drop the dbo.tblLoanTran_GetByTransNumGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_GetByTransNumGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_GetByTransNumGoodsId
 GO
 
 /*
@@ -17010,7 +17010,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_GetByTransNumGoodsId
+CREATE PROCEDURE dbo.tblLoanTran_GetByTransNumGoodsId
 (
 
 	@TransNum nchar (12)  ,
@@ -17053,9 +17053,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLoanTran_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLoanTran_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLoanTran_Find
+-- Drop the dbo.tblLoanTran_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLoanTran_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLoanTran_Find
 GO
 
 /*
@@ -17067,7 +17067,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLoanTran_Find
+CREATE PROCEDURE dbo.tblLoanTran_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -17182,9 +17182,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_Get_List
+-- Drop the dbo.tblKit_info_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_Get_List
 GO
 
 /*
@@ -17196,7 +17196,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_Get_List
+CREATE PROCEDURE dbo.tblKit_info_Get_List
 
 AS
 
@@ -17222,9 +17222,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_GetPaged
+-- Drop the dbo.tblKit_info_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_GetPaged
 GO
 
 /*
@@ -17236,7 +17236,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_GetPaged
+CREATE PROCEDURE dbo.tblKit_info_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -17324,9 +17324,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_Insert
+-- Drop the dbo.tblKit_info_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_Insert
 GO
 
 /*
@@ -17338,7 +17338,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_Insert
+CREATE PROCEDURE dbo.tblKit_info_Insert
 (
 
 	@KitId nchar (7)  ,
@@ -17377,9 +17377,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_Update
+-- Drop the dbo.tblKit_info_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_Update
 GO
 
 /*
@@ -17391,7 +17391,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_Update
+CREATE PROCEDURE dbo.tblKit_info_Update
 (
 
 	@KitId nchar (7)  ,
@@ -17432,9 +17432,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_Delete
+-- Drop the dbo.tblKit_info_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_Delete
 GO
 
 /*
@@ -17446,7 +17446,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_Delete
+CREATE PROCEDURE dbo.tblKit_info_Delete
 (
 
 	@KitId nchar (7)  ,
@@ -17473,9 +17473,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_GetByKitIdGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_GetByKitIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_GetByKitIdGoodsId
+-- Drop the dbo.tblKit_info_GetByKitIdGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_GetByKitIdGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_GetByKitIdGoodsId
 GO
 
 /*
@@ -17487,7 +17487,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_GetByKitIdGoodsId
+CREATE PROCEDURE dbo.tblKit_info_GetByKitIdGoodsId
 (
 
 	@KitId nchar (7)  ,
@@ -17520,9 +17520,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_info_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_info_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_info_Find
+-- Drop the dbo.tblKit_info_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_info_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_info_Find
 GO
 
 /*
@@ -17534,7 +17534,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_info_Find
+CREATE PROCEDURE dbo.tblKit_info_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -17589,9 +17589,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_Get_List
+-- Drop the dbo.tblLocation_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_Get_List
 GO
 
 /*
@@ -17603,7 +17603,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_Get_List
+CREATE PROCEDURE dbo.tblLocation_Get_List
 
 AS
 
@@ -17630,9 +17630,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_GetPaged
+-- Drop the dbo.tblLocation_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_GetPaged
 GO
 
 /*
@@ -17644,7 +17644,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_GetPaged
+CREATE PROCEDURE dbo.tblLocation_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -17732,9 +17732,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_Insert
+-- Drop the dbo.tblLocation_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_Insert
 GO
 
 /*
@@ -17746,7 +17746,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_Insert
+CREATE PROCEDURE dbo.tblLocation_Insert
 (
 
 	@StkId nchar (5)  ,
@@ -17789,9 +17789,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_Update
+-- Drop the dbo.tblLocation_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_Update
 GO
 
 /*
@@ -17803,7 +17803,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_Update
+CREATE PROCEDURE dbo.tblLocation_Update
 (
 
 	@StkId nchar (5)  ,
@@ -17847,9 +17847,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_Delete
+-- Drop the dbo.tblLocation_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_Delete
 GO
 
 /*
@@ -17861,7 +17861,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_Delete
+CREATE PROCEDURE dbo.tblLocation_Delete
 (
 
 	@StkId nchar (5)  ,
@@ -17888,9 +17888,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_GetByStkIdLocId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_GetByStkIdLocId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_GetByStkIdLocId
+-- Drop the dbo.tblLocation_GetByStkIdLocId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_GetByStkIdLocId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_GetByStkIdLocId
 GO
 
 /*
@@ -17902,7 +17902,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_GetByStkIdLocId
+CREATE PROCEDURE dbo.tblLocation_GetByStkIdLocId
 (
 
 	@StkId nchar (5)  ,
@@ -17936,9 +17936,9 @@ GO
 
 	
 
--- Drop the dbo.usptblLocation_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblLocation_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblLocation_Find
+-- Drop the dbo.tblLocation_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblLocation_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblLocation_Find
 GO
 
 /*
@@ -17950,7 +17950,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblLocation_Find
+CREATE PROCEDURE dbo.tblLocation_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -18011,9 +18011,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_Get_List
+-- Drop the dbo.tblFrmType_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_Get_List
 GO
 
 /*
@@ -18025,7 +18025,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_Get_List
+CREATE PROCEDURE dbo.tblFrmType_Get_List
 
 AS
 
@@ -18051,9 +18051,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_GetPaged
+-- Drop the dbo.tblFrmType_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_GetPaged
 GO
 
 /*
@@ -18065,7 +18065,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_GetPaged
+CREATE PROCEDURE dbo.tblFrmType_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -18152,9 +18152,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_Insert
+-- Drop the dbo.tblFrmType_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_Insert
 GO
 
 /*
@@ -18166,7 +18166,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_Insert
+CREATE PROCEDURE dbo.tblFrmType_Insert
 (
 
 	@Id numeric (18, 0)  ,
@@ -18205,9 +18205,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_Update
+-- Drop the dbo.tblFrmType_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_Update
 GO
 
 /*
@@ -18219,7 +18219,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_Update
+CREATE PROCEDURE dbo.tblFrmType_Update
 (
 
 	@Id numeric (18, 0)  ,
@@ -18257,9 +18257,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_Delete
+-- Drop the dbo.tblFrmType_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_Delete
 GO
 
 /*
@@ -18271,7 +18271,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_Delete
+CREATE PROCEDURE dbo.tblFrmType_Delete
 (
 
 	@Id numeric (18, 0)  
@@ -18295,9 +18295,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_GetById
+-- Drop the dbo.tblFrmType_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_GetById
 GO
 
 /*
@@ -18309,7 +18309,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_GetById
+CREATE PROCEDURE dbo.tblFrmType_GetById
 (
 
 	@Id numeric (18, 0)  
@@ -18339,9 +18339,9 @@ GO
 
 	
 
--- Drop the dbo.usptblFrmType_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblFrmType_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblFrmType_Find
+-- Drop the dbo.tblFrmType_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblFrmType_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblFrmType_Find
 GO
 
 /*
@@ -18353,7 +18353,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblFrmType_Find
+CREATE PROCEDURE dbo.tblFrmType_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -18408,9 +18408,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_Get_List
+-- Drop the dbo.tblKit_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_Get_List
 GO
 
 /*
@@ -18422,7 +18422,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_Get_List
+CREATE PROCEDURE dbo.tblKit_Get_List
 
 AS
 
@@ -18451,9 +18451,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_GetPaged
+-- Drop the dbo.tblKit_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_GetPaged
 GO
 
 /*
@@ -18465,7 +18465,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_GetPaged
+CREATE PROCEDURE dbo.tblKit_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -18552,9 +18552,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_Insert
+-- Drop the dbo.tblKit_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_Insert
 GO
 
 /*
@@ -18566,7 +18566,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_Insert
+CREATE PROCEDURE dbo.tblKit_Insert
 (
 
 	@Id nchar (6)  ,
@@ -18617,9 +18617,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_Update
+-- Drop the dbo.tblKit_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_Update
 GO
 
 /*
@@ -18631,7 +18631,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_Update
+CREATE PROCEDURE dbo.tblKit_Update
 (
 
 	@Id nchar (6)  ,
@@ -18678,9 +18678,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_Delete
+-- Drop the dbo.tblKit_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_Delete
 GO
 
 /*
@@ -18692,7 +18692,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_Delete
+CREATE PROCEDURE dbo.tblKit_Delete
 (
 
 	@Id nchar (6)  
@@ -18716,9 +18716,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_GetById
+-- Drop the dbo.tblKit_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_GetById
 GO
 
 /*
@@ -18730,7 +18730,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_GetById
+CREATE PROCEDURE dbo.tblKit_GetById
 (
 
 	@Id nchar (6)  
@@ -18763,9 +18763,9 @@ GO
 
 	
 
--- Drop the dbo.usptblKit_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblKit_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblKit_Find
+-- Drop the dbo.tblKit_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblKit_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblKit_Find
 GO
 
 /*
@@ -18777,7 +18777,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblKit_Find
+CREATE PROCEDURE dbo.tblKit_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -18850,9 +18850,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_Get_List
+-- Drop the dbo.tblGoods_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_Get_List
 GO
 
 /*
@@ -18864,7 +18864,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_Get_List
+CREATE PROCEDURE dbo.tblGoods_Get_List
 
 AS
 
@@ -18906,9 +18906,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_GetPaged
+-- Drop the dbo.tblGoods_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_GetPaged
 GO
 
 /*
@@ -18920,7 +18920,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_GetPaged
+CREATE PROCEDURE dbo.tblGoods_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -19007,9 +19007,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_Insert
+-- Drop the dbo.tblGoods_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_Insert
 GO
 
 /*
@@ -19021,7 +19021,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_Insert
+CREATE PROCEDURE dbo.tblGoods_Insert
 (
 
 	@GoodsId char (6)  ,
@@ -19124,9 +19124,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_Update
+-- Drop the dbo.tblGoods_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_Update
 GO
 
 /*
@@ -19138,7 +19138,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_Update
+CREATE PROCEDURE dbo.tblGoods_Update
 (
 
 	@GoodsId char (6)  ,
@@ -19224,9 +19224,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_Delete
+-- Drop the dbo.tblGoods_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_Delete
 GO
 
 /*
@@ -19238,7 +19238,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_Delete
+CREATE PROCEDURE dbo.tblGoods_Delete
 (
 
 	@GoodsId char (6)  
@@ -19262,9 +19262,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_GetByGoodsId procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_GetByGoodsId
+-- Drop the dbo.tblGoods_GetByGoodsId procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_GetByGoodsId') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_GetByGoodsId
 GO
 
 /*
@@ -19276,7 +19276,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_GetByGoodsId
+CREATE PROCEDURE dbo.tblGoods_GetByGoodsId
 (
 
 	@GoodsId char (6)  
@@ -19322,9 +19322,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoods_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoods_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoods_Find
+-- Drop the dbo.tblGoods_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoods_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoods_Find
 GO
 
 /*
@@ -19336,7 +19336,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoods_Find
+CREATE PROCEDURE dbo.tblGoods_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -19485,9 +19485,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_Get_List
+-- Drop the dbo.tblUtils_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_Get_List
 GO
 
 /*
@@ -19499,7 +19499,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_Get_List
+CREATE PROCEDURE dbo.tblUtils_Get_List
 
 AS
 
@@ -19527,9 +19527,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_GetPaged
+-- Drop the dbo.tblUtils_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_GetPaged
 GO
 
 /*
@@ -19541,7 +19541,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_GetPaged
+CREATE PROCEDURE dbo.tblUtils_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -19628,9 +19628,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_Insert
+-- Drop the dbo.tblUtils_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_Insert
 GO
 
 /*
@@ -19642,7 +19642,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_Insert
+CREATE PROCEDURE dbo.tblUtils_Insert
 (
 
 	@Id tinyint   ,
@@ -19689,9 +19689,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_Update
+-- Drop the dbo.tblUtils_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_Update
 GO
 
 /*
@@ -19703,7 +19703,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_Update
+CREATE PROCEDURE dbo.tblUtils_Update
 (
 
 	@Id tinyint   ,
@@ -19747,9 +19747,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_Delete
+-- Drop the dbo.tblUtils_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_Delete
 GO
 
 /*
@@ -19761,7 +19761,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_Delete
+CREATE PROCEDURE dbo.tblUtils_Delete
 (
 
 	@Id tinyint   
@@ -19785,9 +19785,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_GetById
+-- Drop the dbo.tblUtils_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_GetById
 GO
 
 /*
@@ -19799,7 +19799,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_GetById
+CREATE PROCEDURE dbo.tblUtils_GetById
 (
 
 	@Id tinyint   
@@ -19831,9 +19831,9 @@ GO
 
 	
 
--- Drop the dbo.usptblUtils_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblUtils_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblUtils_Find
+-- Drop the dbo.tblUtils_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblUtils_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblUtils_Find
 GO
 
 /*
@@ -19845,7 +19845,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblUtils_Find
+CREATE PROCEDURE dbo.tblUtils_Find
 (
 
 	@SearchUsingOR bit   = null ,
@@ -19912,9 +19912,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_Get_List procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_Get_List
+-- Drop the dbo.tblGoodsGrp_Get_List procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_Get_List') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_Get_List
 GO
 
 /*
@@ -19926,7 +19926,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_Get_List
+CREATE PROCEDURE dbo.tblGoodsGrp_Get_List
 
 AS
 
@@ -19952,9 +19952,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_GetPaged procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_GetPaged
+-- Drop the dbo.tblGoodsGrp_GetPaged procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_GetPaged') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_GetPaged
 GO
 
 /*
@@ -19966,7 +19966,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_GetPaged
+CREATE PROCEDURE dbo.tblGoodsGrp_GetPaged
 (
 
 	@WhereClause varchar (8000)  ,
@@ -20053,9 +20053,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_Insert procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_Insert
+-- Drop the dbo.tblGoodsGrp_Insert procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_Insert') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_Insert
 GO
 
 /*
@@ -20067,7 +20067,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_Insert
+CREATE PROCEDURE dbo.tblGoodsGrp_Insert
 (
 
 	@Id nvarchar (4)  ,
@@ -20106,9 +20106,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_Update procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_Update
+-- Drop the dbo.tblGoodsGrp_Update procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_Update') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_Update
 GO
 
 /*
@@ -20120,7 +20120,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_Update
+CREATE PROCEDURE dbo.tblGoodsGrp_Update
 (
 
 	@Id nvarchar (4)  ,
@@ -20158,9 +20158,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_Delete procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_Delete
+-- Drop the dbo.tblGoodsGrp_Delete procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_Delete') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_Delete
 GO
 
 /*
@@ -20172,7 +20172,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_Delete
+CREATE PROCEDURE dbo.tblGoodsGrp_Delete
 (
 
 	@Id nvarchar (4)  
@@ -20196,9 +20196,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_GetById procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_GetById
+-- Drop the dbo.tblGoodsGrp_GetById procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_GetById') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_GetById
 GO
 
 /*
@@ -20210,7 +20210,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_GetById
+CREATE PROCEDURE dbo.tblGoodsGrp_GetById
 (
 
 	@Id nvarchar (4)  
@@ -20240,9 +20240,9 @@ GO
 
 	
 
--- Drop the dbo.usptblGoodsGrp_Find procedure
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.usptblGoodsGrp_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
-DROP PROCEDURE dbo.usptblGoodsGrp_Find
+-- Drop the dbo.tblGoodsGrp_Find procedure
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.tblGoodsGrp_Find') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+DROP PROCEDURE dbo.tblGoodsGrp_Find
 GO
 
 /*
@@ -20254,7 +20254,7 @@ GO
 */
 
 
-CREATE PROCEDURE dbo.usptblGoodsGrp_Find
+CREATE PROCEDURE dbo.tblGoodsGrp_Find
 (
 
 	@SearchUsingOR bit   = null ,

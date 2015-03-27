@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.Int32 _id)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Id", DbType.Int32, _id);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Date>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -280,7 +280,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Find_Dynamic", typeof(DateColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Find_Dynamic", typeof(DateColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -353,7 +353,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Date> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -415,7 +415,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Date> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -502,7 +502,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Date GetById(TransactionManager transactionManager, System.Int32 _id, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_GetById", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_GetById", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Id", DbType.Int32, _id);
 			
@@ -654,7 +654,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Date entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Id", DbType.Int32, entity.Id );
 			database.AddInParameter(commandWrapper, "@OrgDate", DbType.DateTime, (entity.OrgDate.HasValue ? (object) entity.OrgDate  : System.DBNull.Value));
@@ -704,7 +704,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Date entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblDate_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblDate_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Id", DbType.Int32, entity.Id );
 			database.AddInParameter(commandWrapper, "@OriginalId", DbType.Int32, entity.OriginalId);

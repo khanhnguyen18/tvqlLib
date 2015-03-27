@@ -112,7 +112,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.Int32 _id)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@Id", DbType.Int32, _id);
 			
 			//Provider Data Requesting Command Event
@@ -167,7 +167,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<Menus>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -343,7 +343,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Find_Dynamic", typeof(MenusColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Find_Dynamic", typeof(MenusColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -416,7 +416,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Menus> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -478,7 +478,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<Menus> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -565,7 +565,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.Menus GetById(TransactionManager transactionManager, System.Int32 _id, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_GetById", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_GetById", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@Id", DbType.Int32, _id);
 			
@@ -771,7 +771,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.Menus entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Insert", _useStoredProcedure);
 			
 			database.AddOutParameter(commandWrapper, "@Id", DbType.Int32, 4);
 			database.AddInParameter(commandWrapper, "@Subitem", DbType.Int32, (entity.Subitem.HasValue ? (object) entity.Subitem  : System.DBNull.Value));
@@ -831,7 +831,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.Menus entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblMenus_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblMenus_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@Id", DbType.Int32, entity.Id );
 			database.AddInParameter(commandWrapper, "@Subitem", DbType.Int32, (entity.Subitem.HasValue ? (object) entity.Subitem : System.DBNull.Value) );

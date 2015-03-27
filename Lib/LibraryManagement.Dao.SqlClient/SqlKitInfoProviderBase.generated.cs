@@ -113,7 +113,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Delete(TransactionManager transactionManager, System.String _kitId, System.String _goodsId)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Delete", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Delete", _useStoredProcedure);
 			database.AddInParameter(commandWrapper, "@KitId", DbType.StringFixedLength, _kitId);
 			database.AddInParameter(commandWrapper, "@GoodsId", DbType.StringFixedLength, _goodsId);
 			
@@ -169,7 +169,7 @@ namespace LibraryManagement.Dao.SqlClient
 				return new TList<KitInfo>();
 	
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Find", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Find", _useStoredProcedure);
 
 		bool searchUsingOR = false;
 		if (whereClause.IndexOf(" OR ") > 0) // did they want to do "a=b OR c=d OR..."?
@@ -282,7 +282,7 @@ namespace LibraryManagement.Dao.SqlClient
 				filter = parameters.GetParameters();
 				
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Find_Dynamic", typeof(KitInfoColumn), filter, orderBy, start, pageLength);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Find_Dynamic", typeof(KitInfoColumn), filter, orderBy, start, pageLength);
 		
 			SqlFilterParameter param;
 
@@ -355,7 +355,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<KitInfo> GetAll(TransactionManager transactionManager, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Get_List", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Get_List", _useStoredProcedure);
 			
 			IDataReader reader = null;
 		
@@ -417,7 +417,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override TList<KitInfo> GetPaged(TransactionManager transactionManager, string whereClause, string orderBy, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_GetPaged", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_GetPaged", _useStoredProcedure);
 		
 			
             if (commandWrapper.CommandType == CommandType.Text
@@ -505,7 +505,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override LibraryManagement.Domain.KitInfo GetByKitIdGoodsId(TransactionManager transactionManager, System.String _kitId, System.String _goodsId, int start, int pageLength, out int count)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_GetByKitIdGoodsId", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_GetByKitIdGoodsId", _useStoredProcedure);
 			
 				database.AddInParameter(commandWrapper, "@KitId", DbType.StringFixedLength, _kitId);
 				database.AddInParameter(commandWrapper, "@GoodsId", DbType.StringFixedLength, _goodsId);
@@ -658,7 +658,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Insert(TransactionManager transactionManager, LibraryManagement.Domain.KitInfo entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Insert", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Insert", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@KitId", DbType.StringFixedLength, entity.KitId );
             database.AddInParameter(commandWrapper, "@GoodsId", DbType.StringFixedLength, entity.GoodsId );
@@ -709,7 +709,7 @@ namespace LibraryManagement.Dao.SqlClient
 		public override bool Update(TransactionManager transactionManager, LibraryManagement.Domain.KitInfo entity)
 		{
 			SqlDatabase database = new SqlDatabase(this._connectionString);
-			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.usptblKit_info_Update", _useStoredProcedure);
+			DbCommand commandWrapper = StoredProcedureProvider.GetCommandWrapper(database, "dbo.tblKit_info_Update", _useStoredProcedure);
 			
             database.AddInParameter(commandWrapper, "@KitId", DbType.StringFixedLength, entity.KitId );
 			database.AddInParameter(commandWrapper, "@OriginalKitId", DbType.StringFixedLength, entity.OriginalKitId);
