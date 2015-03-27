@@ -431,7 +431,7 @@ namespace LibraryManagement.App
                 try
                 {
                     _sumrp = this.chkSummary.Checked;
-                    Interaction.CallByName(this, this.string_1.Trim(), CallType.Method, new object[0]);
+                    //Interaction.CallByName(this, this.string_1.Trim(), CallType.Method, new object[0]);
                 }
                 catch (Exception)
                 {

@@ -42,4 +42,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-Lib\LibraryManagement.App\bin\
+
+/Lib/LibraryManagement.App/obj
+/Lib/LibraryManagement.App/bin
+/Lib/LibraryManagement.App/obj
+/Lib/LibraryManagement.App/bin
+obj
+bin
