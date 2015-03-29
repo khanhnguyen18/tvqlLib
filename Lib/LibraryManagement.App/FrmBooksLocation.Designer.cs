@@ -1,11 +1,11 @@
-﻿using DevExpress.Utils;
+﻿using DevExpress.XtraGrid.Views.Base;
+using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
-using LIBRARY_MANAGEMENT.library_dataDataSetTableAdapters;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +41,7 @@ namespace LibraryManagement.App
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-       private void InitializeComponent()
+        private void InitializeComponent()
         {
             this.kCnalMegv = new Container();
             StyleFormatCondition condition = new StyleFormatCondition();
@@ -49,7 +49,6 @@ namespace LibraryManagement.App
             this.repositoryItemCheckEdit1 = new RepositoryItemCheckEdit();
             this.gridControl1 = new GridControl();
             this.bindingSource_0 = new BindingSource(this.kCnalMegv);
-            this.library_dataDataSet_0 = new library_dataDataSet();
             this.gridView1 = new GridView();
             this.colgoods_id = new GridColumn();
             this.colfull_name = new GridColumn();
@@ -64,13 +63,11 @@ namespace LibraryManagement.App
             this.txtStkId = new TextEdit();
             this.LabelControl17 = new LabelControl();
             this.lblLocationName = new LabelControl();
-            this.merclocTableAdapter_0 = new merclocTableAdapter();
             this.btnRefresh = new SimpleButton();
             this.timer_0 = new Timer(this.kCnalMegv);
             this.repositoryItemCheckEdit1.BeginInit();
             this.gridControl1.BeginInit();
             ((ISupportInitialize)this.bindingSource_0).BeginInit();
-            this.library_dataDataSet_0.BeginInit();
             this.gridView1.BeginInit();
             this.repositoryItemImageEdit1.BeginInit();
             this.txtSymbol.Properties.BeginInit();
@@ -95,9 +92,6 @@ namespace LibraryManagement.App
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new BaseView[] { this.gridView1 });
             this.bindingSource_0.DataMember = "mercloc";
-            this.bindingSource_0.DataSource = this.library_dataDataSet_0;
-            this.library_dataDataSet_0.DataSetName = "library_dataDataSet";
-            this.library_dataDataSet_0.SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
             this.gridView1.Appearance.FooterPanel.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -155,7 +149,7 @@ namespace LibraryManagement.App
             this.btnExit.Anchor = AnchorStyles.Bottom;
             this.btnExit.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.btnExit.Appearance.Options.UseFont = true;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new Point(0x155, 0x1a7);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new Size(0x58, 0x17);
@@ -222,7 +216,6 @@ namespace LibraryManagement.App
             this.lblLocationName.Padding = new Padding(3, 0, 0, 0);
             this.lblLocationName.Size = new Size(0x11f, 0x11);
             this.lblLocationName.TabIndex = 0x1be;
-            this.merclocTableAdapter_0.ClearBeforeFill = true;
             this.btnRefresh.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.btnRefresh.Appearance.Options.UseFont = true;
             this.btnRefresh.Location = new Point(0x1df, 0x23);
@@ -235,7 +228,7 @@ namespace LibraryManagement.App
             this.timer_0.Interval = 200;
             this.timer_0.Tick += new EventHandler(this.timer_0_Tick);
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.CancelButton = this.btnExit;
             base.ClientSize = new Size(0x2a0, 0x1ca);
             base.Controls.Add(this.btnRefresh);
@@ -257,7 +250,6 @@ namespace LibraryManagement.App
             this.repositoryItemCheckEdit1.EndInit();
             this.gridControl1.EndInit();
             ((ISupportInitialize)this.bindingSource_0).EndInit();
-            this.library_dataDataSet_0.EndInit();
             this.gridView1.EndInit();
             this.repositoryItemImageEdit1.EndInit();
             this.txtSymbol.Properties.EndInit();
@@ -281,8 +273,6 @@ namespace LibraryManagement.App
         internal LabelControl LabelControl17;
         internal LabelControl lblLocationName;
         internal LabelControl lblStkName;
-        private library_dataDataSet library_dataDataSet_0;
-        private merclocTableAdapter merclocTableAdapter_0;
         private OleDbConnection oleDbConnection_0;
         private OleDbDataAdapter oleDbDataAdapter_0;
         private RepositoryItemCheckEdit repositoryItemCheckEdit1;

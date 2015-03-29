@@ -70,10 +70,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormOld\FrmFastSlow.cs">
+    <Compile Include="FrmCardPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmFastSlow.Designer.cs">
+    <Compile Include="FrmCardPrint.Designer.cs">
+      <DependentUpon>FrmCardPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCashIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCashIO.Designer.cs">
+      <DependentUpon>FrmCashIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePass.Designer.cs">
+      <DependentUpon>FrmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePrice.Designer.cs">
+      <DependentUpon>FrmChangePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangeSysDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeSysDate.Designer.cs">
+      <DependentUpon>FrmChangeSysDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckey.Designer.cs">
+      <DependentUpon>FrmCheckey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFastSlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFastSlow.Designer.cs">
       <DependentUpon>FrmFastSlow.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAdjust_grp.cs">
@@ -118,6 +154,18 @@
     <Compile Include="FrmBooksGrp.Designer.cs">
       <DependentUpon>FrmBooksGrp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBooksLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBooksLocation.Designer.cs">
+      <DependentUpon>FrmBooksLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookView.Designer.cs">
+      <DependentUpon>FrmBookView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\mercinstock_grp.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -139,16 +187,16 @@
     <Compile Include="Report\acc_info.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReports.cs">
+    <Compile Include="FrmReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReports.Designer.cs">
+    <Compile Include="FrmReports.Designer.cs">
       <DependentUpon>FrmReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmAcountList.cs">
+    <Compile Include="FrmAcountList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmAcountList.Designer.cs">
+    <Compile Include="FrmAcountList.Designer.cs">
       <DependentUpon>FrmAcountList.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\lst_postrans.cs">
@@ -175,64 +223,63 @@
     <Compile Include="Form\BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmBookDef.cs">
+    <Compile Include="FrmBookDef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmBookDef.Designer.cs">
+    <Compile Include="FrmBookDef.Designer.cs">
       <DependentUpon>FrmBookDef.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmBrowse.cs">
+    <Compile Include="FrmBrowse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmBrowse.Designer.cs">
+    <Compile Include="FrmBrowse.Designer.cs">
       <DependentUpon>FrmBrowse.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmGetDates.cs">
+    <Compile Include="FrmGetDates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmGetDates.Designer.cs">
-      <DependentUpon>FrmGetDates.cs</DependentUpon>
+    <Compile Include="FrmGetDates.Designer.cs">
     </Compile>
-    <Compile Include="FormOld\FrmLanguage.cs">
+    <Compile Include="FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmLanguage.Designer.cs">
+    <Compile Include="FrmLanguage.Designer.cs">
       <DependentUpon>FrmLanguage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInfo.cs">
+    <Compile Include="FrmLoanInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInfo.Designer.cs">
+    <Compile Include="FrmLoanInfo.Designer.cs">
       <DependentUpon>FrmLoanInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmMsgbox.cs">
+    <Compile Include="FrmMsgbox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmMsgbox.Designer.cs">
+    <Compile Include="FrmMsgbox.Designer.cs">
       <DependentUpon>FrmMsgbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmReaderDef.cs">
+    <Compile Include="FrmReaderDef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReaderDef.Designer.cs">
+    <Compile Include="FrmReaderDef.Designer.cs">
       <DependentUpon>FrmReaderDef.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmUnits.cs">
+    <Compile Include="FrmUnits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmUnits.Designer.cs">
+    <Compile Include="FrmUnits.Designer.cs">
       <DependentUpon>FrmUnits.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmAbout.cs">
+    <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmAbout.Designer.cs">
+    <Compile Include="FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmAccountInfo.cs">
+    <Compile Include="FrmAccountInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmAccountInfo.Designer.cs">
+    <Compile Include="FrmAccountInfo.Designer.cs">
       <DependentUpon>FrmAccountInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\loan_inv.cs">
@@ -263,31 +310,41 @@
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmBookDef.resx">
+    <EmbeddedResource Include="FrmBookDef.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBookDef.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmBrowse.resx">
+    <EmbeddedResource Include="FrmBrowse.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBrowse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmGetAmount.resx">
+    <EmbeddedResource Include="FrmCardPrint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCardPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCashIO.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCashIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePass.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGetAmount.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmGetAmount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmLoanInfo.resx">
+    <EmbeddedResource Include="FrmLoanInfo.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmMsgbox.resx">
+    <EmbeddedResource Include="FrmMsgbox.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmMsgbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmReaderDef.resx">
+    <EmbeddedResource Include="FrmReaderDef.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmReaderDef.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmFastSlow.resx">
+    <EmbeddedResource Include="FrmFastSlow.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmFastSlow.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +371,14 @@
     <EmbeddedResource Include="FrmBooksGrp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBooksGrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBooksLocation.resx">
+      <DependentUpon>FrmBooksLocation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBookView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -349,10 +414,10 @@
     <Compile Include="RefForm.Designer.cs">
       <DependentUpon>RefForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmGetAmount.cs">
+    <Compile Include="FrmGetAmount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmGetAmount.Designer.cs">
+    <Compile Include="FrmGetAmount.Designer.cs">
       <DependentUpon>FrmGetAmount.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\return_book.cs">
@@ -391,6 +456,9 @@
       <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Name>LibraryManagement.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormOld\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
