@@ -310,11 +310,53 @@
     <Compile Include="FrmGetPercent.Designer.cs">
       <DependentUpon>FrmGetPercent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHisPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHisPrice.Designer.cs">
+      <DependentUpon>FrmHisPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportMerc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportMerc.Designer.cs">
+      <DependentUpon>FrmImportMerc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKitDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKitDef.Designer.cs">
+      <DependentUpon>FrmKitDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKitLabelPrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKitLabelPrn.Designer.cs">
+      <DependentUpon>FrmKitLabelPrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKitList.Designer.cs">
+      <DependentUpon>FrmKitList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLanguage.Designer.cs">
       <DependentUpon>FrmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLibraryDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibraryDef.Designer.cs">
+      <DependentUpon>FrmLibraryDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLibraryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibraryInfo.Designer.cs">
+      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReaderDef.cs">
       <SubType>Form</SubType>
@@ -333,6 +375,9 @@
     </Compile>
     <Compile Include="FrmUnits.Designer.cs">
       <DependentUpon>FrmUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitLabelsA4.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="NotProcess\Class0.cs" />
     <Compile Include="NotProcess\Class1.cs" />
@@ -456,6 +501,34 @@
     <EmbeddedResource Include="FrmBookView.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBookView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHisPrice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmHisPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportMerc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmImportMerc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKitDef.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmKitDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKitLabelPrn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmKitLabelPrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKitList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmKitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibraryDef.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLibraryDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibraryInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
