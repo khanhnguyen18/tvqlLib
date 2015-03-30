@@ -1,9 +1,12 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Windows.Forms;
-using System.Drawing;
-using DevExpress.Utils;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
+
 namespace LibraryManagement.App
 {
     partial class FrmGetAmount
@@ -55,10 +58,10 @@ namespace LibraryManagement.App
             this.Txt_Amount.TabIndex = 0x171;
             this.Txt_Amount.KeyDown += new KeyEventHandler(this.Txt_Amount_KeyDown);
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(220, 0x35);
             base.Controls.Add(this.Txt_Amount);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             base.MaximizeBox = false;
             base.Name = "FrmGetAmount";
             base.StartPosition = FormStartPosition.CenterScreen;
@@ -66,9 +69,8 @@ namespace LibraryManagement.App
             base.Load += new EventHandler(this.FrmGetAmount_Load);
             this.Txt_Amount.Properties.EndInit();
             base.ResumeLayout(false);
-
         }
-
+        //private IContainer components;
         private TextEdit Txt_Amount;
 
         #endregion

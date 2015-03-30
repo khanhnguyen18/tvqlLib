@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
-
+using DevExpress.XtraEditors.Mask;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 namespace LibraryManagement.App
 {
-    public partial class FrmGetDates : XtraForm
+    public partial class FrmGetDates : DevExpress.XtraEditors.XtraForm
     {
         public FrmGetDates()
         {
@@ -36,6 +34,8 @@ namespace LibraryManagement.App
             this.Txt_ToDate.EditValue = DateTime.Parse(Class7.smethod_19());
         }
 
+
+
         public DateTime LastDayOfMonth(DateTime dateTime)
         {
             DateTime time = new DateTime(dateTime.Year, dateTime.Month, 1);
@@ -44,7 +44,6 @@ namespace LibraryManagement.App
 
         private void Txt_ToDate_EditValueChanged(object sender, EventArgs e)
         {
-            throw new Exception("");
         }
 
         private void Txt_ToDate_KeyDown(object sender, KeyEventArgs e)
@@ -57,6 +56,5 @@ namespace LibraryManagement.App
                 base.Close();
             }
         }
-
     }
 }

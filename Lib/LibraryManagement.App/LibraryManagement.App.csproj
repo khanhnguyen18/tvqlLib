@@ -106,6 +106,54 @@
     <Compile Include="FrmCheckey.Designer.cs">
       <DependentUpon>FrmCheckey.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateTran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateTran.Designer.cs">
+      <DependentUpon>FrmCreateTran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCsCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCsCard.Designer.cs">
+      <DependentUpon>FrmCsCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCsCardInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCsCardInfo.Designer.cs">
+      <DependentUpon>FrmCsCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurrency.Designer.cs">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiscInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiscInfo.Designer.cs">
+      <DependentUpon>FrmDiscInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiscount.Designer.cs">
+      <DependentUpon>FrmDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEncyptCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEncyptCode.Designer.cs">
+      <DependentUpon>FrmEncyptCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFastSlow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,50 +214,59 @@
     <Compile Include="FrmBookView.Designer.cs">
       <DependentUpon>FrmBookView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\mercinstock_grp.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\mercinstock_supp.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_diary.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_gl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_glmof.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_glmof2.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_info.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FrmReports.cs">
+    <Compile Include="FrmFromDealer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReports.Designer.cs">
-      <DependentUpon>FrmReports.cs</DependentUpon>
+    <Compile Include="FrmFromDealer.Designer.cs">
+      <DependentUpon>FrmFromDealer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFromSupp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFromSupp.Designer.cs">
+      <DependentUpon>FrmFromSupp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFromSuppNoVat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFromSuppNoVat.Designer.cs">
+      <DependentUpon>FrmFromSuppNoVat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFromSuppOd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFromSuppOd.Designer.cs">
+      <DependentUpon>FrmFromSuppOd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFrPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFrPromotion.Designer.cs">
+      <DependentUpon>FrmFrPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGetAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetAmount.Designer.cs">
+      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGetDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetDates.Designer.cs">
+      <DependentUpon>FrmGetDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGetDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetDay.Designer.cs">
+      <DependentUpon>FrmGetDay.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAcountList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAcountList.Designer.cs">
       <DependentUpon>FrmAcountList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\lst_postrans.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\lst_stktrans.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_detail.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\acc_detail.Designer.cs">
-      <DependentUpon>acc_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
@@ -235,41 +292,6 @@
     <Compile Include="FrmBrowse.Designer.cs">
       <DependentUpon>FrmBrowse.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGetDates.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmGetDates.Designer.cs">
-    </Compile>
-    <Compile Include="FrmLanguage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLanguage.Designer.cs">
-      <DependentUpon>FrmLanguage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLoanInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLoanInfo.Designer.cs">
-      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMsgbox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMsgbox.Designer.cs">
-      <DependentUpon>FrmMsgbox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReaderDef.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReaderDef.Designer.cs">
-      <DependentUpon>FrmReaderDef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmUnits.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUnits.Designer.cs">
-      <DependentUpon>FrmUnits.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,8 +304,35 @@
     <Compile Include="FrmAccountInfo.Designer.cs">
       <DependentUpon>FrmAccountInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\loan_inv.cs">
-      <SubType>Component</SubType>
+    <Compile Include="FrmGetPercent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetPercent.Designer.cs">
+      <DependentUpon>FrmGetPercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLanguage.Designer.cs">
+      <DependentUpon>FrmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReaderDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReaderDef.Designer.cs">
+      <DependentUpon>FrmReaderDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReports.Designer.cs">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnits.Designer.cs">
+      <DependentUpon>FrmUnits.cs</DependentUpon>
     </Compile>
     <Compile Include="NotProcess\Class0.cs" />
     <Compile Include="NotProcess\Class1.cs" />
@@ -300,6 +349,12 @@
     <Compile Include="NotProcess\Class7.cs" />
     <Compile Include="NotProcess\Class8.cs" />
     <Compile Include="NotProcess\Class9.cs" />
+    <Compile Include="FrmMsgbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMsgbox.Designer.cs">
+      <DependentUpon>FrmMsgbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\MainForm.resx">
@@ -330,19 +385,41 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmChangePass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateTran.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCreateTran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiscInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDiscInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFromDealer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFromDealer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFromSupp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFromSupp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFromSuppNoVat.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFromSuppNoVat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFromSuppOd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFromSuppOd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFrPromotion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFrPromotion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGetAmount.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmGetAmount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLoanInfo.resx">
+    <EmbeddedResource Include="FrmGetDay.resx">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMsgbox.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMsgbox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReaderDef.resx">
-      <SubType>Designer</SubType>
+      <DependentUpon>FrmGetDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFastSlow.resx">
       <SubType>Designer</SubType>
@@ -414,11 +491,41 @@
     <Compile Include="RefForm.Designer.cs">
       <DependentUpon>RefForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGetAmount.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Report\acc_detail.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FrmGetAmount.Designer.cs">
-      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+    <Compile Include="Report\acc_detail.Designer.cs">
+      <DependentUpon>acc_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\acc_diary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_gl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_glmof.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_glmof2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\acc_info.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\loan_inv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lst_postrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lst_stktrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\mercinstock_grp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\mercinstock_supp.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\return_book.cs">
       <SubType>Component</SubType>

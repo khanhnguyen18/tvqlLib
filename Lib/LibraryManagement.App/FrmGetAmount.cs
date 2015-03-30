@@ -16,12 +16,14 @@ namespace LibraryManagement.App
             InitializeComponent();
         }
 
+
         private void FrmGetAmount_Load(object sender, EventArgs e)
         {
             Class10.double_2 = 0.0;
             this.Txt_Amount.EditValue = 0;
             this.Txt_Amount.SelectAll();
         }
+
 
         private void Txt_Amount_KeyDown(object sender, KeyEventArgs e)
         {

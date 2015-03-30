@@ -1,36 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using Microsoft.VisualBasic;
+using System;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.Utils;
-using DevExpress.XtraGrid.Views.Base;
 using System.Data.OleDb;
-using Microsoft.VisualBasic;
-using DevExpress.XtraTreeList.StyleFormatConditions;
-using DevExpress.XtraGrid;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
     public partial class FrmReports : DevExpress.XtraEditors.XtraForm
     {
-        public static int _status;
-        public static string _stktype;
-        public static bool _sumrp;
-        public static string _trcode;
-        private bool bool_0;
-        private string string_0;
-        private string string_1;
-        private string string_2;
-
         public FrmReports()
         {
             InitializeComponent();
-            
         }
+
+
 
         public void acc_detail()
         {
@@ -59,7 +49,6 @@ namespace LibraryManagement.App
                 DataSet set;
                 WaitDialogForm form = new WaitDialogForm();
                 form.Caption = "Xin đợi một ch\x00fat ....";
-                
                 try
                 {
                     this.string_2 = "CREATE TABLE " + str + "([account_id] [nchar](9) ,[name] [nvarchar](200) NULL,[mof_gl] [nchar](4) NULL,[beg_debit] [numeric](18, 2) DEFAULT ((0)),[beg_credit] [numeric](18, 2) DEFAULT ((0)),[db_amount] [numeric](18, 2) DEFAULT ((0)),[cr_amount] [numeric](18, 2) DEFAULT ((0)),[end_debit] [numeric](18, 2) DEFAULT ((0)),[end_credit] [numeric](18, 2) DEFAULT ((0)),[sumdebit] [numeric](18, 2) DEFAULT ((0)),[sumcredit] [numeric](18, 2) DEFAULT ((0))) ";
@@ -181,7 +170,7 @@ namespace LibraryManagement.App
             {
                 DataSet set;
                 WaitDialogForm form = new WaitDialogForm();
-                    form.Caption= "Xin đợi một ch\x00fat ....";
+                form.Caption = "Xin đợi một ch\x00fat ....";
                 try
                 {
                     this.string_2 = "CREATE TABLE " + str + "([mof_gl] [nchar](4) ,[name] [nvarchar](200) NULL,[beg_debit] [numeric](18, 2) DEFAULT ((0)),[beg_credit] [numeric](18, 2) DEFAULT ((0)),[db_amount] [numeric](18, 2) DEFAULT ((0)),[cr_amount] [numeric](18, 2) DEFAULT ((0)),[end_debit] [numeric](18, 2) DEFAULT ((0)),[end_credit] [numeric](18, 2) DEFAULT ((0))) ";
@@ -489,7 +478,8 @@ namespace LibraryManagement.App
             this.gridView1.Columns["procedure"].Visible = false;
             this.gridView1.Columns["dep_code"].Visible = false;
             this.gridView1.Columns["status"].Visible = false;
-            DevExpress.XtraGrid.StyleFormatCondition condition = new DevExpress.XtraGrid.StyleFormatCondition(FormatConditionEnum.Equal, this.gridView1.Columns["checked"], null, false) ;
+            StyleFormatCondition condition = null;
+            condition = new StyleFormatCondition(FormatConditionEnum.Equal, this.gridView1.Columns["checked"], null, false);
             condition.Appearance.ForeColor = Color.Gray;
             this.gridView1.FormatConditions.Add(condition);
             condition.ApplyToRow = true;

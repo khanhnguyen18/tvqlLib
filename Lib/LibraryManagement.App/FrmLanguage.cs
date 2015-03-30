@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-
 namespace LibraryManagement.App
 {
     public partial class FrmLanguage : DevExpress.XtraEditors.XtraForm
     {
-        private string string_0;
-
         public FrmLanguage()
         {
             InitializeComponent();
@@ -26,14 +22,14 @@ namespace LibraryManagement.App
             {
                 if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a k\x00fd hiệu n\x00e0y ? ", 2) == 1)
                 {
-                    Class7.smethod_23(base.Tag.ToString(), 0, "id", text.ToString(), "", null);
+                    Class7.smethod_23(base.Tag.ToString(), 0, "id", text.ToString(), "", this.oleDbConnection_0);
                     this.Txt_Status.Text = "Đ\x00e3 bị x\x00f3a";
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
             else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi k\x00fd hiệu n\x00e0y ? ", 2) == 1)
             {
-                Class7.smethod_23(base.Tag.ToString(), 1, "id", text.ToString(), "", null);
+                Class7.smethod_23(base.Tag.ToString(), 1, "id", text.ToString(), "", this.oleDbConnection_0);
                 this.Txt_Status.Text = "Đang hoạt động";
                 this.btn_Delete.Text = "&X\x00f3a";
             }
@@ -73,7 +69,7 @@ namespace LibraryManagement.App
             Class11.smethod_5(this, "F");
             Class11.smethod_8(this);
             this.Txt_Id.Enabled = true;
-            Class7.smethod_16("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), null);
+            Class7.smethod_16("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
             this.Txt_Id.Text = FrmBrowse.strReturn;
             this.Txt_Id.Focus();
             this.string_0 = "S";
@@ -85,6 +81,7 @@ namespace LibraryManagement.App
             Class11.smethod_5(this, "F");
             this.string_0 = "D";
         }
+
 
         private void FrmLanguage_Load(object sender, EventArgs e)
         {
@@ -110,29 +107,28 @@ namespace LibraryManagement.App
                     {
                         this.btn_Skip_Click(this, new EventArgs());
                         selectCommandText = string.Concat(new object[] { "INSERT INTO ", base.Tag.ToString(), "(id, Description,status) VALUES(", num, "',N'", str, "',1 )" });
-                        //TODO
-                        //this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, null);
+                        this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                         using (set = new DataSet())
                         {
-                            //this.oleDbDataAdapter_0.Fill(set);
+                            this.oleDbDataAdapter_0.Fill(set);
                         }
-                        //null.Close();
+                        this.oleDbConnection_0.Close();
                     }
                     break;
 
                 case "E":
                     this.btn_Skip_Click(this, new EventArgs());
                     selectCommandText = ("UPDATE " + base.Tag.ToString() + " SET Description =N'" + str + "' ") + " WHERE ID = " + num;
-                    //TODO
-                    //this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, null);
+                    this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                     using (set = new DataSet())
                     {
-                        //this.oleDbDataAdapter_0.Fill(set);
+                        this.oleDbDataAdapter_0.Fill(set);
                     }
-                    //null.Close();
+                    this.oleDbConnection_0.Close();
                     break;
             }
         }
+
 
 
         private void Txt_Id_EditValueChanged(object sender, EventArgs e)
@@ -140,11 +136,10 @@ namespace LibraryManagement.App
             if (!((Class11.string_0 != "S") | (this.Txt_Id.Text == string.Empty)))
             {
                 string text = this.Txt_Id.Text;
-                //TODO
-                //this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT * FROM " + base.Tag.ToString() + " WHERE Id = '" + this.Txt_Id.Text + "' ", null);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT * FROM " + base.Tag.ToString() + " WHERE Id = '" + this.Txt_Id.Text + "' ", this.oleDbConnection_0);
                 DataSet dataSet = new DataSet();
-                //this.oleDbDataAdapter_0.Fill(dataSet);
-                //null.Close();
+                this.oleDbDataAdapter_0.Fill(dataSet);
+                this.oleDbConnection_0.Close();
                 if (dataSet.Tables[0].Rows.Count != 0)
                 {
                     this.Txt_Description.Text = dataSet.Tables[0].Rows[0]["Description"].ToString();
@@ -160,10 +155,10 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) && (Class11.string_0 == "S"))
             {
-                Class7.smethod_16("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), null);
+                Class7.smethod_16("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
                 this.Txt_Id.Text = FrmBrowse.strReturn;
             }
         }
-
+   
     }
 }

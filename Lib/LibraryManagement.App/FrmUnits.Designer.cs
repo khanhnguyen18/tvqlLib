@@ -1,8 +1,11 @@
-﻿using DevExpress.XtraEditors;
-using System.Windows.Forms;
-using System.Drawing;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
 using System;
-using DevExpress.Utils;
+using System.ComponentModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Drawing;
+using System.Windows.Forms;
 namespace LibraryManagement.App
 {
     partial class FrmUnits
@@ -52,7 +55,7 @@ namespace LibraryManagement.App
             this.Txt_Status.Properties.BeginInit();
             base.SuspendLayout();
             this.btn_Exit.Anchor = AnchorStyles.Bottom;
-            this.btn_Exit.DialogResult = DialogResult.Cancel;
+            this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Exit.Location = new Point(0x1c4, 0x53);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new Size(0x4b, 0x17);
@@ -67,7 +70,7 @@ namespace LibraryManagement.App
             this.btn_Search.Text = "T\x00ec&m";
             this.btn_Search.Click += new EventHandler(this.btn_Search_Click);
             this.btn_Edit.Anchor = AnchorStyles.Bottom;
-            this.btn_Edit.DialogResult = DialogResult.Cancel;
+            this.btn_Edit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Edit.Location = new Point(0xe3, 0x53);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new Size(0x4b, 0x17);
@@ -150,7 +153,7 @@ namespace LibraryManagement.App
             this.GroupBox2.TabIndex = 0x1ac;
             this.GroupBox2.TabStop = false;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.CancelButton = this.btn_Exit;
             base.ClientSize = new Size(0x210, 0x72);
             base.Controls.Add(this.GroupBox2);
@@ -167,7 +170,7 @@ namespace LibraryManagement.App
             base.Controls.Add(this.btn_New);
             base.Controls.Add(this.btn_Skip);
             base.Controls.Add(this.btn_Save);
-            base.FormBorderStyle = FormBorderStyle.FixedSingle;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             base.KeyPreview = true;
             base.MaximizeBox = false;
             base.Name = "FrmUnits";
@@ -180,7 +183,6 @@ namespace LibraryManagement.App
             base.ResumeLayout(false);
             base.PerformLayout();
         }
-
         internal SimpleButton btn_Delete;
         private SimpleButton btn_Edit;
         private SimpleButton btn_Exit;
@@ -189,13 +191,18 @@ namespace LibraryManagement.App
         private SimpleButton btn_Search;
         private SimpleButton btn_Skip;
         internal GroupBox GroupBox2;
+        //private IContainer components;
         private LabelControl IjSwogAv6;
         private LabelControl labelControl1;
         internal LabelControl LabelControl3;
-
+        private OleDbConnection oleDbConnection_0;
+        private OleDbDataAdapter oleDbDataAdapter_0;
+        private string string_0;
+        private string string_1;
         private TextEdit Txt_Description;
         private TextEdit Txt_Id;
         internal TextEdit Txt_Status;
+
 
         #endregion
     }

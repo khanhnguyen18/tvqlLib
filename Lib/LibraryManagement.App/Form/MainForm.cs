@@ -105,11 +105,11 @@ namespace LibraryManagement.App
         #region NAVIGATE BAR
         private void iLoan_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            BindToParentForm(new FrmLoanInfo(), this);
+            //BindToParentForm(new FrmLoanInfo(), this);
         }
         private void iBookFinder_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            BindToParentForm(new BookListForm(), this);
+            //BindToParentForm(new BookListForm(), this);
         }
 
        
@@ -124,7 +124,7 @@ namespace LibraryManagement.App
         }
         private void iCardDef_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            BindToParentForm(new FrmLoanInfo(), this);
+            //BindToParentForm(new FrmLoanInfo(), this);
         }
 
         private void iReaderList_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

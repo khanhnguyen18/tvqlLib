@@ -1,17 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+
 
 namespace LibraryManagement.App
 {
-    public partial class FrmMsgbox : XtraForm
+    public partial class FrmMsgbox : DevExpress.XtraEditors.XtraForm
     {
-        public int ret;
         public FrmMsgbox()
         {
             InitializeComponent();
@@ -39,6 +37,5 @@ namespace LibraryManagement.App
         {
             this.Text = Class7.smethod_14("m_softname").ToString();
         }
-
     }
 }

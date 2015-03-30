@@ -1,7 +1,10 @@
 ﻿using DevExpress.XtraEditors;
-using System.Windows.Forms;
-using System.Drawing;
 using System;
+using System.ComponentModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Drawing;
+using System.Windows.Forms;
 namespace LibraryManagement.App
 {
     partial class FrmLanguage
@@ -86,7 +89,7 @@ namespace LibraryManagement.App
             this.btn_Search.Text = "T\x00ec&m";
             this.btn_Search.Click += new EventHandler(this.btn_Search_Click);
             this.btn_Exit.Anchor = AnchorStyles.Bottom;
-            this.btn_Exit.DialogResult = DialogResult.Cancel;
+            this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Exit.Location = new Point(0x1c4, 0x51);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new Size(0x4b, 0x17);
@@ -142,7 +145,7 @@ namespace LibraryManagement.App
             this.Txt_Status.Size = new Size(0x85, 20);
             this.Txt_Status.TabIndex = 0x1a8;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.CancelButton = this.btn_Exit;
             base.ClientSize = new Size(0x210, 0x70);
             base.Controls.Add(this.LabelControl3);
@@ -159,7 +162,7 @@ namespace LibraryManagement.App
             base.Controls.Add(this.btn_New);
             base.Controls.Add(this.btn_Skip);
             base.Controls.Add(this.btn_Save);
-            base.FormBorderStyle = FormBorderStyle.FixedSingle;
+            base.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             base.MaximizeBox = false;
             base.Name = "FrmLanguage";
             base.StartPosition = FormStartPosition.CenterScreen;
@@ -171,8 +174,6 @@ namespace LibraryManagement.App
             base.ResumeLayout(false);
             base.PerformLayout();
         }
-
-
         internal SimpleButton btn_Delete;
         private SimpleButton btn_Edit;
         private SimpleButton btn_Exit;
@@ -181,10 +182,13 @@ namespace LibraryManagement.App
         private SimpleButton btn_Search;
         private SimpleButton btn_Skip;
         internal GroupBox GroupBox2;
+        //private IContainer components;
         private LabelControl labelControl1;
         private LabelControl labelControl2;
         internal LabelControl LabelControl3;
-        
+        private OleDbConnection oleDbConnection_0;
+        private OleDbDataAdapter oleDbDataAdapter_0;
+        private string string_0;
         private TextEdit Txt_Description;
         private TextEdit Txt_Id;
         internal TextEdit Txt_Status;
