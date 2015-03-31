@@ -358,6 +358,30 @@
     <Compile Include="FrmLibraryInfo.Designer.cs">
       <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLibraryLoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibraryLoc.Designer.cs">
+      <DependentUpon>FrmLibraryLoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoanInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoanInfo.Designer.cs">
+      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoanInvList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoanInvList.Designer.cs">
+      <DependentUpon>FrmLoanInvList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReaderDef.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -529,6 +553,22 @@
     <EmbeddedResource Include="FrmLibraryInfo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibraryLoc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLibraryLoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoanInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoanInvList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLoanInvList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogIn.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
