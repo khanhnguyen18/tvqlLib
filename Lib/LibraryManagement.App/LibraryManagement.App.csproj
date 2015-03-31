@@ -190,11 +190,11 @@
     <Compile Include="FormOld\FrmBalance.Designer.cs">
       <DependentUpon>FrmBalance.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmBookRb.cs">
+    <Compile Include="Bill\ReturnBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmBookRb.Designer.cs">
-      <DependentUpon>FrmBookRb.cs</DependentUpon>
+    <Compile Include="Bill\ReturnBookForm.Designer.cs">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmBooksGrp.cs">
       <SubType>Form</SubType>
@@ -250,10 +250,10 @@
     <Compile Include="FormOld\FrmGetAmount.Designer.cs">
       <DependentUpon>FrmGetAmount.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmGetDates.cs">
+    <Compile Include="CommonForm\FrmGetDates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmGetDates.Designer.cs">
+    <Compile Include="CommonForm\FrmGetDates.Designer.cs">
       <DependentUpon>FrmGetDates.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmGetDay.cs">
@@ -267,12 +267,6 @@
     </Compile>
     <Compile Include="FormOld\FrmAcountList.Designer.cs">
       <DependentUpon>FrmAcountList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\MainForm.designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\BookListForm.cs">
       <SubType>Form</SubType>
@@ -364,17 +358,17 @@
     <Compile Include="FormOld\FrmLibraryLoc.Designer.cs">
       <DependentUpon>FrmLibraryLoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInfo.cs">
+    <Compile Include="Bill\LoanBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInfo.Designer.cs">
-      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+    <Compile Include="Bill\LoanBookForm.Designer.cs">
+      <DependentUpon>LoanBookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInvList.cs">
+    <Compile Include="Bill\LoanInvListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmLoanInvList.Designer.cs">
-      <DependentUpon>FrmLoanInvList.cs</DependentUpon>
+    <Compile Include="Bill\LoanInvListForm.Designer.cs">
+      <DependentUpon>LoanInvListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmLogIn.cs">
       <SubType>Form</SubType>
@@ -382,11 +376,11 @@
     <Compile Include="FormOld\FrmLogIn.Designer.cs">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmMain1.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmMain1.Designer.cs">
-      <DependentUpon>FrmMain1.cs</DependentUpon>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmMap_01.cs">
       <SubType>Form</SubType>
@@ -723,10 +717,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\BookListForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
@@ -807,9 +797,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmBalance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmBookRb.resx">
+    <EmbeddedResource Include="Bill\ReturnBookForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmBookRb.cs</DependentUpon>
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOld\FrmBooksGrp.resx">
       <SubType>Designer</SubType>
@@ -855,21 +845,21 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmLibraryLoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmLoanInfo.resx">
+    <EmbeddedResource Include="Bill\LoanBookForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmLoanInfo.cs</DependentUpon>
+      <DependentUpon>LoanBookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmLoanInvList.resx">
+    <EmbeddedResource Include="Bill\LoanInvListForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmLoanInvList.cs</DependentUpon>
+      <DependentUpon>LoanInvListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOld\FrmLogIn.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmMain1.resx">
+    <EmbeddedResource Include="Form\MainForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmMain1.cs</DependentUpon>
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOld\FrmMap_01.resx">
       <SubType>Designer</SubType>
@@ -1156,6 +1146,7 @@
     <Compile Include="Report\voucher_3.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ToolsGui.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">

@@ -25,7 +25,7 @@ namespace LibraryManagement.App
 
         private void FrmGetDay_Load(object sender, EventArgs e)
         {
-            Class7.rciIijbdca = false;
+            Class7.IsInputDate = false;
             this.Txt_InDay.EditValue = DateTime.Parse(Class7.smethod_19());
         }
 
@@ -40,7 +40,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.Return)
             {
                 Class7.dateTime_2 = DateTime.ParseExact(this.Txt_InDay.Text, "dd/MM/yyyy", null);
-                Class7.rciIijbdca = true;
+                Class7.IsInputDate = true;
                 base.Close();
             }
         }

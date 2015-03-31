@@ -369,7 +369,7 @@ internal class Class6
     public void method_26()
     {
         new FrmGetDates().ShowDialog();
-        if (Class7.rciIijbdca)
+        if (Class7.IsInputDate)
         {
             DataSet set;
             DataSet set2;

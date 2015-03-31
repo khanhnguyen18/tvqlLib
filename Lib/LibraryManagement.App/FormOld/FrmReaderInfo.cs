@@ -50,7 +50,7 @@ namespace LibraryManagement.App
         private void btnView_Click(object sender, EventArgs e)
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 this.dataSet_0.Tables["histrans"].Clear();
                 this.string_0 = string.Concat(new object[] { "SELECT DISTINCT  trans_num , tran_date , tran_time , trans_code , remark  FROM tblLoanTran WHERE status = 1 AND (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') AND cs_id = '", this.txtCsId.Text.Trim(), "' GROUP BY trans_num, tran_date, tran_time, trans_code, remark " });

@@ -25,7 +25,7 @@ namespace LibraryManagement.App
         public void acc_detail()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new acc_info().ShowPreviewDialog();
             }
@@ -34,7 +34,7 @@ namespace LibraryManagement.App
         public void acc_diary()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new acc_diary().ShowPreviewDialog();
             }
@@ -44,7 +44,7 @@ namespace LibraryManagement.App
         {
             string str = "ACCGL_" + Class6.smethod_0(SystemInformation.ComputerName);
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 DataSet set;
                 WaitDialogForm form = new WaitDialogForm();
@@ -166,7 +166,7 @@ namespace LibraryManagement.App
         {
             string str = "MOFGL_" + Class6.smethod_0(SystemInformation.ComputerName);
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 DataSet set;
                 WaitDialogForm form = new WaitDialogForm();
@@ -288,7 +288,7 @@ namespace LibraryManagement.App
         {
             string str = "MOFGL2_" + Class6.smethod_0(SystemInformation.ComputerName);
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 DataSet set;
                 WaitDialogForm form = new WaitDialogForm();
@@ -437,7 +437,7 @@ namespace LibraryManagement.App
         public void delpostranlist()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 _status = 0;
                 _trcode = "00";
@@ -448,7 +448,7 @@ namespace LibraryManagement.App
         public void delstktranlist()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 _status = 0;
                 new lst_stktrans().ShowPreviewDialog();
@@ -458,7 +458,7 @@ namespace LibraryManagement.App
         public void fastslow()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new FrmFastSlow().ShowDialog();
             }
@@ -488,7 +488,7 @@ namespace LibraryManagement.App
         public void generalinfo()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new stk_history().ShowPreviewDialog();
             }
@@ -572,7 +572,7 @@ namespace LibraryManagement.App
         public void posinfo_gl()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 Class9.RrqIxZxw5("WHERE type IN('01')");
                 new stk_history().ShowPreviewDialog();
@@ -594,7 +594,7 @@ namespace LibraryManagement.App
         public void postranlist()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 _status = 1;
                 _trcode = "00";
@@ -605,7 +605,7 @@ namespace LibraryManagement.App
         public void rtpostranlist()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 _status = 1;
                 _trcode = "01";
@@ -616,7 +616,7 @@ namespace LibraryManagement.App
         public void salebygrp()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new saledetail_grp().ShowPreviewDialog();
             }
@@ -625,7 +625,7 @@ namespace LibraryManagement.App
         public void salebysupp()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new saledetail_supp().ShowPreviewDialog();
             }
@@ -634,7 +634,7 @@ namespace LibraryManagement.App
         public void salebytaxcode()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 DataSet set;
                 string str = "S05GTGT_" + Class6.smethod_0(SystemInformation.ComputerName);
@@ -672,7 +672,7 @@ namespace LibraryManagement.App
         public void stkinfo_gl()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 Class9.RrqIxZxw5("WHERE type IN('02')");
                 new stk_history().ShowPreviewDialog();
@@ -694,7 +694,7 @@ namespace LibraryManagement.App
         public void stktranlist()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 _status = 1;
                 new lst_stktrans().ShowPreviewDialog();
@@ -704,7 +704,7 @@ namespace LibraryManagement.App
         public void sumbysaler()
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 new sumsaler().ShowPreviewDialog();
             }

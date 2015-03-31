@@ -16,9 +16,9 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    public partial class FrmBookRb : DevExpress.XtraEditors.XtraForm
+    public partial class ReturnBookForm : DevExpress.XtraEditors.XtraForm
     {
-        public FrmBookRb()
+        public ReturnBookForm()
         {
             InitializeComponent();
         }

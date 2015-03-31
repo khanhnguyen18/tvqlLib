@@ -42,7 +42,7 @@ namespace LibraryManagement.App
             }
             Class7.oleDbConnection_1.Close();
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 this.string_1 = string.Concat(new object[] { "select * from tblTransaction where goods_id = '", this.string_2, "' and (tran_date between '", Class7.dateTime_0, "' and '", Class7.dateTime_1, "')  and status = 1  order by tran_date, tran_time " });
                 OleDbDataAdapter adapter3 = new OleDbDataAdapter(this.string_1, Class7.oleDbConnection_1);

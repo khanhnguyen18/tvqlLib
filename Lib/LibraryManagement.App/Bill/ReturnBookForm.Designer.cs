@@ -17,7 +17,7 @@ using DevExpress.XtraGrid.Views.Base;
 
 namespace LibraryManagement.App
 {
-    partial class FrmBookRb
+    partial class ReturnBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@ namespace LibraryManagement.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookRb));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnBookForm));
             this.lblAddress = new DevExpress.XtraEditors.LabelControl();
             this.btnAddGrp = new DevExpress.XtraEditors.SimpleButton();
             this.imageList_0 = new System.Windows.Forms.ImageList(this.components);

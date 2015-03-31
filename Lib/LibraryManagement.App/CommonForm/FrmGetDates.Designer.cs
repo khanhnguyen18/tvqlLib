@@ -59,7 +59,6 @@ namespace LibraryManagement.App
             this.Txt_ToDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.Txt_ToDate.Size = new Size(0x57, 20);
             this.Txt_ToDate.TabIndex = 1;
-            this.Txt_ToDate.EditValueChanged += new EventHandler(this.Txt_ToDate_EditValueChanged);
             this.Txt_ToDate.KeyDown += new KeyEventHandler(this.Txt_ToDate_KeyDown);
             this.LabelControl1.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.LabelControl1.Appearance.Options.UseFont = true;

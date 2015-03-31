@@ -4,9 +4,15 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Alerter;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
+using System;
 using System.ComponentModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
+
 namespace LibraryManagement.App
 {
     partial class MainForm
@@ -14,6 +20,7 @@ namespace LibraryManagement.App
         /// <summary>
         /// Required designer variable.
         /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -29,18 +36,18 @@ namespace LibraryManagement.App
         }
 
         #region Windows Form Designer generated code
-        
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        private ComponentResourceManager manager;
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Alerter.AlertButton alertButton3 = new DevExpress.XtraBars.Alerter.AlertButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar_0 = new DevExpress.XtraBars.Bar();
+            this.barManager_0 = new DevExpress.XtraBars.BarManager(this.components);
+            this.statusBar = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.Lbl_IpAddress = new DevExpress.XtraBars.BarStaticItem();
             this.menuBar = new DevExpress.XtraBars.Bar();
@@ -54,11 +61,10 @@ namespace LibraryManagement.App
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_3 = new DevExpress.XtraBars.BarDockControl();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList_0 = new System.Windows.Forms.ImageList(this.components);
             this.bar_3 = new DevExpress.XtraBars.Bar();
             this.barDockControl_4 = new DevExpress.XtraBars.BarDockControl();
-            this.alertControl_0 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList_1 = new System.Windows.Forms.ImageList(this.components);
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.iLoan = new DevExpress.XtraNavBar.NavBarItem();
@@ -75,29 +81,29 @@ namespace LibraryManagement.App
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollection_0 = new DevExpress.Utils.ImageCollection(this.components);
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).BeginInit();
             this.cnvLekth7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // barManager1
+            // barManager_0
             // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar_0,
+            this.barManager_0.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.statusBar,
             this.menuBar,
             this.bar_2});
-            this.barManager1.DockControls.Add(this.barDockControl_0);
-            this.barManager1.DockControls.Add(this.barDockControl_1);
-            this.barManager1.DockControls.Add(this.barDockControl_2);
-            this.barManager1.DockControls.Add(this.barDockControl_3);
-            this.barManager1.Form = this;
-            this.barManager1.Images = this.imageList1;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barManager_0.DockControls.Add(this.barDockControl_0);
+            this.barManager_0.DockControls.Add(this.barDockControl_1);
+            this.barManager_0.DockControls.Add(this.barDockControl_2);
+            this.barManager_0.DockControls.Add(this.barDockControl_3);
+            this.barManager_0.Form = this;
+            this.barManager_0.Images = this.imageList_0;
+            this.barManager_0.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barStaticItem1,
             this.iPass,
             this.barStaticItem2,
@@ -105,28 +111,30 @@ namespace LibraryManagement.App
             this.iExit,
             this.Lbl_IpAddress,
             this.iMail});
-            this.barManager1.MainMenu = this.menuBar;
-            this.barManager1.MaxItemId = 9;
-            this.barManager1.StatusBar = this.bar_0;
+            this.barManager_0.MainMenu = this.menuBar;
+            this.barManager_0.MaxItemId = 9;
+            this.barManager_0.StatusBar = this.statusBar;
+            this.barManager_0.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager_0_ItemClick);
             // 
-            // bar_0
+            // statusBar
             // 
-            this.bar_0.BarName = "Status bar";
-            this.bar_0.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar_0.DockCol = 0;
-            this.bar_0.DockRow = 0;
-            this.bar_0.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar_0.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.statusBar.BarName = "Status bar";
+            this.statusBar.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.statusBar.DockCol = 0;
+            this.statusBar.DockRow = 0;
+            this.statusBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.statusBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.Lbl_IpAddress)});
-            this.bar_0.OptionsBar.AllowQuickCustomization = false;
-            this.bar_0.OptionsBar.DrawDragBorder = false;
-            this.bar_0.OptionsBar.UseWholeRow = true;
-            this.bar_0.Text = "Status bar";
+            this.statusBar.OptionsBar.AllowQuickCustomization = false;
+            this.statusBar.OptionsBar.DrawDragBorder = false;
+            this.statusBar.OptionsBar.UseWholeRow = true;
+            this.statusBar.Text = "Status bar";
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.Caption = "Nguyen Duy Khanh - Tel : 0907002999 - Email : outdoor1988@gmail.com";
+            this.barStaticItem1.Caption = "Programed by Nguyen Duy Khanh - Tel : 0907002999 - Email : nduykhanh181088@yahoo." +
+                "com";
             this.barStaticItem1.Id = 2;
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -148,6 +156,7 @@ namespace LibraryManagement.App
             this.menuBar.DockRow = 0;
             this.menuBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.menuBar.OptionsBar.AllowQuickCustomization = false;
+            this.menuBar.OptionsBar.MultiLine = true;
             this.menuBar.OptionsBar.UseWholeRow = true;
             this.menuBar.Text = "Custom 4";
             // 
@@ -163,6 +172,8 @@ namespace LibraryManagement.App
             new DevExpress.XtraBars.LinkPersistInfo(this.Txt_Date),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iMail, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar_2.OptionsBar.MultiLine = true;
+            this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
             // 
             // iPass
@@ -171,6 +182,7 @@ namespace LibraryManagement.App
             this.iPass.Id = 3;
             this.iPass.ImageIndex = 2;
             this.iPass.Name = "iPass";
+            this.iPass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPass_ItemClick);
             // 
             // barStaticItem2
             // 
@@ -197,6 +209,7 @@ namespace LibraryManagement.App
             this.iMail.Id = 8;
             this.iMail.ImageIndex = 15;
             this.iMail.Name = "iMail";
+            this.iMail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMail_ItemClick);
             // 
             // iExit
             // 
@@ -204,6 +217,7 @@ namespace LibraryManagement.App
             this.iExit.Id = 6;
             this.iExit.ImageIndex = 10;
             this.iExit.Name = "iExit";
+            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
             // 
             // barDockControl_0
             // 
@@ -233,34 +247,34 @@ namespace LibraryManagement.App
             this.barDockControl_3.Location = new System.Drawing.Point(787, 54);
             this.barDockControl_3.Size = new System.Drawing.Size(0, 435);
             // 
-            // imageList1
+            // imageList_0
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "about.png");
-            this.imageList1.Images.SetKeyName(1, "disk_blue.png");
-            this.imageList1.Images.SetKeyName(2, "keys.png");
-            this.imageList1.Images.SetKeyName(3, "home.png");
-            this.imageList1.Images.SetKeyName(4, "calendar.png");
-            this.imageList1.Images.SetKeyName(5, "lock_information.png");
-            this.imageList1.Images.SetKeyName(6, "cashier.png");
-            this.imageList1.Images.SetKeyName(7, "businessmen.png");
-            this.imageList1.Images.SetKeyName(8, "funnel_add.png");
-            this.imageList1.Images.SetKeyName(9, "businessman_view.png");
-            this.imageList1.Images.SetKeyName(10, "delete2.png");
-            this.imageList1.Images.SetKeyName(11, "box_add.png");
-            this.imageList1.Images.SetKeyName(12, "package_add.png");
-            this.imageList1.Images.SetKeyName(13, "paperclip.png");
-            this.imageList1.Images.SetKeyName(14, "mail.png");
-            this.imageList1.Images.SetKeyName(15, "mail_add.png");
-            this.imageList1.Images.SetKeyName(16, "books.png");
-            this.imageList1.Images.SetKeyName(17, "book_blue_next.png");
-            this.imageList1.Images.SetKeyName(18, "book_blue_view.png");
-            this.imageList1.Images.SetKeyName(19, "user1_into.png");
-            this.imageList1.Images.SetKeyName(20, "user1_view.png");
-            this.imageList1.Images.SetKeyName(21, "user1_information.png");
-            this.imageList1.Images.SetKeyName(22, "table_selection_column.png");
-            this.imageList1.Images.SetKeyName(23, "certificate.png");
+            this.imageList_0.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_0.ImageStream")));
+            this.imageList_0.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_0.Images.SetKeyName(0, "FrmMain1_16_0.png");
+            this.imageList_0.Images.SetKeyName(1, "FrmMain1_16_1.png");
+            this.imageList_0.Images.SetKeyName(2, "FrmMain1_16_2.png");
+            this.imageList_0.Images.SetKeyName(3, "FrmMain1_16_3.png");
+            this.imageList_0.Images.SetKeyName(4, "FrmMain1_16_4.png");
+            this.imageList_0.Images.SetKeyName(5, "FrmMain1_16_5.png");
+            this.imageList_0.Images.SetKeyName(6, "FrmMain1_16_6.png");
+            this.imageList_0.Images.SetKeyName(7, "FrmMain1_16_7.png");
+            this.imageList_0.Images.SetKeyName(8, "FrmMain1_16_8.png");
+            this.imageList_0.Images.SetKeyName(9, "FrmMain1_16_9.png");
+            this.imageList_0.Images.SetKeyName(10, "FrmMain1_16_10.png");
+            this.imageList_0.Images.SetKeyName(11, "FrmMain1_16_11.png");
+            this.imageList_0.Images.SetKeyName(12, "FrmMain1_16_12.png");
+            this.imageList_0.Images.SetKeyName(13, "FrmMain1_16_13.png");
+            this.imageList_0.Images.SetKeyName(14, "FrmMain1_16_14.png");
+            this.imageList_0.Images.SetKeyName(15, "FrmMain1_16_15.png");
+            this.imageList_0.Images.SetKeyName(16, "FrmMain1_16_16.png");
+            this.imageList_0.Images.SetKeyName(17, "FrmMain1_16_17.png");
+            this.imageList_0.Images.SetKeyName(18, "FrmMain1_16_18.png");
+            this.imageList_0.Images.SetKeyName(19, "FrmMain1_16_19.png");
+            this.imageList_0.Images.SetKeyName(20, "FrmMain1_16_20.png");
+            this.imageList_0.Images.SetKeyName(21, "FrmMain1_16_21.png");
+            this.imageList_0.Images.SetKeyName(22, "FrmMain1_16_22.png");
+            this.imageList_0.Images.SetKeyName(23, "FrmMain1_16_23.png");
             // 
             // bar_3
             // 
@@ -278,18 +292,12 @@ namespace LibraryManagement.App
             this.barDockControl_4.Location = new System.Drawing.Point(0, 0);
             this.barDockControl_4.Size = new System.Drawing.Size(0, 0);
             // 
-            // alertControl_0
+            // imageList_1
             // 
-            this.alertControl_0.AutoFormDelay = 9000;
-            alertButton3.Hint = "Đóng";
-            alertButton3.Name = "close";
-            this.alertControl_0.Buttons.Add(alertButton3);
-            // 
-            // imageList2
-            // 
-            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_1.ImageStream")));
+            this.imageList_1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_1.Images.SetKeyName(0, "FrmMain1_32_0.png");
+            this.imageList_1.Images.SetKeyName(1, "FrmMain1_32_1.png");
             // 
             // navBarControl1
             // 
@@ -314,12 +322,12 @@ namespace LibraryManagement.App
             this.navBarItem11,
             this.navBarItem12,
             this.iBookFinder});
-            this.navBarControl1.LargeImages = this.imageCollection1;
+            this.navBarControl1.LargeImages = this.imageCollection_0;
             this.navBarControl1.Location = new System.Drawing.Point(1, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 196;
             this.navBarControl1.Size = new System.Drawing.Size(203, 512);
-            this.navBarControl1.SmallImages = this.imageList1;
+            this.navBarControl1.SmallImages = this.imageList_0;
             this.navBarControl1.TabIndex = 6;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -332,7 +340,7 @@ namespace LibraryManagement.App
             new DevExpress.XtraNavBar.NavBarItemLink(this.iReturn),
             new DevExpress.XtraNavBar.NavBarItemLink(this.iLoanList),
             new DevExpress.XtraNavBar.NavBarItemLink(this.iBookFinder)});
-            this.navBarGroup1.LargeImageIndex = 23;
+            this.navBarGroup1.LargeImageIndex = 0;
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // iLoan
@@ -371,7 +379,7 @@ namespace LibraryManagement.App
             new DevExpress.XtraNavBar.NavBarItemLink(this.iCardDef),
             new DevExpress.XtraNavBar.NavBarItemLink(this.iReaderList),
             new DevExpress.XtraNavBar.NavBarItemLink(this.iReaderInfo)});
-            this.navBarGroup2.LargeImageIndex = 14;
+            this.navBarGroup2.LargeImageIndex = 1;
             this.navBarGroup2.Name = "navBarGroup2";
             // 
             // iCardDef
@@ -425,10 +433,12 @@ namespace LibraryManagement.App
             this.navBarItem12.Caption = "Sao lưu dữ liệu";
             this.navBarItem12.Name = "navBarItem12";
             // 
-            // imageCollection1
+            // imageCollection_0
             // 
-            this.imageCollection1.ImageSize = new System.Drawing.Size(32, 32);
-            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection_0.ImageSize = new System.Drawing.Size(32, 32);
+            this.imageCollection_0.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection_0.ImageStream")));
+            this.imageCollection_0.Images.SetKeyName(0, "32books_blue.png");
+            this.imageCollection_0.Images.SetKeyName(1, "32businessman.png");
             // 
             // cnvLekth7
             // 
@@ -439,12 +449,14 @@ namespace LibraryManagement.App
             this.cnvLekth7.Size = new System.Drawing.Size(206, 435);
             this.cnvLekth7.TabIndex = 7;
             // 
-            // defaultLookAndFeel1
+            // defaultLookAndFeel_0
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "DevExpress Style";
+            this.defaultLookAndFeel_0.LookAndFeel.SkinName = "DevExpress Style";
             // 
             // MainForm
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 515);
             this.Controls.Add(this.cnvLekth7);
             this.Controls.Add(this.barDockControl_4);
@@ -454,20 +466,18 @@ namespace LibraryManagement.App
             this.Controls.Add(this.barDockControl_0);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
-            this.Text = "QUẢN LÝ THƯ VIỆN";
+            this.Text = "Quản lý thư viện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmMain1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).EndInit();
             this.cnvLekth7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
-
-        private AlertControl alertControl_0;
-        private Bar bar_0;
+        private Bar statusBar;
         private Bar menuBar;
         private Bar bar_2;
         private Bar bar_3;
@@ -476,21 +486,21 @@ namespace LibraryManagement.App
         private BarDockControl barDockControl_2;
         private BarDockControl barDockControl_3;
         private BarDockControl barDockControl_4;
-        private BarManager barManager1;
+        private BarManager barManager_0;
         private BarStaticItem barStaticItem1;
         private BarStaticItem barStaticItem2;
         private PanelControl cnvLekth7;
-        private DefaultLookAndFeel defaultLookAndFeel1;
+        private DefaultLookAndFeel defaultLookAndFeel_0;
         private Form form_0;
         private NavBarItem iBookFinder;
         private NavBarItem iCardDef;
-        private IContainer components;
+        //private IContainer components;
         private BarButtonItem iExit;
         private NavBarItem iLoan;
         private NavBarItem iLoanList;
-        private DevExpress.Utils.ImageCollection imageCollection1;
-        private ImageList imageList1;
-        private ImageList imageList2;
+        private DevExpress.Utils.ImageCollection imageCollection_0;
+        private ImageList imageList_0;
+        private ImageList imageList_1;
         private BarButtonItem iMail;
         private BarButtonItem iPass;
         private NavBarItem iReaderInfo;
@@ -506,10 +516,13 @@ namespace LibraryManagement.App
         private NavBarItem navBarItem7;
         private NavBarItem navBarItem8;
         private NavBarItem navBarItem9;
+        private OleDbConnection oleDbConnection_0;
+        private OleDbDataAdapter oleDbDataAdapter_0;
         private string string_0;
         private string string_1;
         private BarStaticItem Txt_Date;
-        private ComponentResourceManager manager;
+
         #endregion
+
     }
 }

@@ -22,7 +22,7 @@ namespace LibraryManagement.App
         private void btn_Detail_Click(object sender, EventArgs e)
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 Class12.string_3 = this.Txt_Account.Text.Replace("-", "");
                 new acc_detail().ShowPreviewDialog();

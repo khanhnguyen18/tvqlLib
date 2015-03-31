@@ -366,12 +366,6 @@ internal class Class11
         }
     }
 
-    public static void smethod_20(object object_0, Form form_0)
-    {
-        //object_0.MdiParent = form_0;
-        //object_0.Show();
-    }
-
     public static void smethod_3(Control control_0)
     {
         string_0 = "F";

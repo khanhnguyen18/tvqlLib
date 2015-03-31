@@ -35,7 +35,7 @@ internal class Class7
     public static OleDbConnection oleDbConnection_1;
     public static OleDbConnection oleDbConnection_2;
     private static OleDbDataAdapter oleDbDataAdapter_0;
-    public static bool rciIijbdca;
+    public static bool IsInputDate;
     public static string string_0;
     public static string string_1;
     public static string string_2;
@@ -60,7 +60,7 @@ internal class Class7
         string_6 = "Data Source=" + smethod_6("SERVER") + ";Initial Catalog=" + smethod_6("NAMEDB") + ";Persist Security Info=True;User ID=" + smethod_6("USERDB") + ";Password=" + smethod_6("PASSDB");
         oleDbConnection_1 = new OleDbConnection(string_5);
         oleDbConnection_2 = new OleDbConnection(string_4);
-        rciIijbdca = false;
+        IsInputDate = false;
         string_8 = "Xin chờ một ch\x00fat ....";
     }
 

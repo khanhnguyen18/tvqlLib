@@ -19,7 +19,7 @@ namespace LibraryManagement.App
         private void btn_Detail_Click(object sender, EventArgs e)
         {
             new FrmGetDates().ShowDialog();
-            if (Class7.rciIijbdca)
+            if (Class7.IsInputDate)
             {
                 Class6.string_11 = this.Txt_Id.Text.Trim();
                 new lst_stktransbycs().ShowPreviewDialog();
@@ -47,7 +47,7 @@ namespace LibraryManagement.App
             if (!(str == string.Empty))
             {
                 new FrmGetDates().ShowDialog();
-                if (Class7.rciIijbdca)
+                if (Class7.IsInputDate)
                 {
                     this.string_0 = string.Concat(new object[] { "SELECT tran_date AS Ng\x00e0y, tran_time AS Giờ, trans_num AS [Số GD], trans_code AS Loại, exp_id AS Xuất, imp_id AS Nhập, SUM(amount) AS [Tổng tiền],remark AS [Diễn giải] FROM tblTransaction WHERE exp_id = '", str, "' OR imp_id = '", str, "' AND (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') GROUP BY tran_date,tran_time,trans_num,trans_code,exp_id,imp_id,remark " });
                     Class7.smethod_16(this.string_0, this.oleDbConnection_0);
