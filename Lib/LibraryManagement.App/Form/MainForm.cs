@@ -44,11 +44,11 @@ namespace LibraryManagement.App
             //    this.BuildMenu();
             //}
 
-            string str = string.Format("{0:dd/MM/yyy}", DateTime.Parse(Class7.smethod_19().ToString()));
-            this.Text = string.Concat(new object[] { Class7.smethod_14("m_softname"), " (USER NAME : ", Class7.string_7, "- COMPUTER NAME :", SystemInformation.ComputerName, " ", str, ")" });
-            this.Txt_Date.Caption = str;
-            this.Lbl_IpAddress.Caption = Class7.smethod_52();
-            this.barStaticItem1.Caption = Class13.smethod_1(Class7.smethod_14("m_copyright").ToString(), Class13.string_0);
+            this.Txt_Date.Caption = string.Format("{0:dd/MM/yyy}", DateTime.Now); ;
+
+            //this.Text = string.Concat(new object[] { Class7.smethod_14("m_softname"), " (USER NAME : ", Class7.string_7, "- COMPUTER NAME :", SystemInformation.ComputerName, " ", str, ")" });
+            //this.Lbl_IpAddress.Caption = Class7.smethod_52();
+            //this.barStaticItem1.Caption = Class13.smethod_1(Class7.smethod_14("m_copyright").ToString(), Class13.string_0);
         }
 
       
@@ -145,7 +145,7 @@ namespace LibraryManagement.App
         #region STANDARD BAR
         private void iExit_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (Class7.smethod_15("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
             {
                 Class7.smethod_25();
                 Environment.Exit(0);
@@ -252,7 +252,7 @@ namespace LibraryManagement.App
                         {
                             break;
                         }
-                        Class7.smethod_15("Trạm " + SystemInformation.ComputerName + " kh\x00f4ng phải l\x00e0 trạm b\x00e1n h\x00e0ng", 1);
+                        Class7.ShowMessageBox("Trạm " + SystemInformation.ComputerName + " kh\x00f4ng phải l\x00e0 trạm b\x00e1n h\x00e0ng", 1);
                         return;
 
                     case "PTRLIST":
@@ -418,7 +418,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "EXIT":
-                        if (Class7.smethod_15("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
+                        if (Class7.ShowMessageBox("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
                         {
                             goto Label_0766;
                         }
@@ -446,7 +446,7 @@ namespace LibraryManagement.App
 
                     case "CLEARSYS":
                         Class7.smethod_43();
-                        Class7.smethod_15("Ho\x00e0n th\x00e0nh khởi tạo trạng th\x00e1i", 2);
+                        Class7.ShowMessageBox("Ho\x00e0n th\x00e0nh khởi tạo trạng th\x00e1i", 2);
                         return;
 
                     case "ABOUT":

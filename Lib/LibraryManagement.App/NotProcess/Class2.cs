@@ -69,10 +69,10 @@ internal class Class2
         }
     }
 
-    public static void smethod_3(string string_1)
+    public static void DeleteByTransactionCode(string string_1)
     {
-        string_0 = "DELETE FROM tblLoanTran where trans_num = '" + string_1 + "' ";
-        Class7.smethod_4(string_0);
+        //string_0 = "DELETE FROM tblLoanTran where trans_num = '" + string_1 + "' ";
+        //Class7.smethod_4(string_0);
     }
 
     public static bool smethod_4(string string_1)
@@ -91,7 +91,7 @@ internal class Class2
         }
     }
 
-    public static bool smethod_5(object object_0)
+    public static bool CheckCsCard(object object_0)
     {
         string_0 = "select id from tblCustomer where id = '" + object_0 + "' AND due_date > '" + Class7.smethod_19() + "' AND status = 1 ";
         oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);

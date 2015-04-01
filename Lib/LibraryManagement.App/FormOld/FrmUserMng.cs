@@ -22,7 +22,7 @@ namespace LibraryManagement.App
         private void btn_Save_Click(object sender, EventArgs e)
         {
             this.method_2();
-            Class7.smethod_15("Cập nhật th\x00e0nh c\x00f4ng !", 1);
+            Class7.ShowMessageBox("Cập nhật th\x00e0nh c\x00f4ng !", 1);
             base.Close();
         }
 

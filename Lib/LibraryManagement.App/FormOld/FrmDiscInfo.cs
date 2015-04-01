@@ -83,7 +83,7 @@ namespace LibraryManagement.App
 
         private void repositoryItemPopupContainerEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            Class7.smethod_16("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
+            Class7.BrowserForm("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
         }
 
         private void repositoryItemPopupContainerEdit1_QueryDisplayText(object sender, QueryDisplayTextEventArgs e)
@@ -104,7 +104,7 @@ namespace LibraryManagement.App
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
         {
-            Class7.smethod_16("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
+            Class7.BrowserForm("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
             this.repositoryItemTextEdit1.NullText = FrmBrowse.strReturn;
         }
 
@@ -113,7 +113,7 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', grp_id AS [Nh\x00f3m], supp_id AS [M\x00e3 NCC] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
+                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', grp_id AS [Nh\x00f3m], supp_id AS [M\x00e3 NCC] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
                 this.Txt_GoodsId.Text = FrmBrowse.strReturn;
                 this.Txt_GoodsId.SelectAll();
             }

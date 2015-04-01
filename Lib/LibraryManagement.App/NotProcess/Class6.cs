@@ -22,7 +22,7 @@ internal class Class6
     public static string string_2;
     public static string string_3;
     public static string string_4;
-    public static string string_5;
+    public static string transNum;
     public static string string_6;
     public static string string_7;
     public static string string_8;
@@ -133,9 +133,10 @@ internal class Class6
         }
     }
 
-    public void method_12(string string_14)
+    public void ComputeTransnum(string string_14)
     {
-        string str2 = ("IF EXISTS (SELECT * FROM tbltransNum WHERE Trans_type = '" + smethod_0(SystemInformation.ComputerName) + string_14 + "') ") + "UPDATE tblTransNum SET last_num = last_num + 1 , last_date =  '" + string_13 + "'";
+        string str2 = ("IF EXISTS (SELECT * FROM tbltransNum WHERE Trans_type = '" + 
+            smethod_0(SystemInformation.ComputerName) + string_14 + "') ") + "UPDATE tblTransNum SET last_num = last_num + 1 , last_date =  '" + string_13 + "'";
         str2 = (str2 + "WHERE Trans_type = '" + smethod_0(SystemInformation.ComputerName) + string_14 + "' ELSE ") + " INSERT INTO tblTransNum(trans_type,last_num,last_date)";
         oleDbDataAdapter_0 = new OleDbDataAdapter(str2 + " VALUES('" + smethod_0(SystemInformation.ComputerName) + string_14 + "',1,'" + string_13 + "')", oleDbConnection_0);
         DataSet dataSet = new DataSet();

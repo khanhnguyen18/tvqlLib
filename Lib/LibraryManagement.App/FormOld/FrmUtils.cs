@@ -24,7 +24,7 @@ namespace LibraryManagement.App
 
         public void a_correct()
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 this.string_1 = "update tblAccount set debamt = 0, creamt = 0";
@@ -49,7 +49,7 @@ namespace LibraryManagement.App
                         continue;
                     }
                 }
-                Class7.smethod_15("Ho\x00e0n th\x00e0nh hiệu chỉnh dữ liệu !", 1);
+                Class7.ShowMessageBox("Ho\x00e0n th\x00e0nh hiệu chỉnh dữ liệu !", 1);
             }
         }
 
@@ -57,7 +57,7 @@ namespace LibraryManagement.App
         {
             if (string.IsNullOrEmpty(this.string_0))
             {
-                Class7.smethod_15("Bạn chưa lựa chọn tiện \x00edch", 1);
+                Class7.ShowMessageBox("Bạn chưa lựa chọn tiện \x00edch", 1);
             }
             else
             {
@@ -82,7 +82,7 @@ namespace LibraryManagement.App
 
         public void correctall()
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn hiệu chỉnh dữ liệu kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn hiệu chỉnh dữ liệu kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 DataTable table;
@@ -237,13 +237,13 @@ namespace LibraryManagement.App
                     }
                 }
                 form.Close();
-                Class7.smethod_15("Hiệu chỉnh dữ liệu đ\x00e3 ho\x00e0n th\x00e0nh", 1);
+                Class7.ShowMessageBox("Hiệu chỉnh dữ liệu đ\x00e3 ho\x00e0n th\x00e0nh", 1);
             }
         }
 
         public void delete_all_data()
         {
-            Class7.smethod_15("Bạn kh\x00f4ng được ph\x00e9p sử dụng t\x00ednh năng n\x00e0y", 1);
+            Class7.ShowMessageBox("Bạn kh\x00f4ng được ph\x00e9p sử dụng t\x00ednh năng n\x00e0y", 1);
         }
 
         private void DetailView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)

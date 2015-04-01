@@ -28,10 +28,10 @@ namespace LibraryManagement.App
             {
                 if (this.Lbl_StockName.Text == string.Empty)
                 {
-                    Class7.smethod_15("Bạn chưa chọn m\x00e3 kho, quầy !", 1);
+                    Class7.ShowMessageBox("Bạn chưa chọn m\x00e3 kho, quầy !", 1);
                     this.Txt_StockId.Focus();
                 }
-                else if (Class7.smethod_15("Bạn c\x00f3 chắc chắn hiệu chỉnh kh\x00f4ng ?", 2) == 1)
+                else if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn hiệu chỉnh kh\x00f4ng ?", 2) == 1)
                 {
                     Class6 class2 = new Class6();
                     string str5 = class2.method_5("K");
@@ -44,7 +44,7 @@ namespace LibraryManagement.App
                     this.oleDbConnection_0.Close();
                     if (dataTable.Rows.Count == 0)
                     {
-                        Class7.smethod_15("Kh\x00f4ng c\x00f3 sự ch\x00eanh lệch, kh\x00f4ng cần hiệu chỉnh !", 1);
+                        Class7.ShowMessageBox("Kh\x00f4ng c\x00f3 sự ch\x00eanh lệch, kh\x00f4ng cần hiệu chỉnh !", 1);
                         form.Close();
                     }
                     else
@@ -72,10 +72,10 @@ namespace LibraryManagement.App
                             }
                             num++;
                         }
-                        class2.method_12("K");
+                        class2.ComputeTransnum("K");
                         form.Caption = "Tạo giao dịch " + str5;
                         this.method_2();
-                        Class7.smethod_15("Hiệu chỉnh dữ liệu th\x00e0nh c\x00f4ng !", 1);
+                        Class7.ShowMessageBox("Hiệu chỉnh dữ liệu th\x00e0nh c\x00f4ng !", 1);
                         form.Close();
                     }
                 }
@@ -111,7 +111,7 @@ namespace LibraryManagement.App
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a danh mục kiểm k\x00ea kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a danh mục kiểm k\x00ea kh\x00f4ng ?", 2) == 1)
             {
                 OleDbDataAdapter adapter = new OleDbDataAdapter("delete from tblAdjust", Class7.oleDbConnection_1);
                 DataSet dataSet = new DataSet();
@@ -125,12 +125,12 @@ namespace LibraryManagement.App
         {
             if (this.Lbl_StockName.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa chọn kho, quầy kiểm k\x00ea", 1);
+                Class7.ShowMessageBox("Bạn chưa chọn kho, quầy kiểm k\x00ea", 1);
                 this.Txt_StockId.Focus();
             }
             else if (this.Txt_TextFile.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa chọn file kiểm k\x00ea", 1);
+                Class7.ShowMessageBox("Bạn chưa chọn file kiểm k\x00ea", 1);
                 this.Txt_TextFile.Focus();
             }
             else
@@ -177,13 +177,13 @@ namespace LibraryManagement.App
             string str = this.Txt_StockId.Text.Trim();
             if (this.chk_ByStore.Checked)
             {
-                if (Class7.smethod_15("Bạn c\x00f3 chắc chắn hiệu chỉnh to\x00e0n bộ kho, quầy n\x00e0y kh\x00f4ng ?", 2) != 1)
+                if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn hiệu chỉnh to\x00e0n bộ kho, quầy n\x00e0y kh\x00f4ng ?", 2) != 1)
                 {
                     this.chk_ByStore.Checked = false;
                 }
                 else
                 {
-                    Class7.smethod_15("Bạn đ\x00e3 chọn tự động hiệu chỉnh to\x00e0n bộ c\x00e1c mặt h\x00e0ng trong kho, quầy n\x00e0y", 1);
+                    Class7.ShowMessageBox("Bạn đ\x00e3 chọn tự động hiệu chỉnh to\x00e0n bộ c\x00e1c mặt h\x00e0ng trong kho, quầy n\x00e0y", 1);
                     WaitDialogForm form = new WaitDialogForm();
                     form.Caption = "Kiểm tra lượng tồn kho, xin đợi ....";
                     string selectCommandText = "SELECT tblStockInfo.id, tblStockInfo.goods_id,tblStockInfo.averimppr, tblStockInfo.imp_qty - tblStockInfo.exp_qty + tblStockInfo.begin_qty AS endqty FROM tblStockInfo LEFT JOIN tblAdjust ON tblAdjust.goods_id = tblStockInfo.goods_id  WHERE tblStockInfo.id = '" + str + "'  AND  not exists(select goods_id from tblNon_plu where tblNon_plu.goods_id = tblStockInfo.goods_id) ";
@@ -387,7 +387,7 @@ namespace LibraryManagement.App
             }
             catch (IOException)
             {
-                Class7.smethod_15("C\x00f3 lỗi trong file txt, bạn h\x00e3y kiểm tra lại", 1);
+                Class7.ShowMessageBox("C\x00f3 lỗi trong file txt, bạn h\x00e3y kiểm tra lại", 1);
             }
         }
 
@@ -412,7 +412,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho h\x00e0ng', fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.smethod_16(str, Class7.oleDbConnection_1);
+                Class7.BrowserForm(str, Class7.oleDbConnection_1);
                 this.Txt_StockId.Text = FrmBrowse.strReturn;
                 this.Txt_StockId.SelectAll();
             }

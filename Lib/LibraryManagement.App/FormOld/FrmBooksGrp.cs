@@ -21,14 +21,14 @@ namespace LibraryManagement.App
             string str = this.btn_Delete.Text;
             if ((str != null) && (str == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a k\x00fd hiệu n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a k\x00fd hiệu n\x00e0y ? ", 2) == 1)
                 {
                     Class7.smethod_23(base.Tag.ToString(), 0, "id", text.ToString(), "", this.oleDbConnection_0);
                     this.Txt_Status.Text = "Đ\x00e3 bị x\x00f3a";
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi k\x00fd hiệu n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi k\x00fd hiệu n\x00e0y ? ", 2) == 1)
             {
                 Class7.smethod_23(base.Tag.ToString(), 1, "id", text.ToString(), "", this.oleDbConnection_0);
                 this.Txt_Status.Text = "Đang hoạt động";
@@ -76,7 +76,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_0 = "D";
         }
@@ -100,7 +100,7 @@ namespace LibraryManagement.App
                 case "N":
                     if (Class7.smethod_18(base.Tag.ToString(), "Description", str2))
                     {
-                        Class7.smethod_15("Nh\x00f3m h\x00e0ng n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
+                        Class7.ShowMessageBox("Nh\x00f3m h\x00e0ng n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
                     }
                     else
                     {
@@ -152,7 +152,7 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) && (Class11.string_0 == "S"))
             {
-                Class7.smethod_16("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
+                Class7.BrowserForm("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
                 this.Txt_Id.Text = FrmBrowse.strReturn;
             }
         }

@@ -48,7 +48,7 @@ namespace LibraryManagement.App
 
         private void btnCreateTrans_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn tạo giao dịch đặt h\x00e0ng n\x00e0y kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn tạo giao dịch đặt h\x00e0ng n\x00e0y kh\x00f4ng ?", 2) == 1)
             {
                 Class6 class2 = new Class6();
                 string str = class2.method_5("H");
@@ -58,7 +58,7 @@ namespace LibraryManagement.App
                 string str5 = this.Txt_ExpID.Text.Trim();
                 if (this.Lbl_ExpName.Text == string.Empty)
                 {
-                    Class7.smethod_15("Bạn chưa chọn m\x00e3 nh\x00e0 cung cấp", 1);
+                    Class7.ShowMessageBox("Bạn chưa chọn m\x00e3 nh\x00e0 cung cấp", 1);
                     this.Txt_ExpID.Focus();
                 }
                 else
@@ -98,8 +98,8 @@ namespace LibraryManagement.App
                         this.Txt_ExpID.Enabled = true;
                         this.Lbl_ExpName.Text = string.Empty;
                         this.Lbl_MercName.Text = string.Empty;
-                        class2.method_12("H");
-                        Class6.string_5 = str;
+                        class2.ComputeTransnum("H");
+                        Class6.transNum = str;
                         this.method_0();
                         this.Txt_ExpID.Focus();
                     }
@@ -173,7 +173,7 @@ namespace LibraryManagement.App
 
         private void kCnalMegv(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a hết lượng h\x00e0ng đ\x00e3 đặt kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a hết lượng h\x00e0ng đ\x00e3 đặt kh\x00f4ng ?", 2) == 1)
             {
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
@@ -220,7 +220,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean KH', fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('05','06') and status = 1 ";
-                Class7.smethod_16(str, this.oleDbConnection_0);
+                Class7.BrowserForm(str, this.oleDbConnection_0);
                 this.Txt_ExpID.Text = FrmBrowse.strReturn;
                 this.Txt_ExpID.SelectAll();
             }
@@ -300,7 +300,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select goods_id as 'M\x00e3 h\x00e0ng',supp_id AS NCC, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
+                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',supp_id AS NCC, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
                 this.Txt_GoodsId.Text = FrmBrowse.strReturn;
                 this.Txt_GoodsId.SelectAll();
             }

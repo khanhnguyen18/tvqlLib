@@ -24,7 +24,7 @@ namespace LibraryManagement.App
             string text = this.btn_Delete.Text;
             if ((text != null) && (text == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a trạm n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a trạm n\x00e0y ? ", 2) == 1)
                 {
                     this.RrqIxZxw5(this, new EventArgs());
                     Class7.smethod_23(base.Tag.ToString(), 0, "id", this.Txt_Id.Text.Trim(), "", this.oleDbConnection_0);
@@ -32,7 +32,7 @@ namespace LibraryManagement.App
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi trạm n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi trạm n\x00e0y ? ", 2) == 1)
             {
                 this.RrqIxZxw5(this, new EventArgs());
                 Class7.smethod_23(base.Tag.ToString(), 1, "id", this.Txt_Id.Text.Trim(), "", this.oleDbConnection_0);
@@ -67,7 +67,7 @@ namespace LibraryManagement.App
         {
             if ((this.Txt_StationName.Text == string.Empty) | (this.Txt_Description.Text == string.Empty))
             {
-                Class7.smethod_15("Bạn chưa nhập đủ th\x00f4ng tin", 1);
+                Class7.ShowMessageBox("Bạn chưa nhập đủ th\x00f4ng tin", 1);
             }
             else
             {
@@ -96,7 +96,7 @@ namespace LibraryManagement.App
                     case "N":
                         if (Class7.smethod_18(base.Tag.ToString(), "Name", str3))
                         {
-                            Class7.smethod_15("T\x00ean trạm đ\x00e3 được đăng k\x00fd, đề nghị kiểm tra lại", 1);
+                            Class7.ShowMessageBox("T\x00ean trạm đ\x00e3 được đăng k\x00fd, đề nghị kiểm tra lại", 1);
                         }
                         else
                         {
@@ -199,7 +199,7 @@ namespace LibraryManagement.App
 
         private void RrqIxZxw5(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }

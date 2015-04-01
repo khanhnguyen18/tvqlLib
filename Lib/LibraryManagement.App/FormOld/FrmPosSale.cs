@@ -54,8 +54,8 @@ namespace LibraryManagement.App
                 this.btn_New.Enabled = true;
                 this.btn_Save.Enabled = false;
                 Class6 class2 = new Class6();
-                class2.method_12("P");
-                Class6.string_5 = this.Txt_TransNum.Text.Trim();
+                class2.ComputeTransnum("P");
+                Class6.transNum = this.Txt_TransNum.Text.Trim();
                 string str5 = Class7.smethod_19();
                 string str2 = Class7.smethod_40();
                 string str6 = Class7.smethod_53();
@@ -84,7 +84,7 @@ namespace LibraryManagement.App
                     int num10 = Class7.smethod_51();
                     str4 = Class10.smethod_1(str).ToString();
                     this.string_1 = string.Concat(new object[] { 
-                        "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, kit_id, kit_qty, goods_id, qty,unit_symb, amount, discount, surplus, vat_amt, commis_amt, user_id, ref, custax_id,card_id, exp_id, cs_id, merc_type, tax_code, vat_incl, invoice, updated, copies, Shift, recnum,remark, status, discpervat, disc_incl,station) VALUES('", str5, "','", str6, "','", Class6.string_5, "','00','','", str3, "', ", num4, ",'", str, "',", num3, ",'", str7, 
+                        "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, kit_id, kit_qty, goods_id, qty,unit_symb, amount, discount, surplus, vat_amt, commis_amt, user_id, ref, custax_id,card_id, exp_id, cs_id, merc_type, tax_code, vat_incl, invoice, updated, copies, Shift, recnum,remark, status, discpervat, disc_incl,station) VALUES('", str5, "','", str6, "','", Class6.transNum, "','00','','", str3, "', ", num4, ",'", str, "',", num3, ",'", str7, 
                         "',", num5 * num3, ",", num6, ",", num9, ",", num8, ",0,", num12, ",'','','','", str2, "','','01','", str4, "',0,'',0,1,0,", row["idx"], 
                         ",N'", str8, "',1,0,0,", num10, ")"
                      });
@@ -95,7 +95,7 @@ namespace LibraryManagement.App
                     }
                     this.oleDbConnection_0.Close();
                 }
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT goods_id,qty,amount FROM  tblTransaction where trans_num = '" + Class6.string_5 + "'", this.oleDbConnection_0);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT goods_id,qty,amount FROM  tblTransaction where trans_num = '" + Class6.transNum + "'", this.oleDbConnection_0);
                 DataTable table = new DataTable();
                 this.oleDbDataAdapter_0.Fill(table);
                 this.oleDbConnection_0.Close();
@@ -117,7 +117,7 @@ namespace LibraryManagement.App
                 if (Class10.double_2 != 0.0)
                 {
                     double num = Class7.smethod_0(this.Lbl_LastAmount.Text);
-                    this.string_1 = string.Concat(new object[] { "INSERT INTO tblTransValue([trans_num],[amount],[frcustomer]) VALUES('", Class6.string_5, "',", num, ",", Class10.double_2, ")" });
+                    this.string_1 = string.Concat(new object[] { "INSERT INTO tblTransValue([trans_num],[amount],[frcustomer]) VALUES('", Class6.transNum, "',", num, ",", Class10.double_2, ")" });
                     this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
                     using (DataSet set = new DataSet())
                     {
@@ -138,7 +138,7 @@ namespace LibraryManagement.App
                 }
                 catch (Exception)
                 {
-                    Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy m\x00e1y in", 1);
+                    Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy m\x00e1y in", 1);
                 }
             }
         }
@@ -165,7 +165,7 @@ namespace LibraryManagement.App
             if ((this.string_2 == "D") && !(this.Txt_TransNum.Text == string.Empty))
             {
                 Class11.string_1 = "R";
-                Class6.string_5 = this.Txt_TransNum.Text.Trim();
+                Class6.transNum = this.Txt_TransNum.Text.Trim();
                 voucher_1 r_ = new voucher_1();
                 r_.PrintingSystem.ShowMarginsWarning = false;
                 r_.PrintingSystem.ShowPrintStatusDialog = false;
@@ -175,7 +175,7 @@ namespace LibraryManagement.App
                 }
                 catch (Exception)
                 {
-                    Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy m\x00e1y in", 1);
+                    Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy m\x00e1y in", 1);
                 }
             }
         }
@@ -200,7 +200,7 @@ namespace LibraryManagement.App
                 else if (this.Sales_View.RowCount != 0)
                 {
                     this.btn_Skip_Click(this, new EventArgs());
-                    new Class6().method_12("P");
+                    new Class6().ComputeTransnum("P");
                     this.oleDbDataAdapter_0 = new OleDbDataAdapter("select * from " + this.string_0, this.oleDbConnection_0);
                     DataTable dataTable = new DataTable();
                     this.oleDbDataAdapter_0.Fill(dataTable);
@@ -218,7 +218,7 @@ namespace LibraryManagement.App
                         }
                         this.oleDbConnection_0.Close();
                     }
-                    Class6.string_5 = str;
+                    Class6.transNum = str;
                     voucher_3 r = new voucher_3();
                     r.PrintingSystem.ShowMarginsWarning = false;
                     r.PrintingSystem.ShowPrintStatusDialog = false;
@@ -269,7 +269,7 @@ namespace LibraryManagement.App
                     this.oleDbConnection_0.Close();
                     if (set.Tables[0].Rows.Count != 0)
                     {
-                        Class7.smethod_15("Lưu \x00fd : Bạn c\x00f2n tồn tại giao dịch bị ho\x00e3n", 1);
+                        Class7.ShowMessageBox("Lưu \x00fd : Bạn c\x00f2n tồn tại giao dịch bị ho\x00e3n", 1);
                     }
                 }
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter("DROP TABLE " + this.string_0, this.oleDbConnection_0);
@@ -331,7 +331,7 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F6:
-                    Class7.smethod_15("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
+                    Class7.ShowMessageBox("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
                     break;
 
                 case Keys.F7:
@@ -364,11 +364,11 @@ namespace LibraryManagement.App
                         }
                         break;
                     }
-                    Class7.smethod_15("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
+                    Class7.ShowMessageBox("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
                     break;
 
                 case Keys.F12:
-                    Class7.smethod_15("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
+                    Class7.ShowMessageBox("Chức năng n\x00e0y đ\x00e3 bị kh\x00f3a bởi bộ phận quản l\x00fd", 1);
                     break;
             }
         }
@@ -533,7 +533,7 @@ namespace LibraryManagement.App
                         Class6 class2 = new Class6();
                         if (!class2.method_22() && (class2.method_21(str2, Class7.smethod_40()) < (num + this.method_9(str2))))
                         {
-                            Class7.smethod_15("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
+                            Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                             this.Txt_Barcode.Focus();
                             this.Txt_Barcode.SelectAll();
                         }
@@ -556,7 +556,7 @@ namespace LibraryManagement.App
                     }
                     else
                     {
-                        Class7.smethod_15("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
+                        Class7.ShowMessageBox("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
                         this.Txt_Barcode.SelectAll();
                     }
                 }
@@ -574,7 +574,7 @@ namespace LibraryManagement.App
             Class6 class2 = new Class6();
             if (!class2.method_22() && (class2.method_21(str, Class7.smethod_40()) < num))
             {
-                Class7.smethod_15("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
+                Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                 this.Txt_Barcode.Focus();
                 this.Txt_Barcode.SelectAll();
             }
@@ -659,7 +659,7 @@ namespace LibraryManagement.App
                     }
                     else
                     {
-                        Class7.smethod_15("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
+                        Class7.ShowMessageBox("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
                         this.Txt_Barcode.SelectAll();
                     }
                 }
@@ -771,7 +771,7 @@ namespace LibraryManagement.App
             {
                 if (keyCode == Keys.F5)
                 {
-                    Class7.smethod_16("SELECT gs.goods_id AS 'M\x00e3 h\x00e0ng',gs.barcode,gs.full_name AS 'T\x00ean h\x00e0ng',pr.rtprice AS 'Gi\x00e1 b\x00e1n lẻ', gs.grp_id AS Nh\x00f3m FROM tblGoods AS gs INNER JOIN tblPrice as pr ON gs.goods_id = pr.goods_id where gs.status = 1", Class7.oleDbConnection_1);
+                    Class7.BrowserForm("SELECT gs.goods_id AS 'M\x00e3 h\x00e0ng',gs.barcode,gs.full_name AS 'T\x00ean h\x00e0ng',pr.rtprice AS 'Gi\x00e1 b\x00e1n lẻ', gs.grp_id AS Nh\x00f3m FROM tblGoods AS gs INNER JOIN tblPrice as pr ON gs.goods_id = pr.goods_id where gs.status = 1", Class7.oleDbConnection_1);
                     this.Txt_Barcode.Text = FrmBrowse.strReturn;
                     this.Txt_Barcode.SelectAll();
                 }
@@ -801,7 +801,7 @@ namespace LibraryManagement.App
                             this.Txt_Qty.Focus();
                             goto Label_02BE;
                         }
-                        Class7.smethod_15("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
+                        Class7.ShowMessageBox("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
                         this.Txt_Barcode.SelectAll();
                         return;
                     }
@@ -832,7 +832,7 @@ namespace LibraryManagement.App
                         this.oleDbConnection_0.Close();
                         if (set.Tables[0].Rows.Count == 0)
                         {
-                            Class7.smethod_15("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
+                            Class7.ShowMessageBox("M\x00e3 h\x00e0ng kh\x00f4ng tồn tại, bạn h\x00e3y kiểm tra lại", 1);
                             this.Txt_Barcode.SelectAll();
                             return;
                         }
@@ -907,7 +907,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserRight(), this.oleDbConnection_0);
+                Class7.BrowserForm(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserRight(), this.oleDbConnection_0);
                 this.Txt_TransNum.Text = FrmBrowse.strReturn;
             }
             if (e.KeyCode == Keys.Return)

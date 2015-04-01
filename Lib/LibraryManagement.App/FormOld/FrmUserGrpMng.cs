@@ -27,7 +27,7 @@ namespace LibraryManagement.App
         private void btn_Save_Click(object sender, EventArgs e)
         {
             this.method_2();
-            Class7.smethod_15("Cập nhật th\x00e0nh c\x00f4ng !", 1);
+            Class7.ShowMessageBox("Cập nhật th\x00e0nh c\x00f4ng !", 1);
             base.Close();
         }
 
@@ -132,7 +132,7 @@ namespace LibraryManagement.App
             string str = Class7.smethod_36(this.Tls_Menus);
             if (this.Txt_Description.Text == string.Empty)
             {
-                Class7.smethod_15("Th\x00f4ng tin chưa đủ", 1);
+                Class7.ShowMessageBox("Th\x00f4ng tin chưa đủ", 1);
             }
             else
             {

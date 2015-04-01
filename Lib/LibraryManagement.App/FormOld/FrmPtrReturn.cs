@@ -50,8 +50,8 @@ namespace LibraryManagement.App
                 double num3;
                 double num4;
                 this.btn_Skip_Click(this, new EventArgs());
-                new Class6().method_12("P");
-                Class6.string_5 = this.Txt_TransNum.Text.Trim();
+                new Class6().ComputeTransnum("P");
+                Class6.transNum = this.Txt_TransNum.Text.Trim();
                 string str4 = this.Txt_OldTrans.Text.Trim();
                 string str = Class7.smethod_19();
                 string str3 = Class7.smethod_53();
@@ -71,7 +71,7 @@ namespace LibraryManagement.App
                     num3 = Class7.smethod_2(row["discount"]);
                     num4 = Class7.smethod_2(row["surplus"]);
                     this.string_1 = string.Concat(new object[] { 
-                        "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, kit_id, kit_qty, goods_id, qty, amount, discount, surplus, vat_amt, commis_amt, user_id, ref, custax_id,card_id, exp_id, cs_id, merc_type, tax_code, vat_incl, invoice, updated, copies, Shift, recnum,remark, status,station) VALUES('", str, "','", str3, "','", Class6.string_5, "','01','',0,'", row["goods_id"], "',", row["qty"], ",", num, ",", num3, ",", num4, 
+                        "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, kit_id, kit_qty, goods_id, qty, amount, discount, surplus, vat_amt, commis_amt, user_id, ref, custax_id,card_id, exp_id, cs_id, merc_type, tax_code, vat_incl, invoice, updated, copies, Shift, recnum,remark, status,station) VALUES('", str, "','", str3, "','", Class6.transNum, "','01','',0,'", row["goods_id"], "',", row["qty"], ",", num, ",", num3, ",", num4, 
                         ",", num2, ",0,", num6, ",'", str4, "','','','", str2, "','','01','',0,'',0,1,0,", row["idx"], ",N'", str5, "',1,", num7, ")"
                      });
                     this.cnvLekth7 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
@@ -81,7 +81,7 @@ namespace LibraryManagement.App
                     }
                     this.oleDbConnection_0.Close();
                 }
-                this.cnvLekth7 = new OleDbDataAdapter("SELECT * FROM  tblTransaction where trans_num = '" + Class6.string_5 + "'", this.oleDbConnection_0);
+                this.cnvLekth7 = new OleDbDataAdapter("SELECT * FROM  tblTransaction where trans_num = '" + Class6.transNum + "'", this.oleDbConnection_0);
                 DataTable table = new DataTable();
                 this.cnvLekth7.Fill(table);
                 this.oleDbConnection_0.Close();
@@ -118,7 +118,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_2 = "D";
         }
@@ -129,7 +129,7 @@ namespace LibraryManagement.App
             {
                 if (Class7.smethod_0(this.Txt_Qty.Text) > Class7.smethod_0(this.Txt_OldQty.Text))
                 {
-                    Class7.smethod_15("Lượng trả lại kh\x00f4ng thể lớn hơn lượng đ\x00e3 b\x00e1n !", 1);
+                    Class7.ShowMessageBox("Lượng trả lại kh\x00f4ng thể lớn hơn lượng đ\x00e3 b\x00e1n !", 1);
                     this.Txt_Qty.Focus();
                     this.Txt_Qty.SelectAll();
                 }
@@ -285,7 +285,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("SELECT ptr.goods_id, gs.full_name, ptr.qty, ptr.amount, ptr.trans_num FROM tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id where ptr.trans_num = '" + this.Txt_OldTrans.Text + "'", this.oleDbConnection_0);
+                Class7.BrowserForm("SELECT ptr.goods_id, gs.full_name, ptr.qty, ptr.amount, ptr.trans_num FROM tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id where ptr.trans_num = '" + this.Txt_OldTrans.Text + "'", this.oleDbConnection_0);
                 this.Txt_GoodsId.Text = FrmBrowse.strReturn;
             }
         }
@@ -331,7 +331,7 @@ namespace LibraryManagement.App
                 else
                 {
                     this.Txt_PosId.Text = string.Empty;
-                    Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy h\x00f3a đơn n\x00e0y", 1);
+                    Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy h\x00f3a đơn n\x00e0y", 1);
                     this.Txt_OldTrans.SelectAll();
                 }
             }

@@ -43,7 +43,7 @@ namespace LibraryManagement.App
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
             //new Class6().method_4(this.Lbl_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3, ref Class6.string_4, ref Class6.object_0);
-            Class6.string_5 = this.Lbl_TransNum.Text.Trim();
+            Class6.transNum = this.Lbl_TransNum.Text.Trim();
             Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
             Class7.smethod_27(Class6.string_4).ShowPreviewDialog();
         }

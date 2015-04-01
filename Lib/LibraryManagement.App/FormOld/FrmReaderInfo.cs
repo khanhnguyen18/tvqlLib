@@ -136,7 +136,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from tblCustomer WHERE status =1";
-                Class7.smethod_16(str, this.oleDbConnection_0);
+                Class7.BrowserForm(str, this.oleDbConnection_0);
                 this.txtCsId.Text = FrmBrowse.strReturn;
             }
         }

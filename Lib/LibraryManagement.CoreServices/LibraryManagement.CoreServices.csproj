@@ -1,0 +1,65 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5321F42E-F278-43C3-BAA5-88070E4B230F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryManagement.CoreServices</RootNamespace>
+    <AssemblyName>LibraryManagement.CoreServices</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoanTransServiceManage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">
+      <Project>{0F642DBF-B074-4DB4-848C-556DFF087D8D}</Project>
+      <Name>LibraryManagement.Dao.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryManagement.Dao\LibraryManagement.Dao.csproj">
+      <Project>{4CB53F99-EF2D-4690-9D9B-9B25B6637659}</Project>
+      <Name>LibraryManagement.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
+      <Project>{96D914C9-AA6D-4D74-9520-DE4D0C7E7CB0}</Project>
+      <Name>LibraryManagement.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibraryManagement.Service\LibraryManagement.Service.csproj">
+      <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
+      <Name>LibraryManagement.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -42,7 +42,7 @@ namespace LibraryManagement.App
 
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
-            Class6.string_5 = this.Lbl_TransNum.Text.Trim();
+            Class6.transNum = this.Lbl_TransNum.Text.Trim();
             string text = this.Lbl_TransCode.Text;
             if (text != null)
             {

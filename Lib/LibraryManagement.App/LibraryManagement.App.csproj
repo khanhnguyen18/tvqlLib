@@ -268,16 +268,16 @@
     <Compile Include="FormOld\FrmAcountList.Designer.cs">
       <DependentUpon>FrmAcountList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\BookListForm.cs">
+    <Compile Include="Bill\BookListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\BookListForm.Designer.cs">
+    <Compile Include="Bill\BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmBookDef.cs">
+    <Compile Include="Book\FrmBookDef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmBookDef.Designer.cs">
+    <Compile Include="Book\FrmBookDef.Designer.cs">
       <DependentUpon>FrmBookDef.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmBrowse.cs">
@@ -717,11 +717,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\BookListForm.resx">
+    <EmbeddedResource Include="Bill\BookListForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmBookDef.resx">
+    <EmbeddedResource Include="Book\FrmBookDef.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBookDef.cs</DependentUpon>
     </EmbeddedResource>
@@ -1149,6 +1149,10 @@
     <Compile Include="ToolsGui.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibraryManagement.CoreServices\LibraryManagement.CoreServices.csproj">
+      <Project>{5321F42E-F278-43C3-BAA5-88070E4B230F}</Project>
+      <Name>LibraryManagement.CoreServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Dao.SqlClient\LibraryManagement.Dao.SqlClient.csproj">
       <Project>{0F642DBF-B074-4DB4-848C-556DFF087D8D}</Project>
       <Name>LibraryManagement.Dao.SqlClient</Name>

@@ -36,7 +36,7 @@ namespace LibraryManagement.App
                 {
                     if (!(text == "&X\x00f3a"))
                     {
-                        if ((text == "&Phục hồi") && (Class7.smethod_15("Bạn c\x00f3 chắc chắn phục hồi giao dịch n\x00e0y kh\x00f4ng ?", 2) == 1))
+                        if ((text == "&Phục hồi") && (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn phục hồi giao dịch n\x00e0y kh\x00f4ng ?", 2) == 1))
                         {
                             class2.method_14("tblTransaction", str, 1);
                             class2.method_19(str);
@@ -44,7 +44,7 @@ namespace LibraryManagement.App
                             this.btn_Skip_Click(this, new EventArgs());
                         }
                     }
-                    else if (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a giao dịch n\x00e0y kh\x00f4ng ?", 2) == 1)
+                    else if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a giao dịch n\x00e0y kh\x00f4ng ?", 2) == 1)
                     {
                         class2.method_20(str);
                         class2.method_10(str);
@@ -106,7 +106,7 @@ namespace LibraryManagement.App
                         }
                         goto Label_0183;
                     Label_0149:
-                        Class7.smethod_15("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
+                        Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                         return;
                 }
             }
@@ -129,13 +129,13 @@ namespace LibraryManagement.App
                 else
                 {
                     this.btn_Skip_Click(this, new EventArgs());
-                    class2.method_12("K");
+                    class2.ComputeTransnum("K");
                     this.ddvqeXfa4(this.string_0, str, this.string_1, str3, str4, str6, str5);
                     class2.method_19(str);
                     class2.method_9(str, str3);
                 }
             }
-            Class6.string_5 = str;
+            Class6.transNum = str;
             Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
         }
 
@@ -151,7 +151,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
         }
 
@@ -172,12 +172,12 @@ namespace LibraryManagement.App
                 Class6 class2 = new Class6();
                 if (!class2.method_22() && (class2.method_21(str, str4) < num))
                 {
-                    Class7.smethod_15("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
+                    Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                     this.Txt_Qty.Focus();
                 }
                 else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
                 {
-                    Class7.smethod_15("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
+                    Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
                 }
                 else
@@ -454,7 +454,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho h\x00e0ng', fullname AS 'Diễn giải' FROM tblStore ";
-                Class7.smethod_16(str, this.oleDbConnection_1);
+                Class7.BrowserForm(str, this.oleDbConnection_1);
                 this.Txt_ExpID.Text = FrmBrowse.strReturn;
                 this.Txt_ExpID.SelectAll();
             }
@@ -493,7 +493,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_1);
+                Class7.BrowserForm("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_1);
                 this.Txt_GoodsId.Text = FrmBrowse.strReturn;
             }
         }
@@ -513,7 +513,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean KH', fullname AS 'Diễn giải' FROM tblStore  ";
-                Class7.smethod_16(str, this.oleDbConnection_1);
+                Class7.BrowserForm(str, this.oleDbConnection_1);
                 this.Txt_ImpID.Text = FrmBrowse.strReturn;
                 this.Txt_ImpID.SelectAll();
             }
@@ -563,7 +563,7 @@ namespace LibraryManagement.App
                     }
                     else
                     {
-                        Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy giao dịch n\x00e0y", 1);
+                        Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy giao dịch n\x00e0y", 1);
                         this.Txt_OldTrans.Focus();
                         return;
                     }
@@ -598,7 +598,7 @@ namespace LibraryManagement.App
                             this.oleDbConnection_1.Close();
                             if (set.Tables[0].Rows.Count == 0)
                             {
-                                Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy giao dịch n\x00e0y", 1);
+                                Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy giao dịch n\x00e0y", 1);
                                 this.Txt_TransNum.Focus();
                                 this.Txt_TransNum.SelectAll();
                                 return;
@@ -640,7 +640,7 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F5:
-                    Class7.smethod_16("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_1);
+                    Class7.BrowserForm("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_1);
                     this.Txt_TransNum.Text = FrmBrowse.strReturn;
                     break;
             }

@@ -13,20 +13,20 @@ internal class Class11
     public static string string_0;
     public static string string_1;
 
-    static Class11()
-    {
-        Class15.smethod_5();
-    }
+    //static Class11()
+    //{
+    //    //Class15.smethod_5();
+    //}
 
     public Class11()
     {
         Class17.smethod_0();
     }
 
-    public static void smethod_0(Control control_0)
+    public static void EnableNewMode(Control button)
     {
         string_0 = "D";
-        foreach (Control control in control_0.Controls)
+        foreach (Control control in button.Controls)
         {
             if (control is SimpleButton)
             {
@@ -125,7 +125,7 @@ internal class Class11
         }
     }
 
-    public static void smethod_10(string string_2, object object_0, object object_1, object object_2, ComboBoxEdit comboBoxEdit_0, int int_0, object object_3)
+    public static void BindCombox(string string_2, object object_0, object object_1, object object_2, ComboBoxEdit comboBoxEdit_0, int int_0, OleDbConnection object_3)
     {
         comboBoxEdit_0.Properties.Items.Clear();
         using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT " + object_0 + ", " + object_1 + " FROM  " + string_2 + " " + object_2, (OleDbConnection) object_3))

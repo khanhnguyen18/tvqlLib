@@ -18,7 +18,7 @@ namespace LibraryManagement.App
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 string text = this.btn_Delete.Text;
                 if ((text != null) && (text == "&X\x00f3a"))
@@ -65,7 +65,7 @@ namespace LibraryManagement.App
             string str4 = "avoucher";
             if (str2 == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
+                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
                 this.txtDescription.Focus();
             }
             else
@@ -89,7 +89,7 @@ namespace LibraryManagement.App
                         break;
 
                     case -1:
-                        Class7.smethod_15("Bạn chưa chọn loại giao dịch", 1);
+                        Class7.ShowMessageBox("Bạn chưa chọn loại giao dịch", 1);
                         this.cmbTranType.Focus();
                         return;
                 }
@@ -114,7 +114,7 @@ namespace LibraryManagement.App
                     }
                     if (Class7.smethod_18(base.Tag.ToString(), "trans_code", str))
                     {
-                        Class7.smethod_15("K\x00fd hiệu n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
+                        Class7.ShowMessageBox("K\x00fd hiệu n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
                     }
                     else
                     {
@@ -143,7 +143,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_0 = "D";
         }
@@ -210,7 +210,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select trans_code, trans_name, status from " + base.Tag.ToString(), this.oleDbConnection_0);
+                Class7.BrowserForm("select trans_code, trans_name, status from " + base.Tag.ToString(), this.oleDbConnection_0);
                 this.txtId.Text = FrmBrowse.strReturn;
             }
         }

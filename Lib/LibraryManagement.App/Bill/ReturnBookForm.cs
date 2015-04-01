@@ -50,7 +50,7 @@ namespace LibraryManagement.App
             {
                 if (this.lblName.Text == string.Empty)
                 {
-                    Class7.smethod_15("Bạn chưa chọn th\x00f4ng tin người mượn", 1);
+                    Class7.ShowMessageBox("Bạn chưa chọn th\x00f4ng tin người mượn", 1);
                     this.txtCsId.Focus();
                 }
                 else
@@ -67,20 +67,20 @@ namespace LibraryManagement.App
                                 this.method_0();
                                 Class2.smethod_2(str);
                                 this.method_3(str);
-                                Class2.smethod_3(str);
+                                Class2.DeleteByTransactionCode(str);
                                 this.method_1();
                             }
                         }
                         else
                         {
                             this.btn_Skip_Click(this, new EventArgs());
-                            new Class6().method_12("H");
+                            new Class6().ComputeTransnum("H");
                             this.method_0();
                             this.method_1();
                             this.method_2();
                         }
                     }
-                    Class6.string_5 = str;
+                    Class6.transNum = str;
                     new return_book().ShowPreviewDialog();
                 }
             }
@@ -88,7 +88,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }
@@ -198,7 +198,7 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             this.string_1 = "S";
             this.string_0 = "SELECT DISTINCT tr.trans_num AS [Số phiếu], tr.tran_time AS [Giờ], tr.cs_id AS [Số thẻ],cs.fullname AS [Họ t\x00ean], tr.status AS [Trạng th\x00e1i] FROM tblLoanTran AS tr INNER JOIN tblCustomer AS cs ON tr.cs_id = cs.id WHERE tr.trans_code = '61'";
-            Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+            Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
             this.txtTransNum.Enabled = true;
             this.txtTransNum.Text = FrmBrowse.strReturn;
             this.txtTransNum.Focus();
@@ -243,7 +243,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from tblCustomer";
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.txtCsId.Text = FrmBrowse.strReturn;
             }
         }

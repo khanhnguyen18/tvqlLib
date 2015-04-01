@@ -61,7 +61,7 @@ namespace LibraryManagement.App
                     adapter2.Fill(set);
                     Class7.oleDbConnection_1.Close();
                 }
-                Class7.smethod_16("select * from " + this.string_0, Class7.oleDbConnection_1);
+                Class7.BrowserForm("select * from " + this.string_0, Class7.oleDbConnection_1);
             }
         }
 

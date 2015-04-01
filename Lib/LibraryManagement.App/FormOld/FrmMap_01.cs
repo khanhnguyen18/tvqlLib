@@ -37,7 +37,7 @@ namespace LibraryManagement.App
             string str3 = this.Txt_EngName.Text.Trim();
             if (str2 == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa đăng k\x00fd t\x00ean t\x00e0i khoản cấp 1", 1);
+                Class7.ShowMessageBox("Bạn chưa đăng k\x00fd t\x00ean t\x00e0i khoản cấp 1", 1);
                 this.Txt_VnName.Focus();
             }
             else
@@ -47,7 +47,7 @@ namespace LibraryManagement.App
                 {
                     if (Class7.smethod_18(base.Tag.ToString(), "mof_gl", str))
                     {
-                        Class7.smethod_15("M\x00e3 cấp 1 n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
+                        Class7.ShowMessageBox("M\x00e3 cấp 1 n\x00e0y đ\x00e3 được đăng k\x00fd", 1);
                         this.Txt_FirstLevel.Focus();
                         return;
                     }
@@ -87,7 +87,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }
@@ -134,7 +134,7 @@ namespace LibraryManagement.App
             if ((e.KeyCode == Keys.F5) && (this.string_1 == "S"))
             {
                 this.string_0 = "select mof_gl, mof_name, mof_nameb FROM " + base.Tag.ToString() + " where glevel = 1 ";
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.Txt_FirstLevel.Text = FrmBrowse.strReturn;
             }
         }

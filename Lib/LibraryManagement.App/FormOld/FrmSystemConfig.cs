@@ -25,13 +25,13 @@ namespace LibraryManagement.App
                 writer.WriteLine(Class13.smethod_0("PASSDB=" + this.Txt_DbPass.Text.Trim(), Class13.string_0));
                 writer.Close();
             }
-            Class7.smethod_15("Cập nhật th\x00e0nh c\x00f4ng file config", 1);
+            Class7.ShowMessageBox("Cập nhật th\x00e0nh c\x00f4ng file config", 1);
         }
 
         private void btn_Menus_Click(object sender, EventArgs e)
         {
             Class7.smethod_30();
-            Class7.smethod_15("Tạo xong bảng menus mới, đề nghị kiểm tra lại", 1);
+            Class7.ShowMessageBox("Tạo xong bảng menus mới, đề nghị kiểm tra lại", 1);
         }
 
         private void btn_Reset_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace LibraryManagement.App
 
         private void method_1()
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a dữ liệu kh\x00f4ng ? ", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a dữ liệu kh\x00f4ng ? ", 2) == 1)
             {
                 this.string_0 = "DELETE FROM tblStockInfo;DELETE FROM tblTransaction;DELETE FROM tblTransNum;DELETE FROM tblTransaction;DELETE FROM tblGoods;DELETE FROM tblUnit;DELETE FROM tblPrice;DELETE FROM tblHisPrice;DELETE FROM tblSuspend;DELETE FROM tblGoodsGrp";
                 this.sqlConnection_0.Open();

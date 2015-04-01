@@ -25,10 +25,10 @@ namespace LibraryManagement.App
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            Class6.string_5 = this.Lbl_TransNum.Text;
-            if (!string.IsNullOrEmpty(Class6.string_5) && (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a đơn h\x00e0ng n\x00e0y kh\x00f4ng ?", 2) == 1))
+            Class6.transNum = this.Lbl_TransNum.Text;
+            if (!string.IsNullOrEmpty(Class6.transNum) && (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a đơn h\x00e0ng n\x00e0y kh\x00f4ng ?", 2) == 1))
             {
-                this.string_0 = "UPDATE " + base.Tag.ToString() + " set status = 0 where trans_num = '" + Class6.string_5 + "' ";
+                this.string_0 = "UPDATE " + base.Tag.ToString() + " set status = 0 where trans_num = '" + Class6.transNum + "' ";
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
                 {
@@ -57,8 +57,8 @@ namespace LibraryManagement.App
 
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
-            Class6.string_5 = this.Lbl_TransNum.Text;
-            if (!string.IsNullOrEmpty(Class6.string_5))
+            Class6.transNum = this.Lbl_TransNum.Text;
+            if (!string.IsNullOrEmpty(Class6.transNum))
             {
             }
         }

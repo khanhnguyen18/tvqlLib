@@ -580,7 +580,7 @@
 
         private void RrqIxZxw5(object sender, PrintEventArgs e)
         {
-            this.string_0 = "SELECT tr.goods_id, gs.full_name, tr.trans_num, tr.corr_tran AS oldtran, tr.tran_date, tr.trans_code, tr.tran_time, tr.exp_id, tr.cs_id, tr.qty, tr.due_date, tr.user_id, tr.remark,  cs.fullname AS csname, cs.address, cs.phone FROM tblLoanTran AS tr INNER JOIN tblGoods AS gs ON tr.goods_id = gs.goods_id INNER JOIN tblCustomer AS cs ON tr.cs_id = cs.id WHERE tr.trans_num = '" + Class6.string_5 + "'";
+            this.string_0 = "SELECT tr.goods_id, gs.full_name, tr.trans_num, tr.corr_tran AS oldtran, tr.tran_date, tr.trans_code, tr.tran_time, tr.exp_id, tr.cs_id, tr.qty, tr.due_date, tr.user_id, tr.remark,  cs.fullname AS csname, cs.address, cs.phone FROM tblLoanTran AS tr INNER JOIN tblGoods AS gs ON tr.goods_id = gs.goods_id INNER JOIN tblCustomer AS cs ON tr.cs_id = cs.id WHERE tr.trans_num = '" + Class6.transNum + "'";
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
             using (DataSet set = new DataSet())
             {

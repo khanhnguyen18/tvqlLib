@@ -27,7 +27,7 @@ namespace LibraryManagement.App
             string text = this.btn_Delete.Text;
             if ((text != null) && (text == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a người sử dụng n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a người sử dụng n\x00e0y ? ", 2) == 1)
                 {
                     adapter = new OleDbDataAdapter("UPDATE " + base.Tag.ToString() + " SET Status = 0 WHERE ID = '" + str + "' ", Class7.oleDbConnection_1);
                     set = new DataSet();
@@ -37,7 +37,7 @@ namespace LibraryManagement.App
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi người sử dụng n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi người sử dụng n\x00e0y ? ", 2) == 1)
             {
                 adapter = new OleDbDataAdapter("UPDATE " + base.Tag.ToString() + " SET Status = 1 WHERE ID = '" + str + "' ", Class7.oleDbConnection_1);
                 set = new DataSet();
@@ -74,7 +74,7 @@ namespace LibraryManagement.App
             Class11.smethod_1(this);
             Class11.smethod_8(this);
             Class11.smethod_5(this, "T");
-            Class11.smethod_10("tblUserGrp", "id", "name", "where status = 1", this.Cmb_Group, 0, this.oleDbConnection_0);
+            Class11.BindCombox("tblUserGrp", "id", "name", "where status = 1", this.Cmb_Group, 0, this.oleDbConnection_0);
             this.btn_MenusRight.Enabled = false;
             this.btn_ReportRight.Enabled = false;
             this.Txt_Id.Text = Class7.smethod_9(base.Tag.ToString(), "{0:0}", Class7.oleDbConnection_1);
@@ -98,16 +98,16 @@ namespace LibraryManagement.App
         {
             Class11.smethod_2(this);
             Class11.smethod_8(this);
-            Class11.smethod_10("tblUserGrp", "id", "name", "where status = 1", this.Cmb_Group, 0, this.oleDbConnection_0);
+            Class11.BindCombox("tblUserGrp", "id", "name", "where status = 1", this.Cmb_Group, 0, this.oleDbConnection_0);
             this.Txt_Id.Enabled = true;
-            Class7.smethod_16("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+            Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
             this.Txt_Id.Text = FrmBrowse.strReturn;
             this.Txt_Id.Focus();
         }
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
         }
 
@@ -139,12 +139,12 @@ namespace LibraryManagement.App
             string str6 = Class11.smethod_11(this.Cmb_Group);
             if (str4 != str5)
             {
-                Class7.smethod_15("Mật khẩu nhập 2 lần kh\x00f4ng giống nhau", 1);
+                Class7.ShowMessageBox("Mật khẩu nhập 2 lần kh\x00f4ng giống nhau", 1);
                 this.Txt_Password.Focus();
             }
             else if (string.IsNullOrEmpty(this.Txt_FullName.Text) | string.IsNullOrEmpty(this.Txt_ShortName.Text))
             {
-                Class7.smethod_15("Th\x00f4ng tin khai b\x00e1o chưa đầy đủ", 1);
+                Class7.ShowMessageBox("Th\x00f4ng tin khai b\x00e1o chưa đầy đủ", 1);
             }
             else
             {
@@ -166,7 +166,7 @@ namespace LibraryManagement.App
                     }
                     else if (Class7.smethod_18(base.Tag.ToString(), "name", str2))
                     {
-                        Class7.smethod_15("T\x00ean sử dụng n\x00e0y đ\x00e3 c\x00f3 trong cơ sở dữ liệu", 1);
+                        Class7.ShowMessageBox("T\x00ean sử dụng n\x00e0y đ\x00e3 c\x00f3 trong cơ sở dữ liệu", 1);
                         this.Txt_ShortName.Focus();
                     }
                     else
@@ -230,7 +230,7 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) & (Class11.string_0 == "S"))
             {
-                Class7.smethod_16("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+                Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
                 this.Txt_Id.Text = FrmBrowse.strReturn;
             }
         }

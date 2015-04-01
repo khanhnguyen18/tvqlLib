@@ -27,7 +27,7 @@ namespace LibraryManagement.App
             this.method_0("m_phone", Class13.smethod_0(this.Txt_Phone.Text, Class13.string_0));
             this.method_0("m_vatnum", Class13.smethod_0(this.Txt_VatNumb.Text, Class13.string_0));
             this.method_0("m_minus", str);
-            Class7.smethod_15("Thay đổi th\x00f4ng tin th\x00e0nh c\x00f4ng", 1);
+            Class7.ShowMessageBox("Thay đổi th\x00f4ng tin th\x00e0nh c\x00f4ng", 1);
             base.Close();
         }
 

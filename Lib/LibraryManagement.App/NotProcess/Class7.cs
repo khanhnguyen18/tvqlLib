@@ -293,18 +293,18 @@ internal class Class7
         return DateTime.Parse("01/01/1900");
     }
 
-    public static int smethod_15(string string_9, int int_1)
+    public static int ShowMessageBox(string content, int onlyOkButton)
     {
         FrmMsgbox msgbox = new FrmMsgbox();
-        msgbox.Lbl_Info.Text = string_9;
+        msgbox.Lbl_Info.Text = content;
 
-        if (int_1 == 1)
+        if (onlyOkButton == 1)
         {
             msgbox.btn_Accept.Visible = false;
             msgbox.btn_Skip.Visible = false;
             msgbox.btn_Ok.Visible = true;
         }
-        else if (int_1 == 2)
+        else if (onlyOkButton == 2)
         {
             msgbox.btn_Accept.Visible = true;
             msgbox.btn_Skip.Visible = true;
@@ -314,7 +314,7 @@ internal class Class7
         return msgbox.ret;
     }
 
-    public static void smethod_16(string string_9, object object_4)
+    public static void BrowserForm(string string_9, object object_4)
     {
         //TODO:Need implement
         FrmBrowse browse = new FrmBrowse();
@@ -721,7 +721,7 @@ internal class Class7
 
     public static void smethod_37()
     {
-        if (smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a dữ liệu kh\x00f4ng ? ", 2) == 1)
+        if (ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a dữ liệu kh\x00f4ng ? ", 2) == 1)
         {
             string selectCommandText = "DELETE FROM tblStockInfo;DELETE FROM tblTransaction;DELETE FROM tblTransNum;DELETE FROM tblTransaction;DELETE FROM tblCust_Info";
             oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, oleDbConnection_1);
@@ -821,13 +821,13 @@ internal class Class7
 
     public static void smethod_43()
     {
-        if (smethod_15("Bạn chắc chắn khởi tạo trạng th\x00e1i của hệ thống ?", 2) == 1)
+        if (ShowMessageBox("Bạn chắc chắn khởi tạo trạng th\x00e1i của hệ thống ?", 2) == 1)
         {
             oleDbDataAdapter_0 = new OleDbDataAdapter("update tblStations set login = 0, user_id = 0", oleDbConnection_1);
             DataSet dataSet = new DataSet();
             oleDbDataAdapter_0.Fill(dataSet);
             oleDbConnection_1.Close();
-            smethod_15("Khởi tạo trạng th\x00e1i hệ thống th\x00e0nh c\x00f4ng, khởi động lại chương tr\x00ecnh", 1);
+            ShowMessageBox("Khởi tạo trạng th\x00e1i hệ thống th\x00e0nh c\x00f4ng, khởi động lại chương tr\x00ecnh", 1);
         }
     }
 

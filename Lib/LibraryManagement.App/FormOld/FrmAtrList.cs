@@ -24,7 +24,7 @@ namespace LibraryManagement.App
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 this.string_0 = "update tblAcctrans set status = 0 where trans_num = '" + this.Lbl_TransNum.Text + "' ";
@@ -51,7 +51,7 @@ namespace LibraryManagement.App
                         continue;
                     }
                 }
-                Class7.smethod_15("X\x00f3a th\x00e0nh c\x00f4ng giao dịch " + this.Lbl_TransNum.Text, 1);
+                Class7.ShowMessageBox("X\x00f3a th\x00e0nh c\x00f4ng giao dịch " + this.Lbl_TransNum.Text, 1);
             }
         }
 
@@ -74,7 +74,7 @@ namespace LibraryManagement.App
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
             this.method_2(this.Lbl_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3);
-            Class6.string_5 = this.Lbl_TransNum.Text.Trim();
+            Class6.transNum = this.Lbl_TransNum.Text.Trim();
             Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
         }
 

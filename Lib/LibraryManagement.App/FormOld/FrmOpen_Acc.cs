@@ -49,12 +49,12 @@ namespace LibraryManagement.App
         {
             if (this.Txt_basic.Text.Trim().Length < 4)
             {
-                Class7.smethod_15("M\x00e3 t\x00e0i khoản c\x00f3 độ d\x00e0i l\x00e0 4", 1);
+                Class7.ShowMessageBox("M\x00e3 t\x00e0i khoản c\x00f3 độ d\x00e0i l\x00e0 4", 1);
                 this.Txt_basic.Focus();
             }
             else if (this.Lbl_VietName.Text == string.Empty)
             {
-                Class7.smethod_15("M\x00e3 t\x00e0i khoản cấp 3 kh\x00f4ng tồn tại", 1);
+                Class7.ShowMessageBox("M\x00e3 t\x00e0i khoản cấp 3 kh\x00f4ng tồn tại", 1);
                 this.Txt_ThirdLevel.Focus();
             }
             else
@@ -62,27 +62,27 @@ namespace LibraryManagement.App
                 string str2 = this.Txt_Account.EditValue.ToString();
                 if (Class7.smethod_18("tblAccount", "account_id", str2) && (this.string_1 == "N"))
                 {
-                    Class7.smethod_15("M\x00e3 t\x00e0i khoản đ\x00e3 được đăng k\x00fd", 1);
+                    Class7.ShowMessageBox("M\x00e3 t\x00e0i khoản đ\x00e3 được đăng k\x00fd", 1);
                     this.Txt_basic.Focus();
                 }
                 else if (this.Txt_ShortName.Text == string.Empty)
                 {
-                    Class7.smethod_15("Bạn chưa khai b\x00e1o t\x00ean viết tắt", 1);
+                    Class7.ShowMessageBox("Bạn chưa khai b\x00e1o t\x00ean viết tắt", 1);
                     this.Txt_ShortName.Focus();
                 }
                 else if (Class7.smethod_18("tblAccount", "abbreviat", this.Txt_ShortName.Text) && (this.string_1 == "N"))
                 {
-                    Class7.smethod_15("T\x00ean viết tắt đ\x00e3 được đăng k\x00fd", 1);
+                    Class7.ShowMessageBox("T\x00ean viết tắt đ\x00e3 được đăng k\x00fd", 1);
                     this.Txt_ShortName.Focus();
                 }
                 else if (this.Txt_Name.Text == string.Empty)
                 {
-                    Class7.smethod_15("Bạn chưa khai b\x00e1o t\x00ean đầy đủ", 1);
+                    Class7.ShowMessageBox("Bạn chưa khai b\x00e1o t\x00ean đầy đủ", 1);
                     this.Txt_Name.Focus();
                 }
                 else if (Class7.smethod_18("tblAccount", "name", this.Txt_ShortName.Text) && (this.string_1 == "N"))
                 {
-                    Class7.smethod_15("T\x00ean t\x00e0i khoản đ\x00e3 được đăng k\x00fd", 1);
+                    Class7.ShowMessageBox("T\x00ean t\x00e0i khoản đ\x00e3 được đăng k\x00fd", 1);
                     this.Txt_Name.Focus();
                 }
                 else
@@ -137,7 +137,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }
@@ -192,7 +192,7 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_Account.EditValue.ToString().Length != 0) ? this.Txt_Account.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_0 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.Txt_Account.Text = FrmBrowse.strReturn;
             }
         }
@@ -229,7 +229,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS [M\x00e3 số], Name AS [T\x00ean KH], fullname AS [Diễn giải] FROM tblStore WHERE Type IN('05','06') and status = 1 ";
-                Class7.smethod_16(str, this.oleDbConnection_0);
+                Class7.BrowserForm(str, this.oleDbConnection_0);
                 this.Txt_CustId.Text = FrmBrowse.strReturn;
             }
         }
@@ -273,7 +273,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "select mof_gl, mof_name FROM tblMof_sys where glevel = 3 ";
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.Txt_ThirdLevel.Text = FrmBrowse.strReturn;
             }
         }

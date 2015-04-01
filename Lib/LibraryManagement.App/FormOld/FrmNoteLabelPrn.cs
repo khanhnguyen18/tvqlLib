@@ -112,7 +112,7 @@ namespace LibraryManagement.App
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            if ((this.Labels_View.RowCount != 0) && (Class7.smethod_15("Bạn c\x00f3 chắc chắn x\x00f3a hết lượng tem đ\x00e3 đặt in kh\x00f4ng", 2) == 1))
+            if ((this.Labels_View.RowCount != 0) && (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a hết lượng tem đ\x00e3 đặt in kh\x00f4ng", 2) == 1))
             {
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "DELETE FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight() }), this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
@@ -128,7 +128,7 @@ namespace LibraryManagement.App
         {
             if (this.Chk_SelectAll.Checked)
             {
-                if (Class7.smethod_15("Bạn c\x00f3 chắc chắn in bảng c\x00e0i kệ cho to\x00e0n bộ mặt h\x00e0ng", 2) != 1)
+                if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn in bảng c\x00e0i kệ cho to\x00e0n bộ mặt h\x00e0ng", 2) != 1)
                 {
                     this.Chk_SelectAll.Checked = false;
                 }
@@ -345,7 +345,7 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1", Class7.oleDbConnection_1);
+                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1", Class7.oleDbConnection_1);
                 this.Txt_GoodsId.Text = FrmBrowse.strReturn;
             }
             if ((e.KeyCode != Keys.Return) || (this.Txt_GoodsId.Text == string.Empty))

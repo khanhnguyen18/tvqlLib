@@ -21,7 +21,7 @@ namespace LibraryManagement.App
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 string text = this.btn_Delete.Text;
                 if ((text != null) && (text == "&X\x00f3a"))
@@ -68,22 +68,22 @@ namespace LibraryManagement.App
         {
             if (DateTime.Parse(Class7.smethod_19()).Subtract(DateTime.ParseExact(this.Txt_TranDate.Text, "dd/MM/yyyy", null)).TotalDays < 0.0)
             {
-                Class7.smethod_15("Ng\x00e0y hiệu lực kh\x00f4ng thể chọn trong tương lai", 1);
+                Class7.ShowMessageBox("Ng\x00e0y hiệu lực kh\x00f4ng thể chọn trong tương lai", 1);
                 this.Txt_TranDate.Focus();
             }
             else if (this.Txt_Voucher.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa khai b\x00e1o số chứng từ", 1);
+                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o số chứng từ", 1);
                 this.Txt_Voucher.Focus();
             }
             else if (this.Txt_Remark.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
+                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
                 this.Txt_Remark.Focus();
             }
             else if (Class7.smethod_0(this.Txt_Amount.Text) <= 0.0)
             {
-                Class7.smethod_15("Số tiền kh\x00f4ng hợp lệ", 1);
+                Class7.ShowMessageBox("Số tiền kh\x00f4ng hợp lệ", 1);
                 this.Txt_Amount.Focus();
             }
             else
@@ -108,14 +108,14 @@ namespace LibraryManagement.App
                         Class12.smethod_2(str5, num, true);
                         Class12.smethod_3(str2, str3, str4, str6, 0.0, num2, str5, str7, 2);
                         Class12.smethod_2(str6, num2, false);
-                        new Class6().method_12("A");
+                        new Class6().ComputeTransnum("A");
                         break;
 
                     default:
                         if (str == "E")
                         {
                             DataSet set;
-                            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) != 1)
+                            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) != 1)
                             {
                                 return;
                             }
@@ -151,7 +151,7 @@ namespace LibraryManagement.App
                         }
                         break;
                 }
-                Class6.string_5 = this.Txt_TransNum.Text.Trim();
+                Class6.transNum = this.Txt_TransNum.Text.Trim();
                 Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
             }
         }
@@ -168,7 +168,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_0 = "D";
         }
@@ -205,7 +205,7 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_CreAccId.EditValue.ToString().Length != 0) ? this.Txt_CreAccId.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.smethod_16(this.string_1, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
                 this.Txt_CreAccId.Text = FrmBrowse.strReturn;
             }
         }
@@ -223,7 +223,7 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_DbAccId.EditValue.ToString().Length != 0) ? this.Txt_DbAccId.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.smethod_16(this.string_1, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
                 this.Txt_DbAccId.Text = FrmBrowse.strReturn;
             }
         }
@@ -253,7 +253,7 @@ namespace LibraryManagement.App
                     }
                     else
                     {
-                        Class7.smethod_15("Giao dịch kh\x00f4ng tồn tại", 1);
+                        Class7.ShowMessageBox("Giao dịch kh\x00f4ng tồn tại", 1);
                         this.btn_Skip_Click(this, new EventArgs());
                     }
                 }

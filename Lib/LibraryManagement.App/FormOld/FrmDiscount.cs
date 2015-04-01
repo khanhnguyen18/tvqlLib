@@ -20,7 +20,7 @@ namespace LibraryManagement.App
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 string str = string.Format("{0:d}", this.Txt_FrDate.EditValue);
@@ -45,11 +45,11 @@ namespace LibraryManagement.App
                                 }
                                 this.oleDbConnection_0.Close();
                             }
-                            Class7.smethod_15("Đặt chiết khấu th\x00e0nh c\x00f4ng", 1);
+                            Class7.ShowMessageBox("Đặt chiết khấu th\x00e0nh c\x00f4ng", 1);
                             base.Close();
                             break;
                         }
-                        Class7.smethod_15("Bạn chưa chọn nh\x00f3m h\x00e0ng được chiết khấu", 1);
+                        Class7.ShowMessageBox("Bạn chưa chọn nh\x00f3m h\x00e0ng được chiết khấu", 1);
                         this.Txt_GoodsGrp.Focus();
                         break;
 
@@ -61,7 +61,7 @@ namespace LibraryManagement.App
                             this.oleDbDataAdapter_0.Fill(set);
                         }
                         this.oleDbConnection_0.Close();
-                        Class7.smethod_15("Đặt chiết khấu th\x00e0nh c\x00f4ng", 1);
+                        Class7.ShowMessageBox("Đặt chiết khấu th\x00e0nh c\x00f4ng", 1);
                         base.Close();
                         break;
                 }
@@ -99,7 +99,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.smethod_16("select Id as 'M\x00e3 số', description AS 'Diễn giải', Status from tblGoodsGrp", this.oleDbConnection_0);
+                Class7.BrowserForm("select Id as 'M\x00e3 số', description AS 'Diễn giải', Status from tblGoodsGrp", this.oleDbConnection_0);
                 this.Txt_GoodsGrp.Text = FrmBrowse.strReturn;
             }
         }

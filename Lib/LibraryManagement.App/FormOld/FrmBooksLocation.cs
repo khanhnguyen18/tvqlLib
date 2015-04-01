@@ -27,15 +27,15 @@ namespace LibraryManagement.App
         {
             if (this.lblStkName.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa chọn thư viện", 1);
+                Class7.ShowMessageBox("Bạn chưa chọn thư viện", 1);
                 this.txtStkId.Focus();
             }
             else if (this.lblLocationName.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa chọn kệ s\x00e1ch", 1);
+                Class7.ShowMessageBox("Bạn chưa chọn kệ s\x00e1ch", 1);
                 this.txtSymbol.Focus();
             }
-            else if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ? ", 2) == 1)
             {
                 WaitDialogForm form = new WaitDialogForm();
                 form.Caption = "Xin đợi một ch\x00fat";
@@ -56,7 +56,7 @@ namespace LibraryManagement.App
                 //    }
                 //}
                 form.Close();
-                Class7.smethod_15("Cập nhật th\x00e0nh c\x00f4ng !", 1);
+                Class7.ShowMessageBox("Cập nhật th\x00e0nh c\x00f4ng !", 1);
             }
         }
 
@@ -111,7 +111,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS [M\x00e3 số], Name AS [T\x00ean kho, quầy], fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.smethod_16(str, this.oleDbConnection_0);
+                Class7.BrowserForm(str, this.oleDbConnection_0);
                 this.txtStkId.Text = FrmBrowse.strReturn;
                 this.txtStkId.SelectAll();
             }
@@ -135,7 +135,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "select loc_id AS [M\x00e3 kệ], Description AS [Diễn giải] from tblLocation where stk_id = '" + this.txtStkId.Text.Trim() + "' and status = 1";
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.txtSymbol.Text = FrmBrowse.strReturn;
             }
         }

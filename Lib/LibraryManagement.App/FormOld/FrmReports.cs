@@ -424,7 +424,7 @@ namespace LibraryManagement.App
                 }
                 catch (Exception)
                 {
-                    Class7.smethod_15("Chức năng chưa được k\x00edch hoạt bởi nh\x00e0 cung cấp", 1);
+                    Class7.ShowMessageBox("Chức năng chưa được k\x00edch hoạt bởi nh\x00e0 cung cấp", 1);
                 }
             }
         }

@@ -345,14 +345,14 @@ namespace LibraryManagement.App
             // 
             // iLoan
             // 
-            this.iLoan.Caption = "Phiếu cho mượn sách";
+            this.iLoan.Caption = "Phiếu mượn sách";
             this.iLoan.Name = "iLoan";
             this.iLoan.SmallImageIndex = 17;
             this.iLoan.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iLoan_LinkClicked);
             // 
             // iReturn
             // 
-            this.iReturn.Caption = "Phiếu nhận trả sách";
+            this.iReturn.Caption = "Phiếu trả sách";
             this.iReturn.Name = "iReturn";
             this.iReturn.SmallImageIndex = 16;
             this.iReturn.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.iReturn_LinkClicked);

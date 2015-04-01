@@ -22,14 +22,14 @@ namespace LibraryManagement.App
             string text = this.btn_Delete.Text;
             if ((text != null) && (text == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a số thẻ n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a số thẻ n\x00e0y ? ", 2) == 1)
                 {
                     Class7.smethod_23(base.Tag.ToString(), 0, "id", this.txtCsId.Text.Trim(), "", Class7.oleDbConnection_1);
                     this.Txt_Status.Text = "Đ\x00e3 bị x\x00f3a";
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi số thẻ n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi số thẻ n\x00e0y ? ", 2) == 1)
             {
                 Class7.smethod_23(base.Tag.ToString(), 1, "id", this.txtCsId.Text.Trim(), "", Class7.oleDbConnection_1);
                 this.Txt_Status.Text = "Đang hoạt động";
@@ -67,7 +67,7 @@ namespace LibraryManagement.App
         {
             if (this.txtName.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa nhập họ t\x00ean", 1);
+                Class7.ShowMessageBox("Bạn chưa nhập họ t\x00ean", 1);
                 this.txtName.Focus();
             }
             else
@@ -117,7 +117,7 @@ namespace LibraryManagement.App
             this.pictureEdit1.Image = null;
             this.txtCsId.Enabled = true;
             this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from " + base.Tag.ToString();
-            Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+            Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
             this.txtCsId.Text = FrmBrowse.strReturn;
             this.txtCsId.Focus();
         }
@@ -151,7 +151,7 @@ namespace LibraryManagement.App
 
         private void RrqIxZxw5(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }
@@ -196,7 +196,7 @@ namespace LibraryManagement.App
             if ((e.KeyCode == Keys.F5) && (this.string_1 == "S"))
             {
                 this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from " + base.Tag.ToString();
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.txtCsId.Text = FrmBrowse.strReturn;
             }
         }

@@ -25,7 +25,7 @@ namespace LibraryManagement.App
             string text = this.btn_Delete.Text;
             if ((text != null) && (text == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a nh\x00f3m n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a nh\x00f3m n\x00e0y ? ", 2) == 1)
                 {
                     adapter = new OleDbDataAdapter("UPDATE " + base.Tag.ToString() + " SET Status = 0 WHERE ID = '" + str + "' ", Class7.oleDbConnection_1);
                     set = new DataSet();
@@ -35,7 +35,7 @@ namespace LibraryManagement.App
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi nh\x00f3m n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi nh\x00f3m n\x00e0y ? ", 2) == 1)
             {
                 adapter = new OleDbDataAdapter("UPDATE " + base.Tag.ToString() + " SET Status = 1 WHERE ID = '" + str + "' ", Class7.oleDbConnection_1);
                 set = new DataSet();
@@ -91,7 +91,7 @@ namespace LibraryManagement.App
             string str3 = this.IjSwogAv6.Text.Trim();
             if (string.IsNullOrEmpty(str) | string.IsNullOrEmpty(str2))
             {
-                Class7.smethod_15("Th\x00f4ng tin khai b\x00e1o chưa đầy đủ.", 1);
+                Class7.ShowMessageBox("Th\x00f4ng tin khai b\x00e1o chưa đầy đủ.", 1);
             }
             else
             {
@@ -113,7 +113,7 @@ namespace LibraryManagement.App
                     }
                     else if (Class7.smethod_18(base.Tag.ToString(), "Name", str))
                     {
-                        Class7.smethod_15("T\x00ean nh\x00f3m đ\x00e3 được sử dụng", 1);
+                        Class7.ShowMessageBox("T\x00ean nh\x00f3m đ\x00e3 được sử dụng", 1);
                         this.Txt_Name.Focus();
                     }
                     else
@@ -133,7 +133,7 @@ namespace LibraryManagement.App
             Class11.smethod_2(this);
             Class11.smethod_8(this);
             this.IjSwogAv6.Enabled = true;
-            Class7.smethod_16("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+            Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
             this.IjSwogAv6.Text = FrmBrowse.strReturn;
             this.IjSwogAv6.Focus();
         }
@@ -170,7 +170,7 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) & (Class11.string_0 == "S"))
             {
-                Class7.smethod_16("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+                Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
                 this.IjSwogAv6.Text = FrmBrowse.strReturn;
             }
         }
@@ -179,7 +179,7 @@ namespace LibraryManagement.App
 
         private void iWyIskLbe(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
         }
    

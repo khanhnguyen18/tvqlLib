@@ -23,9 +23,9 @@ namespace LibraryManagement.App
         {
             if (this.cmbVatRate.SelectedIndex == -1)
             {
-                Class7.smethod_15("Bạn chưa khai b\x00e1o thuế suất mới ?", 1);
+                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o thuế suất mới ?", 1);
             }
-            else if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 string str2 = this.txtGoodsId.Text.Trim();
@@ -69,7 +69,7 @@ namespace LibraryManagement.App
                     this.oleDbDataAdapter_0.Fill(set);
                     this.oleDbConnection_0.Close();
                 }
-                Class7.smethod_15("Hiệu chỉnh th\x00e0nh c\x00f4ng", 1);
+                Class7.ShowMessageBox("Hiệu chỉnh th\x00e0nh c\x00f4ng", 1);
             }
         }
 
@@ -92,7 +92,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.IjSwogAv6 = "SELECT goods_id AS [M\x00e3 số],short_name AS [Diễn giải],Grp_id AS [Nh\x00f3m], Status FROM tblGoods ORDER BY goods_id";
-                Class7.smethod_16(this.IjSwogAv6, this.oleDbConnection_0);
+                Class7.BrowserForm(this.IjSwogAv6, this.oleDbConnection_0);
                 this.txtGoodsId.Text = FrmBrowse.strReturn;
                 this.txtGoodsId.SelectAll();
             }

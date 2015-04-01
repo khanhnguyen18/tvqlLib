@@ -22,7 +22,7 @@ namespace LibraryManagement.App
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            if (Class7.smethod_15("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
+            if (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn kh\x00f4ng ?", 2) == 1)
             {
                 DataSet set;
                 string str = this.Txt_TransNum.Text.Trim();
@@ -98,7 +98,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.btn_Delete.Enabled = false;
             this.btn_Search.Enabled = true;
@@ -220,12 +220,12 @@ namespace LibraryManagement.App
             {
                 if (this.Cmb_Type.SelectedIndex == 0)
                 {
-                    Class7.smethod_16(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend ", this.oleDbConnection_0);
+                    Class7.BrowserForm(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend ", this.oleDbConnection_0);
                     this.Txt_TransNum.Text = FrmBrowse.strReturn;
                 }
                 else if (this.Cmb_Type.SelectedIndex == 1)
                 {
-                    Class7.smethod_16(" SELECT trans_num, goods_id, qty,amount   FROM tblTransaction WHERE trans_code = '00' AND tran_date = '" + Class7.smethod_19() + "' AND status = 1", this.oleDbConnection_0);
+                    Class7.BrowserForm(" SELECT trans_num, goods_id, qty,amount   FROM tblTransaction WHERE trans_code = '00' AND tran_date = '" + Class7.smethod_19() + "' AND status = 1", this.oleDbConnection_0);
                     this.Txt_TransNum.Text = FrmBrowse.strReturn;
                 }
             }
@@ -288,14 +288,14 @@ namespace LibraryManagement.App
                                 this.Lbl_TransCode.Text = string.Empty;
                                 this.Lbl_PosId.Text = string.Empty;
                                 this.Lbl_UserName.Text = string.Empty;
-                                Class7.smethod_15("Kh\x00f4ng t\x00ecm thấy giao dịch b\x00e1n h\x00e0ng n\x00e0y", 1);
+                                Class7.ShowMessageBox("Kh\x00f4ng t\x00ecm thấy giao dịch b\x00e1n h\x00e0ng n\x00e0y", 1);
                             }
                         }
                         this.method_0();
                         break;
 
                     case -1:
-                        Class7.smethod_15("Bạn chưa chọn loại giao dịch cần x\x00f3a", 1);
+                        Class7.ShowMessageBox("Bạn chưa chọn loại giao dịch cần x\x00f3a", 1);
                         this.Cmb_Type.Focus();
                         break;
                 }

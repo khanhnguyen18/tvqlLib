@@ -23,14 +23,14 @@ namespace LibraryManagement.App
             string text = this.btn_Delete.Text;
             if ((text != null) && (text == "&X\x00f3a"))
             {
-                if (Class7.smethod_15("Bạn chắc chắn muốn x\x00f3a m\x00e3 thẻ n\x00e0y ? ", 2) == 1)
+                if (Class7.ShowMessageBox("Bạn chắc chắn muốn x\x00f3a m\x00e3 thẻ n\x00e0y ? ", 2) == 1)
                 {
                     Class7.smethod_23(base.Tag.ToString(), 0, "card_id", this.Txt_Id.Text.Trim(), "", Class7.oleDbConnection_1);
                     this.Txt_Status.Text = "Đ\x00e3 bị x\x00f3a";
                     this.btn_Delete.Text = "&Phục hồi";
                 }
             }
-            else if (Class7.smethod_15("Bạn chắc chắn muốn phục hồi m\x00e3 thẻ n\x00e0y ? ", 2) == 1)
+            else if (Class7.ShowMessageBox("Bạn chắc chắn muốn phục hồi m\x00e3 thẻ n\x00e0y ? ", 2) == 1)
             {
                 Class7.smethod_23(base.Tag.ToString(), 1, "card_id", this.Txt_Id.Text.Trim(), "", Class7.oleDbConnection_1);
                 this.Txt_Status.Text = "Đang hoạt động";
@@ -70,7 +70,7 @@ namespace LibraryManagement.App
         {
             if (this.Txt_FullName.Text == string.Empty)
             {
-                Class7.smethod_15("Bạn chưa đăng k\x00fd t\x00ean kh\x00e1ch h\x00e0ng", 1);
+                Class7.ShowMessageBox("Bạn chưa đăng k\x00fd t\x00ean kh\x00e1ch h\x00e0ng", 1);
                 this.Txt_FullName.Focus();
             }
             else
@@ -144,7 +144,7 @@ namespace LibraryManagement.App
 
         private void btn_Skip_Click(object sender, EventArgs e)
         {
-            Class11.smethod_0(this);
+            Class11.EnableNewMode(this);
             Class11.smethod_5(this, "F");
             this.string_1 = "D";
         }
@@ -227,7 +227,7 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT card_id AS [M\x00e3 thẻ], FullName AS [T\x00ean kh\x00e1ch h\x00e0ng], Status AS [Hiệu lực] FROM " + base.Tag.ToString();
-                Class7.smethod_16(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
                 this.Txt_Id.Text = FrmBrowse.strReturn;
                 this.Txt_Id.SelectAll();
             }
