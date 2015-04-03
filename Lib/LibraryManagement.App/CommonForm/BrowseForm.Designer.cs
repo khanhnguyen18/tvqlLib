@@ -9,7 +9,7 @@ using System.Drawing;
 using DevExpress.Utils;
 namespace LibraryManagement.App
 {
-    partial class FrmBrowse
+    partial class BrowseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,19 @@ namespace LibraryManagement.App
         }
 
         #region Windows Form Designer generated code
-        private ComponentResourceManager manager;
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        private ComponentResourceManager manager;
         private void InitializeComponent()
         {
             this.components = new Container();
-            manager = new ComponentResourceManager(typeof(FrmBrowse));
+            manager = new ComponentResourceManager(typeof(BrowseForm));
             this.grd_Look = new GridControl();
             this.Look_View = new GridView();
-            this.printingSystem_0 = new PrintingSystem(this.icontainer_0);
-            this.printableComponentLink_0 = new PrintableComponentLink(this.icontainer_0);
+            this.printingSystem_0 = new PrintingSystem(this.components);
+            this.printableComponentLink_0 = new PrintableComponentLink(this.components);
             this.grd_Look.BeginInit();
             this.Look_View.BeginInit();
             ((ISupportInitialize)this.printingSystem_0).BeginInit();
@@ -67,7 +67,7 @@ namespace LibraryManagement.App
             this.printableComponentLink_0.PrintingSystem = this.printingSystem_0;
             this.printableComponentLink_0.PrintingSystemBase = this.printingSystem_0;
             base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
+            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             base.ClientSize = new Size(0x28e, 0x1b7);
             base.Controls.Add(this.grd_Look);
             base.KeyPreview = true;
@@ -84,11 +84,11 @@ namespace LibraryManagement.App
         }
 
         public GridControl grd_Look;
-        private IContainer icontainer_0;
+        //private IContainer components;
         private GridView Look_View;
         private PrintableComponentLink printableComponentLink_0;
         private PrintingSystem printingSystem_0;
-        
+
 
 
         #endregion

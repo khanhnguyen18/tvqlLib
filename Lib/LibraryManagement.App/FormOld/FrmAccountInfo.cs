@@ -17,6 +17,9 @@ namespace LibraryManagement.App
         public FrmAccountInfo()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = DataProvider.GetConnection();
+
         }
 
         private void btn_Detail_Click(object sender, EventArgs e)
@@ -292,8 +295,8 @@ namespace LibraryManagement.App
             {
                 string str2 = (this.Txt_Account.EditValue.ToString().Length != 0) ? this.Txt_Account.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_0 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str2 + "%'";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.Txt_Account.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.Txt_Account.Text = BrowseForm.strReturn;
             }
         }
     }

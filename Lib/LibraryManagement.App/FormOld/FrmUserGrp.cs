@@ -133,8 +133,8 @@ namespace LibraryManagement.App
             Class11.smethod_2(this);
             Class11.smethod_8(this);
             this.IjSwogAv6.Enabled = true;
-            Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
-            this.IjSwogAv6.Text = FrmBrowse.strReturn;
+            Class7.BrowserForm1("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+            this.IjSwogAv6.Text = BrowseForm.strReturn;
             this.IjSwogAv6.Focus();
         }
 
@@ -170,8 +170,8 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) & (Class11.string_0 == "S"))
             {
-                Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
-                this.IjSwogAv6.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select Id AS 'M\x00e3 số', Name as 'T\x00ean nh\x00f3m', Descript as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+                this.IjSwogAv6.Text = BrowseForm.strReturn;
             }
         }
 

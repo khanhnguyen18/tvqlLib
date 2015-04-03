@@ -28,23 +28,57 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1.Core, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.1, Version=10.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
@@ -62,6 +96,7 @@
       <HintPath>..\References\Microsoft.Practices.EnterpriseLibrary.Security.Cache.CachingStore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -70,6 +105,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProvider.cs" />
     <Compile Include="FormOld\FrmCardPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,17 +310,17 @@
     <Compile Include="Bill\BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Book\FrmBookDef.cs">
+    <Compile Include="Book\BookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book\FrmBookDef.Designer.cs">
-      <DependentUpon>FrmBookDef.cs</DependentUpon>
+    <Compile Include="Book\BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmBrowse.cs">
+    <Compile Include="CommonForm\BrowseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmBrowse.Designer.cs">
-      <DependentUpon>FrmBrowse.cs</DependentUpon>
+    <Compile Include="CommonForm\BrowseForm.Designer.cs">
+      <DependentUpon>BrowseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmAbout.cs">
       <SubType>Form</SubType>
@@ -502,22 +538,22 @@
     <Compile Include="FormOld\FrmPtrReturn.Designer.cs">
       <DependentUpon>FrmPtrReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmReaderDef.cs">
+    <Compile Include="BookReader\FrmReaderDef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReaderDef.Designer.cs">
+    <Compile Include="BookReader\FrmReaderDef.Designer.cs">
       <DependentUpon>FrmReaderDef.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmReaderInfo.cs">
+    <Compile Include="BookReader\FrmReaderInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReaderInfo.Designer.cs">
+    <Compile Include="BookReader\FrmReaderInfo.Designer.cs">
       <DependentUpon>FrmReaderInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmReaderList.cs">
+    <Compile Include="BookReader\FrmReaderList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmReaderList.Designer.cs">
+    <Compile Include="BookReader\FrmReaderList.Designer.cs">
       <DependentUpon>FrmReaderList.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmRegister.cs">
@@ -721,13 +757,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book\FrmBookDef.resx">
+    <EmbeddedResource Include="BookReader\FrmReaderDef.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmBookDef.cs</DependentUpon>
+      <DependentUpon>FrmReaderDef.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmBrowse.resx">
+    <EmbeddedResource Include="Book\BookForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmBrowse.cs</DependentUpon>
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForm\BrowseForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOld\FrmCardPrint.resx">
       <SubType>Designer</SubType>
@@ -941,11 +981,11 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmPtrReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmReaderInfo.resx">
+    <EmbeddedResource Include="BookReader\FrmReaderInfo.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmReaderInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmReaderList.resx">
+    <EmbeddedResource Include="BookReader\FrmReaderList.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmReaderList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1169,6 +1209,9 @@
       <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Name>LibraryManagement.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="library_dataDataSetTableAdapters\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

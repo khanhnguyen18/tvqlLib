@@ -15,6 +15,8 @@ namespace LibraryManagement.App
         public FrmReaderDef()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -117,8 +119,8 @@ namespace LibraryManagement.App
             this.pictureEdit1.Image = null;
             this.txtCsId.Enabled = true;
             this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from " + base.Tag.ToString();
-            Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-            this.txtCsId.Text = FrmBrowse.strReturn;
+            Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+            this.txtCsId.Text = BrowseForm.strReturn;
             this.txtCsId.Focus();
         }
 
@@ -196,8 +198,8 @@ namespace LibraryManagement.App
             if ((e.KeyCode == Keys.F5) && (this.string_1 == "S"))
             {
                 this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from " + base.Tag.ToString();
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.txtCsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.txtCsId.Text = BrowseForm.strReturn;
             }
         }
     }

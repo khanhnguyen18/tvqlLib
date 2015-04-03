@@ -162,8 +162,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select Id as 'K\x00fd hiệu', Description AS 'Diễn giải', exchange as 'Tỷ gi\x00e1', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select Id as 'K\x00fd hiệu', Description AS 'Diễn giải', exchange as 'Tỷ gi\x00e1', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
             }
         }
     }

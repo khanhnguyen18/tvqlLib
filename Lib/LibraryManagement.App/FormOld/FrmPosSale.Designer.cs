@@ -147,7 +147,7 @@ namespace LibraryManagement.App
             this.Txt_TransNum.EnterMoveNextControl = true;
             this.Txt_TransNum.Location = new Point(0x61, 12);
             this.Txt_TransNum.Name = "Txt_TransNum";
-            this.Txt_TransNum.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_TransNum.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_TransNum.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.Txt_TransNum.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_TransNum.Properties.Appearance.Options.UseFont = true;
@@ -368,7 +368,7 @@ namespace LibraryManagement.App
             this.LabelControl10.Text = "Tổng thanh to\x00e1n";
             this.Lbl_LastAmount.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
             this.Lbl_LastAmount.Appearance.BackColor = Color.Gold;
-            this.Lbl_LastAmount.Appearance.BackColor2 = Color.Yellow;
+            this.Lbl_LastAmount.Appearance.BackColor2 = Color.PapayaWhip;
             this.Lbl_LastAmount.Appearance.BorderColor = Color.White;
             this.Lbl_LastAmount.Appearance.Font = new Font("Tahoma", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.Lbl_LastAmount.Appearance.ForeColor = Color.Black;
@@ -501,7 +501,7 @@ namespace LibraryManagement.App
             this.labelControl9.Text = "Tiền nhận của kh\x00e1ch";
             this.Lbl_ReceivAmt.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
             this.Lbl_ReceivAmt.Appearance.BackColor = Color.Gold;
-            this.Lbl_ReceivAmt.Appearance.BackColor2 = Color.Yellow;
+            this.Lbl_ReceivAmt.Appearance.BackColor2 = Color.PapayaWhip;
             this.Lbl_ReceivAmt.Appearance.BorderColor = Color.White;
             this.Lbl_ReceivAmt.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.Lbl_ReceivAmt.Appearance.ForeColor = Color.Black;

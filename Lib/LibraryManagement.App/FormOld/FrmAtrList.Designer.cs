@@ -136,7 +136,7 @@ namespace LibraryManagement.App
             this.Lbl_TransName.Padding = new Padding(5, 0, 0, 0);
             this.Lbl_TransName.Size = new Size(0x1bb, 0x11);
             this.Lbl_TransName.TabIndex = 0x17b;
-            this.Lbl_TransNum.Appearance.BackColor = Color.Yellow;
+            this.Lbl_TransNum.Appearance.BackColor = Color.PapayaWhip;
             this.Lbl_TransNum.Appearance.BackColor2 = Color.FromArgb(0xff, 0xff, 0xc0);
             this.Lbl_TransNum.Appearance.BorderColor = Color.White;
             this.Lbl_TransNum.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);

@@ -226,11 +226,11 @@ namespace LibraryManagement.App
             this.Txt_Id.EnterMoveNextControl = true;
             this.Txt_Id.Location = new Point(0x67, 12);
             this.Txt_Id.Name = "Txt_Id";
-            this.Txt_Id.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_Id.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_Id.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.Txt_Id.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_Id.Properties.Appearance.Options.UseFont = true;
-            this.Txt_Id.Properties.AppearanceDisabled.BackColor = Color.Yellow;
+            this.Txt_Id.Properties.AppearanceDisabled.BackColor = Color.PapayaWhip;
             this.Txt_Id.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.Txt_Id.Properties.CharacterCasing = CharacterCasing.Upper;
             this.Txt_Id.Size = new Size(0x5d, 20);

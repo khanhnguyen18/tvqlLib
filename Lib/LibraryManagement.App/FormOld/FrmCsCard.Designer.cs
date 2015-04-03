@@ -184,7 +184,7 @@ namespace LibraryManagement.App
             this.Txt_Id.EnterMoveNextControl = true;
             this.Txt_Id.Location = new Point(0x85, 12);
             this.Txt_Id.Name = "Txt_Id";
-            this.Txt_Id.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_Id.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_Id.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.Txt_Id.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_Id.Properties.Appearance.Options.UseFont = true;

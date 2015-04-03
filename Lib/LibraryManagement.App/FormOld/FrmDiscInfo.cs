@@ -83,7 +83,7 @@ namespace LibraryManagement.App
 
         private void repositoryItemPopupContainerEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            Class7.BrowserForm("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
+            Class7.BrowserForm1("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
         }
 
         private void repositoryItemPopupContainerEdit1_QueryDisplayText(object sender, QueryDisplayTextEventArgs e)
@@ -104,8 +104,8 @@ namespace LibraryManagement.App
 
         private void repositoryItemTextEdit1_KeyDown(object sender, KeyEventArgs e)
         {
-            Class7.BrowserForm("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
-            this.repositoryItemTextEdit1.NullText = FrmBrowse.strReturn;
+            Class7.BrowserForm1("SELECT goods_id AS 'M\x00e3 số',short_name AS 'Diễn giải',Grp_id AS 'Nh\x00f3m', Status FROM tblGoods ", Class7.oleDbConnection_1);
+            this.repositoryItemTextEdit1.NullText = BrowseForm.strReturn;
         }
 
         private void Txt_GoodsId_KeyDown(object sender, KeyEventArgs e)
@@ -113,8 +113,8 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', grp_id AS [Nh\x00f3m], supp_id AS [M\x00e3 NCC] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', grp_id AS [Nh\x00f3m], supp_id AS [M\x00e3 NCC] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
                 this.Txt_GoodsId.SelectAll();
             }
             if (e.KeyCode != Keys.Return)

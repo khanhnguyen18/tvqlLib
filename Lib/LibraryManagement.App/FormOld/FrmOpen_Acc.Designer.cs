@@ -200,7 +200,7 @@ namespace LibraryManagement.App
             this.Txt_Account.EnterMoveNextControl = true;
             this.Txt_Account.Location = new System.Drawing.Point(114, 95);
             this.Txt_Account.Name = "Txt_Account";
-            this.Txt_Account.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_Account.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_Account.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Account.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_Account.Properties.Appearance.Options.UseFont = true;

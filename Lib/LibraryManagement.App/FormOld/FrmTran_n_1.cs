@@ -175,8 +175,8 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_CreAccId1.EditValue.ToString().Length != 0) ? this.Txt_CreAccId1.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
-                this.Txt_CreAccId1.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_1, this.oleDbConnection_0);
+                this.Txt_CreAccId1.Text = BrowseForm.strReturn;
             }
         }
 
@@ -193,8 +193,8 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_CreAccId2.EditValue.ToString().Length != 0) ? this.Txt_CreAccId2.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
-                this.Txt_CreAccId2.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_1, this.oleDbConnection_0);
+                this.Txt_CreAccId2.Text = BrowseForm.strReturn;
             }
         }
 
@@ -204,8 +204,8 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_CreAccId3.EditValue.ToString().Length != 0) ? this.Txt_CreAccId3.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
-                this.Txt_CreAccId3.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_1, this.oleDbConnection_0);
+                this.Txt_CreAccId3.Text = BrowseForm.strReturn;
             }
         }
 
@@ -226,8 +226,8 @@ namespace LibraryManagement.App
             {
                 string str = (this.Txt_DebAccId.EditValue.ToString().Length != 0) ? this.Txt_DebAccId.EditValue.ToString().Substring(0, 3) : string.Empty;
                 this.string_1 = "SELECT account_id AS [Số TK], abbreviat AS [T\x00ean viết tắt], mof_gl AS [Cấp 3], name AS [T\x00ean đầy đủ] FROM tblAccount where status = 1 and account_id LIKE '" + str + "%'";
-                Class7.BrowserForm(this.string_1, this.oleDbConnection_0);
-                this.Txt_DebAccId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_1, this.oleDbConnection_0);
+                this.Txt_DebAccId.Text = BrowseForm.strReturn;
             }
         }
 

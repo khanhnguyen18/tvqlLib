@@ -283,7 +283,7 @@ namespace LibraryManagement.App
             this.Controls.Add(this.btn_History);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmReaderList";
-            this.Text = "FrmReaderList";
+            this.Text = "Danh sách thẻ thư viện";
             this.Load += new System.EventHandler(this.RrqIxZxw5);
             this.Activated += new System.EventHandler(this.FrmReaderList_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_0)).EndInit();

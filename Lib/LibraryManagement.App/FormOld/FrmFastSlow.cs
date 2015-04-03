@@ -75,7 +75,7 @@ namespace LibraryManagement.App
             this.gridView1.Columns["L\x00e3i gộp"].SummaryItem.FieldName = "L\x00e3i gộp";
             this.gridView1.Columns["L\x00e3i gộp"].SummaryItem.SummaryType = SummaryItemType.Sum;
             this.gridView1.Columns["L\x00e3i gộp"].SummaryItem.DisplayFormat = "{0:n2}";
-            this.gridView1.Columns["Doanh số"].AppearanceCell.BackColor = Color.Yellow;
+            this.gridView1.Columns["Doanh số"].AppearanceCell.BackColor = Color.PapayaWhip;
             this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_0) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_1);
         }
 

@@ -21,6 +21,8 @@ namespace LibraryManagement.App
         public ReturnBookForm()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -67,7 +69,7 @@ namespace LibraryManagement.App
                                 this.method_0();
                                 Class2.smethod_2(str);
                                 this.method_3(str);
-                                Class2.DeleteByTransactionCode(str);
+                                Class2.smethod_3(str);
                                 this.method_1();
                             }
                         }
@@ -198,9 +200,9 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             this.string_1 = "S";
             this.string_0 = "SELECT DISTINCT tr.trans_num AS [Số phiếu], tr.tran_time AS [Giờ], tr.cs_id AS [Số thẻ],cs.fullname AS [Họ t\x00ean], tr.status AS [Trạng th\x00e1i] FROM tblLoanTran AS tr INNER JOIN tblCustomer AS cs ON tr.cs_id = cs.id WHERE tr.trans_code = '61'";
-            Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
+            Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
             this.txtTransNum.Enabled = true;
-            this.txtTransNum.Text = FrmBrowse.strReturn;
+            this.txtTransNum.Text = BrowseForm.strReturn;
             this.txtTransNum.Focus();
         }
 
@@ -243,8 +245,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from tblCustomer";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.txtCsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.txtCsId.Text = BrowseForm.strReturn;
             }
         }
 

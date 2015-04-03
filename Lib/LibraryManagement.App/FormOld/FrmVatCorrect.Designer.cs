@@ -90,7 +90,7 @@ namespace LibraryManagement.App
             this.txtGoodsId.EnterMoveNextControl = true;
             this.txtGoodsId.Location = new System.Drawing.Point(109, 12);
             this.txtGoodsId.Name = "txtGoodsId";
-            this.txtGoodsId.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.txtGoodsId.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtGoodsId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGoodsId.Properties.Appearance.Options.UseBackColor = true;
             this.txtGoodsId.Properties.Appearance.Options.UseFont = true;

@@ -249,7 +249,7 @@ namespace LibraryManagement.App
             this.Txt_TransNum.EnterMoveNextControl = true;
             this.Txt_TransNum.Location = new System.Drawing.Point(116, 3);
             this.Txt_TransNum.Name = "Txt_TransNum";
-            this.Txt_TransNum.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_TransNum.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_TransNum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_TransNum.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_TransNum.Properties.Appearance.Options.UseFont = true;
@@ -640,7 +640,7 @@ namespace LibraryManagement.App
             this.Txt_TotalAmt.EnterMoveNextControl = true;
             this.Txt_TotalAmt.Location = new System.Drawing.Point(506, 322);
             this.Txt_TotalAmt.Name = "Txt_TotalAmt";
-            this.Txt_TotalAmt.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_TotalAmt.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_TotalAmt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_TotalAmt.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_TotalAmt.Properties.Appearance.Options.UseFont = true;

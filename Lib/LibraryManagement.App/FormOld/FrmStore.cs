@@ -171,8 +171,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho quầy', fullname AS 'Diễn giải' FROM " + base.Tag.ToString() + " WHERE Type IN('01','02') ", this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho quầy', fullname AS 'Diễn giải' FROM " + base.Tag.ToString() + " WHERE Type IN('01','02') ", this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
                 this.Txt_Id.SelectAll();
             }
         }

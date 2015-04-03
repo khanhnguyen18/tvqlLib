@@ -210,8 +210,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select trans_code, trans_name, status from " + base.Tag.ToString(), this.oleDbConnection_0);
-                this.txtId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select trans_code, trans_name, status from " + base.Tag.ToString(), this.oleDbConnection_0);
+                this.txtId.Text = BrowseForm.strReturn;
             }
         }
     }

@@ -129,7 +129,7 @@ namespace LibraryManagement.App
             // 
             // Lbl_TransNum
             // 
-            this.Lbl_TransNum.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Lbl_TransNum.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Lbl_TransNum.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Lbl_TransNum.Appearance.BorderColor = System.Drawing.Color.White;
             this.Lbl_TransNum.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

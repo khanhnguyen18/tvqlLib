@@ -220,13 +220,13 @@ namespace LibraryManagement.App
             {
                 if (this.Cmb_Type.SelectedIndex == 0)
                 {
-                    Class7.BrowserForm(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend ", this.oleDbConnection_0);
-                    this.Txt_TransNum.Text = FrmBrowse.strReturn;
+                    Class7.BrowserForm1(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend ", this.oleDbConnection_0);
+                    this.Txt_TransNum.Text = BrowseForm.strReturn;
                 }
                 else if (this.Cmb_Type.SelectedIndex == 1)
                 {
-                    Class7.BrowserForm(" SELECT trans_num, goods_id, qty,amount   FROM tblTransaction WHERE trans_code = '00' AND tran_date = '" + Class7.smethod_19() + "' AND status = 1", this.oleDbConnection_0);
-                    this.Txt_TransNum.Text = FrmBrowse.strReturn;
+                    Class7.BrowserForm1(" SELECT trans_num, goods_id, qty,amount   FROM tblTransaction WHERE trans_code = '00' AND tran_date = '" + Class7.smethod_19() + "' AND status = 1", this.oleDbConnection_0);
+                    this.Txt_TransNum.Text = BrowseForm.strReturn;
                 }
             }
             string str = this.Txt_TransNum.Text.Trim();

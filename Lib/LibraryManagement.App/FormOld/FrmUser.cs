@@ -100,8 +100,8 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             Class11.BindCombox("tblUserGrp", "id", "name", "where status = 1", this.Cmb_Group, 0, this.oleDbConnection_0);
             this.Txt_Id.Enabled = true;
-            Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
-            this.Txt_Id.Text = FrmBrowse.strReturn;
+            Class7.BrowserForm1("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+            this.Txt_Id.Text = BrowseForm.strReturn;
             this.Txt_Id.Focus();
         }
 
@@ -230,8 +230,8 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) & (Class11.string_0 == "S"))
             {
-                Class7.BrowserForm("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select Id AS 'M\x00e3 số', Name as 'T\x00ean sử dụng', full_name as 'Diễn giải', Status from " + base.Tag.ToString(), Class7.oleDbConnection_1);
+                this.Txt_Id.Text = BrowseForm.strReturn;
             }
         }
    

@@ -384,7 +384,7 @@ namespace LibraryManagement.App
             this.Txt_GoodsId.EnterMoveNextControl = true;
             this.Txt_GoodsId.Location = new Point(0x8d, 12);
             this.Txt_GoodsId.Name = "Txt_GoodsId";
-            this.Txt_GoodsId.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_GoodsId.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_GoodsId.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.Txt_GoodsId.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_GoodsId.Properties.Appearance.Options.UseFont = true;
@@ -874,7 +874,7 @@ namespace LibraryManagement.App
             this.txtFrDate.EnterMoveNextControl = true;
             this.txtFrDate.Location = new Point(0x11c, 7);
             this.txtFrDate.Name = "txtFrDate";
-            this.txtFrDate.Properties.Appearance.BackColor = Color.Yellow;
+            this.txtFrDate.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.txtFrDate.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.txtFrDate.Properties.Appearance.Options.UseBackColor = true;
             this.txtFrDate.Properties.Appearance.Options.UseFont = true;
@@ -898,7 +898,7 @@ namespace LibraryManagement.App
             this.txtToDate.EnterMoveNextControl = true;
             this.txtToDate.Location = new Point(0x1b9, 7);
             this.txtToDate.Name = "txtToDate";
-            this.txtToDate.Properties.Appearance.BackColor = Color.Yellow;
+            this.txtToDate.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.txtToDate.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.txtToDate.Properties.Appearance.Options.UseBackColor = true;
             this.txtToDate.Properties.Appearance.Options.UseFont = true;

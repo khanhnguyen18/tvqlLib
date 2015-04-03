@@ -241,8 +241,8 @@ namespace LibraryManagement.App
             if ((e.KeyCode == Keys.F5) && (this.string_1 == "S"))
             {
                 this.string_0 = "select mof_gl, mof_name, mof_nameb FROM " + base.Tag.ToString() + " where glevel = 3 ";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.Txt_ThirdLevel.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.Txt_ThirdLevel.Text = BrowseForm.strReturn;
             }
         }
 

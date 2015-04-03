@@ -102,7 +102,7 @@ namespace LibraryManagement.App
             this.Txt_Account.EnterMoveNextControl = true;
             this.Txt_Account.Location = new Point(0x6a, 12);
             this.Txt_Account.Name = "Txt_Account";
-            this.Txt_Account.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_Account.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_Account.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.Txt_Account.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_Account.Properties.Appearance.Options.UseFont = true;
@@ -172,8 +172,8 @@ namespace LibraryManagement.App
             this.labelControl1.Size = new Size(0x31, 13);
             this.labelControl1.TabIndex = 0x1d7;
             this.labelControl1.Text = "Số dư đầu";
-            this.Lbl_Balance.Appearance.BackColor = Color.Yellow;
-            this.Lbl_Balance.Appearance.BackColor2 = Color.Yellow;
+            this.Lbl_Balance.Appearance.BackColor = Color.PapayaWhip;
+            this.Lbl_Balance.Appearance.BackColor2 = Color.PapayaWhip;
             this.Lbl_Balance.Appearance.BorderColor = Color.White;
             this.Lbl_Balance.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.Lbl_Balance.Appearance.ForeColor = Color.Black;

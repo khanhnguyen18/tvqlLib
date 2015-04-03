@@ -19,7 +19,8 @@ namespace LibraryManagement.App
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
-            Application.Run(new FrmBookDef());
+            //Application.Run(new LoanBookForm());
+            Application.Run(new MainForm());
         }
     }
 }

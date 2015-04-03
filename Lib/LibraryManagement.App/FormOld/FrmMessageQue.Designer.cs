@@ -126,7 +126,7 @@ namespace LibraryManagement.App
             // 
             this.txtMessage.Location = new System.Drawing.Point(12, 54);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.txtMessage.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtMessage.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMessage.Properties.Appearance.Options.UseBackColor = true;
             this.txtMessage.Properties.Appearance.Options.UseFont = true;

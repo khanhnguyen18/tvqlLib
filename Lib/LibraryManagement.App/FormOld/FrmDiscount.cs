@@ -99,8 +99,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select Id as 'M\x00e3 số', description AS 'Diễn giải', Status from tblGoodsGrp", this.oleDbConnection_0);
-                this.Txt_GoodsGrp.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select Id as 'M\x00e3 số', description AS 'Diễn giải', Status from tblGoodsGrp", this.oleDbConnection_0);
+                this.Txt_GoodsGrp.Text = BrowseForm.strReturn;
             }
         }
   

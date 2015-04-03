@@ -116,7 +116,7 @@ namespace LibraryManagement.App
             // 
             this.memoEdit1.Location = new System.Drawing.Point(14, 269);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.memoEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.memoEdit1.Properties.Appearance.Options.UseFont = true;

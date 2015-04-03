@@ -203,7 +203,7 @@ namespace LibraryManagement.App
             this.Txt_GoodsId.Location = new Point(120, 6);
             this.Txt_GoodsId.Name = "Txt_GoodsId";
             this.Txt_GoodsId.Padding = new Padding(3, 0, 0, 0);
-            this.Txt_GoodsId.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_GoodsId.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_GoodsId.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.Txt_GoodsId.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_GoodsId.Properties.Appearance.Options.UseFont = true;

@@ -345,8 +345,8 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1", Class7.oleDbConnection_1);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select goods_id as 'M\x00e3 h\x00e0ng',barcode, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1", Class7.oleDbConnection_1);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
             }
             if ((e.KeyCode != Keys.Return) || (this.Txt_GoodsId.Text == string.Empty))
             {

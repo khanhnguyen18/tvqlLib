@@ -16,6 +16,7 @@ namespace LibraryManagement.App
         public FrmCustomer()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -217,8 +218,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean KH', fullname AS 'Diễn giải', Status FROM " + base.Tag.ToString() + " WHERE Type > '02' ";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
                 this.Txt_Id.SelectAll();
             }
         }

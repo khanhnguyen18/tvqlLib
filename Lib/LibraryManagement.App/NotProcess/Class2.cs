@@ -69,10 +69,10 @@ internal class Class2
         }
     }
 
-    public static void DeleteByTransactionCode(string string_1)
+    public static void smethod_3(string string_1)
     {
-        //string_0 = "DELETE FROM tblLoanTran where trans_num = '" + string_1 + "' ";
-        //Class7.smethod_4(string_0);
+        string_0 = "DELETE FROM tblLoanTran where trans_num = '" + string_1 + "' ";
+        Class7.smethod_4(string_0);
     }
 
     public static bool smethod_4(string string_1)

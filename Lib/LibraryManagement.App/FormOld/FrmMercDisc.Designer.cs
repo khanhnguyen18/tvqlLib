@@ -195,8 +195,8 @@ namespace LibraryManagement.App
             // 
             // Lbl_GoodsId
             // 
-            this.Lbl_GoodsId.Appearance.BackColor = System.Drawing.Color.Yellow;
-            this.Lbl_GoodsId.Appearance.BackColor2 = System.Drawing.Color.Yellow;
+            this.Lbl_GoodsId.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
+            this.Lbl_GoodsId.Appearance.BackColor2 = System.Drawing.Color.PapayaWhip;
             this.Lbl_GoodsId.Appearance.BorderColor = System.Drawing.Color.White;
             this.Lbl_GoodsId.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_GoodsId.Appearance.ForeColor = System.Drawing.Color.Black;

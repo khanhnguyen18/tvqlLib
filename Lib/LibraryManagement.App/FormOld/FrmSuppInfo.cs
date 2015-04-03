@@ -37,7 +37,7 @@ namespace LibraryManagement.App
             if (!(str == string.Empty))
             {
                 this.string_0 = "SELECT stk.id AS [M\x00e3 kho], gs.goods_id AS [M\x00e3 h\x00e0ng], gs.full_name AS [T\x00ean h\x00e0ng], gs.piceunit AS [Đơn vị], stk.begin_qty - stk.exp_qty + stk.imp_qty AS Tồn, stk.averimppr AS [Gi\x00e1 vốn]  FROM  tblGoods AS gs INNER JOIN  tblStockInfo AS stk ON gs.goods_id = stk.goods_id  WHERE gs.supp_id = '" + str + "'";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
             }
         }
 
@@ -50,7 +50,7 @@ namespace LibraryManagement.App
                 if (Class7.IsInputDate)
                 {
                     this.string_0 = string.Concat(new object[] { "SELECT tran_date AS Ng\x00e0y, tran_time AS Giờ, trans_num AS [Số GD], trans_code AS Loại, exp_id AS Xuất, imp_id AS Nhập, SUM(amount) AS [Tổng tiền],remark AS [Diễn giải] FROM tblTransaction WHERE exp_id = '", str, "' OR imp_id = '", str, "' AND (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') GROUP BY tran_date,tran_time,trans_num,trans_code,exp_id,imp_id,remark " });
-                    Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
+                    Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
                 }
             }
         }
@@ -95,8 +95,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean KH', fullname AS 'Diễn giải', Status FROM  tblStore WHERE Type > '02' AND Status = 1";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
                 this.Txt_Id.SelectAll();
             }
         }

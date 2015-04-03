@@ -138,7 +138,7 @@ namespace LibraryManagement.App
             this.LabelControl2.Text = "Số giao dịch";
             this.ddvqeXfa4.Location = new Point(0x74, 0x1a);
             this.ddvqeXfa4.Name = "Txt_TransNum";
-            this.ddvqeXfa4.Properties.Appearance.BackColor = Color.Yellow;
+            this.ddvqeXfa4.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.ddvqeXfa4.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.ddvqeXfa4.Properties.Appearance.Options.UseBackColor = true;
             this.ddvqeXfa4.Properties.Appearance.Options.UseFont = true;

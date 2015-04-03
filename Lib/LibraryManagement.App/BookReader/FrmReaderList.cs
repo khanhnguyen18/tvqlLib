@@ -12,6 +12,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace LibraryManagement.App
 {
@@ -20,9 +21,9 @@ namespace LibraryManagement.App
         public FrmReaderList()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
-
-
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
@@ -61,12 +62,20 @@ namespace LibraryManagement.App
 
         private void RrqIxZxw5(object sender, EventArgs e)
         {
-            //TODO
-            //this.tblCustomerTableAdapter_0.SqlConnection_0.ConnectionString = Class7.string_6;
-            //this.tblCustomerTableAdapter_0.Fill(this.library_dataDataSet_0.tblCustomer);
-            this.Text = "Danh s\x00e1ch thẻ thư viện";
+            string query = "SELECT id, Type, fullname, address, phone, fax, person_id, place_issue, email, due_date, image, bankname, bank_br, accnum, Vatnum, contactps, remark, open_date, Status FROM dbo.tblCustomer";
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(query, this.oleDbConnection_0);
+            using (DataSet set = new DataSet())
+            {
+                this.oleDbDataAdapter_0.Fill(set);
+                this.oleDbConnection_0.Close();
+                gridControl1.DataSource = set.Tables[0];
+            }
+
             this.gridView1.BestFitColumns();
         }
+
+        private OleDbConnection oleDbConnection_0;
+        private OleDbDataAdapter oleDbDataAdapter_0;
    
     }
 }

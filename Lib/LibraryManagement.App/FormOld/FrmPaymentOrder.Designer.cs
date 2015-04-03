@@ -152,7 +152,7 @@ namespace LibraryManagement.App
             // 
             this.Txt_TransNum.Location = new System.Drawing.Point(106, 26);
             this.Txt_TransNum.Name = "Txt_TransNum";
-            this.Txt_TransNum.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_TransNum.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_TransNum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_TransNum.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_TransNum.Properties.Appearance.Options.UseFont = true;

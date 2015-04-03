@@ -20,6 +20,7 @@ namespace LibraryManagement.App
         public FrmAtrList()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

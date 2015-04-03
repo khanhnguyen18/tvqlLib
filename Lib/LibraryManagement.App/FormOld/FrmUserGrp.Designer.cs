@@ -100,7 +100,7 @@ namespace LibraryManagement.App
             this.IjSwogAv6.EnterMoveNextControl = true;
             this.IjSwogAv6.Location = new Point(0x6b, 8);
             this.IjSwogAv6.Name = "Txt_Id";
-            this.IjSwogAv6.Properties.Appearance.BackColor = Color.Yellow;
+            this.IjSwogAv6.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.IjSwogAv6.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.IjSwogAv6.Properties.Appearance.Options.UseBackColor = true;
             this.IjSwogAv6.Properties.Appearance.Options.UseFont = true;

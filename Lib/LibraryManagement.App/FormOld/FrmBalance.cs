@@ -19,6 +19,7 @@ namespace LibraryManagement.App
         public FrmBalance()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -385,8 +386,8 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_1);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_1);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
                 this.Txt_GoodsId.SelectAll();
             }
             if (e.KeyCode != Keys.Return)
@@ -477,8 +478,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho h\x00e0ng', fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.BrowserForm(str, this.oleDbConnection_1);
-                this.Txt_StockId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, this.oleDbConnection_1);
+                this.Txt_StockId.Text = BrowseForm.strReturn;
                 this.Txt_StockId.SelectAll();
             }
         }
@@ -546,8 +547,8 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F5:
-                    Class7.BrowserForm("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_2 + "' order by trans_num ", this.oleDbConnection_1);
-                    this.Txt_TransNum.Text = FrmBrowse.strReturn;
+                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_2 + "' order by trans_num ", this.oleDbConnection_1);
+                    this.Txt_TransNum.Text = BrowseForm.strReturn;
                     break;
             }
         }

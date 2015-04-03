@@ -220,8 +220,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean KH', fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('05','06') and status = 1 ";
-                Class7.BrowserForm(str, this.oleDbConnection_0);
-                this.Txt_ExpID.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, this.oleDbConnection_0);
+                this.Txt_ExpID.Text = BrowseForm.strReturn;
                 this.Txt_ExpID.SelectAll();
             }
         }
@@ -300,8 +300,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select goods_id as 'M\x00e3 h\x00e0ng',supp_id AS NCC, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select goods_id as 'M\x00e3 h\x00e0ng',supp_id AS NCC, full_name AS 'Diễn giải', piceunit AS [Đơn vị] from tblGoods where status = 1 and mbc = 0", Class7.oleDbConnection_1);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
                 this.Txt_GoodsId.SelectAll();
             }
         }

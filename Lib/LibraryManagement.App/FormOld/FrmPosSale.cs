@@ -473,8 +473,8 @@ namespace LibraryManagement.App
             this.Sales_View.Columns["Th\x00e0nh tiền"].SummaryItem.DisplayFormat = "{0:n0}";
             this.Sales_View.Columns["%CK"].DisplayFormat.FormatType = FormatType.Numeric;
             this.Sales_View.Columns["%CK"].DisplayFormat.FormatString = "{0:P2}";
-            this.Sales_View.Columns["%CK"].AppearanceCell.BackColor = Color.Yellow;
-            this.Sales_View.Columns["M\x00e3 g\x00f3i/b\x00f3"].AppearanceCell.BackColor = Color.Yellow;
+            this.Sales_View.Columns["%CK"].AppearanceCell.BackColor = Color.PapayaWhip;
+            this.Sales_View.Columns["M\x00e3 g\x00f3i/b\x00f3"].AppearanceCell.BackColor = Color.PapayaWhip;
             this.Sales_View.BestFitColumns();
             this.string_1 = "select  sum(qty * price) as amount,sum(qty * price) - (sum(qty * price*rt_discpc) + sum(qty*price*pc_disc) + sum(qty*price*card_disc)) as totalamt,sum(qty * price*rt_discpc) + sum(qty*price*pc_disc) + sum(qty*price*card_disc) as discamt from " + this.string_0;
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
@@ -771,8 +771,8 @@ namespace LibraryManagement.App
             {
                 if (keyCode == Keys.F5)
                 {
-                    Class7.BrowserForm("SELECT gs.goods_id AS 'M\x00e3 h\x00e0ng',gs.barcode,gs.full_name AS 'T\x00ean h\x00e0ng',pr.rtprice AS 'Gi\x00e1 b\x00e1n lẻ', gs.grp_id AS Nh\x00f3m FROM tblGoods AS gs INNER JOIN tblPrice as pr ON gs.goods_id = pr.goods_id where gs.status = 1", Class7.oleDbConnection_1);
-                    this.Txt_Barcode.Text = FrmBrowse.strReturn;
+                    Class7.BrowserForm1("SELECT gs.goods_id AS 'M\x00e3 h\x00e0ng',gs.barcode,gs.full_name AS 'T\x00ean h\x00e0ng',pr.rtprice AS 'Gi\x00e1 b\x00e1n lẻ', gs.grp_id AS Nh\x00f3m FROM tblGoods AS gs INNER JOIN tblPrice as pr ON gs.goods_id = pr.goods_id where gs.status = 1", Class7.oleDbConnection_1);
+                    this.Txt_Barcode.Text = BrowseForm.strReturn;
                     this.Txt_Barcode.SelectAll();
                 }
                 return;
@@ -907,8 +907,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserRight(), this.oleDbConnection_0);
-                this.Txt_TransNum.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserRight(), this.oleDbConnection_0);
+                this.Txt_TransNum.Text = BrowseForm.strReturn;
             }
             if (e.KeyCode == Keys.Return)
             {

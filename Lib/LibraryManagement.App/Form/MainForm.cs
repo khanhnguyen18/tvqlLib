@@ -311,7 +311,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "GOODS":
-                        ToolsGui.BindToParentForm(new FrmBookDef(), this);
+                        ToolsGui.BindToParentForm(new BookForm(), this);
                         return;
 
                     case "DIAGRAM":

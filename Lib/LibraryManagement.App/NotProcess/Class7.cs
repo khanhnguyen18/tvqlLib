@@ -48,15 +48,15 @@ internal class Class7
 
     static Class7()
     {
-        Class15.smethod_5();
-        Class17.smethod_0();
+        //Class15.smethod_5();
+        //Class17.smethod_0();
         bool_0 = false;
         string_0 = null;
         int_0 = 0;
         string_3 = "Provider=Microsoft.Jet.OLEDB.4.0; data source= " + Application.StartupPath + @"\Menus.xls;Extended Properties=Excel 8.0;";
         oleDbConnection_0 = new OleDbConnection(string_3);
         string_4 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\Share.mdb;User Id=admin;Password=;";
-        string_5 = "Provider=sqloledb;Data Source=" + smethod_6("SERVER") + " ;Initial Catalog=" + smethod_6("NAMEDB") + ";User Id=" + smethod_6("USERDB") + ";Password=" + smethod_6("PASSDB");
+        string_5 = DataProvider.GetConnectionString();
         string_6 = "Data Source=" + smethod_6("SERVER") + ";Initial Catalog=" + smethod_6("NAMEDB") + ";Persist Security Info=True;User ID=" + smethod_6("USERDB") + ";Password=" + smethod_6("PASSDB");
         oleDbConnection_1 = new OleDbConnection(string_5);
         oleDbConnection_2 = new OleDbConnection(string_4);
@@ -314,16 +314,16 @@ internal class Class7
         return msgbox.ret;
     }
 
-    public static void BrowserForm(string string_9, object object_4)
+    public static void BrowserForm1(string string_9, OleDbConnection object_4)
     {
-        //TODO:Need implement
-        FrmBrowse browse = new FrmBrowse();
+        BrowseForm browse = new BrowseForm();
         browse.grd_Look.DataSource = null;
-        oleDbDataAdapter_0 = new OleDbDataAdapter(string_9, (OleDbConnection) object_4);
+
+        oleDbDataAdapter_0 = new OleDbDataAdapter(string_9,  object_4);
         using (DataSet set = new DataSet())
         {
             oleDbDataAdapter_0.Fill(set);
-            //object_4.Close();
+            object_4.Close();
             browse.grd_Look.DataSource = set.Tables[0];
         }
         browse.ShowDialog();

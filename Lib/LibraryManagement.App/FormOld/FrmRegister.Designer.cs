@@ -86,7 +86,7 @@ namespace LibraryManagement.App
             this.Txt_HDDinfo.EnterMoveNextControl = true;
             this.Txt_HDDinfo.Location = new System.Drawing.Point(116, 6);
             this.Txt_HDDinfo.Name = "Txt_HDDinfo";
-            this.Txt_HDDinfo.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_HDDinfo.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_HDDinfo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_HDDinfo.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_HDDinfo.Properties.Appearance.Options.UseFont = true;

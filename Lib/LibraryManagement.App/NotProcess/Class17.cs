@@ -11,7 +11,7 @@ internal class Class17
 
     internal static void smethod_0()
     {
-        throw new Exception("smethod_0");
+      
     }
 }
 

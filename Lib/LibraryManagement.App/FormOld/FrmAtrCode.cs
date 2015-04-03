@@ -21,6 +21,7 @@ namespace LibraryManagement.App
         public FrmAtrCode()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Correct_Click(object sender, EventArgs e)
@@ -414,8 +415,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS 'T\x00ean kho h\x00e0ng', fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.BrowserForm(str, Class7.oleDbConnection_1);
-                this.Txt_StockId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, Class7.oleDbConnection_1);
+                this.Txt_StockId.Text = BrowseForm.strReturn;
                 this.Txt_StockId.SelectAll();
             }
         }

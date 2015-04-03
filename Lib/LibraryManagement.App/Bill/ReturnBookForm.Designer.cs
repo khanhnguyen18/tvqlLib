@@ -289,7 +289,7 @@ namespace LibraryManagement.App
             this.txtCsId.EnterMoveNextControl = true;
             this.txtCsId.Location = new System.Drawing.Point(27, 93);
             this.txtCsId.Name = "txtCsId";
-            this.txtCsId.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.txtCsId.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtCsId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCsId.Properties.Appearance.Options.UseBackColor = true;
             this.txtCsId.Properties.Appearance.Options.UseFont = true;

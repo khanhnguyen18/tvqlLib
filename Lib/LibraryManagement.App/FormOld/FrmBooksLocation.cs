@@ -20,6 +20,7 @@ namespace LibraryManagement.App
         public FrmBooksLocation()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
 
@@ -111,8 +112,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS [M\x00e3 số], Name AS [T\x00ean kho, quầy], fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.BrowserForm(str, this.oleDbConnection_0);
-                this.txtStkId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, this.oleDbConnection_0);
+                this.txtStkId.Text = BrowseForm.strReturn;
                 this.txtStkId.SelectAll();
             }
         }
@@ -135,8 +136,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "select loc_id AS [M\x00e3 kệ], Description AS [Diễn giải] from tblLocation where stk_id = '" + this.txtStkId.Text.Trim() + "' and status = 1";
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.txtSymbol.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.txtSymbol.Text = BrowseForm.strReturn;
             }
         }
     }

@@ -386,7 +386,7 @@ namespace LibraryManagement.App
 
         private void iGoods_ItemClick(object sender, ItemClickEventArgs e)
         {
-            new FrmBookDef().ShowDialog();
+            new BookForm().ShowDialog();
         }
 
         private void iGoodsGrp_ItemClick(object sender, ItemClickEventArgs e)
@@ -811,8 +811,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS 'M\x00e3 số', Name AS [T\x00ean nh\x00e0 cung cấp], fullname AS 'Diễn giải' FROM tblStore WHERE Type IN('05','06') and status = 1 ";
-                Class7.BrowserForm(str, this.oleDbConnection_0);
-                this.Txt_ExpID.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, this.oleDbConnection_0);
+                this.Txt_ExpID.Text = BrowseForm.strReturn;
                 this.Txt_ExpID.SelectAll();
             }
         }
@@ -826,8 +826,8 @@ namespace LibraryManagement.App
             string str3;
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_0);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select goods_id as 'M\x00e3 số', full_name AS 'Diễn giải' from tblGoods where status = 1 and mbc = 0", this.oleDbConnection_0);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
             }
             if (e.KeyCode != Keys.Return)
             {
@@ -903,8 +903,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 string str = "SELECT Id AS [M\x00e3 số], Name AS [T\x00ean kho, quầy], fullname AS [Diễn giải] FROM tblStore WHERE Type IN('01','02') and status = 1";
-                Class7.BrowserForm(str, this.oleDbConnection_0);
-                this.Txt_ImpID.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(str, this.oleDbConnection_0);
+                this.Txt_ImpID.Text = BrowseForm.strReturn;
                 this.Txt_ImpID.SelectAll();
             }
         }
@@ -977,8 +977,8 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F5:
-                    Class7.BrowserForm("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_0);
-                    this.Txt_TransNum.Text = FrmBrowse.strReturn;
+                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_0);
+                    this.Txt_TransNum.Text = BrowseForm.strReturn;
                     break;
             }
         }

@@ -78,8 +78,8 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             this.Txt_Id.Enabled = true;
             this.Txt_Id.Focus();
-            Class7.BrowserForm("select id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
-            this.Txt_Id.Text = FrmBrowse.strReturn;
+            Class7.BrowserForm1("select id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
+            this.Txt_Id.Text = BrowseForm.strReturn;
             this.string_1 = "S";
         }
 
@@ -161,8 +161,8 @@ namespace LibraryManagement.App
         {
             if ((e.KeyCode == Keys.F5) && (Class11.string_0 == "S"))
             {
-                Class7.BrowserForm("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("select Id as 'M\x00e3 số', Description AS 'Diễn giải', Status from " + base.Tag.ToString(), this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
             }
         }
     }

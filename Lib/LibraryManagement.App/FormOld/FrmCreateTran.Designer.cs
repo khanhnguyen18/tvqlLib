@@ -82,7 +82,7 @@ namespace LibraryManagement.App
             this.txtId.EnterMoveNextControl = true;
             this.txtId.Location = new Point(130, 12);
             this.txtId.Name = "txtId";
-            this.txtId.Properties.Appearance.BackColor = Color.Yellow;
+            this.txtId.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.txtId.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 0);
             this.txtId.Properties.Appearance.Options.UseBackColor = true;
             this.txtId.Properties.Appearance.Options.UseFont = true;

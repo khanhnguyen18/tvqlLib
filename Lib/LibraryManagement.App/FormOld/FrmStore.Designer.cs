@@ -113,7 +113,7 @@ namespace LibraryManagement.App
             this.Txt_Id.EnterMoveNextControl = true;
             this.Txt_Id.Location = new System.Drawing.Point(119, 12);
             this.Txt_Id.Name = "Txt_Id";
-            this.Txt_Id.Properties.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.Txt_Id.Properties.Appearance.BackColor = System.Drawing.Color.PapayaWhip;
             this.Txt_Id.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Id.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_Id.Properties.Appearance.Options.UseFont = true;

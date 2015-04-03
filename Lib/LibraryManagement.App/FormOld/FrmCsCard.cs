@@ -227,8 +227,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.string_0 = "SELECT card_id AS [M\x00e3 thẻ], FullName AS [T\x00ean kh\x00e1ch h\x00e0ng], Status AS [Hiệu lực] FROM " + base.Tag.ToString();
-                Class7.BrowserForm(this.string_0, this.oleDbConnection_0);
-                this.Txt_Id.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
+                this.Txt_Id.Text = BrowseForm.strReturn;
                 this.Txt_Id.SelectAll();
             }
         }

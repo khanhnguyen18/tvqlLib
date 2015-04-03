@@ -196,7 +196,7 @@ namespace LibraryManagement.App
             this.Txt_TransNum.EnterMoveNextControl = true;
             this.Txt_TransNum.Location = new Point(0x74, 3);
             this.Txt_TransNum.Name = "Txt_TransNum";
-            this.Txt_TransNum.Properties.Appearance.BackColor = Color.Yellow;
+            this.Txt_TransNum.Properties.Appearance.BackColor = Color.PapayaWhip;
             this.Txt_TransNum.Properties.Appearance.Font = new Font("Tahoma", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
             this.Txt_TransNum.Properties.Appearance.Options.UseBackColor = true;
             this.Txt_TransNum.Properties.Appearance.Options.UseFont = true;

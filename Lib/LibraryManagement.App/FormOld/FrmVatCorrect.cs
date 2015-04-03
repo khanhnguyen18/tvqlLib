@@ -92,8 +92,8 @@ namespace LibraryManagement.App
             if (e.KeyCode == Keys.F5)
             {
                 this.IjSwogAv6 = "SELECT goods_id AS [M\x00e3 số],short_name AS [Diễn giải],Grp_id AS [Nh\x00f3m], Status FROM tblGoods ORDER BY goods_id";
-                Class7.BrowserForm(this.IjSwogAv6, this.oleDbConnection_0);
-                this.txtGoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1(this.IjSwogAv6, this.oleDbConnection_0);
+                this.txtGoodsId.Text = BrowseForm.strReturn;
                 this.txtGoodsId.SelectAll();
             }
             if (e.KeyCode == Keys.Return)

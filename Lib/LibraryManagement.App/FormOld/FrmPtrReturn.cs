@@ -285,8 +285,8 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F5)
             {
-                Class7.BrowserForm("SELECT ptr.goods_id, gs.full_name, ptr.qty, ptr.amount, ptr.trans_num FROM tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id where ptr.trans_num = '" + this.Txt_OldTrans.Text + "'", this.oleDbConnection_0);
-                this.Txt_GoodsId.Text = FrmBrowse.strReturn;
+                Class7.BrowserForm1("SELECT ptr.goods_id, gs.full_name, ptr.qty, ptr.amount, ptr.trans_num FROM tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id where ptr.trans_num = '" + this.Txt_OldTrans.Text + "'", this.oleDbConnection_0);
+                this.Txt_GoodsId.Text = BrowseForm.strReturn;
             }
         }
 
