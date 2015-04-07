@@ -322,10 +322,10 @@
     <Compile Include="CommonForm\BrowseForm.Designer.cs">
       <DependentUpon>BrowseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmAbout.cs">
+    <Compile Include="Help\FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmAbout.Designer.cs">
+    <Compile Include="Help\FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="FormOld\FrmAccountInfo.cs">
@@ -1095,10 +1095,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RefForm.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>RefForm.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -1116,12 +1112,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="RefForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RefForm.Designer.cs">
-      <DependentUpon>RefForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\acc_detail.cs">
       <SubType>Component</SubType>
@@ -1189,6 +1179,10 @@
     <Compile Include="ToolsGui.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ArtDe\ArtDe.csproj">
+      <Project>{AEDC9C15-159C-4B76-A93B-9B783B38423C}</Project>
+      <Name>ArtDe</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.CoreServices\LibraryManagement.CoreServices.csproj">
       <Project>{5321F42E-F278-43C3-BAA5-88070E4B230F}</Project>
       <Name>LibraryManagement.CoreServices</Name>
@@ -1209,9 +1203,6 @@
       <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Name>LibraryManagement.Service</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="library_dataDataSetTableAdapters\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
