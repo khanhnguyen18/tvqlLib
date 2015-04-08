@@ -176,7 +176,7 @@ namespace LibraryManagement.App
 
             foreach (Menus menu in lstMainMenu)
             {
-                if (menu.Subitem == 1)
+                if (menu.Subitem == 1 && menu.Skip== true)
                 {
                     item = new BarSubItem(manager, menu.Prompt.Trim());
                     item.Name = menu.Menukey.Trim();
@@ -190,7 +190,7 @@ namespace LibraryManagement.App
                     continue;
                 }
 
-                if (menu.Subitem == 2)
+                if (menu.Subitem == 2 && menu.Skip == true)
                 {
                     BarSubItem item2 = new BarSubItem(manager, menu.Prompt.ToString());
                     item2.Tag = menu.Id.ToString();
@@ -223,7 +223,7 @@ namespace LibraryManagement.App
 
                 }
 
-                if ((menu.Subitem == 0) && (menu.Menukey.Trim() != "/-"))
+                if ((menu.Subitem == 0) && (menu.Menukey.Trim() != "/-") && menu.Skip == true)
                 {
                     BarButtonItem item4 = new BarButtonItem(manager, menu.Prompt, menu.Imageidx.Value);
 

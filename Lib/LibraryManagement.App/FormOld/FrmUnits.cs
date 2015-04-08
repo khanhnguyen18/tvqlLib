@@ -13,6 +13,8 @@ namespace LibraryManagement.App
         public FrmUnits()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)

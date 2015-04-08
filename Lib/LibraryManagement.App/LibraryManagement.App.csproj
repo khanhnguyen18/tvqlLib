@@ -101,6 +101,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -406,10 +407,10 @@
     <Compile Include="Bill\LoanInvListForm.Designer.cs">
       <DependentUpon>LoanInvListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOld\FrmLogIn.cs">
+    <Compile Include="Form\FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOld\FrmLogIn.Designer.cs">
+    <Compile Include="Form\FrmLogIn.Designer.cs">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\MainForm.cs">
@@ -893,7 +894,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>LoanInvListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOld\FrmLogIn.resx">
+    <EmbeddedResource Include="Form\FrmLogIn.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -1203,6 +1204,11 @@
       <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Name>LibraryManagement.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+    <None Include="Resources\Book.jpg" />
+    <None Include="Resources\images.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,6 +21,7 @@ namespace LibraryManagement.App
         public FrmFromSupp()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -342,32 +343,32 @@ namespace LibraryManagement.App
 
         private void FrmFromSupp_Load(object sender, EventArgs e)
         {
-            DataSet set;
-            this.Text = Class6.string_1.ToString();
-            this.Txt_Date.Text = Class7.smethod_19();
-            this.btn_Skip_Click(this, new EventArgs());
-            this.Txt_Vatrate.Properties.ReadOnly = true;
-            try
-            {
-                string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
-                using (set = new DataSet())
-                {
-                    this.oleDbDataAdapter_0.Fill(set);
-                }
-                this.oleDbConnection_0.Close();
-            }
-            catch (Exception)
-            {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
-                using (set = new DataSet())
-                {
-                    this.oleDbDataAdapter_0.Fill(set);
-                }
-                this.oleDbConnection_0.Close();
-            }
-            this.method_0();
-            this.method_1();
+            //DataSet set;
+            //this.Text = Class6.string_1.ToString();
+            //this.Txt_Date.Text = Class7.smethod_19();
+            //this.btn_Skip_Click(this, new EventArgs());
+            //this.Txt_Vatrate.Properties.ReadOnly = true;
+            //try
+            //{
+            //    string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
+            //    this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
+            //    using (set = new DataSet())
+            //    {
+            //        this.oleDbDataAdapter_0.Fill(set);
+            //    }
+            //    this.oleDbConnection_0.Close();
+            //}
+            //catch (Exception)
+            //{
+            //    this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
+            //    using (set = new DataSet())
+            //    {
+            //        this.oleDbDataAdapter_0.Fill(set);
+            //    }
+            //    this.oleDbConnection_0.Close();
+            //}
+            //this.method_0();
+            //this.method_1();
         }
 
         private void GrdTran_Click(object sender, EventArgs e)

@@ -20,6 +20,7 @@ namespace LibraryManagement.App
         public FrmMercList()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
 
         private void btn_ChangePrice_Click(object sender, EventArgs e)

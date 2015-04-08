@@ -167,10 +167,8 @@ namespace LibraryManagement.App
             this.bar_2.DockRow = 1;
             this.bar_2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar_2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iPass, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.Txt_Date),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iMail, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;

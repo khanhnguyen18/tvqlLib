@@ -110,6 +110,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <ProjectReference Include="..\ArtDe\ArtDe.csproj">
+      <Project>{AEDC9C15-159C-4B76-A93B-9B783B38423C}</Project>
+      <Name>ArtDe</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj">
       <Name>LibraryManagement.Domain</Name>
       <Project>{591AB408-FBFC-4C2A-9436-D0C2AD994E95}</Project>

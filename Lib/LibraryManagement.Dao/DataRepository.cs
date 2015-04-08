@@ -173,7 +173,11 @@ namespace LibraryManagement.Dao
 		{
 			get
 			{
-					return WebConfigurationManager.ConnectionStrings;
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString =
+                config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString.Replace("123456",
+                ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["My"]));
+                return config.ConnectionStrings.ConnectionStrings;
 			}
 		}
 

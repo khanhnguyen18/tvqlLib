@@ -24,3 +24,14 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Debug\M
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\obj\Debug\LibraryManagement.Domain.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\obj\Debug\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\LibraryManagement.Domain.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\LibraryManagement.Domain.xml
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.Unity.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\bin\Release\Microsoft.Practices.Unity.Interception.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\obj\Release\ResolveAssemblyReference.cache
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Domain\obj\Release\LibraryManagement.Domain.dll

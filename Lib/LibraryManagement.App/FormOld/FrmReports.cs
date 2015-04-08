@@ -18,6 +18,7 @@ namespace LibraryManagement.App
         public FrmReports()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
 
 
@@ -466,8 +467,7 @@ namespace LibraryManagement.App
 
         private void FrmReports_Load(object sender, EventArgs e)
         {
-            this.method_0();
-            this.Text = Class7.smethod_14("m_softname").ToString();
+            //this.method_0();
             this.string_2 = "SELECT  dep_id AS TT, rep_name AS [B\x00e1o c\x00e1o], description AS [Diễn giải], [procedure], dep_code, status,checked AS [Trạng th\x00e1i] FROM tblReports where dep_code = '" + Class11.string_1 + "' and status = 1  order by dep_id";
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
             DataSet dataSet = new DataSet();

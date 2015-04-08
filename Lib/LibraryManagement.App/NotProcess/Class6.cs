@@ -8,7 +8,7 @@ using LibraryManagement.App;
 internal class Class6
 {
     public static double double_0;
-    public static object object_0;
+    public static string object_0;
     public static object object_1;
     public static OleDbConnection oleDbConnection_0;
     public static OleDbConnection oleDbConnection_1;

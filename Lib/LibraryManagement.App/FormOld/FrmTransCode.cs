@@ -43,7 +43,7 @@ namespace LibraryManagement.App
 
         private void LstTransCode_DoubleClick(object sender, EventArgs e)
         {
-            //new Class6().method_4(this.Txt_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3, ref Class6.string_4, ref (string) ref Class6.object_0);
+            new Class6().method_4(this.Txt_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3, ref Class6.string_4, ref Class6.object_0);
             base.Close();
             Class7.smethod_26(Class7.string_1).ShowDialog();
         }
