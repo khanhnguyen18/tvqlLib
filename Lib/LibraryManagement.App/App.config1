@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<configSections>
+		<section name="netTiersService"
+		 type="LibraryManagement.Dao.Bases.NetTiersServiceSection, LibraryManagement.Dao"
+		 allowDefinition="MachineToApplication"
+		 restartOnExternalChanges="true" />
+		<section name="enterpriseLibrary.ConfigurationSource" type="Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ConfigurationSourceSection, Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+	</configSections>
+	
+	<appSettings>
+		<add key="d23fcew3" value="B9CCCCD6C9DDD0" />
+		<add key="df324fddf3" value="B9CCCDD6C9B9D0" />
+		<add key="buzan" value="91C9CDE1CD" />
+		<add key="fdff" value="7C9A94A29D81" />
+		<add key="erddeef" value="B9CCCCD6C9B9D0" />
+		<add key="sdfew" value="79C4B4BFB47D9891A6BA7D" />
+		<add key="eker" value="99D781C1CDBF" />
+		<add key="errrf" value="99D781C1CDBF" />
+		<add key="dffeew" value="BEC9" />
+		<add key="dfdfdff" value="99D781C1CDBF" />
+		<add key="dfdfsdfsd" value="99D781C1CDBF" />
+		<add key="isactives" value="99D781C1CDBF" />
+		<add key="somm" value="99D781C1CDBF" />
+		<add key="millionaire" value="99D781C1CDBF" />
+	</appSettings>
+
+	<netTiersService defaultProvider="SqlNetTiersProvider">
+		<providers>
+			<add name="SqlNetTiersProvider" type="LibraryManagement.Dao.SqlClient.SqlNetTiersProvider, LibraryManagement.Dao.SqlClient"
+			  connectionStringName="netTiersConnectionString" useStoredProcedure="false" providerInvariantName="System.Data.SqlClient"
+			  entityFactoryType="LibraryManagement.Domain.EntityFactory" useEntityFactory="true" enableEntityTracking="false" enableMethodAuthorization="false"
+			  defaultCommandTimeout="30"/>
+		</providers>
+	</netTiersService>
+	<enterpriseLibrary.ConfigurationSource selectedSource="File Configuration Source">
+		<sources>
+			<add name="File Configuration Source" type="Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileConfigurationSource, Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+				filePath="entlib.config" />
+		</sources>
+	</enterpriseLibrary.ConfigurationSource>
+</configuration>

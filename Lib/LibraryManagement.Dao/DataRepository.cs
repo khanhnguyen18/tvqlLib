@@ -174,9 +174,17 @@ namespace LibraryManagement.Dao
 			get
 			{
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString =
-                config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString.Replace("123456",
-                ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["My"]));
+                string netTiersConnectionString = @"Data Source=[DataSource];Initial Catalog=LibraryManagement;Persist Security Info=True;
+                                       User ID=[User];Password=[Pass]";
+
+                netTiersConnectionString = netTiersConnectionString.Replace("[DataSource]", ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["sdfew"]));
+                netTiersConnectionString = netTiersConnectionString.Replace("[User]", ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["dffeew"]));
+                netTiersConnectionString = netTiersConnectionString.Replace("[Pass]", ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["fdff"]));
+                config.ConnectionStrings.ConnectionStrings.Add(new ConnectionStringSettings("netTiersConnectionString", netTiersConnectionString));
+                //<add name="netTiersConnectionString" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=LibraryManagement;Persist Security Info=True;User ID=sa;Password=123456" />
+                //config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString =
+                //config.ConnectionStrings.ConnectionStrings["netTiersConnectionString"].ConnectionString.Replace("123456",
+                //ArtDe.Decode.DecodeCode(ConfigurationManager.AppSettings["My"]));
                 return config.ConnectionStrings.ConnectionStrings;
 			}
 		}

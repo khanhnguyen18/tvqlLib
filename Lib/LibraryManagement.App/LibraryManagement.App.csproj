@@ -9,6 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LibraryManagement.App</RootNamespace>
     <AssemblyName>LibraryManagement.App</AssemblyName>
+    <ApplicationIcon>1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1206,6 +1207,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1.ico" />
     <Content Include="ReadMe.txt" />
     <None Include="Resources\Book.jpg" />
     <None Include="Resources\images.jpg" />

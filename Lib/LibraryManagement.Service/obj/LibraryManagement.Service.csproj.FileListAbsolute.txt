@@ -74,3 +74,7 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\obj\Releas
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\obj\Release\LibraryManagement.Service.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Debug\ArtDe.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Debug\ArtDe.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Release\ArtDe.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Release\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Release\LibraryManagement.Dao.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Service\bin\Release\ArtDe.pdb

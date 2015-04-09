@@ -48,3 +48,6 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\obj\Release\Re
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\obj\Release\LibraryManagement.Dao.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\bin\Debug\ArtDe.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\bin\Debug\ArtDe.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\bin\Release\ArtDe.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\bin\Release\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao\bin\Release\ArtDe.pdb

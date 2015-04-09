@@ -1,0 +1,10 @@
+----APPP
+buzan : change : 9FDAD6D3(True), 91C9CDE1CD(False)
+sdfew : server : 79C4B4BFB490C0B1C0AD9EBB(sqlexpress)| 79C4B4BFB47D9891A6BA7D(.\SQL2008R2)
+dffeew : user: BEC9(sa)
+fdff:   pass: 7C9A94A29D81(123456) | B9CCCCD6C9B9D0(ndkhanh)
+----Instalshield
+buzan : change 
+somm : server 
+millionaire: user
+eker:pass

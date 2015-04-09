@@ -59,3 +59,7 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\obj\
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\obj\Release\LibraryManagement.Dao.SqlClient.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Debug\ArtDe.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Debug\ArtDe.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Release\ArtDe.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Release\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Release\LibraryManagement.Dao.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.Dao.SqlClient\bin\Release\ArtDe.pdb

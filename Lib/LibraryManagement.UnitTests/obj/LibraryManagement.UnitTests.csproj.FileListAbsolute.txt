@@ -90,3 +90,9 @@ C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Rele
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\obj\Release\LibraryManagement.UnitTests.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\ArtDe.dll
 C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Debug\ArtDe.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\ArtDe.dll
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\LibraryManagement.Domain.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\LibraryManagement.Dao.SqlClient.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\LibraryManagement.Dao.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\LibraryManagement.Service.pdb
+C:\Users\khanh\Documents\GitHub\tvqlLib\Lib\LibraryManagement.UnitTests\bin\Release\ArtDe.pdb
