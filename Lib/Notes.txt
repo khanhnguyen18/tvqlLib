@@ -8,3 +8,6 @@ buzan : change
 somm : server 
 millionaire: user
 eker:pass
+
+------------
+Set shortcut runs as aministrator
