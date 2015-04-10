@@ -132,7 +132,7 @@ namespace LibraryManagement.App
 
         private void txtCsId_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F5)
+            if (e.KeyCode == Keys.F2)
             {
                 string str = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from tblCustomer WHERE status =1";
                 Class7.BrowserForm1(str, this.oleDbConnection_0);

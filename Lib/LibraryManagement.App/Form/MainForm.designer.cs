@@ -49,19 +49,19 @@ namespace LibraryManagement.App
             this.barManager_0 = new DevExpress.XtraBars.BarManager(this.components);
             this.statusBar = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.Lbl_IpAddress = new DevExpress.XtraBars.BarStaticItem();
             this.menuBar = new DevExpress.XtraBars.Bar();
             this.bar_2 = new DevExpress.XtraBars.Bar();
-            this.iPass = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.Txt_Date = new DevExpress.XtraBars.BarStaticItem();
-            this.iMail = new DevExpress.XtraBars.BarButtonItem();
-            this.iExit = new DevExpress.XtraBars.BarButtonItem();
+            this.blbiBook = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.blbiPrintCard = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_3 = new DevExpress.XtraBars.BarDockControl();
             this.imageList_0 = new System.Windows.Forms.ImageList(this.components);
+            this.iPass = new DevExpress.XtraBars.BarButtonItem();
+            this.Txt_Date = new DevExpress.XtraBars.BarStaticItem();
+            this.iMail = new DevExpress.XtraBars.BarButtonItem();
+            this.imageCollection_0 = new DevExpress.Utils.ImageCollection(this.components);
             this.bar_3 = new DevExpress.XtraBars.Bar();
             this.barDockControl_4 = new DevExpress.XtraBars.BarDockControl();
             this.imageList_1 = new System.Windows.Forms.ImageList(this.components);
@@ -81,12 +81,11 @@ namespace LibraryManagement.App
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.imageCollection_0 = new DevExpress.Utils.ImageCollection(this.components);
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).BeginInit();
             this.cnvLekth7.SuspendLayout();
             this.SuspendLayout();
@@ -106,13 +105,13 @@ namespace LibraryManagement.App
             this.barManager_0.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barStaticItem1,
             this.iPass,
-            this.barStaticItem2,
             this.Txt_Date,
-            this.iExit,
-            this.Lbl_IpAddress,
-            this.iMail});
+            this.iMail,
+            this.blbiBook,
+            this.blbiPrintCard});
+            this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 9;
+            this.barManager_0.MaxItemId = 11;
             this.barManager_0.StatusBar = this.statusBar;
             this.barManager_0.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager_0_ItemClick);
             // 
@@ -124,8 +123,7 @@ namespace LibraryManagement.App
             this.statusBar.DockRow = 0;
             this.statusBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
             this.statusBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.Lbl_IpAddress)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1)});
             this.statusBar.OptionsBar.AllowQuickCustomization = false;
             this.statusBar.OptionsBar.DrawDragBorder = false;
             this.statusBar.OptionsBar.UseWholeRow = true;
@@ -138,16 +136,6 @@ namespace LibraryManagement.App
             this.barStaticItem1.Id = 2;
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // Lbl_IpAddress
-            // 
-            this.Lbl_IpAddress.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.Lbl_IpAddress.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Lbl_IpAddress.Appearance.Options.UseFont = true;
-            this.Lbl_IpAddress.Caption = "IpAddress";
-            this.Lbl_IpAddress.Id = 7;
-            this.Lbl_IpAddress.Name = "Lbl_IpAddress";
-            this.Lbl_IpAddress.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // menuBar
             // 
@@ -167,62 +155,32 @@ namespace LibraryManagement.App
             this.bar_2.DockRow = 1;
             this.bar_2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar_2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.Txt_Date),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.iExit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiBook),
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiPrintCard)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
             // 
-            // iPass
+            // blbiBook
             // 
-            this.iPass.Caption = "Đổi mật khẩu";
-            this.iPass.Id = 3;
-            this.iPass.ImageIndex = 2;
-            this.iPass.Name = "iPass";
-            this.iPass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPass_ItemClick);
+            this.blbiBook.Caption = "Quản lý sách";
+            this.blbiBook.Id = 9;
+            this.blbiBook.LargeImageIndex = 2;
+            this.blbiBook.Name = "blbiBook";
             // 
-            // barStaticItem2
+            // blbiPrintCard
             // 
-            this.barStaticItem2.Caption = "Ngày làm việc hiện thời";
-            this.barStaticItem2.Id = 4;
-            this.barStaticItem2.ImageIndex = 4;
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // Txt_Date
-            // 
-            this.Txt_Date.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Date.Appearance.Options.UseFont = true;
-            this.Txt_Date.Caption = "12/02/2010";
-            this.Txt_Date.Id = 5;
-            this.Txt_Date.Name = "Txt_Date";
-            this.Txt_Date.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // iMail
-            // 
-            this.iMail.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.iMail.Appearance.Options.UseFont = true;
-            this.iMail.Caption = "Tin nhắn";
-            this.iMail.Id = 8;
-            this.iMail.ImageIndex = 15;
-            this.iMail.Name = "iMail";
-            this.iMail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMail_ItemClick);
-            // 
-            // iExit
-            // 
-            this.iExit.Caption = "THOÁT";
-            this.iExit.Id = 6;
-            this.iExit.ImageIndex = 10;
-            this.iExit.Name = "iExit";
-            this.iExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iExit_ItemClick);
+            this.blbiPrintCard.Caption = "In thẻ thư viện";
+            this.blbiPrintCard.Id = 10;
+            this.blbiPrintCard.LargeImageIndex = 3;
+            this.blbiPrintCard.Name = "blbiPrintCard";
             // 
             // barDockControl_0
             // 
             this.barDockControl_0.CausesValidation = false;
             this.barDockControl_0.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl_0.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl_0.Size = new System.Drawing.Size(787, 54);
+            this.barDockControl_0.Size = new System.Drawing.Size(787, 87);
             // 
             // barDockControl_1
             // 
@@ -235,15 +193,15 @@ namespace LibraryManagement.App
             // 
             this.barDockControl_2.CausesValidation = false;
             this.barDockControl_2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl_2.Location = new System.Drawing.Point(0, 54);
-            this.barDockControl_2.Size = new System.Drawing.Size(0, 435);
+            this.barDockControl_2.Location = new System.Drawing.Point(0, 87);
+            this.barDockControl_2.Size = new System.Drawing.Size(0, 402);
             // 
             // barDockControl_3
             // 
             this.barDockControl_3.CausesValidation = false;
             this.barDockControl_3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl_3.Location = new System.Drawing.Point(787, 54);
-            this.barDockControl_3.Size = new System.Drawing.Size(0, 435);
+            this.barDockControl_3.Location = new System.Drawing.Point(787, 87);
+            this.barDockControl_3.Size = new System.Drawing.Size(0, 402);
             // 
             // imageList_0
             // 
@@ -266,13 +224,49 @@ namespace LibraryManagement.App
             this.imageList_0.Images.SetKeyName(14, "FrmMain1_16_14.png");
             this.imageList_0.Images.SetKeyName(15, "FrmMain1_16_15.png");
             this.imageList_0.Images.SetKeyName(16, "FrmMain1_16_16.png");
-            this.imageList_0.Images.SetKeyName(17, "FrmMain1_16_17.png");
+            this.imageList_0.Images.SetKeyName(17, "folder2_green.png");
             this.imageList_0.Images.SetKeyName(18, "FrmMain1_16_18.png");
             this.imageList_0.Images.SetKeyName(19, "FrmMain1_16_19.png");
             this.imageList_0.Images.SetKeyName(20, "FrmMain1_16_20.png");
             this.imageList_0.Images.SetKeyName(21, "FrmMain1_16_21.png");
             this.imageList_0.Images.SetKeyName(22, "FrmMain1_16_22.png");
             this.imageList_0.Images.SetKeyName(23, "FrmMain1_16_23.png");
+            // 
+            // iPass
+            // 
+            this.iPass.Caption = "Đổi mật khẩu";
+            this.iPass.Id = 3;
+            this.iPass.ImageIndex = 2;
+            this.iPass.Name = "iPass";
+            this.iPass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iPass_ItemClick);
+            // 
+            // Txt_Date
+            // 
+            this.Txt_Date.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Date.Appearance.Options.UseFont = true;
+            this.Txt_Date.Caption = "12/02/2010";
+            this.Txt_Date.Id = 5;
+            this.Txt_Date.Name = "Txt_Date";
+            this.Txt_Date.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // iMail
+            // 
+            this.iMail.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.iMail.Appearance.Options.UseFont = true;
+            this.iMail.Caption = "Tin nhắn";
+            this.iMail.Id = 8;
+            this.iMail.ImageIndex = 15;
+            this.iMail.Name = "iMail";
+            this.iMail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMail_ItemClick);
+            // 
+            // imageCollection_0
+            // 
+            this.imageCollection_0.ImageSize = new System.Drawing.Size(32, 32);
+            this.imageCollection_0.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection_0.ImageStream")));
+            this.imageCollection_0.Images.SetKeyName(0, "32box.png");
+            this.imageCollection_0.Images.SetKeyName(1, "32businessman.png");
+            this.imageCollection_0.Images.SetKeyName(2, "32book_blue.png");
+            this.imageCollection_0.Images.SetKeyName(3, "32printer.png");
             // 
             // bar_3
             // 
@@ -324,14 +318,14 @@ namespace LibraryManagement.App
             this.navBarControl1.Location = new System.Drawing.Point(1, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 196;
-            this.navBarControl1.Size = new System.Drawing.Size(203, 512);
+            this.navBarControl1.Size = new System.Drawing.Size(203, 632);
             this.navBarControl1.SmallImages = this.imageList_0;
             this.navBarControl1.TabIndex = 6;
             this.navBarControl1.Text = "navBarControl1";
             // 
             // navBarGroup1
             // 
-            this.navBarGroup1.Caption = "Quản lý thư viện";
+            this.navBarGroup1.Caption = "Quản lý phiếu";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.iLoan),
@@ -431,20 +425,13 @@ namespace LibraryManagement.App
             this.navBarItem12.Caption = "Sao lưu dữ liệu";
             this.navBarItem12.Name = "navBarItem12";
             // 
-            // imageCollection_0
-            // 
-            this.imageCollection_0.ImageSize = new System.Drawing.Size(32, 32);
-            this.imageCollection_0.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection_0.ImageStream")));
-            this.imageCollection_0.Images.SetKeyName(0, "32books_blue.png");
-            this.imageCollection_0.Images.SetKeyName(1, "32businessman.png");
-            // 
             // cnvLekth7
             // 
             this.cnvLekth7.Controls.Add(this.navBarControl1);
             this.cnvLekth7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cnvLekth7.Location = new System.Drawing.Point(0, 54);
+            this.cnvLekth7.Location = new System.Drawing.Point(0, 87);
             this.cnvLekth7.Name = "cnvLekth7";
-            this.cnvLekth7.Size = new System.Drawing.Size(206, 435);
+            this.cnvLekth7.Size = new System.Drawing.Size(206, 402);
             this.cnvLekth7.TabIndex = 7;
             // 
             // defaultLookAndFeel_0
@@ -468,8 +455,8 @@ namespace LibraryManagement.App
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).EndInit();
             this.cnvLekth7.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -486,14 +473,12 @@ namespace LibraryManagement.App
         private BarDockControl barDockControl_4;
         private BarManager barManager_0;
         private BarStaticItem barStaticItem1;
-        private BarStaticItem barStaticItem2;
         private PanelControl cnvLekth7;
         private DefaultLookAndFeel defaultLookAndFeel_0;
         private Form form_0;
         private NavBarItem iBookFinder;
         private NavBarItem iCardDef;
         //private IContainer components;
-        private BarButtonItem iExit;
         private NavBarItem iLoan;
         private NavBarItem iLoanList;
         private DevExpress.Utils.ImageCollection imageCollection_0;
@@ -504,7 +489,6 @@ namespace LibraryManagement.App
         private NavBarItem iReaderInfo;
         private NavBarItem iReaderList;
         private NavBarItem iReturn;
-        private BarStaticItem Lbl_IpAddress;
         private NavBarControl navBarControl1;
         private NavBarGroup navBarGroup1;
         private NavBarGroup navBarGroup2;
@@ -521,6 +505,8 @@ namespace LibraryManagement.App
         private BarStaticItem Txt_Date;
 
         #endregion
+        private BarLargeButtonItem blbiBook;
+        private BarLargeButtonItem blbiPrintCard;
 
     }
 }

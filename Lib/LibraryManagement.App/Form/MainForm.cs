@@ -303,11 +303,11 @@ namespace LibraryManagement.App
                         return;
 
                     case "UNITS":
-                        ToolsGui.BindToParentForm(new FrmUnits(), this);
+                        ToolsGui.BindToParentForm(new UnitsForm(), this);
                         return;
 
                     case "GOODSGRP":
-                        ToolsGui.BindToParentForm(new FrmBooksGrp(), this);
+                        ToolsGui.BindToParentForm(new BookCategoryForm(), this);
                         return;
 
                     case "GOODS":
@@ -315,15 +315,15 @@ namespace LibraryManagement.App
                         return;
 
                     case "DIAGRAM":
-                        ToolsGui.BindToParentForm(new FrmLibraryLoc(), this);
+                        ToolsGui.BindToParentForm(new LibraryLocationForm(), this);
                         return;
 
                     case "MERCLOCATION":
-                        ToolsGui.BindToParentForm(new FrmBooksLocation(), this);
+                        ToolsGui.BindToParentForm(new BooksLocationForm(), this);
                         return;
 
                     case "LABELS":
-                        ToolsGui.BindToParentForm(new FrmCardPrint(), this);
+                        ToolsGui.BindToParentForm(new CardPrintForm(), this);
                         return;
 
                     case "KITS":
@@ -450,7 +450,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "ABOUT":
-                        new FrmAbout().ShowDialog();
+                        new AboutForm().ShowDialog();
                         return;
 
                     case "USERGUIDE":
@@ -550,7 +550,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "LBRCARD":
-                        ToolsGui.BindToParentForm(new FrmCardPrint(), this);
+                        ToolsGui.BindToParentForm(new CardPrintForm(), this);
                         return;
 
                     default:

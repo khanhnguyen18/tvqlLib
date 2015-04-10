@@ -140,7 +140,6 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             this.Text = "Đăng k\x00fd thẻ thư viện";
             base.Tag = "tblCustomer";
-            this.lblCopyright.Text = Class13.smethod_1(Class7.smethod_14("m_copyright").ToString(), Class13.string_0);
         }
 
 
@@ -195,7 +194,7 @@ namespace LibraryManagement.App
 
         private void txtCsId_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.F5) && (this.string_1 == "S"))
+            if ((e.KeyCode == Keys.F2) && (this.string_1 == "S"))
             {
                 this.string_0 = "SELECT id AS [M\x00e3 thẻ], fullname AS [Họ v\x00e0 t\x00ean], phone AS [Số ĐT], status AS [Trạng th\x00e1i] from " + base.Tag.ToString();
                 Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);

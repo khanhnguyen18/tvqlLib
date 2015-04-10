@@ -90,7 +90,6 @@ namespace LibraryManagement.App
             this.btn_New = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Skip = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Save = new DevExpress.XtraEditors.SimpleButton();
-            this.lblCopyright = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCsId.Properties)).BeginInit();
@@ -573,28 +572,7 @@ namespace LibraryManagement.App
             this.btn_Save.Text = "&Lưu";
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // lblCopyright
-            // 
-            this.lblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCopyright.Appearance.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCopyright.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.lblCopyright.Appearance.BorderColor = System.Drawing.Color.White;
-            this.lblCopyright.Appearance.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCopyright.Appearance.Options.UseBackColor = true;
-            this.lblCopyright.Appearance.Options.UseBorderColor = true;
-            this.lblCopyright.Appearance.Options.UseFont = true;
-            this.lblCopyright.Appearance.Options.UseForeColor = true;
-            this.lblCopyright.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.lblCopyright.Location = new System.Drawing.Point(-1, 394);
-            this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.lblCopyright.Size = new System.Drawing.Size(619, 17);
-            this.lblCopyright.TabIndex = 456;
-            // 
-            // FrmBookRb
+            // ReturnBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -604,7 +582,6 @@ namespace LibraryManagement.App
             this.Controls.Add(this.btn_New);
             this.Controls.Add(this.btn_Skip);
             this.Controls.Add(this.btn_Save);
-            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.gridControl1);
@@ -616,7 +593,7 @@ namespace LibraryManagement.App
             this.Controls.Add(this.LabelControl18);
             this.Controls.Add(this.LabelControl4);
             this.Controls.Add(this.txtCsId);
-            this.Name = "FrmBookRb";
+            this.Name = "ReturnBookForm";
             this.Text = "FrmBookRb";
             this.Load += new System.EventHandler(this.FrmBookRb_Load);
             this.Activated += new System.EventHandler(this.FrmBookRb_Activated);
@@ -671,7 +648,6 @@ namespace LibraryManagement.App
         internal LabelControl labelControl5;
         internal LabelControl LabelControl9;
         internal LabelControl lblAddress;
-        internal LabelControl lblCopyright;
         internal LabelControl lblEmail;
         internal LabelControl lblName;
         internal LabelControl lblPhone;

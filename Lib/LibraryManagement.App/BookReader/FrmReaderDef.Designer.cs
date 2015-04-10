@@ -71,7 +71,6 @@ namespace LibraryManagement.App
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPlaceOfIssue = new DevExpress.XtraEditors.TextEdit();
             this.openFileDialog_0 = new System.Windows.Forms.OpenFileDialog();
-            this.lblCopyright = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCsId.Properties)).BeginInit();
@@ -456,34 +455,12 @@ namespace LibraryManagement.App
             this.openFileDialog_0.FileName = "*.jpg";
             this.openFileDialog_0.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_0_FileOk);
             // 
-            // lblCopyright
-            // 
-            this.lblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCopyright.Appearance.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCopyright.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.lblCopyright.Appearance.BorderColor = System.Drawing.Color.White;
-            this.lblCopyright.Appearance.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCopyright.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCopyright.Appearance.Options.UseBackColor = true;
-            this.lblCopyright.Appearance.Options.UseBorderColor = true;
-            this.lblCopyright.Appearance.Options.UseFont = true;
-            this.lblCopyright.Appearance.Options.UseForeColor = true;
-            this.lblCopyright.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.lblCopyright.Location = new System.Drawing.Point(0, 239);
-            this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.lblCopyright.Size = new System.Drawing.Size(610, 17);
-            this.lblCopyright.TabIndex = 399;
-            // 
             // FrmReaderDef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_Exit;
             this.ClientSize = new System.Drawing.Size(610, 256);
-            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtPlaceOfIssue);
             this.Controls.Add(this.btnImage);
@@ -559,7 +536,6 @@ namespace LibraryManagement.App
         internal LabelControl LabelControl5;
         internal LabelControl LabelControl7;
         internal LabelControl LabelControl8;
-        internal LabelControl lblCopyright;
         private OleDbConnection oleDbConnection_0;
         private OleDbDataAdapter oleDbDataAdapter_0;
         internal OpenFileDialog openFileDialog_0;
