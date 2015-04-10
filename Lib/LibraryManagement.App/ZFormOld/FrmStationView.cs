@@ -33,7 +33,7 @@ namespace LibraryManagement.App
                     if ((bool)this.gridView1.GetRowCellValue(i, "Gửi"))
                     {
                         int rowCellValue = (int)this.gridView1.GetRowCellValue(i, "M\x00e3");
-                        this.string_0 = string.Concat(new object[] { "INSERT INTO tblQueuemsg(fr_pos, to_pos, sender, msg_date, msg_time, message) VALUES('", Class7.smethod_51(), "',", rowCellValue, ",'", Class7.GetUserRight(), "','", Class7.smethod_19(), "','", Class7.smethod_53(), "' ,N'", this.memoEdit1.Text.Trim(), "' )" });
+                        this.string_0 = string.Concat(new object[] { "INSERT INTO tblQueuemsg(fr_pos, to_pos, sender, msg_date, msg_time, message) VALUES('", Class7.smethod_51(), "',", rowCellValue, ",'", Class7.GetUserId(), "','", Class7.smethod_19(), "','", Class7.smethod_53(), "' ,N'", this.memoEdit1.Text.Trim(), "' )" });
                         this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
                         using (DataSet set = new DataSet())
                         {

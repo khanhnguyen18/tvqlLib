@@ -218,7 +218,7 @@ namespace LibraryManagement.App
 
         private void NoteA4_BeforePrint(object sender, PrintEventArgs e)
         {
-            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT Pos_id ,goods_id,barcode,shortname,fullname,grp_id,supp_id,rtprice,remark ,user_id ,timeinput FROM tblNotePrn where user_id = " + Class7.GetUserRight() + " Order By timeinput ", Class7.oleDbConnection_1);
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT Pos_id ,goods_id,barcode,shortname,fullname,grp_id,supp_id,rtprice,remark ,user_id ,timeinput FROM tblNotePrn where user_id = " + Class7.GetUserId() + " Order By timeinput ", Class7.oleDbConnection_1);
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet);
             Class7.oleDbConnection_1.Close();

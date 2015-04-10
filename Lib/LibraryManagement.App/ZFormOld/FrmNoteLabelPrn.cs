@@ -39,9 +39,9 @@ namespace LibraryManagement.App
                 string str9 = DateTime.Now.ToString("HH:mm:ss");
                 double num2 = Class7.smethod_0(this.Txt_Qty.Text);
                 string selectCommandText = string.Concat(new object[] { 
-                    "IF NOT EXISTS(select goods_id from ", base.Tag.ToString(), " where goods_id = '", str2, "' and user_id = ", Class7.GetUserRight(), ") INSERT INTO ", base.Tag.ToString(), "([timeinput],[pos_id],[goods_id],[barcode],[shortname],[fullname],[grp_id],[supp_id],[rtprice],[qty],[remark],user_id) VALUES('", str9, "', '", str, "' ,'", str2, "','", text, 
-                    "' ,N'", str3, "',N'", str4, "','", str5, "','", str6, "','", num, "',", num2, ",'", str7, "', ", Class7.GetUserRight(), 
-                    ") Else UPDATE ", base.Tag.ToString(), " SET qty = qty + ", num2, ",timeinput = '", str9, "' where goods_id = '", str2, "' and user_id = ", Class7.GetUserRight()
+                    "IF NOT EXISTS(select goods_id from ", base.Tag.ToString(), " where goods_id = '", str2, "' and user_id = ", Class7.GetUserId(), ") INSERT INTO ", base.Tag.ToString(), "([timeinput],[pos_id],[goods_id],[barcode],[shortname],[fullname],[grp_id],[supp_id],[rtprice],[qty],[remark],user_id) VALUES('", str9, "', '", str, "' ,'", str2, "','", text, 
+                    "' ,N'", str3, "',N'", str4, "','", str5, "','", str6, "','", num, "',", num2, ",'", str7, "', ", Class7.GetUserId(), 
+                    ") Else UPDATE ", base.Tag.ToString(), " SET qty = qty + ", num2, ",timeinput = '", str9, "' where goods_id = '", str2, "' and user_id = ", Class7.GetUserId()
                  });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
@@ -79,7 +79,7 @@ namespace LibraryManagement.App
                 double num = Class7.smethod_0(this.Txt_Qty.Text);
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = DateTime.Now.ToString("HH:mm:ss");
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "update ", base.Tag.ToString(), " set qty = qty - ", num, ", timeinput = '", str2, "' where goods_id = '", str, "' and user_id = ", Class7.GetUserRight() }), this.oleDbConnection_1);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "update ", base.Tag.ToString(), " set qty = qty - ", num, ", timeinput = '", str2, "' where goods_id = '", str, "' and user_id = ", Class7.GetUserId() }), this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
                 {
                     this.oleDbDataAdapter_0.Fill(set);
@@ -114,7 +114,7 @@ namespace LibraryManagement.App
         {
             if ((this.Labels_View.RowCount != 0) && (Class7.ShowMessageBox("Bạn c\x00f3 chắc chắn x\x00f3a hết lượng tem đ\x00e3 đặt in kh\x00f4ng", 2) == 1))
             {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "DELETE FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight() }), this.oleDbConnection_1);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "DELETE FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserId() }), this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
                 {
                     this.oleDbDataAdapter_0.Fill(set);
@@ -137,7 +137,7 @@ namespace LibraryManagement.App
                     DataSet set;
                     WaitDialogForm form = new WaitDialogForm();
                     form.Caption = "Xin chờ một ch\x00fat ....";
-                    this.string_0 = string.Concat(new object[] { "DELETE FROM ", base.Tag.ToString(), " WHERE user_id = ", Class7.GetUserRight() });
+                    this.string_0 = string.Concat(new object[] { "DELETE FROM ", base.Tag.ToString(), " WHERE user_id = ", Class7.GetUserId() });
                     this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_1);
                     using (set = new DataSet())
                     {
@@ -157,7 +157,7 @@ namespace LibraryManagement.App
                             string str = row["rtprice"].ToString();
                             this.string_0 = string.Concat(new object[] { 
                                 "INSERT INTO ", base.Tag.ToString(), "(idx,[pos_id],[goods_id],[barcode],[shortname],[fullname],[grp_id],[supp_id],[rtprice],[qty],[remark],user_id) VALUES(", num, ", '00002' ,'", row["goods_id"], "','", row["barcode"], "', N'", row["short_name"], "',N'", row["full_name"], "','", row["grp_id"], "','", row["supp_id"], 
-                                "','", str, "',1,'', ", Class7.GetUserRight(), ") "
+                                "','", str, "',1,'', ", Class7.GetUserId(), ") "
                              });
                             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_1);
                             using (set = new DataSet())
@@ -212,14 +212,14 @@ namespace LibraryManagement.App
 
         private void method_0()
         {
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "select goods_id from ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight(), " Order by timeinput" }), this.oleDbConnection_1);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "select goods_id from ", base.Tag.ToString(), " where user_id = ", Class7.GetUserId(), " Order by timeinput" }), this.oleDbConnection_1);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
             this.oleDbConnection_1.Close();
             int num = 1;
             foreach (DataRow row in dataTable.Rows)
             {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { " UPDATE ", base.Tag.ToString(), " set idx = ", num, " where goods_id = '", row["goods_id"], "' and user_id = ", Class7.GetUserRight() }), this.oleDbConnection_1);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { " UPDATE ", base.Tag.ToString(), " set idx = ", num, " where goods_id = '", row["goods_id"], "' and user_id = ", Class7.GetUserId() }), this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
                 {
                     this.oleDbDataAdapter_0.Fill(set);
@@ -231,7 +231,7 @@ namespace LibraryManagement.App
 
         private void method_1()
         {
-            string selectCommandText = string.Concat(new object[] { "SELECT [idx] AS [TT],[goods_id] AS [M\x00e3 h\x00e0ng] ,barcode,[fullname] AS [T\x00ean h\x00e0ng], [qty] AS [Lượng tem], rtprice AS [Gi\x00e1 b\x00e1n lẻ] FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight(), " ORDER BY timeinput" });
+            string selectCommandText = string.Concat(new object[] { "SELECT [idx] AS [TT],[goods_id] AS [M\x00e3 h\x00e0ng] ,barcode,[fullname] AS [T\x00ean h\x00e0ng], [qty] AS [Lượng tem], rtprice AS [Gi\x00e1 b\x00e1n lẻ] FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserId(), " ORDER BY timeinput" });
             using (this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1))
             {
                 using (DataSet set = new DataSet())
@@ -252,7 +252,7 @@ namespace LibraryManagement.App
 
         private void method_2()
         {
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "delete from ", base.Tag.ToString(), " where qty <= 0 and user_id = ", Class7.GetUserRight() }), this.oleDbConnection_1);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "delete from ", base.Tag.ToString(), " where qty <= 0 and user_id = ", Class7.GetUserId() }), this.oleDbConnection_1);
             using (DataSet set = new DataSet())
             {
                 this.oleDbDataAdapter_0.Fill(set);
@@ -274,11 +274,11 @@ namespace LibraryManagement.App
 
         private void method_4()
         {
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("delete from tblNotePrn where user_id = " + Class7.GetUserRight(), this.oleDbConnection_1);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("delete from tblNotePrn where user_id = " + Class7.GetUserId(), this.oleDbConnection_1);
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);
             this.oleDbConnection_1.Close();
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight(), " order by timeinput" }), this.oleDbConnection_1);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserId(), " order by timeinput" }), this.oleDbConnection_1);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
             this.oleDbConnection_1.Close();
@@ -288,7 +288,7 @@ namespace LibraryManagement.App
                 {
                     OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { 
                         "INSERT INTO tblNotePrn([timeinput],[goods_id],[barcode],[shortname],[fullname],[grp_id],[supp_id],[rtprice],Pos_id,user_id) VALUES('", row["timeinput"], "', '", row["goods_id"], "', '", row["barcode"], "',N'", row["shortname"], "' ,N'", row["fullname"], "','", row["grp_id"], "','", row["supp_id"], "',", row["rtprice"], 
-                        ",'", row["pos_id"], "',", Class7.GetUserRight(), ")"
+                        ",'", row["pos_id"], "',", Class7.GetUserId(), ")"
                      }), this.oleDbConnection_1);
                     using (DataSet set2 = new DataSet())
                     {
@@ -306,7 +306,7 @@ namespace LibraryManagement.App
             string str3 = string.Empty;
             string str4 = string.Empty;
             string str5 = string.Empty;
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserRight(), " order by timeinput" }), this.oleDbConnection_1);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM ", base.Tag.ToString(), " where user_id = ", Class7.GetUserId(), " order by timeinput" }), this.oleDbConnection_1);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
             this.oleDbConnection_1.Close();

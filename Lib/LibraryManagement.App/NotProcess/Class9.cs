@@ -46,7 +46,7 @@ internal class Class9
             }
         }
         str2 = str2.Substring(1, str2.Length - 3);
-        string_0 = string.Concat(new object[] { "DELETE FROM ", str, " WHERE user_id = ", Class7.GetUserRight() });
+        string_0 = string.Concat(new object[] { "DELETE FROM ", str, " WHERE user_id = ", Class7.GetUserId() });
         oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);
         using (set = new DataSet())
         {
@@ -62,7 +62,7 @@ internal class Class9
             foreach (DataRow row in table.Rows)
             {
                 string_0 = string.Concat(new object[] { 
-                    "INSERT INTO ", str, "(id,goods_id,grp_id,full_name,tend_qty,tend_amt,user_id)  VALUES('", row["id"], "','", row["goods_id"], "','", row["grp_id"], "', N'", row["full_name"], "',", row["end_qty"], ",", row["end_amt"], ", ", Class7.GetUserRight(), 
+                    "INSERT INTO ", str, "(id,goods_id,grp_id,full_name,tend_qty,tend_amt,user_id)  VALUES('", row["id"], "','", row["goods_id"], "','", row["grp_id"], "', N'", row["full_name"], "',", row["end_qty"], ",", row["end_amt"], ", ", Class7.GetUserId(), 
                     ") "
                  });
                 oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);

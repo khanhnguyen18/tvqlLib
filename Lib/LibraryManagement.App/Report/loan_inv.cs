@@ -592,9 +592,9 @@
             {
                 this.dataSet1.Tables["loantran"].Rows[i]["idx"] = i + 1;
             }
-            this.xrlabel_7.Text = Class13.smethod_1(Class7.smethod_14("m_name").ToString(), Class13.string_0);
-            this.xrlabel_6.Text = Class13.smethod_1(Class7.smethod_14("m_address").ToString(), Class13.string_0);
-            this.xrlabel_2.Text = Class13.smethod_1(Class7.smethod_14("m_phone").ToString(), Class13.string_0);
+            this.xrlabel_7.Text = Class13.smethod_1(Class7.smethod_14("m_name").ToString(), string.Empty);
+            this.xrlabel_6.Text = Class13.smethod_1(Class7.smethod_14("m_address").ToString(), string.Empty);
+            this.xrlabel_2.Text = Class13.smethod_1(Class7.smethod_14("m_phone").ToString(), string.Empty);
         }
     }
 }

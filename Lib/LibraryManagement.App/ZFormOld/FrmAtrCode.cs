@@ -63,7 +63,7 @@ namespace LibraryManagement.App
                             double num3 = num2 * Class7.smethod_0(row["averimppr"].ToString());
                             string selectCommandText = string.Concat(new object[] { 
                                 "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, invoice, post, exp_id, imp_id,goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id,cs_id,remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status) VALUES('", str, "','", str2, "','", str5, "','", this.string_0, "','','',0,'", str6, "','", str7, "','", row["goods_id"], "',", num2, 
-                                ",'", row["piceunit"], "',", num3, ",0,0,0,0, ", Class7.GetUserRight(), ",'',N'", str4, "',0,'01','',0,0,0,0,", num, ",1)"
+                                ",'", row["piceunit"], "',", num3, ",0,0,0,0, ", Class7.GetUserId(), ",'',N'", str4, "',0,'01','',0,0,0,0,", num, ",1)"
                              });
                             this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                             using (DataSet set = new DataSet())

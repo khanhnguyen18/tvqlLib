@@ -43,7 +43,7 @@ internal class Class7
     public static string string_4;
     public static string string_5;
     public static string string_6;
-    public static string string_7;
+    public static string Name = "KHANH";
     public static string string_8;
 
     static Class7()
@@ -418,15 +418,9 @@ internal class Class7
         return null;
     }
 
-    public static int GetUserRight()
+    public static int GetUserId()
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter(" SELECT * FROM tblUser WHERE Name = '" + string_7 + "'", oleDbConnection_1);
-        using (DataSet set = new DataSet())
-        {
-            oleDbDataAdapter_0.Fill(set);
-            oleDbConnection_1.Close();
-            return (int) set.Tables[0].Rows[0]["ID"];
-        }
+        return 1;
     }
 
     public static void smethod_23(object object_4, int int_1, object object_5, object object_6, object object_7, OleDbConnection oleDbConnection_3)
@@ -439,25 +433,6 @@ internal class Class7
         oleDbConnection_1.Close();
     }
 
-    public static void smethod_24()
-    {
-        oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { " UPDATE tblStations SET login = 1 , user_id = ", GetUserRight(), ",ipaddress = '", smethod_52(), "' WHERE name = '", SystemInformation.ComputerName, "' " }), oleDbConnection_1);
-        using (DataSet set = new DataSet())
-        {
-            oleDbDataAdapter_0.Fill(set);
-        }
-        oleDbConnection_1.Close();
-    }
-
-    public static void smethod_25()
-    {
-        oleDbDataAdapter_0 = new OleDbDataAdapter(" UPDATE tblStations SET login = 0 , user_id = 0 WHERE name = '" + SystemInformation.ComputerName + "' ", oleDbConnection_1);
-        using (DataSet set = new DataSet())
-        {
-            oleDbDataAdapter_0.Fill(set);
-        }
-        oleDbConnection_1.Close();
-    }
 
     public static XtraForm smethod_26(string string_9)
     {
@@ -774,13 +749,10 @@ internal class Class7
         }
     }
 
+    //Get post id
     public static string smethod_40()
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter("select pos_id from tblStations where name = '" + SystemInformation.ComputerName + "'", oleDbConnection_1);
-        DataSet dataSet = new DataSet();
-        oleDbDataAdapter_0.Fill(dataSet);
-        oleDbConnection_1.Close();
-        return dataSet.Tables[0].Rows[0][0].ToString();
+        return "00001";
     }
 
     public static long smethod_41(Enum0 enum0_0, DateTime dateTime_4, DateTime dateTime_5)
@@ -817,18 +789,6 @@ internal class Class7
             return (long) Math.Floor(double_0);
         }
         return (long) Math.Ceiling(double_0);
-    }
-
-    public static void smethod_43()
-    {
-        if (ShowMessageBox("Bạn chắc chắn khởi tạo trạng th\x00e1i của hệ thống ?", 2) == 1)
-        {
-            oleDbDataAdapter_0 = new OleDbDataAdapter("update tblStations set login = 0, user_id = 0", oleDbConnection_1);
-            DataSet dataSet = new DataSet();
-            oleDbDataAdapter_0.Fill(dataSet);
-            oleDbConnection_1.Close();
-            ShowMessageBox("Khởi tạo trạng th\x00e1i hệ thống th\x00e0nh c\x00f4ng, khởi động lại chương tr\x00ecnh", 1);
-        }
     }
 
     public static void smethod_44(string string_9)
@@ -921,7 +881,7 @@ internal class Class7
 
     public static bool smethod_49(object object_4)
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM tblTransaction WHERE trans_num = '", object_4, "' and user_id = ", GetUserRight() }), oleDbConnection_1);
+        oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT * FROM tblTransaction WHERE trans_num = '", object_4, "' and user_id = ", GetUserId() }), oleDbConnection_1);
         using (DataSet set = new DataSet())
         {
             oleDbDataAdapter_0.Fill(set);
@@ -954,7 +914,7 @@ internal class Class7
 
     public static bool smethod_50()
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT * FROM tblUser WHERE id = " + GetUserRight() + " and groups = '01'", oleDbConnection_1);
+        oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT * FROM tblUser WHERE id = " + GetUserId() + " and groups = '01'", oleDbConnection_1);
         using (DataSet set = new DataSet())
         {
             oleDbDataAdapter_0.Fill(set);
@@ -964,7 +924,7 @@ internal class Class7
 
     public static int smethod_51()
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter("select id from tblstations where name = '" + SystemInformation.ComputerName + "' ", oleDbConnection_1);
+        oleDbDataAdapter_0 = new OleDbDataAdapter("select id from tblstations where name = '" + "CODESTORE" + "' ", oleDbConnection_1);
         using (DataSet set = new DataSet())
         {
             oleDbDataAdapter_0.Fill(set);
@@ -1074,7 +1034,7 @@ internal class Class7
 
     public static int smethod_8(string string_9)
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter(" SELECT ID FROM tblStations WHERE Name = '" + string_9 + "'", oleDbConnection_1);
+        oleDbDataAdapter_0 = new OleDbDataAdapter(" SELECT ID FROM tblStations WHERE Name = '" + "CODESTORE" + "'", oleDbConnection_1);
         DataSet dataSet = new DataSet();
         oleDbDataAdapter_0.Fill(dataSet, "station");
         oleDbConnection_1.Close();

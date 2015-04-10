@@ -59,7 +59,7 @@ namespace LibraryManagement.App
                 string str5 = Class7.smethod_19();
                 string str2 = Class7.smethod_40();
                 string str6 = Class7.smethod_53();
-                int num12 = Class7.GetUserRight();
+                int num12 = Class7.GetUserId();
                 string str8 = "B\x00e1n lẻ h\x00e0ng h\x00f3a";
                 string str4 = "";
                 this.string_1 = "select idx, goods_id,price, qty, qty*price as amount,(qty*price)*(rt_discpc + pc_disc + card_disc) as discamt, kit_qty, kit_id  from " + this.string_0 + " where goods_id <> '' ";
@@ -209,7 +209,7 @@ namespace LibraryManagement.App
                     {
                         this.string_1 = string.Concat(new object[] { 
                             "INSERT INTO tblSuspend(trans_num, idx, goods_id, Name, qty, unit, price, rt_discpc, pc_disc, card_disc,user_id,pos_id) VALUES ('", str, "',", row["idx"], ",'", row["goods_id"], "',N'", row["Name"], "',", row["qty"], ",'", row["unit"], "',", row["price"], ",", row["rt_discpc"], 
-                            ",", row["pc_disc"], ",", row["card_disc"], ",", Class7.GetUserRight(), ", '", Class7.smethod_40(), "')"
+                            ",", row["pc_disc"], ",", row["card_disc"], ",", Class7.GetUserId(), ", '", Class7.smethod_40(), "')"
                          });
                         this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
                         using (DataSet set = new DataSet())
@@ -261,7 +261,7 @@ namespace LibraryManagement.App
             }
             else
             {
-                this.string_1 = "select * from tblSuspend where user_id = " + Class7.GetUserRight();
+                this.string_1 = "select * from tblSuspend where user_id = " + Class7.GetUserId();
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
                 {
@@ -907,7 +907,7 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F2)
             {
-                Class7.BrowserForm1(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserRight(), this.oleDbConnection_0);
+                Class7.BrowserForm1(" SELECT trans_num, goods_id, Name, qty  FROM tblSuspend WHERE user_id = " + Class7.GetUserId(), this.oleDbConnection_0);
                 this.Txt_TransNum.Text = BrowseForm.strReturn;
             }
             if (e.KeyCode == Keys.Return)

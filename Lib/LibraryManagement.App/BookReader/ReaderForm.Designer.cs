@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    partial class FrmReaderDef
+    partial class ReaderForm
     {
         /// <summary>
         /// Required designer variable.

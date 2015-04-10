@@ -334,7 +334,7 @@ namespace LibraryManagement.App
                 double num2 = (Class7.smethod_0(row["mamount"].ToString()) == 0.0) ? Class7.smethod_0(row["pamount"].ToString()) : Class7.smethod_0(row["mamount"].ToString());
                 string selectCommandText = string.Concat(new object[] { 
                     "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, invoice, post, exp_id, imp_id,goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id,cs_id,remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station) VALUES('", str, "',convert(VARCHAR(5),getdate(),108),'", str2, "','", this.string_2, "','','',0,'", str6, "','", str5, "','", row["goods_id"], "',", num, ",'", row["unitsymb"], 
-                    "',", num2, ",0,0,0,0, ", Class7.GetUserRight(), ",'',N'", str4, "',0,'01','',0,0,0,0,", row["idx"], ",1,", Class7.smethod_51(), ")"
+                    "',", num2, ",0,0,0,0, ", Class7.GetUserId(), ",'',N'", str4, "',0,'01','',0,0,0,0,", row["idx"], ",1,", Class7.smethod_51(), ")"
                  });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 DataSet dataSet = new DataSet();

@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    partial class FrmOverDueInfo
+    partial class OverDueForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@ namespace LibraryManagement.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOverDueInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OverDueForm));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dataSet_0 = new System.Data.DataSet();
             this.dataTable_0 = new System.Data.DataTable();

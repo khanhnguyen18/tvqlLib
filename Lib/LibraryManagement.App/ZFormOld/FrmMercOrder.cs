@@ -75,7 +75,7 @@ namespace LibraryManagement.App
                             {
                                 this.string_2 = string.Concat(new object[] { 
                                     "INSERT INTO tblOn_order (tran_date, tran_time, deliver_dt, trans_num, trans_code, exp_id, goods_id, qty, unit_symb, price, merc_type, user_id, remark,status,end_qty) VALUES     ('", Class7.smethod_19(), "','", str3, "','", str2, "','", str, "','30','", str5, "','", row["goods_id"], "',", row["qty"], ",'", row["unitsymb"], 
-                                    "',", row["price"], ",'01',", Class7.GetUserRight(), ",N'", str4, "',1,", row["end_qty"], ") "
+                                    "',", row["price"], ",'01',", Class7.GetUserId(), ",N'", str4, "',1,", row["end_qty"], ") "
                                  });
                                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                                 using (DataSet set = new DataSet())

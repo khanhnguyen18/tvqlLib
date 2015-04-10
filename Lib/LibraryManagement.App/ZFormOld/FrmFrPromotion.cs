@@ -117,7 +117,7 @@ namespace LibraryManagement.App
                             selectCommandText = "INSERT INTO tblLABELS([idx],[timeinput],[goods_id],[fullname],[shortname],[grp_id],[supp_id],[rtprice],[qty],user_id) ";
                             object obj2 = selectCommandText;
                             obj2 = string.Concat(new object[] { obj2, "VALUES(", row["recnum"], ",'", row["recnum"].ToString(), "','", row["goods_id"], "','", row["full_name"], "','", row["full_name"], "'," });
-                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserRight(), ")" }), this.oleDbConnection_0);
+                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserId(), ")" }), this.oleDbConnection_0);
                             using (DataSet set2 = new DataSet())
                             {
                                 adapter.Fill(set2);
@@ -394,7 +394,7 @@ namespace LibraryManagement.App
                 object obj2 = str10 + "VALUES('" + str + "','" + str3 + "','" + str2 + "','" + this.string_1 + "','" + str7 + "','',0,'" + str4 + "',";
                 obj2 = string.Concat(new object[] { obj2, "'", str5, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num4, ", " });
                 obj2 = string.Concat(new object[] { obj2, num5, ", ", num6, ", ", row["surplus"], ", 0, " });
-                obj2 = string.Concat(new object[] { obj2, Class7.GetUserRight(), ",'' ,N'", str6, "' ,0 ,'", row["merc_type"], "' ," });
+                obj2 = string.Concat(new object[] { obj2, Class7.GetUserId(), ",'' ,N'", str6, "' ,0 ,'", row["merc_type"], "' ," });
                 selectCommandText = string.Concat(new object[] { obj2, "'", str8, "' ,", num, ",", num3, ",", num2, ",0 ,", row["idx"], " ,1 ,", Class7.smethod_51(), ")" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
@@ -535,7 +535,7 @@ namespace LibraryManagement.App
                     {
                         string str = this.Txt_TransNum.Text.Trim();
                         new Class6();
-                        if (Class7.GetUserRight() == 1)
+                        if (Class7.GetUserId() == 1)
                         {
                             this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' ";
                         }

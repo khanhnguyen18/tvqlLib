@@ -202,7 +202,7 @@ internal class Class12
         new Class6();
         string_0 = string.Concat(new object[] { 
             "INSERT INTO tblAccTrans (tran_date, tran_time, ef_date, trans_num, voucher, trans_code, account_id, db_amount, cr_amount, user_id, corr_acc, remark, updated, recnum, status)  VALUES ('", object_3, "','", Class7.smethod_53(), "','", Class7.smethod_19(), "','", object_2, "' ,'", object_4, "','", Class6.string_2, "','", object_5, "',", double_2, 
-            ", ", double_3, ",", Class7.GetUserRight(), ",'", object_6, "',N'", object_7, "',0,", int_0, ",1) "
+            ", ", double_3, ",", Class7.GetUserId(), ",'", object_6, "',N'", object_7, "',0,", int_0, ",1) "
          });
         oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);
         using (DataSet set = new DataSet())

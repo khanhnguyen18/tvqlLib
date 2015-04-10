@@ -14,11 +14,13 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    public partial class FrmOverDueInfo : DevExpress.XtraEditors.XtraForm
+    public partial class OverDueForm : DevExpress.XtraEditors.XtraForm
     {
-        public FrmOverDueInfo()
+        public OverDueForm()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
 

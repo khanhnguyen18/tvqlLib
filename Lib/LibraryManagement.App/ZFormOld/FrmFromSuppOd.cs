@@ -612,7 +612,7 @@ namespace LibraryManagement.App
                 object obj2 = str10 + "VALUES('" + Class7.smethod_19() + "','" + str4 + "','" + str + "','" + this.string_1 + "','" + str8 + "','',0,'" + str5 + "',";
                 obj2 = string.Concat(new object[] { obj2, "'", str6, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num3, ", " });
                 obj2 = string.Concat(new object[] { obj2, num4, ", ", num6, ", ", row["surplus"], ", 0, " });
-                obj2 = string.Concat(new object[] { obj2, Class7.GetUserRight(), ",'' ,N'", str7, "' ,0 ,'", row["merc_type"], "' ," });
+                obj2 = string.Concat(new object[] { obj2, Class7.GetUserId(), ",'' ,N'", str7, "' ,0 ,'", row["merc_type"], "' ," });
                 selectCommandText = string.Concat(new object[] { obj2, "'", str3, "' ,", num8, ",", num, ",", num7, ",0 ,", row["idx"], " ,1,'", str2, "',", Class7.smethod_51(), ")" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())

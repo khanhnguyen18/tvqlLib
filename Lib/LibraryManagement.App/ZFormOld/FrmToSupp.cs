@@ -368,7 +368,7 @@ namespace LibraryManagement.App
                 case Keys.Return:
                     if (Class11.string_0 == "S")
                     {
-                        if (Class7.GetUserRight() == 1)
+                        if (Class7.GetUserId() == 1)
                         {
                             this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
                         }

@@ -56,7 +56,7 @@ namespace LibraryManagement.App
                 string str = Class7.smethod_19();
                 string str3 = Class7.smethod_53();
                 string str2 = this.Txt_PosId.Text.Trim();
-                int num6 = Class7.GetUserRight();
+                int num6 = Class7.GetUserId();
                 int num7 = Class7.smethod_51();
                 string str5 = "Trả lại h\x00e0ng b\x00e1n lẻ";
                 this.string_1 = "select idx,goods_id, Name, qty, unit, amount, discount, surplus, vat_amt from " + this.string_0;

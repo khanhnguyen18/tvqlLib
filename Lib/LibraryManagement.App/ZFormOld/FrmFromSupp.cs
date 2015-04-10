@@ -184,7 +184,7 @@ namespace LibraryManagement.App
                             selectCommandText = "INSERT INTO tblLABELS([idx],[timeinput],[goods_id],[fullname],[shortname],[grp_id],[supp_id],[rtprice],[qty],user_id) ";
                             object obj2 = selectCommandText;
                             obj2 = string.Concat(new object[] { obj2, "VALUES(", row["recnum"], ",'", row["recnum"].ToString(), "','", row["goods_id"], "','", row["full_name"], "','", row["full_name"], "'," });
-                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserRight(), ")" }), this.oleDbConnection_0);
+                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserId(), ")" }), this.oleDbConnection_0);
                             using (DataSet set2 = new DataSet())
                             {
                                 adapter.Fill(set2);
@@ -409,7 +409,7 @@ namespace LibraryManagement.App
 
         private void iStore_ItemClick(object sender, ItemClickEventArgs e)
         {
-            new FrmReaderDef().ShowDialog();
+            new ReaderForm().ShowDialog();
         }
 
         private void method_0()
@@ -698,7 +698,7 @@ namespace LibraryManagement.App
                 obj2 = this.string_2;
                 this.string_2 = string.Concat(new object[] { obj2, num4, ", ", num6, ", ", row["surplus"], ", 0, " });
                 obj2 = this.string_2;
-                this.string_2 = string.Concat(new object[] { obj2, Class7.GetUserRight(), ",'' ,N'", str6, "' ,0 ,'", row["merc_type"], "' ," });
+                this.string_2 = string.Concat(new object[] { obj2, Class7.GetUserId(), ",'' ,N'", str6, "' ,0 ,'", row["merc_type"], "' ," });
                 obj2 = this.string_2;
                 this.string_2 = string.Concat(new object[] { obj2, "'", str2, "' ,", num8, ",", num, ",", num7, ",0 ,", row["idx"], " ,1 ,", Class7.smethod_51(), ")" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
@@ -923,7 +923,7 @@ namespace LibraryManagement.App
                     {
                         string str = this.Txt_TransNum.Text.Trim();
                         new Class6();
-                        if (Class7.GetUserRight() == 1)
+                        if (Class7.GetUserId() == 1)
                         {
                             this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' ";
                         }

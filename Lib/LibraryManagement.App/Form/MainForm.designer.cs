@@ -53,6 +53,8 @@ namespace LibraryManagement.App
             this.bar_2 = new DevExpress.XtraBars.Bar();
             this.blbiBook = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiPrintCard = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
@@ -108,10 +110,12 @@ namespace LibraryManagement.App
             this.Txt_Date,
             this.iMail,
             this.blbiBook,
-            this.blbiPrintCard});
+            this.blbiPrintCard,
+            this.barLargeButtonItem1,
+            this.barLargeButtonItem2});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 11;
+            this.barManager_0.MaxItemId = 13;
             this.barManager_0.StatusBar = this.statusBar;
             this.barManager_0.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager_0_ItemClick);
             // 
@@ -156,7 +160,9 @@ namespace LibraryManagement.App
             this.bar_2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar_2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.blbiBook),
-            new DevExpress.XtraBars.LinkPersistInfo(this.blbiPrintCard)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiPrintCard),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
@@ -167,6 +173,7 @@ namespace LibraryManagement.App
             this.blbiBook.Id = 9;
             this.blbiBook.LargeImageIndex = 2;
             this.blbiBook.Name = "blbiBook";
+            this.blbiBook.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiBook_ItemClick);
             // 
             // blbiPrintCard
             // 
@@ -174,6 +181,23 @@ namespace LibraryManagement.App
             this.blbiPrintCard.Id = 10;
             this.blbiPrintCard.LargeImageIndex = 3;
             this.blbiPrintCard.Name = "blbiPrintCard";
+            this.blbiPrintCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiPrintCard_ItemClick);
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Caption = "Quản lý độc giả";
+            this.barLargeButtonItem1.Id = 11;
+            this.barLargeButtonItem1.LargeImageIndex = 1;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
+            // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Caption = "Sách quá hạn trả";
+            this.barLargeButtonItem2.Id = 12;
+            this.barLargeButtonItem2.LargeImageIndex = 4;
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
             // barDockControl_0
             // 
@@ -230,7 +254,7 @@ namespace LibraryManagement.App
             this.imageList_0.Images.SetKeyName(20, "FrmMain1_16_20.png");
             this.imageList_0.Images.SetKeyName(21, "FrmMain1_16_21.png");
             this.imageList_0.Images.SetKeyName(22, "FrmMain1_16_22.png");
-            this.imageList_0.Images.SetKeyName(23, "FrmMain1_16_23.png");
+            this.imageList_0.Images.SetKeyName(23, "businessmen.png");
             // 
             // iPass
             // 
@@ -267,6 +291,7 @@ namespace LibraryManagement.App
             this.imageCollection_0.Images.SetKeyName(1, "32businessman.png");
             this.imageCollection_0.Images.SetKeyName(2, "32book_blue.png");
             this.imageCollection_0.Images.SetKeyName(3, "32printer.png");
+            this.imageCollection_0.Images.SetKeyName(4, "32stopwatch_red.png");
             // 
             // bar_3
             // 
@@ -507,6 +532,8 @@ namespace LibraryManagement.App
         #endregion
         private BarLargeButtonItem blbiBook;
         private BarLargeButtonItem blbiPrintCard;
+        private BarLargeButtonItem barLargeButtonItem1;
+        private BarLargeButtonItem barLargeButtonItem2;
 
     }
 }

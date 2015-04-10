@@ -128,7 +128,7 @@ namespace LibraryManagement.App
         #region USER MANAGEMENT GROUP(3 items)
         private void iCardDef_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
-            ToolsGui.BindToParentForm(new LoanBookForm(), this);
+            ToolsGui.BindToParentForm(new ReaderForm(), this);
         }
 
         private void iReaderList_LinkClicked(object sender, NavBarLinkEventArgs e)
@@ -143,14 +143,7 @@ namespace LibraryManagement.App
         #endregion
 
         #region STANDARD BAR
-        private void iExit_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (Class7.ShowMessageBox("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
-            {
-                Class7.smethod_25();
-                Environment.Exit(0);
-            }
-        }
+  
 
         private void iMail_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -353,7 +346,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "CUSTOMER":
-                        FrmReaderDef frm6 = new FrmReaderDef();
+                        ReaderForm frm6 = new ReaderForm();
                         frm6.MdiParent = this;
                         frm6.Show();
 
@@ -429,7 +422,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "UTILS":
-                        ToolsGui.BindToParentForm(new FrmUtils(), this);
+                        //ToolsGui.BindToParentForm(new FrmUtils(), this);
                         return;
 
                     case "PASSCHANGE":
@@ -444,10 +437,7 @@ namespace LibraryManagement.App
                         ToolsGui.BindToParentForm(new FrmUserGrp(), this);
                         return;
 
-                    case "CLEARSYS":
-                        Class7.smethod_43();
-                        Class7.ShowMessageBox("Ho\x00e0n th\x00e0nh khởi tạo trạng th\x00e1i", 2);
-                        return;
+                    
 
                     case "ABOUT":
                         new AboutForm().ShowDialog();
@@ -526,7 +516,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "OVERDUELST":
-                        ToolsGui.BindToParentForm(new FrmOverDueInfo(), this);
+                        ToolsGui.BindToParentForm(new OverDueForm(), this);
                         return;
 
                     case "BOOKSEARCH":
@@ -576,8 +566,8 @@ namespace LibraryManagement.App
                 ToolsGui.BindToParentForm(new FrmOrderList(), this);
                 return;
             Label_0766:
-                Class7.smethod_25();
-                Environment.Exit(0);
+                //Class7.smethod_25();
+                //Environment.Exit(0);
                 return;
             Label_082D:
                 ToolsGui.BindToParentForm(new FrmAtrList(), this);
@@ -596,5 +586,25 @@ namespace LibraryManagement.App
             }
         }
         #endregion
+
+        private void blbiBook_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new BookForm().ShowDialog();
+        }
+
+        private void blbiPrintCard_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new CardPrintForm().ShowDialog();
+        }
+
+        private void barLargeButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new ReaderForm().ShowDialog();
+        }
+
+        private void barLargeButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ToolsGui.BindToParentForm(new OverDueForm(), this);
+        }
     }
 }

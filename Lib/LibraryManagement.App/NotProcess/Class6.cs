@@ -74,7 +74,7 @@ internal class Class6
             string str = "INSERT INTO tblHisprice(Hisdate, Histime, goods_id, oldwsprice, newwsprice, oldrtprice, newrtprice, user_id) ";
             object obj2 = str;
             obj2 = string.Concat(new object[] { obj2, " VALUES('", string_13, "','", string_15, "','", string_14, "',", num2, ",", double_1, ",", num, "," });
-            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { obj2, " ", double_1, " ,", Class7.GetUserRight(), " )" }), oleDbConnection_0);
+            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { obj2, " ", double_1, " ,", Class7.GetUserId(), " )" }), oleDbConnection_0);
             using (DataSet set2 = new DataSet())
             {
                 oleDbDataAdapter_0.Fill(set2);
@@ -535,7 +535,7 @@ internal class Class6
             object obj2 = str3 + "VALUES('" + str + "','" + string_21 + "','" + string_15 + "','" + string_16 + "','" + string_19 + "','',0,'" + string_17 + "',";
             obj2 = string.Concat(new object[] { obj2, "'", string_18, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num, ", " });
             oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { 
-                obj2, row["disc_amt"], ", ", row["vat_amt"], ", ", row["surplus"], ", 0, ", Class7.GetUserRight(), ",'' ,N'", string_20, "' ,0 ,'", row["merc_type"], "' ,'' ,0 ,0 ,0 ,0 ,", row["idx"], " ,1,", Class7.smethod_51(), 
+                obj2, row["disc_amt"], ", ", row["vat_amt"], ", ", row["surplus"], ", 0, ", Class7.GetUserId(), ",'' ,N'", string_20, "' ,0 ,'", row["merc_type"], "' ,'' ,0 ,0 ,0 ,0 ,", row["idx"], " ,1,", Class7.smethod_51(), 
                 " )"
              }), oleDbConnection_0);
             using (DataSet set = new DataSet())
@@ -615,43 +615,7 @@ internal class Class6
 
     public static string smethod_0(string string_14)
     {
-        oleDbDataAdapter_0 = new OleDbDataAdapter("select id from tblStations where name = '" + string_14 + "' ", oleDbConnection_0);
-        DataSet dataSet = new DataSet();
-        oleDbDataAdapter_0.Fill(dataSet);
-        oleDbConnection_0.Close();
-        return string.Format("{0:000}", dataSet.Tables[0].Rows[0][0]);
-    }
-
-    public static string smethod_1()
-    {
-        string str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
-        OleDbDataAdapter adapter = new OleDbDataAdapter(" SELECT ID FROM tblStations  WHERE Name = '" + SystemInformation.ComputerName + "' ", Class7.oleDbConnection_1);
-        using (DataSet set = new DataSet())
-        {
-            adapter.Fill(set);
-            oleDbConnection_0.Close();
-            if (set.Tables[0].Rows.Count != 0)
-            {
-                return str.Substring(((int) set.Tables[0].Rows[0][0]) - 1, 1);
-            }
-            return string.Empty;
-        }
-    }
-
-    public static string smethod_2(string string_14)
-    {
-        string str = null;
-        oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT trCode FROM tblTrcode WHERE trDepart = '" + string_14 + "' ", oleDbConnection_0);
-        using (DataTable table = new DataTable())
-        {
-            oleDbDataAdapter_0.Fill(table);
-            oleDbConnection_0.Close();
-            foreach (DataRow row in table.Rows)
-            {
-                str = str + row[0].ToString() + ",";
-            }
-        }
-        return str.Substring(0, str.Length - 1);
+        return string.Format("{0:000}", 1);
     }
 
     public static string smethod_3(string string_14)

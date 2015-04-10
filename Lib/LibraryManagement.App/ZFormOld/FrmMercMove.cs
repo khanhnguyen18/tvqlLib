@@ -182,7 +182,7 @@ namespace LibraryManagement.App
                             selectCommandText = "INSERT INTO tblLABELS([idx],[timeinput],[goods_id],[fullname],[shortname],[grp_id],[supp_id],[rtprice],[qty],user_id) ";
                             object obj2 = selectCommandText;
                             obj2 = string.Concat(new object[] { obj2, "VALUES(", row["recnum"], ",'", row["recnum"].ToString(), "','", row["goods_id"], "','", row["full_name"], "','", row["full_name"], "'," });
-                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserRight(), ")" }), this.oleDbConnection_1);
+                            OleDbDataAdapter adapter = new OleDbDataAdapter(string.Concat(new object[] { obj2, "'", row["grp_id"], "','", row["exp_id"], "','", row["rtprice"], "',", row["qty"], ",", Class7.GetUserId(), ")" }), this.oleDbConnection_1);
                             using (DataSet set2 = new DataSet())
                             {
                                 adapter.Fill(set2);
@@ -588,7 +588,7 @@ namespace LibraryManagement.App
                 case Keys.Return:
                     if (Class11.string_0 == "S")
                     {
-                        if (Class7.GetUserRight() == 1)
+                        if (Class7.GetUserId() == 1)
                         {
                             this.string_0 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
                         }

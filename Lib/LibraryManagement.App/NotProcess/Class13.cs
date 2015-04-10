@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Management;
+using ArtDe;
 
 internal class Class13
 {
@@ -11,7 +12,7 @@ internal class Class13
     {
         Class15.smethod_5();
         Class17.smethod_0();
-        string_0 = "0913203991";
+        string_0 = "";
     }
 
     public Class13()
@@ -36,19 +37,7 @@ internal class Class13
 
     public static string smethod_1(string string_1, string string_2)
     {
-        byte[] inputBuffer = Convert.FromBase64String(string_1);
-        MD5CryptoServiceProvider provider = new MD5CryptoServiceProvider();
-        byte[] buffer2 = provider.ComputeHash(Encoding.UTF8.GetBytes(string_2));
-        provider.Clear();
-        TripleDESCryptoServiceProvider provider2 = new TripleDESCryptoServiceProvider();
-
-        provider2.Key = buffer2;
-        provider2.Mode = CipherMode.ECB;
-        provider2.Padding = PaddingMode.PKCS7;
-
-        byte[] bytes = provider2.CreateDecryptor().TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
-        provider2.Clear();
-        return Encoding.UTF8.GetString(bytes);
+        return Decode.DecodeCode(string_1);
     }
 
     public static string smethod_2(string string_1)

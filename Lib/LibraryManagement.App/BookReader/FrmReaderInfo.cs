@@ -43,7 +43,7 @@ namespace LibraryManagement.App
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            new FrmReaderDef().ShowDialog();
+            new ReaderForm().ShowDialog();
         }
 
         private void btnView_Click(object sender, EventArgs e)

@@ -347,7 +347,7 @@ namespace LibraryManagement.App
                 string str9 = selectCommandText + "goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id, cs_id, " + "remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station) ";
                 object obj2 = str9 + "VALUES('" + str7 + "','" + str6 + "','" + str + "','" + this.string_1 + "','" + str5 + "','',0,'" + str2 + "',";
                 obj2 = string.Concat(new object[] { obj2, "'", str3, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num4, ", " });
-                selectCommandText = string.Concat(new object[] { obj2, num6, ", 0, ", num5, ", 0, ", Class7.GetUserRight(), ",'' ,N'", str4, "' ,0 ,'", row["merc_type"], "' ,'' ,0 ,0 ,0 ,0 ,", row["idx"], " ,1,", Class7.smethod_51(), " )" });
+                selectCommandText = string.Concat(new object[] { obj2, num6, ", 0, ", num5, ", 0, ", Class7.GetUserId(), ",'' ,N'", str4, "' ,0 ,'", row["merc_type"], "' ,'' ,0 ,0 ,0 ,0 ,", row["idx"], " ,1,", Class7.smethod_51(), " )" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
                 {

@@ -43,7 +43,7 @@ namespace LibraryManagement.App
                     case 1:
                         {
                             this.btn_Skip_Click(this, new EventArgs());
-                            string str3 = "Bị x\x00f3a bởi : " + Class7.string_7;
+                            string str3 = "Bị x\x00f3a bởi : " + Class7.Name;
                             this.string_0 = "update tblTransaction set status = 0, remark = N'" + str3 + "' where trans_num = '" + str + "' ";
                             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
                             using (set = new DataSet())

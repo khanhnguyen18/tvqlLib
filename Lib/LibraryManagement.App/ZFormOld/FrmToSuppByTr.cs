@@ -205,7 +205,7 @@ namespace LibraryManagement.App
                 num = Class7.smethod_2(row["amount"]);
                 this.string_4 = string.Concat(new object[] { 
                     "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, invoice, post, exp_id, imp_id, goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id, cs_id, remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station,ref) VALUES('", str, "','", str2, "','", string_6, "','", string_7, "','", string_10, "','',0,'", string_8, "','", string_9, "','", row["goods_id"], 
-                    "', ", row["qty"], ", '", row["unitsymb"], "',", num, ", ", row["disc_amt"], ", ", row["vat_amt"], ", ", row["surplus"], ", 0, ", Class7.GetUserRight(), ",'' ,N'", string_11, 
+                    "', ", row["qty"], ", '", row["unitsymb"], "',", num, ", ", row["disc_amt"], ", ", row["vat_amt"], ", ", row["surplus"], ", 0, ", Class7.GetUserId(), ",'' ,N'", string_11, 
                     "' ,0 ,'", row["merc_type"], "' ,'' ,0 ,0 ,0 ,0 ,", row["idx"], " ,1,", Class7.smethod_51(), ",'", this.Txt_OldTrans.Text, "')"
                  });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_4, this.oleDbConnection_1);
@@ -583,7 +583,7 @@ namespace LibraryManagement.App
                 case Keys.Return:
                     if (Class11.string_0 == "S")
                     {
-                        if (Class7.GetUserRight() == 1)
+                        if (Class7.GetUserId() == 1)
                         {
                             this.string_4 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
                         }

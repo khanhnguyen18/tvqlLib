@@ -97,7 +97,7 @@ namespace LibraryManagement.App
 
         private void btnAddGrp_Click(object sender, EventArgs e)
         {
-            new FrmReaderDef().ShowDialog();
+            new ReaderForm().ShowDialog();
         }
 
 
@@ -140,7 +140,7 @@ namespace LibraryManagement.App
                     object obj2 = this.dataSet_0.Tables["loantran"].Rows[i]["goods_id"];
                     object obj3 = this.dataSet_0.Tables["loantran"].Rows[i]["oldtran"];
                     this.string_0 = string.Concat(new object[] { 
-                        "INSERT INTO tblLoanTran(trans_num, tran_date,trans_code, tran_time, exp_id, cs_id, goods_id, qty, user_id, remark, status, corr_tran) VALUES ('", str, "','", Class7.smethod_19(), "','", this.string_2, "','", Class7.smethod_53(), "','", Class7.smethod_40(), "','", str2, "','", obj2, "',1,", Class7.GetUserRight(), 
+                        "INSERT INTO tblLoanTran(trans_num, tran_date,trans_code, tran_time, exp_id, cs_id, goods_id, qty, user_id, remark, status, corr_tran) VALUES ('", str, "','", Class7.smethod_19(), "','", this.string_2, "','", Class7.smethod_53(), "','", Class7.smethod_40(), "','", str2, "','", obj2, "',1,", Class7.GetUserId(), 
                         ",N'", str3, "',1,'", obj3, "')"
                      });
                     Class7.smethod_4(this.string_0);

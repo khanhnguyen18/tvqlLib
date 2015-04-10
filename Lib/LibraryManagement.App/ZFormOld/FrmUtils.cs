@@ -108,7 +108,7 @@ namespace LibraryManagement.App
                         str = str + row[0].ToString() + "/";
                     }
                 }
-                string str4 = Class6.smethod_2("K");
+                //string str4 = Class6.smethod_2("K");
                 string str3 = "10";
                 string str5 = "00";
                 string str6 = "01";

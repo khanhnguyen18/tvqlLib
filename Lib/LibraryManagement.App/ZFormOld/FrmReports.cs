@@ -531,7 +531,7 @@ namespace LibraryManagement.App
                 this.oleDbConnection_0.Close();
             }
             string str4 = null;
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("Select * from tblUser where id = " + Class7.GetUserRight(), this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("Select * from tblUser where id = " + Class7.GetUserId(), this.oleDbConnection_0);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
             str4 = Class13.smethod_2(dataTable.Rows[0]["rpright"].ToString());

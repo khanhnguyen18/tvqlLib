@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    public partial class FrmReaderDef : DevExpress.XtraEditors.XtraForm
+    public partial class ReaderForm : DevExpress.XtraEditors.XtraForm
     {
-        public FrmReaderDef()
+        public ReaderForm()
         {
             InitializeComponent();
 

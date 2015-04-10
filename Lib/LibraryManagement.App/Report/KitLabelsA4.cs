@@ -47,7 +47,7 @@ namespace LibraryManagement.App
 
         private void KitLabelsA4_BeforePrint(object sender, PrintEventArgs e)
         {
-            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT [kit_id],[description],[rtprice],[user_id],[timeinput]  FROM [tblKitLabelPrn] where user_id = " + Class7.GetUserRight() + " Order By timeinput ", Class7.oleDbConnection_1);
+            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT [kit_id],[description],[rtprice],[user_id],[timeinput]  FROM [tblKitLabelPrn] where user_id = " + Class7.GetUserId() + " Order By timeinput ", Class7.oleDbConnection_1);
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet);
             Class7.oleDbConnection_1.Close();

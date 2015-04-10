@@ -501,11 +501,11 @@
     <Compile Include="ZFormOld\FrmOrderList.Designer.cs">
       <DependentUpon>FrmOrderList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmOverDueInfo.cs">
+    <Compile Include="Bill\OverDueForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmOverDueInfo.Designer.cs">
-      <DependentUpon>FrmOverDueInfo.cs</DependentUpon>
+    <Compile Include="Bill\OverDueForm.Designer.cs">
+      <DependentUpon>OverDueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmPayment.cs">
       <SubType>Form</SubType>
@@ -543,11 +543,11 @@
     <Compile Include="ZFormOld\FrmPtrReturn.Designer.cs">
       <DependentUpon>FrmPtrReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="BookReader\FrmReaderDef.cs">
+    <Compile Include="BookReader\ReaderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookReader\FrmReaderDef.Designer.cs">
-      <DependentUpon>FrmReaderDef.cs</DependentUpon>
+    <Compile Include="BookReader\ReaderForm.Designer.cs">
+      <DependentUpon>ReaderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BookReader\FrmReaderInfo.cs">
       <SubType>Form</SubType>
@@ -711,12 +711,6 @@
     <Compile Include="ZFormOld\FrmUserReport.Designer.cs">
       <DependentUpon>FrmUserReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmUtils.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUtils.Designer.cs">
-      <DependentUpon>FrmUtils.cs</DependentUpon>
-    </Compile>
     <Compile Include="ZFormOld\FrmVatCorrect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -762,9 +756,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>BookListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookReader\FrmReaderDef.resx">
+    <EmbeddedResource Include="BookReader\ReaderForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmReaderDef.cs</DependentUpon>
+      <DependentUpon>ReaderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Misc\BookForm.resx">
       <SubType>Designer</SubType>
@@ -958,9 +952,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmOrderList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmOverDueInfo.resx">
+    <EmbeddedResource Include="Bill\OverDueForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmOverDueInfo.cs</DependentUpon>
+      <DependentUpon>OverDueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZFormOld\FrmPayment.resx">
       <SubType>Designer</SubType>
@@ -1085,10 +1079,6 @@
     <EmbeddedResource Include="ZFormOld\FrmUserReport.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmUserReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUtils.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUtils.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZFormOld\FrmVatCorrect.resx">
       <SubType>Designer</SubType>
