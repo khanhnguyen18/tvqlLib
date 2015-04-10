@@ -141,12 +141,6 @@
     <Compile Include="ZFormOld\FrmChangeSysDate.Designer.cs">
       <DependentUpon>FrmChangeSysDate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmCheckey.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCheckey.Designer.cs">
-      <DependentUpon>FrmCheckey.cs</DependentUpon>
-    </Compile>
     <Compile Include="ZFormOld\FrmCreateTran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -560,12 +554,6 @@
     </Compile>
     <Compile Include="BookReader\FrmReaderList.Designer.cs">
       <DependentUpon>FrmReaderList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmRegister.Designer.cs">
-      <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmReports.cs">
       <SubType>Form</SubType>
@@ -987,10 +975,6 @@
     <EmbeddedResource Include="BookReader\FrmReaderList.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmReaderList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmRegister.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZFormOld\FrmStations.resx">
       <SubType>Designer</SubType>

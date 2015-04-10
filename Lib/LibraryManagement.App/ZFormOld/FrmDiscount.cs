@@ -75,7 +75,7 @@ namespace LibraryManagement.App
 
         private void FrmDiscount_Load(object sender, EventArgs e)
         {
-            this.Text = Class7.smethod_14("m_softname").ToString();
+            this.Text = "Giảm giá";
             this.Txt_ToDate.EditValue = DateTime.Parse(Class7.smethod_19());
             this.Txt_FrDate.EditValue = DateTime.Parse(Class7.smethod_19());
         }

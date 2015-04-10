@@ -35,7 +35,7 @@ namespace LibraryManagement.App
 
         private void FrmMsgbox_Load(object sender, EventArgs e)
         {
-            this.Text = Class7.smethod_14("m_softname").ToString();
+            this.Text = "Thông báo";
         }
     }
 }

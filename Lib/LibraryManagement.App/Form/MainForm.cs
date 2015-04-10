@@ -14,6 +14,8 @@ using System.Reflection;
 using System.Windows.Forms;
 using LibraryManagement.Service;
 using LibraryManagement.Domain;
+using ArtDe;
+using System.Configuration;
 
 namespace LibraryManagement.App
 {
@@ -27,6 +29,13 @@ namespace LibraryManagement.App
         #region LOAD FORM
         private void FrmMain1_Load(object sender, EventArgs e)
         {
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            string code = Decode.DecodeCode(config.AppSettings.Settings["free"].Value);
+
+            if (!string.IsNullOrEmpty(code))
+                defaultLookAndFeel_0.LookAndFeel.SkinName = code;
+
+
             BuildMenu();
             //if (Class7.GetUserRight() < 4)
             //{
@@ -51,7 +60,7 @@ namespace LibraryManagement.App
             //this.barStaticItem1.Caption = Class13.smethod_1(Class7.smethod_14("m_copyright").ToString(), Class13.string_0);
         }
 
-      
+
 
         //Maybe use
         //public void UpdateSkip()
@@ -143,7 +152,7 @@ namespace LibraryManagement.App
         #endregion
 
         #region STANDARD BAR
-  
+
 
         private void iMail_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -169,7 +178,7 @@ namespace LibraryManagement.App
 
             foreach (Menus menu in lstMainMenu)
             {
-                if (menu.Subitem == 1 && menu.Skip== true)
+                if (menu.Subitem == 1 && menu.Skip == true)
                 {
                     item = new BarSubItem(manager, menu.Prompt.Trim());
                     item.Name = menu.Menukey.Trim();
@@ -437,7 +446,7 @@ namespace LibraryManagement.App
                         ToolsGui.BindToParentForm(new FrmUserGrp(), this);
                         return;
 
-                    
+
 
                     case "ABOUT":
                         new AboutForm().ShowDialog();

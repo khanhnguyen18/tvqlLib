@@ -185,7 +185,7 @@ namespace LibraryManagement.App
             // 
             // barLargeButtonItem1
             // 
-            this.barLargeButtonItem1.Caption = "Quản lý độc giả";
+            this.barLargeButtonItem1.Caption = "Quản lý bạn đọc";
             this.barLargeButtonItem1.Id = 11;
             this.barLargeButtonItem1.LargeImageIndex = 1;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
@@ -251,10 +251,10 @@ namespace LibraryManagement.App
             this.imageList_0.Images.SetKeyName(17, "folder2_green.png");
             this.imageList_0.Images.SetKeyName(18, "FrmMain1_16_18.png");
             this.imageList_0.Images.SetKeyName(19, "FrmMain1_16_19.png");
-            this.imageList_0.Images.SetKeyName(20, "FrmMain1_16_20.png");
+            this.imageList_0.Images.SetKeyName(20, "document_view.png");
             this.imageList_0.Images.SetKeyName(21, "FrmMain1_16_21.png");
             this.imageList_0.Images.SetKeyName(22, "FrmMain1_16_22.png");
-            this.imageList_0.Images.SetKeyName(23, "businessmen.png");
+            this.imageList_0.Images.SetKeyName(23, "check.png");
             // 
             // iPass
             // 

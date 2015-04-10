@@ -455,7 +455,7 @@ namespace LibraryManagement.App
             this.openFileDialog_0.FileName = "*.jpg";
             this.openFileDialog_0.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_0_FileOk);
             // 
-            // FrmReaderDef
+            // ReaderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -495,7 +495,7 @@ namespace LibraryManagement.App
             this.Controls.Add(this.txtName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "FrmReaderDef";
+            this.Name = "ReaderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReaderDef";
             this.Load += new System.EventHandler(this.FrmReaderDef_Load);

@@ -47,9 +47,9 @@ namespace LibraryManagement.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReaderInfo));
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition3 = new DevExpress.XtraGrid.StyleFormatCondition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReaderInfo));
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dataSet_0 = new System.Data.DataSet();
             this.dataTable_0 = new System.Data.DataTable();
@@ -208,15 +208,15 @@ namespace LibraryManagement.App
             this.colgoods_id,
             this.colfull_name,
             this.coldue_date});
-            styleFormatCondition2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            styleFormatCondition2.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
-            styleFormatCondition2.Appearance.Options.UseFont = true;
-            styleFormatCondition2.Appearance.Options.UseForeColor = true;
-            styleFormatCondition2.ApplyToRow = true;
-            styleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition2.Value1 = false;
+            styleFormatCondition3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            styleFormatCondition3.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
+            styleFormatCondition3.Appearance.Options.UseFont = true;
+            styleFormatCondition3.Appearance.Options.UseForeColor = true;
+            styleFormatCondition3.ApplyToRow = true;
+            styleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition3.Value1 = false;
             this.kCnalMegv.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition2});
+            styleFormatCondition3});
             this.kCnalMegv.GridControl = this.gridControl1;
             this.kCnalMegv.Name = "kCnalMegv";
             this.kCnalMegv.OptionsView.ShowAutoFilterRow = true;
@@ -559,15 +559,15 @@ namespace LibraryManagement.App
             this.coltran_time,
             this.coltrans_code,
             this.colremark});
-            styleFormatCondition3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            styleFormatCondition3.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
-            styleFormatCondition3.Appearance.Options.UseFont = true;
-            styleFormatCondition3.Appearance.Options.UseForeColor = true;
-            styleFormatCondition3.ApplyToRow = true;
-            styleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition3.Value1 = false;
+            styleFormatCondition1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            styleFormatCondition1.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
+            styleFormatCondition1.Appearance.Options.UseFont = true;
+            styleFormatCondition1.Appearance.Options.UseForeColor = true;
+            styleFormatCondition1.ApplyToRow = true;
+            styleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition1.Value1 = false;
             this.gridView2.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition3});
+            styleFormatCondition1});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
