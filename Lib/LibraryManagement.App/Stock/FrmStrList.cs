@@ -21,6 +21,7 @@ namespace LibraryManagement.App
         public FrmStrList()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
 
 
@@ -42,7 +43,7 @@ namespace LibraryManagement.App
 
         private void btnPrintInvoice_Click(object sender, EventArgs e)
         {
-            //new Class6().method_4(this.Lbl_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3, ref Class6.string_4, ref Class6.object_0);
+            new Class6().method_4(this.Lbl_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3, ref Class6.string_4, ref Class6.object_0);
             Class6.transNum = this.Lbl_TransNum.Text.Trim();
             Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
             Class7.smethod_27(Class6.string_4).ShowPreviewDialog();
@@ -67,7 +68,7 @@ namespace LibraryManagement.App
             condition.Appearance.BackColor = Color.Red;
             this.gridView1.FormatConditions.Add(condition);
             condition.ApplyToRow = true;
-            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_0) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_1);
+            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeFrom) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeTo);
         }
 
         private void GrdTransList_Click(object sender, EventArgs e)
@@ -166,7 +167,7 @@ namespace LibraryManagement.App
             this.string_0 = this.string_0 + "trans_code AS [Loại], exp_id AS [Nơi xuất], imp_id AS [Nơi nhập], SUM(discount) AS [C.khấu], SUM(amount)  ";
             this.string_0 = this.string_0 + "AS [Th\x00e0nh tiền],SUM(vat_amt) AS [Thuế VAT], remark AS [Ghi ch\x00fa],user_id, status FROM " + base.Tag.ToString() + " ";
             object obj2 = this.string_0;
-            this.string_0 = string.Concat(new object[] { obj2, "WHERE (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') " });
+            this.string_0 = string.Concat(new object[] { obj2, "WHERE (tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "') " });
             this.string_0 = this.string_0 + " AND trans_code <> '00' AND trans_code <> '01'  ";
             this.string_0 = this.string_0 + "GROUP BY remark, trans_num, tran_date, tran_time, trans_code, exp_id, imp_id,user_id, status ";
             this.string_0 = this.string_0 + " ORDER BY tran_date,tran_time, trans_num ";

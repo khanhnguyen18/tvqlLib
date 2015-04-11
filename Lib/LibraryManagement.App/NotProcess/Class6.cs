@@ -374,8 +374,8 @@ internal class Class6
         {
             DataSet set;
             DataSet set2;
-            DateTime time2 = Class7.dateTime_0;
-            DateTime time3 = Class7.dateTime_1;
+            DateTime time2 = Class7.dateTimeFrom;
+            DateTime time3 = Class7.dateTimeTo;
             string str6 = string.Format("{0:00}", time2.Month) + time2.Year.ToString();
             string str = "STKGL_" + smethod_0(SystemInformation.ComputerName);
             try

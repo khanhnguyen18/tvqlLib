@@ -49,7 +49,7 @@ namespace LibraryManagement.App
                 new FrmGetDates().ShowDialog();
                 if (Class7.IsInputDate)
                 {
-                    this.string_0 = string.Concat(new object[] { "SELECT tran_date AS Ng\x00e0y, tran_time AS Giờ, trans_num AS [Số GD], trans_code AS Loại, exp_id AS Xuất, imp_id AS Nhập, SUM(amount) AS [Tổng tiền],remark AS [Diễn giải] FROM tblTransaction WHERE exp_id = '", str, "' OR imp_id = '", str, "' AND (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') GROUP BY tran_date,tran_time,trans_num,trans_code,exp_id,imp_id,remark " });
+                    this.string_0 = string.Concat(new object[] { "SELECT tran_date AS Ng\x00e0y, tran_time AS Giờ, trans_num AS [Số GD], trans_code AS Loại, exp_id AS Xuất, imp_id AS Nhập, SUM(amount) AS [Tổng tiền],remark AS [Diễn giải] FROM tblTransaction WHERE exp_id = '", str, "' OR imp_id = '", str, "' AND (tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "') GROUP BY tran_date,tran_time,trans_num,trans_code,exp_id,imp_id,remark " });
                     Class7.BrowserForm1(this.string_0, this.oleDbConnection_0);
                 }
             }

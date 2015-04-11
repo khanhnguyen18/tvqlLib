@@ -37,7 +37,7 @@ internal class Class13
 
     public static string smethod_1(string string_1, string string_2)
     {
-        return Decode.DecodeCode(string_1);
+        return string_1;
     }
 
     public static string smethod_2(string string_1)

@@ -10,6 +10,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace LibraryManagement.App
 {
@@ -20,8 +21,6 @@ namespace LibraryManagement.App
             InitializeComponent();
             this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
         }
-
-
 
         public void acc_detail()
         {
@@ -77,7 +76,7 @@ namespace LibraryManagement.App
                     this.oleDbDataAdapter_0.Fill(set);
                     this.oleDbConnection_0.Close();
                 }
-                this.string_2 = string.Concat(new object[] { "select account_id, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTime_0, "' and '", Class7.dateTime_1, "') " });
+                this.string_2 = string.Concat(new object[] { "select account_id, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTimeFrom, "' and '", Class7.dateTimeTo, "') " });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable dataTable = new DataTable();
                 this.oleDbDataAdapter_0.Fill(dataTable);
@@ -92,7 +91,7 @@ namespace LibraryManagement.App
                         continue;
                     }
                 }
-                this.string_2 = "select account_id, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTime_0 + "' GROUP BY account_id ";
+                this.string_2 = "select account_id, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTimeFrom + "' GROUP BY account_id ";
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable table3 = new DataTable();
                 this.oleDbDataAdapter_0.Fill(table3);
@@ -199,7 +198,7 @@ namespace LibraryManagement.App
                     this.oleDbDataAdapter_0.Fill(set);
                     this.oleDbConnection_0.Close();
                 }
-                this.string_2 = string.Concat(new object[] { "select LEFT(account_id,4) AS mof_gl, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTime_0, "' and '", Class7.dateTime_1, "') " });
+                this.string_2 = string.Concat(new object[] { "select LEFT(account_id,4) AS mof_gl, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTimeFrom, "' and '", Class7.dateTimeTo, "') " });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable dataTable = new DataTable();
                 this.oleDbDataAdapter_0.Fill(dataTable);
@@ -214,7 +213,7 @@ namespace LibraryManagement.App
                         continue;
                     }
                 }
-                this.string_2 = "select LEFT(account_id,4) AS mof_gl, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTime_0 + "' GROUP BY LEFT(account_id,4) ";
+                this.string_2 = "select LEFT(account_id,4) AS mof_gl, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTimeFrom + "' GROUP BY LEFT(account_id,4) ";
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable table2 = new DataTable();
                 this.oleDbDataAdapter_0.Fill(table2);
@@ -328,7 +327,7 @@ namespace LibraryManagement.App
                     this.oleDbDataAdapter_0.Fill(set);
                     this.oleDbConnection_0.Close();
                 }
-                this.string_2 = string.Concat(new object[] { "select LEFT(account_id,4) AS mof_gl, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTime_0, "' and '", Class7.dateTime_1, "') " });
+                this.string_2 = string.Concat(new object[] { "select LEFT(account_id,4) AS mof_gl, db_amount, cr_amount from tblAccTrans where status = 1 and (tran_date between '", Class7.dateTimeFrom, "' and '", Class7.dateTimeTo, "') " });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable dataTable = new DataTable();
                 this.oleDbDataAdapter_0.Fill(dataTable);
@@ -343,7 +342,7 @@ namespace LibraryManagement.App
                         continue;
                     }
                 }
-                this.string_2 = "select LEFT(account_id,4) AS mof_gl, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTime_0 + "' GROUP BY LEFT(account_id,4) ";
+                this.string_2 = "select LEFT(account_id,4) AS mof_gl, SUM(cr_amount) - SUM(db_amount) AS beg_amt from tblAccTrans where status = 1 and tran_date <= '" + Class7.dateTimeFrom + "' GROUP BY LEFT(account_id,4) ";
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 DataTable table3 = new DataTable();
                 this.oleDbDataAdapter_0.Fill(table3);
@@ -416,12 +415,14 @@ namespace LibraryManagement.App
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            if (this.bool_0 && !string.IsNullOrEmpty(this.string_1))
+            if (this.bool_0 && !string.IsNullOrEmpty(this.methodName))
             {
                 try
                 {
                     _sumrp = this.chkSummary.Checked;
-                    //Interaction.CallByName(this, this.string_1.Trim(), CallType.Method, new object[0]);
+                    MethodInfo methodInfo = typeof(FrmReports).GetMethod(methodName);
+                    if (methodInfo != null)
+                        methodInfo.Invoke(this, null);
                 }
                 catch (Exception)
                 {
@@ -485,14 +486,7 @@ namespace LibraryManagement.App
             condition.ApplyToRow = true;
         }
 
-        public void generalinfo()
-        {
-            new FrmGetDates().ShowDialog();
-            if (Class7.IsInputDate)
-            {
-                new stk_history().ShowPreviewDialog();
-            }
-        }
+      
 
         private void gridControl1_Click(object sender, EventArgs e)
         {
@@ -502,7 +496,7 @@ namespace LibraryManagement.App
         {
             try
             {
-                this.string_1 = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, "procedure").ToString().Trim();
+                this.methodName = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, "procedure").ToString().Trim();
                 Class6.string_10 = this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, "B\x00e1o c\x00e1o").ToString().Trim();
                 this.bool_0 = (bool)this.gridView1.GetRowCellValue(this.gridView1.FocusedRowHandle, "Trạng th\x00e1i");
                 if (!this.bool_0)
@@ -521,54 +515,15 @@ namespace LibraryManagement.App
 
 
 
-        private void method_0()
+        #region LIST REPORT
+        public void generalinfo()
         {
-            this.string_2 = "update tblReports set checked = 0";
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
-            using (DataSet set = new DataSet())
+            new FrmGetDates().ShowDialog();
+            if (Class7.IsInputDate)
             {
-                this.oleDbDataAdapter_0.Fill(set);
-                this.oleDbConnection_0.Close();
-            }
-            string str4 = null;
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("Select * from tblUser where id = " + Class7.GetUserId(), this.oleDbConnection_0);
-            DataTable dataTable = new DataTable();
-            this.oleDbDataAdapter_0.Fill(dataTable);
-            str4 = Class13.smethod_2(dataTable.Rows[0]["rpright"].ToString());
-            str4.ToCharArray();
-            int index = 0;
-            string[] strArray = str4.Split(new char[] { ';' });
-            string str3 = null;
-            string str2 = null;
-            for (index = 0; index <= (strArray.Length - 2); index++)
-            {
-                str3 = strArray[index].ToString();
-                for (int i = index + 1; i <= (strArray.Length - 1); i++)
-                {
-                    str2 = strArray[i].ToString();
-                    if (str3 == str2)
-                    {
-                        strArray[i] = "";
-                    }
-                }
-            }
-            int length = strArray.Length;
-            string str = null;
-            new DataTable();
-            for (index = 0; index <= (length - 1); index++)
-            {
-                str = strArray[index].ToString();
-                if (!string.IsNullOrEmpty(str))
-                {
-                    DataSet dataSet = new DataSet();
-                    using (new OleDbCommand())
-                    {
-                    }
-                    new OleDbDataAdapter(" Update tblReports set checked = 1 where [idx] = " + int.Parse(str), this.oleDbConnection_0).Fill(dataSet);
-                }
+                new stk_history().ShowPreviewDialog();
             }
         }
-
         public void posinfo_gl()
         {
             new FrmGetDates().ShowDialog();
@@ -651,7 +606,7 @@ namespace LibraryManagement.App
                 catch (Exception)
                 {
                 }
-                this.string_2 = string.Concat(new object[] { "SELECT DISTINCT ptr.goods_id, gs.full_name, gs.grp_id, gs.piceunit, gs.tax_code, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.qty ELSE 0 END) AS sold, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.qty ELSE 0 END) AS rb, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.amount - ptr.discount ELSE 0 END) AS in_amt, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.amount - ptr.discount ELSE 0 END) AS out_amt,SUM(CASE ptr.trans_code WHEN '00' THEN ptr.surplus ELSE 0 END) AS soldsur, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.surplus ELSE 0 END) AS rbsur, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.vat_amt ELSE 0 END) AS vat_amt,SUM(CASE ptr.trans_code WHEN '01' THEN ptr.vat_amt ELSE 0 END) AS rbvat_amt, ptr.exp_id, stk.fullname INTO ", str, " FROM ((tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id) INNER JOIN tblStore AS stk ON ptr.exp_id = stk.id) WHERE     (ptr.Status = 1) AND (ptr.trans_code IN ('00', '01')) AND (ptr.tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "' ) GROUP BY ptr.goods_id, gs.full_name, ptr.exp_id, stk.fullname, gs.grp_id, gs.piceunit,  gs.tax_code" });
+                this.string_2 = string.Concat(new object[] { "SELECT DISTINCT ptr.goods_id, gs.full_name, gs.grp_id, gs.piceunit, gs.tax_code, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.qty ELSE 0 END) AS sold, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.qty ELSE 0 END) AS rb, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.amount - ptr.discount ELSE 0 END) AS in_amt, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.amount - ptr.discount ELSE 0 END) AS out_amt,SUM(CASE ptr.trans_code WHEN '00' THEN ptr.surplus ELSE 0 END) AS soldsur, SUM(CASE ptr.trans_code WHEN '01' THEN ptr.surplus ELSE 0 END) AS rbsur, SUM(CASE ptr.trans_code WHEN '00' THEN ptr.vat_amt ELSE 0 END) AS vat_amt,SUM(CASE ptr.trans_code WHEN '01' THEN ptr.vat_amt ELSE 0 END) AS rbvat_amt, ptr.exp_id, stk.fullname INTO ", str, " FROM ((tblTransaction AS ptr INNER JOIN tblGoods AS gs ON ptr.goods_id = gs.goods_id) INNER JOIN tblStore AS stk ON ptr.exp_id = stk.id) WHERE     (ptr.Status = 1) AND (ptr.trans_code IN ('00', '01')) AND (ptr.tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "' ) GROUP BY ptr.goods_id, gs.full_name, ptr.exp_id, stk.fullname, gs.grp_id, gs.piceunit,  gs.tax_code" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 using (set = new DataSet())
                 {
@@ -708,6 +663,7 @@ namespace LibraryManagement.App
             {
                 new sumsaler().ShowPreviewDialog();
             }
-        }
+        } 
+        #endregion
     }
 }

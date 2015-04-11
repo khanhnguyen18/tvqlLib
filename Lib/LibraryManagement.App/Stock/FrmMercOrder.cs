@@ -19,6 +19,8 @@ namespace LibraryManagement.App
         public FrmMercOrder()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
+            this.string_0 = "ORDER_" + Class6.smethod_0(SystemInformation.ComputerName);
         }
 
 

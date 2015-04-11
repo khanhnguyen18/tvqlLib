@@ -19,6 +19,11 @@ namespace LibraryManagement.App
         public FrmToSupp()
         {
             InitializeComponent();
+
+            this.oleDbConnection_0 = new OleDbConnection(Class7.string_4);
+            this.oleDbConnection_1 = new OleDbConnection(Class7.string_5);
+            this.string_0 = "TOSUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
+
         }
 
 
@@ -359,6 +364,54 @@ namespace LibraryManagement.App
 
         private void Txt_TransNum_EditValueChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(this.Txt_TransNum.Text.Trim())) return;
+
+            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
+
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_1);
+            using (DataSet set = new DataSet())
+            {
+                this.oleDbDataAdapter_0.Fill(set);
+                this.oleDbConnection_1.Close();
+                if (set.Tables[0].Rows.Count == 0)
+                {
+                    this.Txt_TransNum.Focus();
+                    this.Txt_TransNum.SelectAll();
+                    return;
+                }
+            }
+            string str = this.Txt_TransNum.Text.Trim();
+            string str2 = null;
+            string str3 = null;
+            string str4 = null;
+            string str5 = null;
+            bool flag = false;
+            new Class6().method_15(this.string_0, str, ref str2, ref str3, ref str4, ref flag, ref str5, ref this.string_3);
+            this.Txt_ImpID.Text = str2;
+            this.Txt_ExpID.Text = str3;
+            this.Txt_Remark.Text = str4;
+            this.Txt_Voucher.Text = str5;
+            this.method_1();
+            if (this.Txt_ImpID.Text != string.Empty)
+            {
+                Class11.smethod_3(this);
+                if (!Class7.smethod_50())
+                {
+                    this.btn_Edit.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
+                    this.btn_Delete.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
+                }
+                Class11.smethod_5(this, "F");
+            }
+            if (flag)
+            {
+                this.btn_Delete.Text = "&X\x00f3a";
+                this.btn_Edit.Enabled = true;
+            }
+            else
+            {
+                this.btn_Delete.Text = "&Phục hồi";
+                this.btn_Edit.Enabled = false;
+            }
         }
 
         private void Txt_TransNum_KeyDown(object sender, KeyEventArgs e)
@@ -368,14 +421,9 @@ namespace LibraryManagement.App
                 case Keys.Return:
                     if (Class11.string_0 == "S")
                     {
-                        if (Class7.GetUserId() == 1)
-                        {
-                            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
-                        }
-                        else
-                        {
-                            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' AND tran_date = '" + Class7.smethod_19() + "'";
-                        }
+
+                        this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + this.Txt_TransNum.Text.Trim() + "' ";
+
                         this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_1);
                         using (DataSet set = new DataSet())
                         {
@@ -425,11 +473,11 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F2:
-                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_1);
+                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_1);
                     this.Txt_TransNum.Text = BrowseForm.strReturn;
                     break;
             }
         }
-   
+
     }
 }

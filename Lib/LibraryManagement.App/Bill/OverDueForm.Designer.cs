@@ -300,7 +300,7 @@ namespace LibraryManagement.App
             this.printableComponentLink_0.PrintingSystemBase = this.printingSystem_0;
             this.printableComponentLink_0.CreateReportHeaderArea += new DevExpress.XtraPrinting.CreateAreaEventHandler(this.printableComponentLink_0_CreateReportHeaderArea);
             // 
-            // FrmOverDueInfo
+            // OverDueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -309,7 +309,7 @@ namespace LibraryManagement.App
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.gridControl1);
-            this.Name = "FrmOverDueInfo";
+            this.Name = "OverDueForm";
             this.Text = "FrmOverDueInfo";
             this.Load += new System.EventHandler(this.FrmOverDueInfo_Load);
             this.Activated += new System.EventHandler(this.FrmOverDueInfo_Activated);

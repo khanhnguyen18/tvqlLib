@@ -11,7 +11,7 @@ using System.Windows.Forms;
 internal class Class11
 {
     public static string string_0;
-    public static string string_1;
+    public static string string_1 = "K";
 
     //static Class11()
     //{
@@ -20,7 +20,7 @@ internal class Class11
 
     public Class11()
     {
-        Class17.smethod_0();
+        //Class17.smethod_0();
     }
 
     public static void EnableNewMode(Control button)

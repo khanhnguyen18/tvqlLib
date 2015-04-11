@@ -117,6 +117,10 @@
     <Compile Include="Report\library_card.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\v_frsupp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="ZFormOld\FrmCashIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,10 +247,10 @@
     <Compile Include="Misc\BooksLocationForm.Designer.cs">
       <DependentUpon>BooksLocationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmBookView.cs">
+    <Compile Include="Stock\FrmBookView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmBookView.Designer.cs">
+    <Compile Include="Stock\FrmBookView.Designer.cs">
       <DependentUpon>FrmBookView.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmFromDealer.cs">
@@ -255,10 +259,10 @@
     <Compile Include="ZFormOld\FrmFromDealer.Designer.cs">
       <DependentUpon>FrmFromDealer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmFromSupp.cs">
+    <Compile Include="Stock\FrmFromSupp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmFromSupp.Designer.cs">
+    <Compile Include="Stock\FrmFromSupp.Designer.cs">
       <DependentUpon>FrmFromSupp.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmFromSuppNoVat.cs">
@@ -369,16 +373,16 @@
     <Compile Include="ZFormOld\FrmKitList.Designer.cs">
       <DependentUpon>FrmKitList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmLanguage.cs">
+    <Compile Include="Misc\FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmLanguage.Designer.cs">
+    <Compile Include="Misc\FrmLanguage.Designer.cs">
       <DependentUpon>FrmLanguage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmLibraryDef.cs">
+    <Compile Include="Misc\FrmLibraryDef.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmLibraryDef.Designer.cs">
+    <Compile Include="Misc\FrmLibraryDef.Designer.cs">
       <DependentUpon>FrmLibraryDef.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmLibraryInfo.cs">
@@ -459,10 +463,10 @@
     <Compile Include="ZFormOld\FrmMercMove.Designer.cs">
       <DependentUpon>FrmMercMove.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmMercOrder.cs">
+    <Compile Include="Stock\FrmMercOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmMercOrder.Designer.cs">
+    <Compile Include="Stock\FrmMercOrder.Designer.cs">
       <DependentUpon>FrmMercOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmMercPosView.cs">
@@ -555,10 +559,10 @@
     <Compile Include="BookReader\FrmReaderList.Designer.cs">
       <DependentUpon>FrmReaderList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmReports.cs">
+    <Compile Include="Stock\FrmReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmReports.Designer.cs">
+    <Compile Include="Stock\FrmReports.Designer.cs">
       <DependentUpon>FrmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmStations.cs">
@@ -585,10 +589,10 @@
     <Compile Include="ZFormOld\FrmStore.Designer.cs">
       <DependentUpon>FrmStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmStrList.cs">
+    <Compile Include="Stock\FrmStrList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmStrList.Designer.cs">
+    <Compile Include="Stock\FrmStrList.Designer.cs">
       <DependentUpon>FrmStrList.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmSuppInfo.cs">
@@ -621,10 +625,10 @@
     <Compile Include="ZFormOld\FrmToDealer.Designer.cs">
       <DependentUpon>FrmToDealer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmToSupp.cs">
+    <Compile Include="Stock\FrmToSupp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmToSupp.Designer.cs">
+    <Compile Include="Stock\FrmToSupp.Designer.cs">
       <DependentUpon>FrmToSupp.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmToSuppByTr.cs">
@@ -633,10 +637,10 @@
     <Compile Include="ZFormOld\FrmToSuppByTr.Designer.cs">
       <DependentUpon>FrmToSuppByTr.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmTransCode.cs">
+    <Compile Include="Stock\FrmTransCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmTransCode.Designer.cs">
+    <Compile Include="Stock\FrmTransCode.Designer.cs">
       <DependentUpon>FrmTransCode.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmTran_0_1.cs">
@@ -748,6 +752,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>ReaderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CommonForm\FrmGetDates.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmGetDates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Misc\BookForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BookForm.cs</DependentUpon>
@@ -759,6 +767,14 @@
     <EmbeddedResource Include="Misc\CardPrintForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CardPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FrmReports.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\Report\mercinstock_supp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mercinstock_supp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZFormOld\FrmCashIO.resx">
       <SubType>Designer</SubType>
@@ -780,7 +796,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmFromDealer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFromSupp.resx">
+    <EmbeddedResource Include="Stock\FrmFromSupp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmFromSupp.cs</DependentUpon>
     </EmbeddedResource>
@@ -836,7 +852,7 @@
       <DependentUpon>BooksLocationForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmBookView.resx">
+    <EmbeddedResource Include="Stock\FrmBookView.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmBookView.cs</DependentUpon>
     </EmbeddedResource>
@@ -860,7 +876,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmKitList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmLibraryDef.resx">
+    <EmbeddedResource Include="Misc\FrmLibraryDef.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmLibraryDef.cs</DependentUpon>
     </EmbeddedResource>
@@ -916,7 +932,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmMercMove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercOrder.resx">
+    <EmbeddedResource Include="Stock\FrmMercOrder.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmMercOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -992,7 +1008,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmStrList.resx">
+    <EmbeddedResource Include="Stock\FrmStrList.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmStrList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1016,7 +1032,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmToDealer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmToSupp.resx">
+    <EmbeddedResource Include="Stock\FrmToSupp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmToSupp.cs</DependentUpon>
     </EmbeddedResource>
@@ -1024,7 +1040,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmToSuppByTr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmTransCode.resx">
+    <EmbeddedResource Include="Stock\FrmTransCode.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmTransCode.cs</DependentUpon>
     </EmbeddedResource>
@@ -1126,10 +1142,10 @@
     <Compile Include="Report\lst_stktrans.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\mercinstock_grp.cs">
+    <Compile Include="Stock\Report\mercinstock_grp.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\mercinstock_supp.cs">
+    <Compile Include="Stock\Report\mercinstock_supp.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\return_book.cs">

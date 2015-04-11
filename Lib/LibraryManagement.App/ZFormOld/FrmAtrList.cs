@@ -101,7 +101,7 @@ namespace LibraryManagement.App
             condition.Appearance.BackColor= Color.Red;
             this.TransView.FormatConditions.Add(condition);
             condition.ApplyToRow = true;
-            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_0) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_1);
+            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeFrom) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeTo);
             this.btnDelete.Enabled = Class7.smethod_50();
         }
 
@@ -143,7 +143,7 @@ namespace LibraryManagement.App
             this.string_0 = "Select DISTINCT trans_num AS [Số GD], tran_date AS [Ng\x00e0y GD], tran_time AS [Giờ], ";
             this.string_0 = this.string_0 + "trans_code AS [Loại],voucher AS [Chứng từ], remark AS [Diễn giải],user_id AS [M\x00e3 NV], status FROM " + base.Tag.ToString() + " ";
             object obj2 = this.string_0;
-            this.string_0 = string.Concat(new object[] { obj2, "WHERE (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') " });
+            this.string_0 = string.Concat(new object[] { obj2, "WHERE (tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "') " });
             this.string_0 = this.string_0 + "GROUP BY remark, trans_num, tran_date, tran_time, trans_code, user_id, status, voucher ";
             this.string_0 = this.string_0 + " ORDER BY tran_date,tran_time, trans_num ";
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);

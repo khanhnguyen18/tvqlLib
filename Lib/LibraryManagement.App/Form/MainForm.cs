@@ -615,5 +615,16 @@ namespace LibraryManagement.App
         {
             ToolsGui.BindToParentForm(new OverDueForm(), this);
         }
+
+        private void barLargeButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Class6.string_1 = "13";
+            ToolsGui.BindToParentForm(new FrmFromSupp(), this);
+        }
+
+        private void barLargeButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ToolsGui.BindToParentForm(new FrmLibraryInfo(), this);
+        }
     }
 }

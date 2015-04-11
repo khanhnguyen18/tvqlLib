@@ -17,5 +17,10 @@ namespace LibraryManagement.App
         {
             return "Provider = sqloledb; " + ((SqlNetTiersProvider)Service.ConnectionScope.Current.DataProvider).ConnectionString;
         }
+
+        public static string GetSqlConnectionString()
+        {
+            return ((SqlNetTiersProvider)Service.ConnectionScope.Current.DataProvider).ConnectionString;
+        }
     }
 }

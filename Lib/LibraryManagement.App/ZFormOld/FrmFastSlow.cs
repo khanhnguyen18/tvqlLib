@@ -51,7 +51,7 @@ namespace LibraryManagement.App
         private void FrmFastSlow_Load(object sender, EventArgs e)
         {
             this.Text = "Đ\x00e1nh gi\x00e1 h\x00e0ng b\x00e1n chạy/chậm";
-            this.string_0 = string.Concat(new object[] { "SELECT DISTINCT tr.goods_id AS [M\x00e3 h\x00e0ng], gs.supp_id AS NCC, gs.grp_id AS Nh\x00f3m, gs.full_name AS [T\x00ean h\x00e0ng], gs.piceunit AS [Đơn vị], SUM(tr.amount + tr.surplus)/ SUM(tr.qty) AS [Gi\x00e1 b\x00e1n TB], SUM(tr.qty) AS [Doanh số], SUM(tr.amount + tr.surplus) AS [Doanh thu], SUM(tr.surplus) AS [L\x00e3i gộp]  FROM         tblTransaction AS tr INNER JOIN  tblGoods AS gs ON tr.goods_id = gs.goods_id INNER JOIN  tblPrice AS pr ON tr.goods_id = pr.goods_id  WHERE tr.trans_code = '00' AND tr.Status = 1   AND (tr.tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "')  GROUP BY tr.goods_id,gs.grp_id, gs.supp_id, gs.full_name, gs.piceunit  ORDER BY SUM(tr.qty) DESC " });
+            this.string_0 = string.Concat(new object[] { "SELECT DISTINCT tr.goods_id AS [M\x00e3 h\x00e0ng], gs.supp_id AS NCC, gs.grp_id AS Nh\x00f3m, gs.full_name AS [T\x00ean h\x00e0ng], gs.piceunit AS [Đơn vị], SUM(tr.amount + tr.surplus)/ SUM(tr.qty) AS [Gi\x00e1 b\x00e1n TB], SUM(tr.qty) AS [Doanh số], SUM(tr.amount + tr.surplus) AS [Doanh thu], SUM(tr.surplus) AS [L\x00e3i gộp]  FROM         tblTransaction AS tr INNER JOIN  tblGoods AS gs ON tr.goods_id = gs.goods_id INNER JOIN  tblPrice AS pr ON tr.goods_id = pr.goods_id  WHERE tr.trans_code = '00' AND tr.Status = 1   AND (tr.tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "')  GROUP BY tr.goods_id,gs.grp_id, gs.supp_id, gs.full_name, gs.piceunit  ORDER BY SUM(tr.qty) DESC " });
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
             using (DataSet set = new DataSet())
             {
@@ -76,7 +76,7 @@ namespace LibraryManagement.App
             this.gridView1.Columns["L\x00e3i gộp"].SummaryItem.SummaryType = SummaryItemType.Sum;
             this.gridView1.Columns["L\x00e3i gộp"].SummaryItem.DisplayFormat = "{0:n2}";
             this.gridView1.Columns["Doanh số"].AppearanceCell.BackColor = Color.PapayaWhip;
-            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_0) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_1);
+            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeFrom) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeTo);
         }
 
         private void printableComponentLink_0_CreateReportHeaderArea(object sender, CreateAreaEventArgs e)

@@ -85,6 +85,8 @@ namespace LibraryManagement.App
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -112,10 +114,12 @@ namespace LibraryManagement.App
             this.blbiBook,
             this.blbiPrintCard,
             this.barLargeButtonItem1,
-            this.barLargeButtonItem2});
+            this.barLargeButtonItem2,
+            this.barLargeButtonItem3,
+            this.barLargeButtonItem4});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 13;
+            this.barManager_0.MaxItemId = 15;
             this.barManager_0.StatusBar = this.statusBar;
             this.barManager_0.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager_0_ItemClick);
             // 
@@ -162,7 +166,9 @@ namespace LibraryManagement.App
             new DevExpress.XtraBars.LinkPersistInfo(this.blbiBook),
             new DevExpress.XtraBars.LinkPersistInfo(this.blbiPrintCard),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
@@ -292,6 +298,8 @@ namespace LibraryManagement.App
             this.imageCollection_0.Images.SetKeyName(2, "32book_blue.png");
             this.imageCollection_0.Images.SetKeyName(3, "32printer.png");
             this.imageCollection_0.Images.SetKeyName(4, "32stopwatch_red.png");
+            this.imageCollection_0.Images.SetKeyName(5, "32export2.png");
+            this.imageCollection_0.Images.SetKeyName(6, "32firewall.png");
             // 
             // bar_3
             // 
@@ -463,6 +471,22 @@ namespace LibraryManagement.App
             // 
             this.defaultLookAndFeel_0.LookAndFeel.SkinName = "DevExpress Style";
             // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Nhập Kho";
+            this.barLargeButtonItem3.Id = 13;
+            this.barLargeButtonItem3.LargeImageIndex = 5;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem3_ItemClick);
+            // 
+            // barLargeButtonItem4
+            // 
+            this.barLargeButtonItem4.Caption = "Tồn kho";
+            this.barLargeButtonItem4.Id = 14;
+            this.barLargeButtonItem4.LargeImageIndex = 6;
+            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
+            this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,6 +558,8 @@ namespace LibraryManagement.App
         private BarLargeButtonItem blbiPrintCard;
         private BarLargeButtonItem barLargeButtonItem1;
         private BarLargeButtonItem barLargeButtonItem2;
+        private BarLargeButtonItem barLargeButtonItem3;
+        private BarLargeButtonItem barLargeButtonItem4;
 
     }
 }

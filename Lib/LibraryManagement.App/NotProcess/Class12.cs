@@ -139,12 +139,12 @@ internal class Class12
         double num;
         double num2;
         DateTime now = DateTime.Now;
-        DateTime time2 = Class7.dateTime_1;
+        DateTime time2 = Class7.dateTimeTo;
         TimeSpan timeOfDay = now.TimeOfDay;
         TimeSpan span2 = time2.TimeOfDay;
         if (timeOfDay <= span2)
         {
-            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "' " }), oleDbConnection_0);
+            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "' " }), oleDbConnection_0);
             using (set = new DataSet())
             {
                 oleDbDataAdapter_0.Fill(set);
@@ -157,7 +157,7 @@ internal class Class12
         }
         if (timeOfDay > span2)
         {
-            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTime_1, "' AND '", now, "' " }), oleDbConnection_0);
+            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTimeTo, "' AND '", now, "' " }), oleDbConnection_0);
             using (set = new DataSet())
             {
                 oleDbDataAdapter_0.Fill(set);
@@ -166,7 +166,7 @@ internal class Class12
                 double num4 = Class7.smethod_2(set.Tables[0].Rows[0]["expamt"]);
                 double_1 = (smethod_0(string_4) - num3) + num4;
             }
-            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "' " }), oleDbConnection_0);
+            oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "SELECT SUM(CASE trans_code WHEN 'a1' THEN amount ELSE 0 END) AS impamt,SUM(CASE trans_code WHEN 'a2' THEN amount ELSE 0 END) AS expamt  FROM dbo.tblAccTrans  WHERE tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "' " }), oleDbConnection_0);
             using (set = new DataSet())
             {
                 oleDbDataAdapter_0.Fill(set);

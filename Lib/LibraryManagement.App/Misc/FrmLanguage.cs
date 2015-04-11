@@ -12,6 +12,7 @@ namespace LibraryManagement.App
         public FrmLanguage()
         {
             InitializeComponent();
+            this.oleDbConnection_0 = DataProvider.GetConnection();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -106,7 +107,7 @@ namespace LibraryManagement.App
                     else
                     {
                         this.btn_Skip_Click(this, new EventArgs());
-                        selectCommandText = string.Concat(new object[] { "INSERT INTO ", base.Tag.ToString(), "(id, Description,status) VALUES(", num, "',N'", str, "',1 )" });
+                        selectCommandText = string.Concat(new object[] { "INSERT INTO ", base.Tag.ToString(), "(id, Description,status) VALUES(", num, ",N'", str, "',1 )" });
                         this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                         using (set = new DataSet())
                         {

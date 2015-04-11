@@ -52,7 +52,7 @@ namespace LibraryManagement.App
             if (Class7.IsInputDate)
             {
                 this.dataSet_0.Tables["histrans"].Clear();
-                this.string_0 = string.Concat(new object[] { "SELECT DISTINCT  trans_num , tran_date , tran_time , trans_code , remark  FROM tblLoanTran WHERE status = 1 AND (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') AND cs_id = '", this.txtCsId.Text.Trim(), "' GROUP BY trans_num, tran_date, tran_time, trans_code, remark " });
+                this.string_0 = string.Concat(new object[] { "SELECT DISTINCT  trans_num , tran_date , tran_time , trans_code , remark  FROM tblLoanTran WHERE status = 1 AND (tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "') AND cs_id = '", this.txtCsId.Text.Trim(), "' GROUP BY trans_num, tran_date, tran_time, trans_code, remark " });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
                 {

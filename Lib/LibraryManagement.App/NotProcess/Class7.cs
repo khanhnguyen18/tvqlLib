@@ -22,8 +22,8 @@ using LibraryManagement.App;
 internal class Class7
 {
     public static bool bool_0;
-    public static DateTime dateTime_0;
-    public static DateTime dateTime_1;
+    public static DateTime dateTimeFrom;
+    public static DateTime dateTimeTo;
     public static DateTime dateTime_2;
     public static DateTime dateTime_3;
     public static int int_0;
@@ -57,7 +57,7 @@ internal class Class7
         oleDbConnection_0 = new OleDbConnection(string_3);
         string_4 = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\Share.mdb;User Id=admin;Password=;";
         string_5 = DataProvider.GetConnectionString();
-        string_6 = "Data Source=" + smethod_6("SERVER") + ";Initial Catalog=" + smethod_6("NAMEDB") + ";Persist Security Info=True;User ID=" + smethod_6("USERDB") + ";Password=" + smethod_6("PASSDB");
+        string_6 = DataProvider.GetSqlConnectionString();
         oleDbConnection_1 = new OleDbConnection(string_5);
         oleDbConnection_2 = new OleDbConnection(string_4);
         IsInputDate = false;

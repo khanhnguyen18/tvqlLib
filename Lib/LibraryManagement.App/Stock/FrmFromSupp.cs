@@ -13,6 +13,8 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Windows.Forms;
+using LibraryManagement.Domain;
+using LibraryManagement.Service;
 
 namespace LibraryManagement.App
 {
@@ -22,6 +24,7 @@ namespace LibraryManagement.App
         {
             InitializeComponent();
             this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
+            this.string_0 = "FRSUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -29,6 +32,7 @@ namespace LibraryManagement.App
             new UnitsForm().ShowDialog();
         }
 
+        #region BUTTONS
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if (this.string_3 != "F")
@@ -63,18 +67,18 @@ namespace LibraryManagement.App
                     this.oleDbDataAdapter_0.Fill(table);
                     this.oleDbConnection_0.Close();
                     IEnumerator enumerator = table.Rows.GetEnumerator();
-                        while (enumerator.MoveNext())
+                    while (enumerator.MoveNext())
+                    {
+                        DataRow current = (DataRow)enumerator.Current;
+                        if (class2.method_21(current["goods_id"].ToString(), current["imp_id"].ToString()) < Class7.smethod_2(current["qty"]))
                         {
-                            DataRow current = (DataRow)enumerator.Current;
-                            if (class2.method_21(current["goods_id"].ToString(), current["imp_id"].ToString()) < Class7.smethod_2(current["qty"]))
-                            {
-                                goto Label_0175;
-                            }
+                            goto Label_0175;
                         }
-                        goto Label_01A9;
-                    Label_0175:
-                        Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để x\x00f3a giao dịch n\x00e0y !", 1);
-                        return;
+                    }
+                    goto Label_01A9;
+                Label_0175:
+                    Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để x\x00f3a giao dịch n\x00e0y !", 1);
+                    return;
                 }
             }
         Label_01A9:
@@ -100,8 +104,8 @@ namespace LibraryManagement.App
             Class11.smethod_5(this, "T");
             this.Txt_TransNum.Text = new Class6().method_5("K");
             this.string_3 = "N";
-            this.Txt_Date.Text = Class7.smethod_19();
-            this.Txt_Date.Enabled = false;
+            this.dateEdit1.DateTime = DateTime.Now;
+            this.dateEdit1.Enabled = false;
             this.Txt_ExpID.Focus();
         }
 
@@ -145,10 +149,10 @@ namespace LibraryManagement.App
                                 this.bool_0 = false;
                                 this.string_6 = this.string_4;
                                 this.btn_Skip_Click(this, new EventArgs());
-                                class2.method_18(str2);
+                                class2.method_18(str2);//UpdateStock
                                 class2.method_8(str2);
                                 class2.method_13(str2);
-                                this.method_4();
+                                this.Insert();
                                 class2.method_17(str2);
                                 class2.method_7(str2, str3);
                                 class2.kCnalMegv(this.string_0);
@@ -158,10 +162,10 @@ namespace LibraryManagement.App
                         else
                         {
                             this.bool_0 = true;
-                            this.string_6 = Class7.smethod_19();
+                            this.string_6 = DateTime.Now;
                             this.btn_Skip_Click(this, new EventArgs());
                             class2.ComputeTransnum("K");
-                            this.method_4();
+                            this.Insert();
                             class2.method_17(str2);
                             class2.method_7(str2, str3);
                             class2.kCnalMegv(this.string_0);
@@ -260,7 +264,8 @@ namespace LibraryManagement.App
                     this.Txt_GoodsId.SelectAll();
                 }
             }
-        }
+        } 
+        #endregion
 
         private void CdCbuygdy_EditValueChanged(object sender, EventArgs e)
         {
@@ -324,7 +329,6 @@ namespace LibraryManagement.App
         {
         }
 
-
         private void FrmFromSupp_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.oleDbDataAdapter_0 = new OleDbDataAdapter("DROP TABLE " + this.string_0, this.oleDbConnection_0);
@@ -343,32 +347,32 @@ namespace LibraryManagement.App
 
         private void FrmFromSupp_Load(object sender, EventArgs e)
         {
-            //DataSet set;
-            //this.Text = Class6.string_1.ToString();
-            //this.Txt_Date.Text = Class7.smethod_19();
-            //this.btn_Skip_Click(this, new EventArgs());
-            //this.Txt_Vatrate.Properties.ReadOnly = true;
-            //try
-            //{
-            //    string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
-            //    this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
-            //    using (set = new DataSet())
-            //    {
-            //        this.oleDbDataAdapter_0.Fill(set);
-            //    }
-            //    this.oleDbConnection_0.Close();
-            //}
-            //catch (Exception)
-            //{
-            //    this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
-            //    using (set = new DataSet())
-            //    {
-            //        this.oleDbDataAdapter_0.Fill(set);
-            //    }
-            //    this.oleDbConnection_0.Close();
-            //}
-            //this.method_0();
-            //this.method_1();
+            DataSet set;
+            this.Text = "Nhập kho";
+            this.dateEdit1.DateTime = DateTime.Now;
+            this.btn_Skip_Click(this, new EventArgs());
+            this.Txt_Vatrate.Properties.ReadOnly = true;
+            try
+            {
+                string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
+                using (set = new DataSet())
+                {
+                    this.oleDbDataAdapter_0.Fill(set);
+                }
+                this.oleDbConnection_0.Close();
+            }
+            catch (Exception)
+            {
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
+                using (set = new DataSet())
+                {
+                    this.oleDbDataAdapter_0.Fill(set);
+                }
+                this.oleDbConnection_0.Close();
+            }
+            this.method_0();
+            this.method_1();
         }
 
         private void GrdTran_Click(object sender, EventArgs e)
@@ -401,11 +405,9 @@ namespace LibraryManagement.App
             Class11.smethod_5(this, "T");
             this.Txt_ImpID.Enabled = true;
             this.Txt_ExpID.Enabled = true;
-            this.Txt_Date.Enabled = false;
+            this.dateEdit1.Enabled = false;
             this.string_3 = "E";
         }
-
-
 
         private void iStore_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -636,7 +638,7 @@ namespace LibraryManagement.App
             }
         }
 
-        private void method_4()
+        private void Insert()
         {
             string str = this.Txt_TransNum.Text.Trim();
             string str3 = this.bool_0 ? Class7.smethod_53() : this.string_5;
@@ -692,7 +694,7 @@ namespace LibraryManagement.App
                 this.string_2 = this.string_2 + "goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id, cs_id, ";
                 this.string_2 = this.string_2 + "remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station) ";
                 string str8 = this.string_2;
-                this.string_2 = str8 + "VALUES('" + this.string_6 + "','" + str3 + "','" + str + "','" + this.string_1 + "','" + str7 + "','',0,'" + str4 + "',";
+                this.string_2 = str8 + "VALUES('" + this.string_6.Date+ "','" + str3 + "','" + str + "','" + this.string_1 + "','" + str7 + "','',0,'" + str4 + "',";
                 object obj2 = this.string_2;
                 this.string_2 = string.Concat(new object[] { obj2, "'", str5, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num3, ", " });
                 obj2 = this.string_2;
@@ -820,6 +822,9 @@ namespace LibraryManagement.App
 
         private void Txt_GoodsId_EditValueChanged(object sender, EventArgs e)
         {
+            Goods good = new GoodsService().GetByGoodsId(Txt_GoodsId.Text);
+            if (good != null)
+                Lbl_MercName.Text = good.FullName;
         }
 
         private void Txt_GoodsId_KeyDown(object sender, KeyEventArgs e)
@@ -912,6 +917,46 @@ namespace LibraryManagement.App
 
         private void Txt_TransNum_EditValueChanged(object sender, EventArgs e)
         {
+            string str = this.Txt_TransNum.Text.Trim();
+            if (string.IsNullOrEmpty(str)) return;
+
+            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' ";
+
+
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
+            DataSet dataSet = new DataSet();
+            this.oleDbDataAdapter_0.Fill(dataSet);
+            this.oleDbConnection_0.Close();
+            if (dataSet.Tables[0].Rows.Count != 0)
+            {
+                this.Txt_ImpID.Text = dataSet.Tables[0].Rows[0]["imp_id"].ToString();
+                this.Txt_ExpID.Text = dataSet.Tables[0].Rows[0]["exp_id"].ToString();
+                this.Txt_Remark.Text = dataSet.Tables[0].Rows[0]["remark"].ToString();
+                this.Txt_Voucher.Text = dataSet.Tables[0].Rows[0]["voucher"].ToString();
+                this.dateEdit1.DateTime = (DateTime)dataSet.Tables[0].Rows[0]["tran_date"];
+                this.string_4 = (DateTime)dataSet.Tables[0].Rows[0]["tran_date"];
+                this.string_5 = dataSet.Tables[0].Rows[0]["tran_time"].ToString();
+                this.chk_inclVat.Checked = (bool)dataSet.Tables[0].Rows[0]["vat_incl"];
+                this.Chk_discpervat.Checked = (bool)dataSet.Tables[0].Rows[0]["discpervat"];
+                this.Chk_includedisc.Checked = (bool)dataSet.Tables[0].Rows[0]["disc_incl"];
+                this.method_3(this.string_0, dataSet.Tables[0].Rows[0]["trans_num"].ToString());
+                this.Cmb_TaxCode.Text = dataSet.Tables[0].Rows[0]["tax_code"].ToString();
+                Class11.smethod_3(this);
+                this.string_3 = "F";
+                if (!Class7.smethod_50())
+                {
+                    this.btn_Edit.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
+                    this.btn_Delete.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
+                }
+                Class11.smethod_5(this, "F");
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) + sum(vat_amt) AS t_amt, sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.string_0, this.oleDbConnection_0);
+                DataSet set = new DataSet();
+                this.oleDbDataAdapter_0.Fill(set);
+                this.oleDbConnection_0.Close();
+                this.method_5();
+                this.method_1();
+            }
+
         }
 
         private void Txt_TransNum_KeyDown(object sender, KeyEventArgs e)
@@ -923,14 +968,10 @@ namespace LibraryManagement.App
                     {
                         string str = this.Txt_TransNum.Text.Trim();
                         new Class6();
-                        if (Class7.GetUserId() == 1)
-                        {
-                            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' ";
-                        }
-                        else
-                        {
-                            this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' AND tran_date = '" + Class7.smethod_19() + "'";
-                        }
+
+                        this.string_2 = "SELECT * FROM tblTransaction WHERE trans_num = '" + str + "' ";
+
+
                         this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                         DataSet dataSet = new DataSet();
                         this.oleDbDataAdapter_0.Fill(dataSet);
@@ -941,8 +982,8 @@ namespace LibraryManagement.App
                             this.Txt_ExpID.Text = dataSet.Tables[0].Rows[0]["exp_id"].ToString();
                             this.Txt_Remark.Text = dataSet.Tables[0].Rows[0]["remark"].ToString();
                             this.Txt_Voucher.Text = dataSet.Tables[0].Rows[0]["voucher"].ToString();
-                            this.Txt_Date.Text = dataSet.Tables[0].Rows[0]["tran_date"].ToString();
-                            this.string_4 = dataSet.Tables[0].Rows[0]["tran_date"].ToString();
+                            this.dateEdit1.DateTime = (DateTime)dataSet.Tables[0].Rows[0]["tran_date"];
+                            this.string_4 = (DateTime)dataSet.Tables[0].Rows[0]["tran_date"];
                             this.string_5 = dataSet.Tables[0].Rows[0]["tran_time"].ToString();
                             this.chk_inclVat.Checked = (bool)dataSet.Tables[0].Rows[0]["vat_incl"];
                             this.Chk_discpervat.Checked = (bool)dataSet.Tables[0].Rows[0]["discpervat"];
@@ -978,7 +1019,7 @@ namespace LibraryManagement.App
                     break;
 
                 case Keys.F2:
-                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where tran_date = '" + Class7.smethod_19() + "' and trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_0);
+                    Class7.BrowserForm1("select trans_num as 'Số giao dịch', goods_id AS 'M\x00e3 h\x00e0ng', exp_id AS 'Nơi xuất', qty AS 'Số lượng', amount AS 'Tổng tiền', Status from tblTransaction where trans_code = '" + this.string_1 + "' order by trans_num ", this.oleDbConnection_0);
                     this.Txt_TransNum.Text = BrowseForm.strReturn;
                     break;
             }

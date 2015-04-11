@@ -105,7 +105,6 @@ namespace LibraryManagement.App
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.Chk_includedisc = new DevExpress.XtraEditors.CheckEdit();
             this.Chk_discpervat = new DevExpress.XtraEditors.CheckEdit();
-            this.Txt_Date = new DevExpress.XtraEditors.TextEdit();
             this.barManager_0 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar_0 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
@@ -119,6 +118,7 @@ namespace LibraryManagement.App
             this.barDockControl_3 = new DevExpress.XtraBars.BarDockControl();
             this.bar_1 = new DevExpress.XtraBars.Bar();
             this.Txt_GoodsId = new DevExpress.XtraEditors.TextEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Remark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkLabelPrn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_TransNum.Properties)).BeginInit();
@@ -140,9 +140,10 @@ namespace LibraryManagement.App
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Vatrate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chk_includedisc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chk_discpervat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_GoodsId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox3
@@ -896,24 +897,6 @@ namespace LibraryManagement.App
             this.Chk_discpervat.TabStop = false;
             this.Chk_discpervat.CheckedChanged += new System.EventHandler(this.Chk_discpervat_CheckedChanged);
             // 
-            // Txt_Date
-            // 
-            this.Txt_Date.EditValue = "";
-            this.Txt_Date.EnterMoveNextControl = true;
-            this.Txt_Date.Location = new System.Drawing.Point(279, 3);
-            this.Txt_Date.Name = "Txt_Date";
-            this.Txt_Date.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Date.Properties.Appearance.Options.UseFont = true;
-            this.Txt_Date.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.Txt_Date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.Txt_Date.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.Txt_Date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.Txt_Date.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.Txt_Date.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.Txt_Date.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.Txt_Date.Size = new System.Drawing.Size(70, 20);
-            this.Txt_Date.TabIndex = 415;
-            // 
             // barManager_0
             // 
             this.barManager_0.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -1009,22 +992,22 @@ namespace LibraryManagement.App
             // 
             this.barDockControl_1.CausesValidation = false;
             this.barDockControl_1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl_1.Location = new System.Drawing.Point(0, 390);
-            this.barDockControl_1.Size = new System.Drawing.Size(672, 26);
+            this.barDockControl_1.Location = new System.Drawing.Point(0, 388);
+            this.barDockControl_1.Size = new System.Drawing.Size(672, 28);
             // 
             // barDockControl_2
             // 
             this.barDockControl_2.CausesValidation = false;
             this.barDockControl_2.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl_2.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl_2.Size = new System.Drawing.Size(0, 390);
+            this.barDockControl_2.Size = new System.Drawing.Size(0, 388);
             // 
             // barDockControl_3
             // 
             this.barDockControl_3.CausesValidation = false;
             this.barDockControl_3.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl_3.Location = new System.Drawing.Point(672, 0);
-            this.barDockControl_3.Size = new System.Drawing.Size(0, 390);
+            this.barDockControl_3.Size = new System.Drawing.Size(0, 388);
             // 
             // bar_1
             // 
@@ -1052,12 +1035,30 @@ namespace LibraryManagement.App
             this.Txt_GoodsId.EditValueChanged += new System.EventHandler(this.Txt_GoodsId_EditValueChanged);
             this.Txt_GoodsId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_GoodsId_KeyDown);
             // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(279, 3);
+            this.dateEdit1.MenuManager = this.barManager_0;
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit1.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit1.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dateEdit1.Size = new System.Drawing.Size(100, 20);
+            this.dateEdit1.TabIndex = 420;
+            // 
             // FrmFromSupp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 416);
-            this.Controls.Add(this.Txt_Date);
+            this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.Chk_discpervat);
             this.Controls.Add(this.Chk_includedisc);
             this.Controls.Add(this.labelControl20);
@@ -1146,9 +1147,10 @@ namespace LibraryManagement.App
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Vatrate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chk_includedisc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Chk_discpervat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_GoodsId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1217,11 +1219,10 @@ namespace LibraryManagement.App
         private string string_1;
         private string string_2;
         private string string_3;
-        private string string_4;
+        private DateTime string_4;
         private string string_5;
-        private string string_6;
+        private DateTime string_6;
         internal GridView TransDetail;
-        internal TextEdit Txt_Date;
         internal TextEdit Txt_DiscAmt;
         internal TextEdit Txt_DiscPc;
         internal TextEdit Txt_ExpID;
@@ -1237,5 +1238,6 @@ namespace LibraryManagement.App
         internal TextEdit Txt_Voucher;
 
         #endregion
+        private DateEdit dateEdit1;
     }
 }

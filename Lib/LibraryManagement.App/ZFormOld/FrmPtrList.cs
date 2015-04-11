@@ -85,7 +85,7 @@ namespace LibraryManagement.App
             condition2.Appearance.BackColor = Color.Red;
             this.gridView1.FormatConditions.Add(condition2);
             condition2.ApplyToRow = true;
-            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_0) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTime_1);
+            this.Lbl_duaration.Text = "Từ ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeFrom) + " đến ng\x00e0y " + string.Format("{0:dd/MM/yyyy}", Class7.dateTimeTo);
         }
 
         private void GrdTransList_Click(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace LibraryManagement.App
 
         private void method_0()
         {
-            this.string_0 = string.Concat(new object[] { "SELECT DISTINCT trans_num AS [Số GD], tran_date AS [Ng\x00e0y GD], tran_time AS Giờ, trans_code AS Loại, exp_id AS Quầy, SUM(amount - discount) AS [Thực thu],SUM(discount) AS [C.khấu],SUM(vat_amt) AS [Thuế GTGT],SUM(surplus) AS [L\x00e3i gộp], user_id AS [NV], Status, remark FROM ", base.Tag.ToString(), "  WHERE (tran_date BETWEEN '", Class7.dateTime_0, "' AND '", Class7.dateTime_1, "') AND trans_code IN('00','01') GROUP BY trans_num, tran_date, tran_time, trans_code, user_id, exp_id,Status,remark ORDER BY tran_date,tran_time,trans_num" });
+            this.string_0 = string.Concat(new object[] { "SELECT DISTINCT trans_num AS [Số GD], tran_date AS [Ng\x00e0y GD], tran_time AS Giờ, trans_code AS Loại, exp_id AS Quầy, SUM(amount - discount) AS [Thực thu],SUM(discount) AS [C.khấu],SUM(vat_amt) AS [Thuế GTGT],SUM(surplus) AS [L\x00e3i gộp], user_id AS [NV], Status, remark FROM ", base.Tag.ToString(), "  WHERE (tran_date BETWEEN '", Class7.dateTimeFrom, "' AND '", Class7.dateTimeTo, "') AND trans_code IN('00','01') GROUP BY trans_num, tran_date, tran_time, trans_code, user_id, exp_id,Status,remark ORDER BY tran_date,tran_time,trans_num" });
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);

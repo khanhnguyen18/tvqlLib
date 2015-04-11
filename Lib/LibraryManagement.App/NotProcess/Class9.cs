@@ -74,7 +74,7 @@ internal class Class9
                 }
             }
         }
-        string_0 = "SELECT * FROM tblTransaction WHERE  status = 1 AND tran_date >= '" + Class7.dateTime_0 + "'";
+        string_0 = "SELECT * FROM tblTransaction WHERE  status = 1 AND tran_date >= '" + Class7.dateTimeFrom + "'";
         oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);
         using (table = new DataTable())
         {
@@ -103,7 +103,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -126,7 +126,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -149,7 +149,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -172,7 +172,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -195,7 +195,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -218,7 +218,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -244,7 +244,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -273,7 +273,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -299,7 +299,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -322,7 +322,7 @@ internal class Class9
                             oleDbDataAdapter_0.Fill(set);
                             oleDbConnection_0.Close();
                         }
-                        if (time > Class7.dateTime_1)
+                        if (time > Class7.dateTimeTo)
                         {
                             continue;
                         }
@@ -352,7 +352,7 @@ internal class Class9
                     oleDbDataAdapter_0.Fill(set);
                     oleDbConnection_0.Close();
                 }
-                if (time <= Class7.dateTime_1)
+                if (time <= Class7.dateTimeTo)
                 {
                     string_0 = string.Concat(new object[] { "UPDATE ", str, " SET frdealer_qty = frdealer_qty + ", row["qty"], ", frdealer_amt = frdealer_amt + ", num, " WHERE id = '", str8, "' AND goods_id = '", str7, "' " });
                     oleDbDataAdapter_0 = new OleDbDataAdapter(string_0, oleDbConnection_0);
