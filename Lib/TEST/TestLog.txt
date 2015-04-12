@@ -1,0 +1,21 @@
+2015-04-12-------------------------------------------------------------------------------------
+Happen on version 48.
+This log only on release on program file.
+************** Exception Text **************
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at yRsFC2yKOnT0uiFcVU.chEf8Eoq0xqwJdRrxm.KDl9Bwjba3(String  )
+   at LibraryManagement.App.FrmFromSupp.JsL3hSn0b1(Object  , EventArgs  )
+   at System.Windows.Forms.Control.OnClick(EventArgs e)
+   at DevExpress.XtraEditors.BaseButton.OnClick(EventArgs e)
+   at DevExpress.XtraEditors.BaseButton.OnMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at DevExpress.Utils.Controls.ControlBase.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+Reason:
+    +  Create dynamic type by Text but It make dynamic call
+
+***************************************************************************************************************

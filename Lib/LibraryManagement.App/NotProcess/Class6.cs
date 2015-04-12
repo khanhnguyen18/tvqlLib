@@ -452,7 +452,7 @@ internal class Class6
                     oleDbConnection_0.Close();
                 }
             }
-            Class7.smethod_27("stk_gl").ShowPreviewDialog();
+            Class7.CreateReportInstance("stk_gl").ShowPreviewDialog();
         }
     }
 

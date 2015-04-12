@@ -194,7 +194,7 @@ namespace LibraryManagement.App
             new Class6().ComputeTransnum("A");
         Label_0740:
             Class6.transNum = this.Txt_TransNum.Text.Trim();
-            Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+            Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)

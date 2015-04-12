@@ -101,7 +101,7 @@ namespace LibraryManagement.App
                     new Class6().ComputeTransnum("A");
                 }
                 Class6.transNum = this.Txt_TransNum.Text.Trim();
-                Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+                Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
             }
         }
 

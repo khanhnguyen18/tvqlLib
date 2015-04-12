@@ -333,7 +333,7 @@ namespace LibraryManagement.App
                         }
                     }
                     Class6.transNum = str;
-                    Class7.smethod_27("v_frsupp").ShowPreviewDialog();
+                    Class7.CreateReportInstance("v_frsupp").ShowPreviewDialog();
                 }
             }
         }

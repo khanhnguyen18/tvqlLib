@@ -439,7 +439,7 @@ internal class Class7
         return (XtraForm) Activator.CreateInstance(System.Type.GetType(Assembly.GetEntryAssembly().GetName().Name.Replace(" ", "_") + "." + string_9));
     }
 
-    public static XtraReport smethod_27(string string_9)
+    public static XtraReport CreateReportInstance(string string_9)
     {
         return (XtraReport) Activator.CreateInstance(System.Type.GetType(Assembly.GetEntryAssembly().GetName().Name.Replace(" ", "_") + "." + string_9));
     }

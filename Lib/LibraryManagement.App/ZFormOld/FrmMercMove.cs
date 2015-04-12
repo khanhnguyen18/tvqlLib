@@ -192,8 +192,8 @@ namespace LibraryManagement.App
                     }
                     form.Close();
                     Class6.transNum = str;
-                    Class7.smethod_27("v_mercmove").ShowPreviewDialog();
-                    Class7.smethod_27("v_mercmove1").ShowPreviewDialog();
+                    Class7.CreateReportInstance("v_mercmove").ShowPreviewDialog();
+                    Class7.CreateReportInstance("v_mercmove1").ShowPreviewDialog();
                 }
             }
         }

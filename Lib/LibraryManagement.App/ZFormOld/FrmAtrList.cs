@@ -76,7 +76,7 @@ namespace LibraryManagement.App
         {
             this.method_2(this.Lbl_TransCode.Text, ref Class6.string_2, ref Class6.string_1, ref Class7.string_1, ref Class6.string_3);
             Class6.transNum = this.Lbl_TransNum.Text.Trim();
-            Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+            Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
         }
 
 

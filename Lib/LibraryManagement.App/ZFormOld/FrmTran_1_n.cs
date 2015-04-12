@@ -114,7 +114,7 @@ namespace LibraryManagement.App
                         }
                     }
                     Class6.transNum = this.ddvqeXfa4.Text.Trim();
-                    Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+                    Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
                 }
             }
         }

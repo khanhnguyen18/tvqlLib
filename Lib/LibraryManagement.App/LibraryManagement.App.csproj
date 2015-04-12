@@ -117,7 +117,10 @@
     <Compile Include="Report\library_card.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\v_frsupp.cs">
+    <Compile Include="Stock\Report\v_frsupp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stock\Report\v_tosupp.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils.cs" />

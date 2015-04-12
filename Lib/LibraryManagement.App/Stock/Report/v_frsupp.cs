@@ -10,7 +10,6 @@ using System.Drawing.Printing;
 
 namespace LibraryManagement.App
 {
-    
     public class v_frsupp : XtraReport
     {
         private BottomMarginBand bottomMarginBand_0;

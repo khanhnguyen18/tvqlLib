@@ -136,7 +136,7 @@ namespace LibraryManagement.App
                 }
             }
             Class6.transNum = str;
-            Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+            Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)

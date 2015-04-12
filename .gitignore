@@ -51,3 +51,13 @@ obj
 bin
 /Lib/LibraryManagement.App/bin/Debug
 /Lib/LibraryManagement.App/bin/Debug
+/Lib/LibraryManagement.Dao/bin
+/Lib/LibraryManagement.Dao/obj
+/Lib/LibraryManagement.Dao.SqlClient/bin
+/Lib/LibraryManagement.Dao.SqlClient/obj
+/Lib/LibraryManagement.Domain/bin
+/Lib/LibraryManagement.Domain/obj
+/Lib/LibraryManagement.Service/bin
+/Lib/LibraryManagement.Service/obj
+/Lib/LibraryManagement.UnitTests/bin
+/Lib/LibraryManagement.UnitTests/obj

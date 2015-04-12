@@ -170,7 +170,7 @@ namespace LibraryManagement.App
                 Class6.transNum = str3;
                 Class6.string_6 = str4;
                 Class6.string_7 = str5;
-                Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+                Class7.CreateReportInstance(Class6.string_3).ShowPreviewDialog();
             }
         }
 

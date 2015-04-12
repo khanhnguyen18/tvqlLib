@@ -134,7 +134,8 @@ namespace LibraryManagement.App
                         }
                     }
                     Class6.transNum = str2;
-                    Class7.smethod_27(Class6.string_3).ShowPreviewDialog();
+                    v_tosupp sup = new v_tosupp();
+                    sup.ShowPreviewDialog();
                 }
             }
         }

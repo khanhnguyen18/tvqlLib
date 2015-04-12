@@ -197,7 +197,8 @@ namespace LibraryManagement.App
                         }
                     }
                     Class6.transNum = str2;
-                    Class7.smethod_27("v_frsupp").ShowPreviewDialog();
+                    v_frsupp sup = new v_frsupp();
+                    sup.ShowPreviewDialog();
                 }
             }
         }
