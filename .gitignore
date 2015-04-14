@@ -61,3 +61,4 @@ bin
 /Lib/LibraryManagement.Service/obj
 /Lib/LibraryManagement.UnitTests/bin
 /Lib/LibraryManagement.UnitTests/obj
+*.suo
