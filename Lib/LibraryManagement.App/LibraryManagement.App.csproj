@@ -131,11 +131,11 @@
     <Compile Include="ZFormOld\FrmCashIO.Designer.cs">
       <DependentUpon>FrmCashIO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmChangePass.cs">
+    <Compile Include="Form\ChangePassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmChangePass.Designer.cs">
-      <DependentUpon>FrmChangePass.cs</DependentUpon>
+    <Compile Include="Form\ChangePassForm.Designer.cs">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmChangePrice.cs">
       <SubType>Form</SubType>
@@ -784,9 +784,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmCashIO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmChangePass.resx">
+    <EmbeddedResource Include="Form\ChangePassForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmChangePass.cs</DependentUpon>
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ZFormOld\FrmCreateTran.resx">
       <SubType>Designer</SubType>
@@ -1205,6 +1205,10 @@
     <ProjectReference Include="..\LibraryManagement.Service\LibraryManagement.Service.csproj">
       <Project>{42B50D20-C0DE-4197-AF24-B4DAE7FB88CB}</Project>
       <Name>LibraryManagement.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperKnuth\SuperKnuth.csproj">
+      <Project>{67C17632-B8D8-4793-A9B4-7CA838E7A381}</Project>
+      <Name>SuperKnuth</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

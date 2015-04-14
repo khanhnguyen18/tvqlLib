@@ -8,3 +8,7 @@ Loan Tran
 User, Customer
 
 tblSysvar
+---------------------------------------------------
+Build New
+Add core service
+Add SuperKnuth

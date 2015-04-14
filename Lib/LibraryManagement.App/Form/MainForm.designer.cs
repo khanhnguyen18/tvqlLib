@@ -59,7 +59,7 @@ namespace LibraryManagement.App
             this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem6 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem7 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.blbiChangePass = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
@@ -124,7 +124,7 @@ namespace LibraryManagement.App
             this.barLargeButtonItem4,
             this.barLargeButtonItem5,
             this.barLargeButtonItem6,
-            this.barLargeButtonItem7});
+            this.blbiChangePass});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
             this.barManager_0.MaxItemId = 19;
@@ -181,7 +181,7 @@ namespace LibraryManagement.App
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem5),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem7)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiChangePass)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
@@ -248,13 +248,13 @@ namespace LibraryManagement.App
             this.barLargeButtonItem6.LargeImageIndex = 8;
             this.barLargeButtonItem6.Name = "barLargeButtonItem6";
             // 
-            // barLargeButtonItem7
+            // blbiChangePass
             // 
-            this.barLargeButtonItem7.Caption = "Đổi mật khẩu";
-            this.barLargeButtonItem7.Id = 18;
-            this.barLargeButtonItem7.LargeImageIndex = 10;
-            this.barLargeButtonItem7.Name = "barLargeButtonItem7";
-            this.barLargeButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem7_ItemClick);
+            this.blbiChangePass.Caption = "Đổi mật khẩu";
+            this.blbiChangePass.Id = 18;
+            this.blbiChangePass.LargeImageIndex = 10;
+            this.blbiChangePass.Name = "blbiChangePass";
+            this.blbiChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiChangePass_ItemClick);
             // 
             // barDockControl_0
             // 
@@ -607,7 +607,7 @@ namespace LibraryManagement.App
         private BarLargeButtonItem barLargeButtonItem4;
         private BarLargeButtonItem barLargeButtonItem5;
         private BarLargeButtonItem barLargeButtonItem6;
-        private BarLargeButtonItem barLargeButtonItem7;
+        private BarLargeButtonItem blbiChangePass;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
 
     }

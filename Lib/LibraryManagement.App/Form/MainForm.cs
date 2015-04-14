@@ -161,7 +161,7 @@ namespace LibraryManagement.App
 
         private void iPass_ItemClick(object sender, ItemClickEventArgs e)
         {
-            ToolsGui.BindToParentForm(new FrmChangePass(), this);
+            ToolsGui.BindToParentForm(new ChangePassForm(), this);
         }
         #endregion
 
@@ -435,7 +435,7 @@ namespace LibraryManagement.App
                         return;
 
                     case "PASSCHANGE":
-                        ToolsGui.BindToParentForm(new FrmChangePass(), this);
+                        ToolsGui.BindToParentForm(new ChangePassForm(), this);
                         return;
 
                     case "USERMNG":
@@ -627,9 +627,10 @@ namespace LibraryManagement.App
             ToolsGui.BindToParentForm(new FrmLibraryInfo(), this);
         }
 
-        private void barLargeButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        private void blbiChangePass_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            ToolsGui.BindToParentForm(new ChangePassForm(), this);
+            
         }
     }
 }
