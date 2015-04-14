@@ -626,5 +626,10 @@ namespace LibraryManagement.App
         {
             ToolsGui.BindToParentForm(new FrmLibraryInfo(), this);
         }
+
+        private void barLargeButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

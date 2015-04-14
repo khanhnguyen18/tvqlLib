@@ -9,9 +9,9 @@ using ArtDe;
 
 namespace WindowsApplication1
 {
-    public partial class Form1 : Form
+    public partial class ArtDe : Form
     {
-        public Form1()
+        public ArtDe()
         {
             InitializeComponent();
         }

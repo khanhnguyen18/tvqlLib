@@ -117,6 +117,7 @@
     <Compile Include="Report\library_card.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SingletonUser.cs" />
     <Compile Include="Stock\Report\v_frsupp.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -130,10 +131,10 @@
     <Compile Include="ZFormOld\FrmCashIO.Designer.cs">
       <DependentUpon>FrmCashIO.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmChangePass.cs">
+    <Compile Include="Form\FrmChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmChangePass.Designer.cs">
+    <Compile Include="Form\FrmChangePass.Designer.cs">
       <DependentUpon>FrmChangePass.cs</DependentUpon>
     </Compile>
     <Compile Include="ZFormOld\FrmChangePrice.cs">
@@ -783,7 +784,7 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmCashIO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmChangePass.resx">
+    <EmbeddedResource Include="Form\FrmChangePass.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmChangePass.cs</DependentUpon>
     </EmbeddedResource>

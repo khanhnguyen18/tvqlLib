@@ -1,6 +1,6 @@
 namespace WindowsApplication1
 {
-    partial class Form1
+    partial class ArtDe
     {
         /// <summary>
         /// Required designer variable.

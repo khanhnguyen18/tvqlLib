@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace WindowsApplication1
+namespace SuperKnuthForm
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace WindowsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ArtDe());
+            Application.Run(new KForm());
         }
     }
 }

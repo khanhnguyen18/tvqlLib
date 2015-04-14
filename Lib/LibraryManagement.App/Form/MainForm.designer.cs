@@ -55,6 +55,11 @@ namespace LibraryManagement.App
             this.blbiPrintCard = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem6 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem7 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
@@ -64,6 +69,7 @@ namespace LibraryManagement.App
             this.Txt_Date = new DevExpress.XtraBars.BarStaticItem();
             this.iMail = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection_0 = new DevExpress.Utils.ImageCollection(this.components);
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.bar_3 = new DevExpress.XtraBars.Bar();
             this.barDockControl_4 = new DevExpress.XtraBars.BarDockControl();
             this.imageList_1 = new System.Windows.Forms.ImageList(this.components);
@@ -85,10 +91,9 @@ namespace LibraryManagement.App
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).BeginInit();
             this.cnvLekth7.SuspendLayout();
@@ -116,10 +121,15 @@ namespace LibraryManagement.App
             this.barLargeButtonItem1,
             this.barLargeButtonItem2,
             this.barLargeButtonItem3,
-            this.barLargeButtonItem4});
+            this.barLargeButtonItem4,
+            this.barLargeButtonItem5,
+            this.barLargeButtonItem6,
+            this.barLargeButtonItem7});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 15;
+            this.barManager_0.MaxItemId = 19;
+            this.barManager_0.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.barManager_0.StatusBar = this.statusBar;
             this.barManager_0.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barManager_0_ItemClick);
             // 
@@ -168,7 +178,10 @@ namespace LibraryManagement.App
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem7)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
@@ -205,19 +218,57 @@ namespace LibraryManagement.App
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Nhập Kho NCC";
+            this.barLargeButtonItem3.Id = 13;
+            this.barLargeButtonItem3.LargeImageIndex = 5;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem3_ItemClick);
+            // 
+            // barLargeButtonItem4
+            // 
+            this.barLargeButtonItem4.Caption = "Hàng tồn kho ";
+            this.barLargeButtonItem4.Id = 14;
+            this.barLargeButtonItem4.LargeImageIndex = 7;
+            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
+            this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
+            // 
+            // barLargeButtonItem5
+            // 
+            this.barLargeButtonItem5.Caption = "Trả hàng NCC";
+            this.barLargeButtonItem5.Id = 16;
+            this.barLargeButtonItem5.LargeImageIndex = 9;
+            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
+            // 
+            // barLargeButtonItem6
+            // 
+            this.barLargeButtonItem6.Caption = "Thanh lý sách";
+            this.barLargeButtonItem6.Id = 17;
+            this.barLargeButtonItem6.LargeImageIndex = 8;
+            this.barLargeButtonItem6.Name = "barLargeButtonItem6";
+            // 
+            // barLargeButtonItem7
+            // 
+            this.barLargeButtonItem7.Caption = "Đổi mật khẩu";
+            this.barLargeButtonItem7.Id = 18;
+            this.barLargeButtonItem7.LargeImageIndex = 10;
+            this.barLargeButtonItem7.Name = "barLargeButtonItem7";
+            this.barLargeButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem7_ItemClick);
+            // 
             // barDockControl_0
             // 
             this.barDockControl_0.CausesValidation = false;
             this.barDockControl_0.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl_0.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl_0.Size = new System.Drawing.Size(787, 87);
+            this.barDockControl_0.Size = new System.Drawing.Size(836, 87);
             // 
             // barDockControl_1
             // 
             this.barDockControl_1.CausesValidation = false;
             this.barDockControl_1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControl_1.Location = new System.Drawing.Point(0, 489);
-            this.barDockControl_1.Size = new System.Drawing.Size(787, 26);
+            this.barDockControl_1.Size = new System.Drawing.Size(836, 26);
             // 
             // barDockControl_2
             // 
@@ -230,7 +281,7 @@ namespace LibraryManagement.App
             // 
             this.barDockControl_3.CausesValidation = false;
             this.barDockControl_3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl_3.Location = new System.Drawing.Point(787, 87);
+            this.barDockControl_3.Location = new System.Drawing.Point(836, 87);
             this.barDockControl_3.Size = new System.Drawing.Size(0, 402);
             // 
             // imageList_0
@@ -300,6 +351,15 @@ namespace LibraryManagement.App
             this.imageCollection_0.Images.SetKeyName(4, "32stopwatch_red.png");
             this.imageCollection_0.Images.SetKeyName(5, "32export2.png");
             this.imageCollection_0.Images.SetKeyName(6, "32firewall.png");
+            this.imageCollection_0.Images.SetKeyName(7, "Goods_warehouse_products_shipping_Fix1.png");
+            this.imageCollection_0.Images.SetKeyName(8, "1428956435_palet03.png");
+            this.imageCollection_0.Images.SetKeyName(9, "32truck_red.png");
+            this.imageCollection_0.Images.SetKeyName(10, "32key.png");
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // bar_3
             // 
@@ -471,27 +531,11 @@ namespace LibraryManagement.App
             // 
             this.defaultLookAndFeel_0.LookAndFeel.SkinName = "DevExpress Style";
             // 
-            // barLargeButtonItem3
-            // 
-            this.barLargeButtonItem3.Caption = "Nhập Kho";
-            this.barLargeButtonItem3.Id = 13;
-            this.barLargeButtonItem3.LargeImageIndex = 5;
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
-            this.barLargeButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem3_ItemClick);
-            // 
-            // barLargeButtonItem4
-            // 
-            this.barLargeButtonItem4.Caption = "Tồn kho";
-            this.barLargeButtonItem4.Id = 14;
-            this.barLargeButtonItem4.LargeImageIndex = 6;
-            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
-            this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 515);
+            this.ClientSize = new System.Drawing.Size(836, 515);
             this.Controls.Add(this.cnvLekth7);
             this.Controls.Add(this.barDockControl_4);
             this.Controls.Add(this.barDockControl_2);
@@ -505,6 +549,7 @@ namespace LibraryManagement.App
             this.Load += new System.EventHandler(this.FrmMain1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cnvLekth7)).EndInit();
             this.cnvLekth7.ResumeLayout(false);
@@ -560,6 +605,10 @@ namespace LibraryManagement.App
         private BarLargeButtonItem barLargeButtonItem2;
         private BarLargeButtonItem barLargeButtonItem3;
         private BarLargeButtonItem barLargeButtonItem4;
+        private BarLargeButtonItem barLargeButtonItem5;
+        private BarLargeButtonItem barLargeButtonItem6;
+        private BarLargeButtonItem barLargeButtonItem7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
 
     }
 }

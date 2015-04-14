@@ -4,11 +4,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8355EB7C-7C2A-4752-9A6E-DAF669F76F84}</ProjectGuid>
+    <ProjectGuid>{46E218FC-D034-42EC-A7BC-99F8EDA10B32}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsApplication1</RootNamespace>
-    <AssemblyName>WindowsApplication1</AssemblyName>
+    <RootNamespace>SuperKnuthForm</RootNamespace>
+    <AssemblyName>SuperKnuth.Form</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,21 +36,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtDe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ArtDe.Designer.cs">
-      <DependentUpon>ArtDe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ArtDe.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>ArtDe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KForm.resx">
+      <DependentUpon>KForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -67,12 +61,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="KForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KForm.Designer.cs">
+      <DependentUpon>KForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ArtDe\ArtDe.csproj">
-      <Project>{AEDC9C15-159C-4B76-A93B-9B783B38423C}</Project>
-      <Name>ArtDe</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SuperKnuth\SuperKnuth.csproj">
       <Project>{67C17632-B8D8-4793-A9B4-7CA838E7A381}</Project>
       <Name>SuperKnuth</Name>
