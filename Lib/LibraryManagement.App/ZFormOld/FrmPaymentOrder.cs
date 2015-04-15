@@ -92,7 +92,7 @@ namespace LibraryManagement.App
                 this.Txt_Remark.Focus();
                 return;
             }
-            if (Class7.ParseDoubleValue(this.Txt_Amount.Text) <= 0.0)
+            if (Class7.smethod_0(this.Txt_Amount.Text) <= 0.0)
             {
                 Class7.ShowMessageBox("Số tiền kh\x00f4ng hợp lệ", 1);
                 this.Txt_Amount.Focus();
@@ -101,8 +101,8 @@ namespace LibraryManagement.App
             string str = string.Format("{0:MM/dd/yyyy}", this.Txt_TranDate.EditValue);
             string str2 = this.Txt_Voucher.Text.Trim();
             string str3 = this.Txt_DbAccId.EditValue.ToString();
-            double num = Class7.ParseDoubleValue(this.Txt_Amount.Text);
-            double num2 = Class7.ParseDoubleValue(this.Txt_Amount.Text);
+            double num = Class7.smethod_0(this.Txt_Amount.Text);
+            double num2 = Class7.smethod_0(this.Txt_Amount.Text);
             string str4 = this.Txt_CreAccId.EditValue.ToString();
             string str5 = this.Txt_Remark.Text.Trim();
             string str6 = this.Txt_Payer.Text.Trim();
@@ -113,7 +113,7 @@ namespace LibraryManagement.App
             string str11 = this.Txt_BenAccId.Text.Trim();
             string str12 = this.Txt_BenBank.Text.Trim();
             string str13 = this.Txt_BenBranch.Text.Trim();
-            double num3 = Class7.ParseDoubleValue(this.Txt_Amount.Text);
+            double num3 = Class7.smethod_0(this.Txt_Amount.Text);
             string str14 = this.Txt_TransNum.Text.Trim();
             string str15 = this.IjSwogAv6;
             switch (str15)

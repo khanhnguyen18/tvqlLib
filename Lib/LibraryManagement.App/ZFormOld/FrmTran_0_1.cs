@@ -90,7 +90,7 @@ namespace LibraryManagement.App
                 string str2 = string.Format("{0:MM/dd/yyyy}", this.Txt_TranDate.EditValue);
                 string str3 = this.Txt_Voucher.Text.Trim();
                 string str4 = this.Txt_Account.EditValue.ToString();
-                double num = Class7.ParseDoubleValue(this.Txt_Amount.Text);
+                double num = Class7.smethod_0(this.Txt_Amount.Text);
                 double num2 = 0.0;
                 string str5 = string.Empty;
                 string str6 = this.Txt_Remark.Text.Trim();

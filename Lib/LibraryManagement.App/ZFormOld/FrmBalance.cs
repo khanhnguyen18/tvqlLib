@@ -28,7 +28,7 @@ namespace LibraryManagement.App
             {
                 this.Txt_GoodsId.Focus();
             }
-            else if ((Class7.ParseDoubleValue(this.Txt_MinusQty.Text) < 0.0) | (Class7.ParseDoubleValue(this.Txt_PlusQty.Text) < 0.0))
+            else if ((Class7.smethod_0(this.Txt_MinusQty.Text) < 0.0) | (Class7.smethod_0(this.Txt_PlusQty.Text) < 0.0))
             {
                 this.Txt_MinusQty.Focus();
             }
@@ -36,18 +36,18 @@ namespace LibraryManagement.App
             {
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.ParseDoubleValue(this.Txt_MinusQty.Text);
-                double num2 = Class7.ParseDoubleValue(this.Txt_PlusQty.Text);
-                double num3 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num = Class7.smethod_0(this.Txt_MinusQty.Text);
+                double num2 = Class7.smethod_0(this.Txt_PlusQty.Text);
+                double num3 = Class7.smethod_0(this.Txt_Price.Text);
                 double num4 = num3 * num2;
                 double num5 = num3 * num;
                 string str3 = this.Cmb_Unit.Text.Trim();
-                if (Class7.ParseDoubleValue(this.Txt_MinusQty.Text) < 0.0)
+                if (Class7.smethod_0(this.Txt_MinusQty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_MinusQty.Focus();
                 }
-                else if (Class7.ParseDoubleValue(this.Txt_PlusQty.Text) < 0.0)
+                else if (Class7.smethod_0(this.Txt_PlusQty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_PlusQty.Focus();
@@ -299,8 +299,8 @@ namespace LibraryManagement.App
             this.oleDbConnection_1.Close();
             foreach (DataRow row in dataTable.Rows)
             {
-                double num1 = (Class7.ParseDoubleValue(row["pqty"].ToString()) == 0.0) ? Class7.ParseDoubleValue(row["mqty"].ToString()) : Class7.ParseDoubleValue(row["pqty"].ToString());
-                double num2 = (Class7.ParseDoubleValue(row["pamount"].ToString()) == 0.0) ? Class7.ParseDoubleValue(row["mamount"].ToString()) : Class7.ParseDoubleValue(row["pamount"].ToString());
+                double num1 = (Class7.smethod_0(row["pqty"].ToString()) == 0.0) ? Class7.smethod_0(row["mqty"].ToString()) : Class7.smethod_0(row["pqty"].ToString());
+                double num2 = (Class7.smethod_0(row["pamount"].ToString()) == 0.0) ? Class7.smethod_0(row["mamount"].ToString()) : Class7.smethod_0(row["pamount"].ToString());
                 string selectCommandText = string.Concat(new object[] { 
                     "IF EXISTS (SELECT id FROM tblStockInfo WHERE id = '", str, "' and goods_id = '", row["goods_id"], "') UPDATE  tblStockInfo SET Imp_qty = imp_qty + ", row["pqty"], " , imp_amt = imp_amt + ", row["pamount"], ",  exp_qty = exp_qty + ", row["mqty"], ", exp_amt = exp_amt + ", row["mamount"], ", last_date ='", Class6.string_13, "' WHERE id = '", str, 
                     "' AND goods_id = '", row["goods_id"], "' Else INSERT INTO tblStockInfo(id,goods_id, Imp_qty,imp_amt,exp_qty, exp_amt, last_date )  VALUES('", str, "','", row["goods_id"], "',", row["pqty"], ", ", row["pamount"], ",", row["mqty"], ",", row["mamount"], ",'", Class6.string_13, 
@@ -328,10 +328,10 @@ namespace LibraryManagement.App
             this.oleDbConnection_1.Close();
             foreach (DataRow row in dataTable.Rows)
             {
-                string str6 = (Class7.ParseDoubleValue(row["mqty"].ToString()) == 0.0) ? "" : str3;
-                string str5 = (Class7.ParseDoubleValue(row["pqty"].ToString()) == 0.0) ? "" : str3;
-                double num = (Class7.ParseDoubleValue(row["pqty"].ToString()) == 0.0) ? Class7.ParseDoubleValue(row["mqty"].ToString()) : Class7.ParseDoubleValue(row["pqty"].ToString());
-                double num2 = (Class7.ParseDoubleValue(row["mamount"].ToString()) == 0.0) ? Class7.ParseDoubleValue(row["pamount"].ToString()) : Class7.ParseDoubleValue(row["mamount"].ToString());
+                string str6 = (Class7.smethod_0(row["mqty"].ToString()) == 0.0) ? "" : str3;
+                string str5 = (Class7.smethod_0(row["pqty"].ToString()) == 0.0) ? "" : str3;
+                double num = (Class7.smethod_0(row["pqty"].ToString()) == 0.0) ? Class7.smethod_0(row["mqty"].ToString()) : Class7.smethod_0(row["pqty"].ToString());
+                double num2 = (Class7.smethod_0(row["mamount"].ToString()) == 0.0) ? Class7.smethod_0(row["pamount"].ToString()) : Class7.smethod_0(row["mamount"].ToString());
                 string selectCommandText = string.Concat(new object[] { 
                     "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, invoice, post, exp_id, imp_id,goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id,cs_id,remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station) VALUES('", str, "',convert(VARCHAR(5),getdate(),108),'", str2, "','", this.string_2, "','','',0,'", str6, "','", str5, "','", row["goods_id"], "',", num, ",'", row["unitsymb"], 
                     "',", num2, ",0,0,0,0, ", Class7.GetUserId(), ",'',N'", str4, "',0,'01','',0,0,0,0,", row["idx"], ",1,", Class7.smethod_51(), ")"
@@ -354,11 +354,11 @@ namespace LibraryManagement.App
             this.oleDbConnection_1.Close();
             foreach (DataRow row in dataTable.Rows)
             {
-                double num = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["qty"].ToString()) : 0.0;
-                double num2 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["qty"].ToString()) : 0.0;
-                double num3 = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["amount"].ToString()) : 0.0;
-                double num4 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["amount"].ToString()) : 0.0;
-                double num1 = Class7.ParseDoubleValue(row["amount"].ToString()) / Class7.ParseDoubleValue(row["qty"].ToString());
+                double num = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["qty"].ToString()) : 0.0;
+                double num2 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["qty"].ToString()) : 0.0;
+                double num3 = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["amount"].ToString()) : 0.0;
+                double num4 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["amount"].ToString()) : 0.0;
+                double num1 = Class7.smethod_0(row["amount"].ToString()) / Class7.smethod_0(row["qty"].ToString());
                 selectCommandText = string.Concat(new object[] { "UPDATE  tblStockInfo SET exp_qty = exp_qty - ", num2, ",exp_amt = exp_amt - ", num4, ", imp_qty = imp_qty - ", num, ", imp_amt = imp_amt - ", num3, " WHERE id = '", str2, "' AND goods_id = '", row["goods_id"].ToString(), "' " });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
@@ -371,11 +371,11 @@ namespace LibraryManagement.App
 
         private void timer_0_Tick(object sender, EventArgs e)
         {
-            if (Class7.ParseDoubleValue(this.Txt_MinusQty.Text) != 0.0)
+            if (Class7.smethod_0(this.Txt_MinusQty.Text) != 0.0)
             {
                 this.Txt_PlusQty.Text = "0";
             }
-            if (Class7.ParseDoubleValue(this.Txt_PlusQty.Text) != 0.0)
+            if (Class7.smethod_0(this.Txt_PlusQty.Text) != 0.0)
             {
                 this.Txt_MinusQty.Text = "0";
             }
@@ -446,7 +446,7 @@ namespace LibraryManagement.App
                         this.Txt_EndQty.EditValue = class2.method_21(str3, str4);
                         if (class2.method_21(str3, str4) == 0.0)
                         {
-                            this.Txt_Price.EditValue = Class7.ParseDoubleValue(set2.Tables[0].Rows[0]["lastimppr"].ToString());
+                            this.Txt_Price.EditValue = Class7.smethod_0(set2.Tables[0].Rows[0]["lastimppr"].ToString());
                         }
                         else
                         {
@@ -504,11 +504,11 @@ namespace LibraryManagement.App
                         this.oleDbConnection_1.Close();
                         foreach (DataRow row in dataTable.Rows)
                         {
-                            double num = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["qty"].ToString()) : 0.0;
-                            double num4 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["qty"].ToString()) : 0.0;
-                            double num5 = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["amount"].ToString()) : 0.0;
-                            double num2 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.ParseDoubleValue(row["amount"].ToString()) : 0.0;
-                            double num3 = Class7.ParseDoubleValue(row["amount"].ToString()) / Class7.ParseDoubleValue(row["qty"].ToString());
+                            double num = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["qty"].ToString()) : 0.0;
+                            double num4 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["qty"].ToString()) : 0.0;
+                            double num5 = (row["exp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["amount"].ToString()) : 0.0;
+                            double num2 = (row["imp_id"].ToString().Trim() == string.Empty) ? Class7.smethod_0(row["amount"].ToString()) : 0.0;
+                            double num3 = Class7.smethod_0(row["amount"].ToString()) / Class7.smethod_0(row["qty"].ToString());
                             selectCommandText = string.Concat(new object[] { 
                                 "INSERT INTO ", this.string_1, "(idx, goods_id, Name, pqty, mqty, price, mamount, pamount, unitsymb, merc_type) VALUES(", row["recnum"], ",'", row["goods_id"], "',N'", row["full_name"], "',", num, ",", num4, ", ", num3, ",", num2, 
                                 ",", num5, ",'", row["unit_symb"], "','01') "

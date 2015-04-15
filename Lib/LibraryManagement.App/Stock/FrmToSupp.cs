@@ -23,6 +23,7 @@ namespace LibraryManagement.App
             this.oleDbConnection_0 = new OleDbConnection(Class7.string_4);
             this.oleDbConnection_1 = new OleDbConnection(Class7.string_5);
             this.string_0 = "TOSUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
+
         }
 
 
@@ -166,8 +167,8 @@ namespace LibraryManagement.App
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str4 = this.Txt_ExpID.Text.Trim();
                 string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
-                double num2 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num = Class7.smethod_0(this.Txt_Qty.Text);
+                double num2 = Class7.smethod_0(this.Txt_Price.Text);
                 string str3 = this.Cmb_Unit.Text.Trim();
                 Class6 class2 = new Class6();
                 if (!class2.method_22() && (class2.method_21(str, str4) < num))
@@ -175,7 +176,7 @@ namespace LibraryManagement.App
                     Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                     this.Txt_Qty.Focus();
                 }
-                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -234,7 +235,7 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_Price.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn gi\x00e1").ToString();
@@ -325,7 +326,7 @@ namespace LibraryManagement.App
                 if (dataSet.Tables[0].Rows.Count != 0)
                 {
                     this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                    this.Txt_Price.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["lastimppr"].ToString());
+                    this.Txt_Price.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["lastimppr"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.SelectedIndex = 0;

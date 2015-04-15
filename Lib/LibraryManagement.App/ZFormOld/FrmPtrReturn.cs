@@ -127,7 +127,7 @@ namespace LibraryManagement.App
         {
             if (this.Lbl_MercName.Text != string.Empty)
             {
-                if (Class7.ParseDoubleValue(this.Txt_Qty.Text) > Class7.ParseDoubleValue(this.Txt_OldQty.Text))
+                if (Class7.smethod_0(this.Txt_Qty.Text) > Class7.smethod_0(this.Txt_OldQty.Text))
                 {
                     Class7.ShowMessageBox("Lượng trả lại kh\x00f4ng thể lớn hơn lượng đ\x00e3 b\x00e1n !", 1);
                     this.Txt_Qty.Focus();
@@ -135,12 +135,12 @@ namespace LibraryManagement.App
                 }
                 else
                 {
-                    double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
+                    double num = Class7.smethod_0(this.Txt_Qty.Text);
                     string str = this.Txt_GoodsId.Text.Trim();
-                    double num2 = (Class7.ParseDoubleValue(this.Txt_Amount.Text) / Class7.ParseDoubleValue(this.Txt_OldQty.Text)) * num;
-                    double num3 = (Class7.ParseDoubleValue(this.Txt_Discount.Text) / Class7.ParseDoubleValue(this.Txt_OldQty.Text)) * num;
-                    double num4 = (Class7.ParseDoubleValue(this.Txt_Surplus.Text) / Class7.ParseDoubleValue(this.Txt_OldQty.Text)) * num;
-                    double num5 = (Class7.ParseDoubleValue(this.Txt_Vatamt.Text) / Class7.ParseDoubleValue(this.Txt_OldQty.Text)) * num;
+                    double num2 = (Class7.smethod_0(this.Txt_Amount.Text) / Class7.smethod_0(this.Txt_OldQty.Text)) * num;
+                    double num3 = (Class7.smethod_0(this.Txt_Discount.Text) / Class7.smethod_0(this.Txt_OldQty.Text)) * num;
+                    double num4 = (Class7.smethod_0(this.Txt_Surplus.Text) / Class7.smethod_0(this.Txt_OldQty.Text)) * num;
+                    double num5 = (Class7.smethod_0(this.Txt_Vatamt.Text) / Class7.smethod_0(this.Txt_OldQty.Text)) * num;
                     string str2 = this.Lbl_MercName.Text.Trim();
                     string str3 = this.Lbl_Unit.Text.Trim();
                     this.string_1 = string.Concat(new object[] { 

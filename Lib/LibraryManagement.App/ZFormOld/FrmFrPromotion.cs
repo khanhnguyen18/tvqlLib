@@ -159,11 +159,11 @@ namespace LibraryManagement.App
             {
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
-                double num2 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num = Class7.smethod_0(this.Txt_Qty.Text);
+                double num2 = Class7.smethod_0(this.Txt_Price.Text);
                 double num3 = 0.0;
                 string str3 = this.Cmb_Unit.Text.Trim();
-                if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
+                if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -238,7 +238,7 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_Price.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn gi\x00e1").ToString();

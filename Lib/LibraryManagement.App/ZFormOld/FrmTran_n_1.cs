@@ -58,7 +58,7 @@ namespace LibraryManagement.App
                 Class7.ShowMessageBox("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
                 this.Txt_Remark.Focus();
             }
-            else if (Class7.ParseDoubleValue(this.Txt_CreAmt1.Text) <= 0.0)
+            else if (Class7.smethod_0(this.Txt_CreAmt1.Text) <= 0.0)
             {
                 Class7.ShowMessageBox("Số tiền kh\x00f4ng hợp lệ", 1);
                 this.Txt_CreAmt1.Focus();
@@ -77,9 +77,9 @@ namespace LibraryManagement.App
                     string str3 = string.Format("{0:MM/dd/yyyy}", this.Txt_TranDate.EditValue);
                     string str4 = this.Txt_Voucher.Text.Trim();
                     string str5 = this.Txt_DebAccId.EditValue.ToString();
-                    double num2 = Class7.ParseDoubleValue(this.Txt_CreAmt1.Text);
-                    double num3 = Class7.ParseDoubleValue(this.Txt_CreAmt2.Text);
-                    double num = Class7.ParseDoubleValue(this.Txt_CreAmt3.Text);
+                    double num2 = Class7.smethod_0(this.Txt_CreAmt1.Text);
+                    double num3 = Class7.smethod_0(this.Txt_CreAmt2.Text);
+                    double num = Class7.smethod_0(this.Txt_CreAmt3.Text);
                     string str6 = this.Txt_Remark.Text.Trim();
                     string str2 = this.Txt_TransNum.Text.Trim();
                     Class12.smethod_3(str2, str3, str4, str5, num2, 0.0, this.Txt_CreAccId1.EditValue.ToString(), str6, 2);
@@ -97,7 +97,7 @@ namespace LibraryManagement.App
                     Class12.smethod_2(this.Txt_CreAccId1.EditValue.ToString(), num2, false);
                     Class12.smethod_2(this.Txt_CreAccId2.EditValue.ToString(), num3, false);
                     Class12.smethod_2(this.Txt_CreAccId3.EditValue.ToString(), num, false);
-                    Class12.smethod_2(this.Txt_DebAccId.EditValue.ToString(), Class7.ParseDoubleValue(this.Lbl_DebitAmt.Text), true);
+                    Class12.smethod_2(this.Txt_DebAccId.EditValue.ToString(), Class7.smethod_0(this.Lbl_DebitAmt.Text), true);
                     new Class6().ComputeTransnum("A");
                 }
                 Class6.transNum = this.Txt_TransNum.Text.Trim();
@@ -153,7 +153,7 @@ namespace LibraryManagement.App
         {
             try
             {
-                double num = (Class7.ParseDoubleValue(this.Txt_CreAmt3.Text) + Class7.ParseDoubleValue(this.Txt_CreAmt2.Text)) + Class7.ParseDoubleValue(this.Txt_CreAmt1.Text);
+                double num = (Class7.smethod_0(this.Txt_CreAmt3.Text) + Class7.smethod_0(this.Txt_CreAmt2.Text)) + Class7.smethod_0(this.Txt_CreAmt1.Text);
                 this.Lbl_DebitAmt.Text = string.Format("{0:n2}", num);
             }
             catch (Exception)

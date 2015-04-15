@@ -28,10 +28,10 @@ namespace LibraryManagement.App
         {
             string str = this.Txt_GoodsId.Text.Trim();
             string text = this.Lbl_MercName.Text;
-            double num = Class7.ParseDoubleValue(this.Txt_Price.Text);
-            double num2 = Class7.ParseDoubleValue(this.Txt_Qty.Text);
+            double num = Class7.smethod_0(this.Txt_Price.Text);
+            double num2 = Class7.smethod_0(this.Txt_Qty.Text);
             string str3 = this.Lbl_Unit.Text;
-            double num3 = Class7.ParseDoubleValue(this.Txt_EndQty.Text);
+            double num3 = Class7.smethod_0(this.Txt_EndQty.Text);
             this.string_2 = string.Concat(new object[] { 
                 "IF EXISTS(SELECT goods_id FROM ", this.string_0, " WHERE goods_id = '", str, "')  UPDATE ", this.string_0, " SET qty = ", num2, " WHERE goods_id = '", str, "'  ELSE  INSERT INTO ", this.string_0, " (goods_id, Name,unitsymb, qty, price,end_qty )  VALUES     ('", str, "',N'", text, 
                 "','", str3, "',", num2, ",", num, ",", num3, ");  DELETE FROM ", this.string_0, " WHERE qty <= 0 "
@@ -285,7 +285,7 @@ namespace LibraryManagement.App
             if (dataSet.Tables[0].Rows.Count != 0)
             {
                 this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                this.Txt_Price.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["prefprice"].ToString());
+                this.Txt_Price.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["prefprice"].ToString());
                 this.Txt_Qty.Text = "1";
                 this.Lbl_Unit.Text = dataSet.Tables[0].Rows[0]["piceunit"].ToString();
                 this.Txt_EndQty.EditValue = new Class6().method_21(str3, "00002");

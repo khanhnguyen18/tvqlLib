@@ -219,8 +219,8 @@ namespace LibraryManagement.App
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = this.Txt_ExpID.Text.Trim();
                 string str3 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
-                double num2 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num = Class7.smethod_0(this.Txt_Qty.Text);
+                double num2 = Class7.smethod_0(this.Txt_Price.Text);
                 string str4 = this.Cmb_Unit.Text.Trim();
                 Class6 class2 = new Class6();
                 if (!class2.method_22() && (class2.method_21(str, str2) < num))
@@ -228,7 +228,7 @@ namespace LibraryManagement.App
                     Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                     this.Txt_Qty.Focus();
                 }
-                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -514,7 +514,7 @@ namespace LibraryManagement.App
                 if (set2.Tables[0].Rows.Count != 0)
                 {
                     this.Lbl_MercName.Text = set2.Tables[0].Rows[0]["full_name"].ToString();
-                    this.Txt_Price.EditValue = Class7.ParseDoubleValue(set2.Tables[0].Rows[0]["prefprice"].ToString());
+                    this.Txt_Price.EditValue = Class7.smethod_0(set2.Tables[0].Rows[0]["prefprice"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(set2.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(set2.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.SelectedIndex = 0;

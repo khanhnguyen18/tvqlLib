@@ -156,7 +156,7 @@ namespace LibraryManagement.App
 
         private void iMail_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //ToolsGui.BindToParentForm(new FrmStationView(), this);
+            ToolsGui.BindToParentForm(new FrmStationView(), this);
         }
 
         private void iPass_ItemClick(object sender, ItemClickEventArgs e)
@@ -246,17 +246,62 @@ namespace LibraryManagement.App
         {
             try
             {
+                FrmPtrList list;
                 switch (e.Item.Tag.ToString())
                 {
+                    case "POSSALE":
+                        if (Class10.smethod_0())
+                        {
+                            break;
+                        }
+                        Class7.ShowMessageBox("Trạm " + SystemInformation.ComputerName + " kh\x00f4ng phải l\x00e0 trạm b\x00e1n h\x00e0ng", 1);
+                        return;
+
+                    case "PTRLIST":
+                        new FrmGetDates().ShowDialog();
+                        if (Class7.IsInputDate)
+                        {
+                            goto Label_04AF;
+                        }
+                        return;
+
+                    case "MERCRT":
+                        FrmPtrReturn frm = new FrmPtrReturn();
+                        frm.MdiParent = this;
+                        frm.Show();
+                        return;
+
+                    case "PTRDELETE":
+                        FrmPtrDelete frm1 = new FrmPtrDelete();
+                        frm1.MdiParent = this;
+                        frm1.Show();
+                        return;
+
                     case "PREPORTS":
                         Class11.string_1 = "P";
                         ToolsGui.BindToParentForm(new FrmReports(), this);
+                        return;
+
+                    case "MERCSEARCH":
+                        FrmMercPosView frm2 = new FrmMercPosView();
+                        frm2.MdiParent = this;
+                        frm2.Show();
+
+
+                        return;
+
+                    case "CURRENCY":
+                        FrmCurrency frm3 = new FrmCurrency();
+                        frm3.MdiParent = this;
+                        frm3.Show();
+
                         return;
 
                     case "STOCKADD":
                         FrmLibraryDef frm4 = new FrmLibraryDef();
                         frm4.MdiParent = this;
                         frm4.Show();
+
                         return;
 
                     case "UNITS":
@@ -283,14 +328,65 @@ namespace LibraryManagement.App
                         ToolsGui.BindToParentForm(new CardPrintForm(), this);
                         return;
 
+                    case "KITS":
+                        ToolsGui.BindToParentForm(new FrmKitDef(), this);
+                        return;
+
+                    case "KITLABELS":
+                        ToolsGui.BindToParentForm(new FrmKitLabelPrn(), this);
+                        return;
+
+                    case "KITSLIST":
+                        ToolsGui.BindToParentForm(new FrmKitList(), this);
+                        return;
+
+                    case "NOTEPRN":
+                        FrmNoteLabelPrn frm5 = new FrmNoteLabelPrn();
+                        frm5.MdiParent = this;
+                        frm5.Show();
+                        return;
+
+                    case "HISPRICE":
+                        new FrmGetDates().ShowDialog();
+                        if (Class7.IsInputDate)
+                        {
+                            goto Label_0627;
+                        }
+                        return;
+
                     case "CUSTOMER":
                         ReaderForm frm6 = new ReaderForm();
                         frm6.MdiParent = this;
                         frm6.Show();
+
+                        return;
+
+                    case "STRLIST":
+                        new FrmGetDates().ShowDialog();
+                        if (Class7.IsInputDate)
+                        {
+                            goto Label_0666;
+                        }
                         return;
 
                     case "ORDER":
                         ToolsGui.BindToParentForm(new FrmMercOrder(), this);
+                        return;
+
+                    case "ORDERAUTO":
+                        ToolsGui.BindToParentForm(new FrmAutoOrder(), this);
+                        return;
+
+                    case "ORDERLIST":
+                        new FrmGetDates().ShowDialog();
+                        if (Class7.IsInputDate)
+                        {
+                            goto Label_06AD;
+                        }
+                        return;
+
+                    case "MERCLIST":
+                        ToolsGui.BindToParentForm(new FrmMercList(), this);
                         return;
 
                     case "TRANSCODE":
@@ -315,17 +411,109 @@ namespace LibraryManagement.App
                         ToolsGui.BindToParentForm(new FrmReports(), this);
                         return;
 
+                    case "ADJUST":
+                        ToolsGui.BindToParentForm(new FrmAdjust_grp(), this);
+                        return;
+
                     case "SUPPDEF":
                         ToolsGui.BindToParentForm(new FrmCustomer(), this);
                         return;
+
+                    case "EXIT":
+                        if (Class7.ShowMessageBox("Bạn chắc chắn tho\x00e1t khỏi chương tr\x00ecnh ?", 2) == 1)
+                        {
+                            goto Label_0766;
+                        }
+                        return;
+
+                    case "STATIONS":
+                        ToolsGui.BindToParentForm(new FrmStations(), this);
+                        return;
+
+                    case "UTILS":
+                        //ToolsGui.BindToParentForm(new FrmUtils(), this);
+                        return;
+
+                    case "PASSCHANGE":
+                        ToolsGui.BindToParentForm(new ChangePassForm(), this);
+                        return;
+
+                    case "USERMNG":
+                        ToolsGui.BindToParentForm(new FrmUser(), this);
+                        return;
+
+                    case "USERGRP":
+                        ToolsGui.BindToParentForm(new FrmUserGrp(), this);
+                        return;
+
+
 
                     case "ABOUT":
                         new AboutForm().ShowDialog();
                         return;
 
+                    case "USERGUIDE":
+                        Process.Start("Library.chm");
+                        return;
+
+                    case "ACCTRANS":
+                        Class11.string_1 = "A";
+                        ToolsGui.BindToParentForm(new FrmAtrCode(), this);
+                        return;
+
+                    case "ACCTRLIST":
+                        new FrmGetDates().ShowDialog();
+                        if (Class7.IsInputDate)
+                        {
+                            goto Label_082D;
+                        }
+                        return;
+
+                    case "ACCLIST":
+                        ToolsGui.BindToParentForm(new FrmAcountList(), this);
+                        return;
+
+                    case "ACCLV1":
+                        ToolsGui.BindToParentForm(new FrmMap_01(), this);
+                        return;
+
+                    case "ACCLV2":
+                        ToolsGui.BindToParentForm(new FrmMap_02(), this);
+                        return;
+
+                    case "ACCLV3":
+                        ToolsGui.BindToParentForm(new FrmMap_03(), this);
+                        return;
+
+                    case "ACCDETAIL":
+                        ToolsGui.BindToParentForm(new FrmOpen_Acc(), this);
+                        return;
+
+                    case "ACCVIEW":
+                        ToolsGui.BindToParentForm(new FrmAccountInfo(), this);
+                        return;
+
+                    case "CREATETR":
+                        ToolsGui.BindToParentForm(new FrmCreateTran(), this);
+                        return;
+
                     case "AREPORT":
                         Class11.string_1 = "A";
                         ToolsGui.BindToParentForm(new FrmReports(), this);
+                        return;
+
+                    case "CSCARD":
+                        if (!(SystemInformation.ComputerName != "TUANANH"))
+                        {
+                            goto Label_08E0;
+                        }
+                        return;
+
+                    case "CSCARDINFO":
+                        if (!(SystemInformation.ComputerName != "TUANANH"))
+                        {
+                            goto Label_0909;
+                        }
                         return;
 
                     case "LOAN":
@@ -351,7 +539,9 @@ namespace LibraryManagement.App
                     case "LOANLST":
                         new FrmGetDates().ShowDialog();
                         if (Class7.IsInputDate)
-                            ToolsGui.BindToParentForm(new FrmLoanInvList(), this);
+                        {
+                            goto Label_096B;
+                        }
                         return;
 
                     case "LREPORTS":
@@ -365,8 +555,40 @@ namespace LibraryManagement.App
                     default:
                         return;
                 }
+                FrmPosSale frm9 = new FrmPosSale();
+                frm9.MdiParent = this;
+                frm9.Show();
 
-
+                return;
+            Label_04AF:
+                list = new FrmPtrList();
+                list.MdiParent = this;
+                list.Show();
+                return;
+            Label_0627:
+                ToolsGui.BindToParentForm(new FrmHisPrice(), this);
+                return;
+            Label_0666:
+                ToolsGui.BindToParentForm(new FrmStrList(), this);
+                return;
+            Label_06AD:
+                ToolsGui.BindToParentForm(new FrmOrderList(), this);
+                return;
+            Label_0766:
+                //Class7.smethod_25();
+                //Environment.Exit(0);
+                return;
+            Label_082D:
+                ToolsGui.BindToParentForm(new FrmAtrList(), this);
+                return;
+            Label_08E0:
+                ToolsGui.BindToParentForm(new FrmCsCard(), this);
+                return;
+            Label_0909:
+                ToolsGui.BindToParentForm(new FrmCsCardInfo(), this);
+                return;
+            Label_096B:
+                ToolsGui.BindToParentForm(new FrmLoanInvList(), this);
             }
             catch (Exception)
             {
@@ -410,18 +632,5 @@ namespace LibraryManagement.App
             ToolsGui.BindToParentForm(new ChangePassForm(), this);
             
         }
-
-        private void blbiSupplierReturn_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Class6.string_1 = "15";
-            ToolsGui.BindToParentForm(new FrmToSupp(), this);
-        }
-
-        private void blbiBuyOld_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Class6.string_1 = "19";
-            ToolsGui.BindToParentForm(new FrmBookLost(), this);
-        }
-
     }
 }

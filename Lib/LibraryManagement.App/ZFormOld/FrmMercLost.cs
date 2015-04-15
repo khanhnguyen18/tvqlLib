@@ -14,18 +14,11 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    public partial class FrmBookLost : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMercLost : DevExpress.XtraEditors.XtraForm
     {
-        public FrmBookLost()
+        public FrmMercLost()
         {
             InitializeComponent();
-            
-            
-            this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
-            this.string_0 = null;
-            this.string_1 = "TEMPSTR_" + Class6.smethod_0(SystemInformation.ComputerName);
-            this.string_2 = Class6.string_2;
-            this.string_3 = null;
         }
 
 
@@ -159,8 +152,8 @@ namespace LibraryManagement.App
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str4 = this.Txt_ExpID.Text.Trim();
                 string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
-                double num2 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num = Class7.smethod_0(this.Txt_Qty.Text);
+                double num2 = Class7.smethod_0(this.Txt_Price.Text);
                 string str3 = this.Cmb_Unit.Text.Trim();
                 Class6 class2 = new Class6();
                 if (!class2.method_22() && (class2.method_21(str, str4) < num))
@@ -168,7 +161,7 @@ namespace LibraryManagement.App
                     Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                     this.Txt_Qty.Focus();
                 }
-                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -197,6 +190,7 @@ namespace LibraryManagement.App
         private void FrmMercLost_Load(object sender, EventArgs e)
         {
             DataSet set;
+            this.Text = Class6.string_1.ToString();
             this.Lbl_Date.Text = string.Format("{0:dd/MM/yyy}", DateTime.Parse(Class7.smethod_19().ToString()));
             this.btn_Skip_Click(this, new EventArgs());
             try
@@ -226,7 +220,7 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_Price.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn gi\x00e1").ToString();
@@ -384,7 +378,7 @@ namespace LibraryManagement.App
                 if (set2.Tables[0].Rows.Count != 0)
                 {
                     this.Lbl_MercName.Text = set2.Tables[0].Rows[0]["full_name"].ToString();
-                    this.Txt_Price.EditValue = Class7.ParseDoubleValue(set2.Tables[0].Rows[0]["prefprice"].ToString());
+                    this.Txt_Price.EditValue = Class7.smethod_0(set2.Tables[0].Rows[0]["prefprice"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(set2.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(set2.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.SelectedIndex = 0;

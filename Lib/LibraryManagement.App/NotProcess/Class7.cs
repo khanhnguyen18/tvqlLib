@@ -173,7 +173,7 @@ internal class Class7
         return set;
     }
 
-    public static double ParseDoubleValue(string string_9)
+    public static double smethod_0(string string_9)
     {
         if (string.IsNullOrEmpty(string_9))
         {
@@ -274,7 +274,7 @@ internal class Class7
             case "N":
                 if (smethod_12(str2))
                 {
-                    return ParseDoubleValue(str2);
+                    return smethod_0(str2);
                 }
                 return 0;
         }

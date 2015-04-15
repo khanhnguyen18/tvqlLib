@@ -57,10 +57,10 @@ namespace LibraryManagement.App
                         int num = 1;
                         foreach (DataRow row in dataTable.Rows)
                         {
-                            string str6 = (Class7.ParseDoubleValue(row["real_qty"].ToString()) > 0.0) ? "" : str3;
-                            string str7 = (Class7.ParseDoubleValue(row["real_qty"].ToString()) < 0.0) ? "" : str3;
-                            double num2 = Math.Abs(Class7.ParseDoubleValue(row["real_qty"].ToString()));
-                            double num3 = num2 * Class7.ParseDoubleValue(row["averimppr"].ToString());
+                            string str6 = (Class7.smethod_0(row["real_qty"].ToString()) > 0.0) ? "" : str3;
+                            string str7 = (Class7.smethod_0(row["real_qty"].ToString()) < 0.0) ? "" : str3;
+                            double num2 = Math.Abs(Class7.smethod_0(row["real_qty"].ToString()));
+                            double num3 = num2 * Class7.smethod_0(row["averimppr"].ToString());
                             string selectCommandText = string.Concat(new object[] { 
                                 "INSERT INTO tblTransaction(tran_date, tran_time, trans_num, trans_code, voucher, invoice, post, exp_id, imp_id,goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id,cs_id,remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status) VALUES('", str, "','", str2, "','", str5, "','", this.string_0, "','','',0,'", str6, "','", str7, "','", row["goods_id"], "',", num2, 
                                 ",'", row["piceunit"], "',", num3, ",0,0,0,0, ", Class7.GetUserId(), ",'',N'", str4, "',0,'01','',0,0,0,0,", num, ",1)"
@@ -290,10 +290,10 @@ namespace LibraryManagement.App
             this.oleDbConnection_0.Close();
             foreach (DataRow row in dataTable.Rows)
             {
-                double num = (Class7.ParseDoubleValue(row["real_qty"].ToString()) > 0.0) ? Class7.ParseDoubleValue(row["real_qty"].ToString()) : 0.0;
-                double num2 = (Class7.ParseDoubleValue(row["real_qty"].ToString()) < 0.0) ? Math.Abs(Class7.ParseDoubleValue(row["real_qty"].ToString())) : 0.0;
-                double num3 = (num2 != 0.0) ? (num2 * Class7.ParseDoubleValue(row["averimppr"].ToString())) : 0.0;
-                double num4 = (num != 0.0) ? (num * Class7.ParseDoubleValue(row["averimppr"].ToString())) : 0.0;
+                double num = (Class7.smethod_0(row["real_qty"].ToString()) > 0.0) ? Class7.smethod_0(row["real_qty"].ToString()) : 0.0;
+                double num2 = (Class7.smethod_0(row["real_qty"].ToString()) < 0.0) ? Math.Abs(Class7.smethod_0(row["real_qty"].ToString())) : 0.0;
+                double num3 = (num2 != 0.0) ? (num2 * Class7.smethod_0(row["averimppr"].ToString())) : 0.0;
+                double num4 = (num != 0.0) ? (num * Class7.smethod_0(row["averimppr"].ToString())) : 0.0;
                 string str2 = row["goods_id"].ToString().Trim();
                 string selectCommandText = string.Concat(new object[] { 
                     "IF EXISTS (SELECT id FROM tblStockInfo WHERE id = '", str, "' and goods_id = '", str2, "') UPDATE  tblStockInfo SET Imp_qty = imp_qty + ", num, " , imp_amt = imp_amt + ", num4, ",  exp_qty = exp_qty + ", num2, ", exp_amt = exp_amt + ", num3, ", last_date ='", Class6.string_13, "' WHERE id = '", str, 
@@ -375,7 +375,7 @@ namespace LibraryManagement.App
                     }
                     str5.ToCharArray();
                     string[] strArray = str5.Split(new char[] { ',' });
-                    num = (Class7.ParseDoubleValue(strArray[1].ToString()) == 0.0) ? 1.0 : Class7.ParseDoubleValue(strArray[1].ToString());
+                    num = (Class7.smethod_0(strArray[1].ToString()) == 0.0) ? 1.0 : Class7.smethod_0(strArray[1].ToString());
                     object obj2 = " IF EXISTS (SELECT goods_id FROM tblAdjust WHERE goods_id = '" + str4 + "')  ";
                     obj2 = string.Concat(new object[] { obj2, "UPDATE tblAdjust SET qty = qty + ", num, " WHERE goods_id = '", str4, "' Else " });
                     OleDbDataAdapter adapter2 = new OleDbDataAdapter(string.Concat(new object[] { obj2, "INSERT INTO tblAdjust(pos_id,goods_id,QTy) VALUES('", str2, "','", str4, "',", num, ")" }), Class7.oleDbConnection_1);

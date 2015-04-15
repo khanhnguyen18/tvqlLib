@@ -100,7 +100,7 @@ namespace LibraryManagement.App
             DataSet set;
             string str = this.Txt_Id.Text.Trim();
             string str2 = this.Txt_Description.Text.Trim();
-            double num = Class7.ParseDoubleValue(this.Txt_ExchangeRate.Text);
+            double num = Class7.smethod_0(this.Txt_ExchangeRate.Text);
             string selectCommandText = null;
             switch (Class11.string_0)
             {
