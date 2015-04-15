@@ -36,7 +36,7 @@ namespace LibraryManagement.App
                 }
                 else
                 {
-                    Class10.double_2 = Class7.smethod_0(this.Txt_Amount.Text);
+                    Class10.double_2 = Class7.ParseDoubleValue(this.Txt_Amount.Text);
                     base.Close();
                 }
             }

@@ -22,7 +22,7 @@ namespace LibraryManagement.App
         {
             string str = string.Format("{0:d}", this.Txt_FrDate.EditValue);
             string str2 = string.Format("{0:d}", this.Txt_ToDate.EditValue);
-            double num = Class7.smethod_0(this.Txt_DiscPercent.EditValue.ToString()) / 100.0;
+            double num = Class7.ParseDoubleValue(this.Txt_DiscPercent.EditValue.ToString()) / 100.0;
             this.string_0 = string.Concat(new object[] { "UPDATE tblPrice SET  discpercent = ", num, ", disc_frdate = '", str, "',disc_todate = '", str2, "'  WHERE goods_id = '", this.Lbl_GoodsId.Text, "'" });
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_0, this.oleDbConnection_0);
             using (DataSet set = new DataSet())
@@ -48,7 +48,7 @@ namespace LibraryManagement.App
                 this.Txt_RtPrice.Text = set.Tables[0].Rows[0]["rtprice"].ToString();
                 this.Txt_FrDate.Text = set.Tables[0].Rows[0]["disc_frdate"].ToString();
                 this.Txt_ToDate.Text = set.Tables[0].Rows[0]["disc_todate"].ToString();
-                this.Txt_DiscPercent.EditValue = Class7.smethod_0(set.Tables[0].Rows[0]["discpercent"].ToString()) * 100.0;
+                this.Txt_DiscPercent.EditValue = Class7.ParseDoubleValue(set.Tables[0].Rows[0]["discpercent"].ToString()) * 100.0;
                 this.Txt_RtPrice.Enabled = false;
             }
         }

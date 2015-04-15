@@ -52,7 +52,7 @@ namespace LibraryManagement.App
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.LabelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_Remark = new DevExpress.XtraEditors.TextEdit();
-            this.Lbl_MercName = new DevExpress.XtraEditors.LabelControl();
+            this.lblBookName = new DevExpress.XtraEditors.LabelControl();
             this.Lbl_ImpName = new DevExpress.XtraEditors.LabelControl();
             this.Lbl_ExpName = new DevExpress.XtraEditors.LabelControl();
             this.chkLabelPrn = new DevExpress.XtraEditors.CheckEdit();
@@ -191,24 +191,24 @@ namespace LibraryManagement.App
             this.Txt_Remark.Size = new System.Drawing.Size(532, 20);
             this.Txt_Remark.TabIndex = 9;
             // 
-            // Lbl_MercName
+            // lblBookName
             // 
-            this.Lbl_MercName.Appearance.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.Lbl_MercName.Appearance.BackColor2 = System.Drawing.Color.PaleTurquoise;
-            this.Lbl_MercName.Appearance.BorderColor = System.Drawing.Color.White;
-            this.Lbl_MercName.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_MercName.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_MercName.Appearance.Options.UseBackColor = true;
-            this.Lbl_MercName.Appearance.Options.UseBorderColor = true;
-            this.Lbl_MercName.Appearance.Options.UseFont = true;
-            this.Lbl_MercName.Appearance.Options.UseForeColor = true;
-            this.Lbl_MercName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.Lbl_MercName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.Lbl_MercName.Location = new System.Drawing.Point(299, 121);
-            this.Lbl_MercName.Name = "Lbl_MercName";
-            this.Lbl_MercName.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.Lbl_MercName.Size = new System.Drawing.Size(303, 17);
-            this.Lbl_MercName.TabIndex = 380;
+            this.lblBookName.Appearance.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lblBookName.Appearance.BackColor2 = System.Drawing.Color.PaleTurquoise;
+            this.lblBookName.Appearance.BorderColor = System.Drawing.Color.White;
+            this.lblBookName.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookName.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblBookName.Appearance.Options.UseBackColor = true;
+            this.lblBookName.Appearance.Options.UseBorderColor = true;
+            this.lblBookName.Appearance.Options.UseFont = true;
+            this.lblBookName.Appearance.Options.UseForeColor = true;
+            this.lblBookName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblBookName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.lblBookName.Location = new System.Drawing.Point(299, 121);
+            this.lblBookName.Name = "lblBookName";
+            this.lblBookName.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lblBookName.Size = new System.Drawing.Size(303, 17);
+            this.lblBookName.TabIndex = 380;
             // 
             // Lbl_ImpName
             // 
@@ -308,9 +308,9 @@ namespace LibraryManagement.App
             this.LabelControl17.Appearance.Options.UseFont = true;
             this.LabelControl17.Location = new System.Drawing.Point(21, 65);
             this.LabelControl17.Name = "LabelControl17";
-            this.LabelControl17.Size = new System.Drawing.Size(67, 13);
+            this.LabelControl17.Size = new System.Drawing.Size(85, 13);
             this.LabelControl17.TabIndex = 365;
-            this.LabelControl17.Text = "Nơi xuất hàng";
+            this.LabelControl17.Text = "Tên nhà cung cấp";
             // 
             // LabelControl18
             // 
@@ -992,22 +992,22 @@ namespace LibraryManagement.App
             // 
             this.barDockControl_1.CausesValidation = false;
             this.barDockControl_1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl_1.Location = new System.Drawing.Point(0, 388);
-            this.barDockControl_1.Size = new System.Drawing.Size(672, 28);
+            this.barDockControl_1.Location = new System.Drawing.Point(0, 387);
+            this.barDockControl_1.Size = new System.Drawing.Size(672, 29);
             // 
             // barDockControl_2
             // 
             this.barDockControl_2.CausesValidation = false;
             this.barDockControl_2.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl_2.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl_2.Size = new System.Drawing.Size(0, 388);
+            this.barDockControl_2.Size = new System.Drawing.Size(0, 387);
             // 
             // barDockControl_3
             // 
             this.barDockControl_3.CausesValidation = false;
             this.barDockControl_3.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl_3.Location = new System.Drawing.Point(672, 0);
-            this.barDockControl_3.Size = new System.Drawing.Size(0, 388);
+            this.barDockControl_3.Size = new System.Drawing.Size(0, 387);
             // 
             // bar_1
             // 
@@ -1093,7 +1093,7 @@ namespace LibraryManagement.App
             this.Controls.Add(this.GroupBox4);
             this.Controls.Add(this.LabelControl14);
             this.Controls.Add(this.Txt_Remark);
-            this.Controls.Add(this.Lbl_MercName);
+            this.Controls.Add(this.lblBookName);
             this.Controls.Add(this.Lbl_ImpName);
             this.Controls.Add(this.Lbl_ExpName);
             this.Controls.Add(this.chkLabelPrn);
@@ -1212,10 +1212,10 @@ namespace LibraryManagement.App
         internal LabelControl LabelControl9;
         internal LabelControl Lbl_ExpName;
         internal LabelControl Lbl_ImpName;
-        internal LabelControl Lbl_MercName;
+        internal LabelControl lblBookName;
         private OleDbConnection oleDbConnection_0;
         private OleDbDataAdapter oleDbDataAdapter_0;
-        private string string_0;
+        private string tempTable;
         private string string_1;
         private string string_2;
         private string string_3;

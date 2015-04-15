@@ -24,13 +24,38 @@ namespace LibraryManagement.App
         {
             InitializeComponent();
             this.oleDbConnection_0 = new OleDbConnection(Class7.string_5);
-            this.string_0 = "FRSUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
+            this.tempTable = "ASUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
         }
 
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        private void FrmFromSupp_Load(object sender, EventArgs e)
         {
-            new UnitsForm().ShowDialog();
+            this.Text = "Nhập kho";
+            this.dateEdit1.DateTime = DateTime.Now;
+            this.btn_Skip_Click(this, new EventArgs());
+            this.Txt_Vatrate.Properties.ReadOnly = true;
+            try
+            {
+                string selectCommandText = "CREATE TABLE " + this.tempTable + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
+                using (DataSet set = new DataSet())
+                {
+                    this.oleDbDataAdapter_0.Fill(set);
+                }
+                this.oleDbConnection_0.Close();
+            }
+            catch (Exception)
+            {
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.tempTable, this.oleDbConnection_0);
+                using (DataSet set = new DataSet())
+                {
+                    this.oleDbDataAdapter_0.Fill(set);
+                }
+                this.oleDbConnection_0.Close();
+            }
+            this.method_0();
+            this.method_1();
         }
+
 
         #region BUTTONS
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -113,12 +138,12 @@ namespace LibraryManagement.App
         {
             if (this.Lbl_ImpName.Text == string.Empty)
             {
-                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o nơi nhập h\x00e0ng", 1);
+                Class7.ShowMessageBox("Bạn chưa khai báo nơi nhập hàng", 1);
                 this.Txt_ImpID.Focus();
             }
             else if (this.Lbl_ExpName.Text == string.Empty)
             {
-                Class7.ShowMessageBox("Bạn chưa khai b\x00e1o nơi xuất h\x00e0ng", 1);
+                Class7.ShowMessageBox("Bạn chưa khai báo nơi xuất hàng", 1);
                 this.Txt_ExpID.Focus();
             }
             else if (this.TransDetail.RowCount == 0)
@@ -155,8 +180,8 @@ namespace LibraryManagement.App
                                 this.Insert();
                                 class2.method_17(str2);
                                 class2.method_7(str2, str3);
-                                class2.kCnalMegv(this.string_0);
-                                class2.method_11(this.string_0, str4);
+                                class2.kCnalMegv(this.tempTable);
+                                class2.method_11(this.tempTable, str4);
                             }
                         }
                         else
@@ -168,8 +193,8 @@ namespace LibraryManagement.App
                             this.Insert();
                             class2.method_17(str2);
                             class2.method_7(str2, str3);
-                            class2.kCnalMegv(this.string_0);
-                            class2.method_11(this.string_0, str4);
+                            class2.kCnalMegv(this.tempTable);
+                            class2.method_11(this.tempTable, str4);
                         }
                     }
                     if (this.chkLabelPrn.Checked)
@@ -223,34 +248,34 @@ namespace LibraryManagement.App
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(this.Lbl_MercName.Text))
+            if (string.IsNullOrEmpty(this.lblBookName.Text))
             {
                 this.Txt_GoodsId.Focus();
             }
             else
             {
                 string str = this.Txt_GoodsId.Text.Trim();
-                string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.smethod_0(this.Txt_Qty.Text);
-                double num2 = Class7.smethod_0(this.CdCbuygdy.Text);
-                double num3 = Class7.smethod_0(this.Txt_DiscPc.Text);
+                string str2 = this.lblBookName.Text.Trim();
+                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
+                double num2 = Class7.ParseDoubleValue(this.CdCbuygdy.Text);
+                double num3 = Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
                 string str3 = this.Cmb_Unit.Text.Trim();
                 if (num2 <= 0.0)
                 {
                     Class7.ShowMessageBox("Gi\x00e1 nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.CdCbuygdy.Focus();
                 }
-                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
                 {
-                    Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
+                    Class7.ShowMessageBox("Số lượng nhập đăng ký không hợp lệ", 1);
                     this.Txt_Qty.Focus();
                 }
                 else
                 {
                     string selectCommandText = string.Concat(new object[] { 
-                        "IF EXISTS (SELECT goods_id FROM ", this.string_0, " where goods_id = '", str, "') UPDATE ", this.string_0, " SET [qty] = ", num, " ,[amount] = ", num2 * num, ",[price] = ", num2, ",disc_pc = ", num3, " WHERE goods_id = '", str, 
-                        "' Else INSERT INTO ", this.string_0, "(goods_id, name, qty, price, vat_amt, disc_amt,disc_pc, amount,unitsymb,merc_type)  VALUES('", str, "' , N'", str2, "',", num, ",", num2, ",0,0,", num3, ", ", num2 * num, ", '", str3, 
-                        "', '01') ; DELETE FROM ", this.string_0, " WHERE qty <= 0 "
+                        "IF EXISTS (SELECT goods_id FROM ", this.tempTable, " where goods_id = '", str, "') UPDATE ", this.tempTable, " SET [qty] = ", num, " ,[amount] = ", num2 * num, ",[price] = ", num2, ",disc_pc = ", num3, " WHERE goods_id = '", str, 
+                        "' Else INSERT INTO ", this.tempTable, "(goods_id, name, qty, price, vat_amt, disc_amt,disc_pc, amount,unitsymb,merc_type)  VALUES('", str, "' , N'", str2, "',", num, ",", num2, ",0,0,", num3, ", ", num2 * num, ", '", str3, 
+                        "', '01') ; DELETE FROM ", this.tempTable, " WHERE qty <= 0 "
                      });
                     this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                     using (DataSet set = new DataSet())
@@ -258,8 +283,9 @@ namespace LibraryManagement.App
                         this.oleDbDataAdapter_0.Fill(set);
                     }
                     this.oleDbConnection_0.Close();
-                    this.method_5();
-                    new Class6().method_2(this.string_0);
+
+                    this.ComputeSummary();
+                    new Class6().method_2(this.tempTable);
                     this.method_1();
                     this.Txt_GoodsId.Focus();
                     this.Txt_GoodsId.SelectAll();
@@ -267,6 +293,11 @@ namespace LibraryManagement.App
             }
         } 
         #endregion
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new UnitsForm().ShowDialog();
+        }
 
         private void CdCbuygdy_EditValueChanged(object sender, EventArgs e)
         {
@@ -276,7 +307,7 @@ namespace LibraryManagement.App
         {
             if ((this.string_3 == "N") || (this.string_3 == "E"))
             {
-                this.method_5();
+                this.ComputeSummary();
             }
         }
 
@@ -284,7 +315,7 @@ namespace LibraryManagement.App
         {
             if ((this.string_3 == "N") || (this.string_3 == "E"))
             {
-                this.method_5();
+                this.ComputeSummary();
             }
         }
 
@@ -292,7 +323,7 @@ namespace LibraryManagement.App
         {
             if ((this.string_3 == "N") || (this.string_3 == "E"))
             {
-                this.method_5();
+                this.ComputeSummary();
             }
         }
 
@@ -300,7 +331,7 @@ namespace LibraryManagement.App
         {
             if ((this.string_3 == "N") || (this.string_3 == "E"))
             {
-                this.method_5();
+                this.ComputeSummary();
             }
             string text = this.Cmb_TaxCode.Text;
             if (text != null)
@@ -332,7 +363,7 @@ namespace LibraryManagement.App
 
         private void FrmFromSupp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("DROP TABLE " + this.string_0, this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("DROP TABLE " + this.tempTable, this.oleDbConnection_0);
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);
             this.oleDbConnection_0.Close();
@@ -342,50 +373,21 @@ namespace LibraryManagement.App
         {
             if (e.KeyCode == Keys.F3)
             {
-                this.method_5();
+                this.ComputeSummary();
             }
         }
 
-        private void FrmFromSupp_Load(object sender, EventArgs e)
-        {
-            DataSet set;
-            this.Text = "Nhập kho";
-            this.dateEdit1.DateTime = DateTime.Now;
-            this.btn_Skip_Click(this, new EventArgs());
-            this.Txt_Vatrate.Properties.ReadOnly = true;
-            try
-            {
-                string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
-                using (set = new DataSet())
-                {
-                    this.oleDbDataAdapter_0.Fill(set);
-                }
-                this.oleDbConnection_0.Close();
-            }
-            catch (Exception)
-            {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
-                using (set = new DataSet())
-                {
-                    this.oleDbDataAdapter_0.Fill(set);
-                }
-                this.oleDbConnection_0.Close();
-            }
-            this.method_0();
-            this.method_1();
-        }
-
+    
         private void GrdTran_Click(object sender, EventArgs e)
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_DiscPc.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "% CK").ToString();
                 this.CdCbuygdy.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn gi\x00e1").ToString();
-                this.Lbl_MercName.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "T\x00ean h\x00e0ng").ToString();
+                this.lblBookName.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "T\x00ean h\x00e0ng").ToString();
                 this.Cmb_Unit.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn vị").ToString();
             }
         }
@@ -420,14 +422,14 @@ namespace LibraryManagement.App
             Class11.smethod_8(this);
             this.Lbl_ImpName.Text = string.Empty;
             this.Lbl_ExpName.Text = string.Empty;
-            this.Lbl_MercName.Text = string.Empty;
+            this.lblBookName.Text = string.Empty;
             this.Cmb_TaxCode.SelectedIndex = 0;
             this.chk_inclVat.Checked = false;
             this.Txt_ImpAmt.EditValue = 0;
             this.Txt_TotalAmt.EditValue = 0;
             this.Txt_VatAmt.EditValue = 0;
             this.Txt_DiscAmt.EditValue = 0;
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.string_0, this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("DELETE FROM " + this.tempTable, this.oleDbConnection_0);
             using (DataSet set = new DataSet())
             {
                 this.oleDbDataAdapter_0.Fill(set);
@@ -437,7 +439,7 @@ namespace LibraryManagement.App
 
         private void method_1()
         {
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT idx AS [TT], goods_id AS [M\x00e3 h\x00e0ng], name AS [T\x00ean h\x00e0ng], qty AS [Số lượng], unitsymb AS [Đơn vị], price AS [Đơn gi\x00e1],disc_pc AS [% CK], price*qty AS [Th\x00e0nh tiền] FROM " + this.string_0 + " ORDER BY autoid", this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT idx AS [TT], goods_id AS [M\x00e3 h\x00e0ng], name AS [T\x00ean h\x00e0ng], qty AS [Số lượng], unitsymb AS [Đơn vị], price AS [Đơn gi\x00e1],disc_pc AS [% CK], price*qty AS [Th\x00e0nh tiền] FROM " + this.tempTable + " ORDER BY autoid", this.oleDbConnection_0);
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);
             this.oleDbConnection_0.Close();
@@ -461,8 +463,8 @@ namespace LibraryManagement.App
         {
             DataSet set2;
             DataSet set3;
-            double num = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
-            Class7.smethod_0(this.Txt_DiscPc.Text);
+            double num = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
+            Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
             string text = this.Cmb_TaxCode.Text;
             if (text != null)
             {
@@ -492,7 +494,7 @@ namespace LibraryManagement.App
             this.Txt_DiscAmt.EditValue = 0;
             if (this.chk_inclVat.Checked)
             {
-                this.string_2 = string.Concat(new object[] { "UPDATE ", this.string_0, " set vat_amt = amount - (amount / (1 + ", num, "))" });
+                this.string_2 = string.Concat(new object[] { "UPDATE ", this.tempTable, " set vat_amt = amount - (amount / (1 + ", num, "))" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 using (set3 = new DataSet())
                 {
@@ -502,7 +504,7 @@ namespace LibraryManagement.App
             }
             else
             {
-                this.string_2 = string.Concat(new object[] { "UPDATE ", this.string_0, " set vat_amt = amount * ", num });
+                this.string_2 = string.Concat(new object[] { "UPDATE ", this.tempTable, " set vat_amt = amount * ", num });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
                 using (set3 = new DataSet())
                 {
@@ -514,7 +516,7 @@ namespace LibraryManagement.App
             {
                 if (this.chk_inclVat.Checked)
                 {
-                    this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.string_0 + " set disc_amt = ((amount - vat_amt)*disc_pc)/100 ", this.oleDbConnection_0);
+                    this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.tempTable + " set disc_amt = ((amount - vat_amt)*disc_pc)/100 ", this.oleDbConnection_0);
                     using (set2 = new DataSet())
                     {
                         this.oleDbDataAdapter_0.Fill(set2);
@@ -523,7 +525,7 @@ namespace LibraryManagement.App
                 }
                 else
                 {
-                    this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.string_0 + " set disc_amt = (amount*disc_pc)/100 ", this.oleDbConnection_0);
+                    this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.tempTable + " set disc_amt = (amount*disc_pc)/100 ", this.oleDbConnection_0);
                     using (set2 = new DataSet())
                     {
                         this.oleDbDataAdapter_0.Fill(set2);
@@ -533,7 +535,7 @@ namespace LibraryManagement.App
             }
             if (this.Chk_discpervat.Checked)
             {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.string_0 + " set disc_amt = (amount - vat_amt) * disc_pc/100 ", this.oleDbConnection_0);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.tempTable + " set disc_amt = (amount - vat_amt) * disc_pc/100 ", this.oleDbConnection_0);
                 using (set2 = new DataSet())
                 {
                     this.oleDbDataAdapter_0.Fill(set2);
@@ -542,14 +544,14 @@ namespace LibraryManagement.App
             }
             else
             {
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.string_0 + " set disc_amt = (amount + vat_amt)*disc_pc/100 ", this.oleDbConnection_0);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("UPDATE " + this.tempTable + " set disc_amt = (amount + vat_amt)*disc_pc/100 ", this.oleDbConnection_0);
                 using (set2 = new DataSet())
                 {
                     this.oleDbDataAdapter_0.Fill(set2);
                 }
                 this.oleDbConnection_0.Close();
             }
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.string_0, this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.tempTable, this.oleDbConnection_0);
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);
             this.oleDbConnection_0.Close();
@@ -558,20 +560,20 @@ namespace LibraryManagement.App
             double num4 = 0.0;
             if (dataSet.Tables[0].Rows.Count != 0)
             {
-                num2 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["a_amt"].ToString());
-                num3 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["d_amt"].ToString());
-                num4 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["v_amt"].ToString());
+                num2 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["a_amt"].ToString());
+                num3 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["d_amt"].ToString());
+                num4 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["v_amt"].ToString());
                 if (this.chk_inclVat.Checked)
                 {
                     this.Txt_TotalAmt.EditValue = num2 + num4;
-                    this.Txt_ImpAmt.EditValue = Class7.smethod_0(this.Txt_TotalAmt.Text) - num4;
+                    this.Txt_ImpAmt.EditValue = Class7.ParseDoubleValue(this.Txt_TotalAmt.Text) - num4;
                     this.Txt_VatAmt.EditValue = num4;
                     this.Txt_DiscAmt.EditValue = num3;
                 }
                 else
                 {
                     this.Txt_TotalAmt.EditValue = num2 + num4;
-                    this.Txt_ImpAmt.EditValue = Class7.smethod_0(this.Txt_TotalAmt.Text) + num4;
+                    this.Txt_ImpAmt.EditValue = Class7.ParseDoubleValue(this.Txt_TotalAmt.Text) + num4;
                     this.Txt_VatAmt.EditValue = num4;
                     this.Txt_DiscAmt.EditValue = num3;
                 }
@@ -651,8 +653,8 @@ namespace LibraryManagement.App
             int num7 = this.Chk_includedisc.Checked ? 1 : 0;
             int num = this.Chk_discpervat.Checked ? 1 : 0;
             string str2 = this.Cmb_TaxCode.Text.Trim();
-            double num2 = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
-            this.string_2 = "SELECT goods_id,qty,price,amount,idx,unitsymb, disc_amt,vat_amt,surplus,merc_type,disc_pc FROM " + this.string_0;
+            double num2 = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
+            this.string_2 = "SELECT goods_id,qty,price,amount,idx,unitsymb, disc_amt,vat_amt,surplus,merc_type,disc_pc FROM " + this.tempTable;
             this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_2, this.oleDbConnection_0);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
@@ -713,13 +715,13 @@ namespace LibraryManagement.App
             }
         }
 
-        private void method_5()
+        private void ComputeSummary()
         {
             this.Txt_ImpAmt.EditValue = 0;
             this.Txt_TotalAmt.EditValue = 0;
             this.Txt_VatAmt.EditValue = 0;
             this.Txt_DiscAmt.EditValue = 0;
-            double num = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
+            double num = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
             string text = this.Cmb_TaxCode.Text;
             if (text != null)
             {
@@ -742,7 +744,7 @@ namespace LibraryManagement.App
                     num = 0.0;
                 }
             }
-            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select * from " + this.string_0, this.oleDbConnection_0);
+            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select * from " + this.tempTable, this.oleDbConnection_0);
             using (DataTable table = new DataTable())
             {
                 this.oleDbDataAdapter_0.Fill(table);
@@ -825,7 +827,7 @@ namespace LibraryManagement.App
         {
             Goods good = new GoodsService().GetByGoodsId(Txt_GoodsId.Text);
             if (good != null)
-                Lbl_MercName.Text = good.FullName;
+                lblBookName.Text = good.FullName;
         }
 
         private void Txt_GoodsId_KeyDown(object sender, KeyEventArgs e)
@@ -880,8 +882,8 @@ namespace LibraryManagement.App
             this.oleDbConnection_0.Close();
             if (dataSet.Tables[0].Rows.Count != 0)
             {
-                this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                this.CdCbuygdy.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["rtprice"].ToString());
+                this.lblBookName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
+                this.CdCbuygdy.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["rtprice"].ToString());
                 this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                 this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                 this.Cmb_Unit.SelectedIndex = 0;
@@ -890,7 +892,7 @@ namespace LibraryManagement.App
             }
             else
             {
-                this.Lbl_MercName.Text = string.Empty;
+                this.lblBookName.Text = string.Empty;
                 this.CdCbuygdy.EditValue = 0;
             }
         }
@@ -940,7 +942,7 @@ namespace LibraryManagement.App
                 this.chk_inclVat.Checked = (bool)dataSet.Tables[0].Rows[0]["vat_incl"];
                 this.Chk_discpervat.Checked = (bool)dataSet.Tables[0].Rows[0]["discpervat"];
                 this.Chk_includedisc.Checked = (bool)dataSet.Tables[0].Rows[0]["disc_incl"];
-                this.method_3(this.string_0, dataSet.Tables[0].Rows[0]["trans_num"].ToString());
+                this.method_3(this.tempTable, dataSet.Tables[0].Rows[0]["trans_num"].ToString());
                 this.Cmb_TaxCode.Text = dataSet.Tables[0].Rows[0]["tax_code"].ToString();
                 Class11.smethod_3(this);
                 this.string_3 = "F";
@@ -950,11 +952,11 @@ namespace LibraryManagement.App
                     this.btn_Delete.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
                 }
                 Class11.smethod_5(this, "F");
-                this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) + sum(vat_amt) AS t_amt, sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.string_0, this.oleDbConnection_0);
+                this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) + sum(vat_amt) AS t_amt, sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.tempTable, this.oleDbConnection_0);
                 DataSet set = new DataSet();
                 this.oleDbDataAdapter_0.Fill(set);
                 this.oleDbConnection_0.Close();
-                this.method_5();
+                this.ComputeSummary();
                 this.method_1();
             }
 
@@ -989,7 +991,7 @@ namespace LibraryManagement.App
                             this.chk_inclVat.Checked = (bool)dataSet.Tables[0].Rows[0]["vat_incl"];
                             this.Chk_discpervat.Checked = (bool)dataSet.Tables[0].Rows[0]["discpervat"];
                             this.Chk_includedisc.Checked = (bool)dataSet.Tables[0].Rows[0]["disc_incl"];
-                            this.method_3(this.string_0, dataSet.Tables[0].Rows[0]["trans_num"].ToString());
+                            this.method_3(this.tempTable, dataSet.Tables[0].Rows[0]["trans_num"].ToString());
                             this.Cmb_TaxCode.Text = dataSet.Tables[0].Rows[0]["tax_code"].ToString();
                             Class11.smethod_3(this);
                             this.string_3 = "F";
@@ -999,11 +1001,11 @@ namespace LibraryManagement.App
                                 this.btn_Delete.Enabled = Class7.smethod_49(this.Txt_TransNum.Text);
                             }
                             Class11.smethod_5(this, "F");
-                            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) + sum(vat_amt) AS t_amt, sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.string_0, this.oleDbConnection_0);
+                            this.oleDbDataAdapter_0 = new OleDbDataAdapter("select sum(amount) + sum(vat_amt) AS t_amt, sum(amount) AS a_amt, sum(disc_amt) AS d_amt, sum(vat_amt) AS v_amt from " + this.tempTable, this.oleDbConnection_0);
                             DataSet set = new DataSet();
                             this.oleDbDataAdapter_0.Fill(set);
                             this.oleDbConnection_0.Close();
-                            this.method_5();
+                            this.ComputeSummary();
                             this.method_1();
                         }
                         if ((bool)dataSet.Tables[0].Rows[0]["status"])

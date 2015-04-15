@@ -69,8 +69,8 @@ internal class Class6
         {
             oleDbDataAdapter_0.Fill(set);
             oleDbConnection_0.Close();
-            double num = Class7.smethod_0(set.Tables[0].Rows[0]["rtprice"].ToString());
-            double num2 = Class7.smethod_0(set.Tables[0].Rows[0]["wsprice"].ToString());
+            double num = Class7.ParseDoubleValue(set.Tables[0].Rows[0]["rtprice"].ToString());
+            double num2 = Class7.ParseDoubleValue(set.Tables[0].Rows[0]["wsprice"].ToString());
             string str = "INSERT INTO tblHisprice(Hisdate, Histime, goods_id, oldwsprice, newwsprice, oldrtprice, newrtprice, user_id) ";
             object obj2 = str;
             obj2 = string.Concat(new object[] { obj2, " VALUES('", string_13, "','", string_15, "','", string_14, "',", num2, ",", double_1, ",", num, "," });
@@ -170,10 +170,10 @@ internal class Class6
         foreach (DataRow row in dataTable.Rows)
         {
             Class7.smethod_2(row["vat_amt"]);
-            double num = Class7.smethod_0(row["surplus"].ToString());
-            double num2 = Class7.smethod_0(row["discount"].ToString());
-            double num3 = (Class7.smethod_0(row["amount"].ToString()) + num2) + num;
-            double num4 = ((num3 + num2) + num) / Class7.smethod_0(row["qty"].ToString());
+            double num = Class7.ParseDoubleValue(row["surplus"].ToString());
+            double num2 = Class7.ParseDoubleValue(row["discount"].ToString());
+            double num3 = (Class7.ParseDoubleValue(row["amount"].ToString()) + num2) + num;
+            double num4 = ((num3 + num2) + num) / Class7.ParseDoubleValue(row["qty"].ToString());
             object obj2 = "INSERT INTO " + string_14 + "(goods_id, name, qty, price, disc_amt, amount,surplus, unitsymb,merc_type,idx) ";
             obj2 = string.Concat(new object[] { obj2, " VALUES('", row["goods_id"], "' ,N'", row["full_name"], "',", row["qty"], ",", num4, ", ", row["discount"], "," });
             oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { obj2, num3, ",", row["surplus"], ",'", row["unit_symb"], "','", row["merc_type"], "',", row["recnum"], " )" }), oleDbConnection_0);
@@ -204,7 +204,7 @@ internal class Class6
         oleDbConnection_0.Close();
         if (dataSet.Tables[0].Rows.Count != 0)
         {
-            return Class7.smethod_0(dataSet.Tables[0].Rows[0][0].ToString());
+            return Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0][0].ToString());
         }
         return 0.0;
     }
@@ -217,7 +217,7 @@ internal class Class6
         oleDbConnection_0.Close();
         foreach (DataRow row in dataTable.Rows)
         {
-            double num = Class7.smethod_0(row["amount"].ToString()) / Class7.smethod_0(row["qty"].ToString());
+            double num = Class7.ParseDoubleValue(row["amount"].ToString()) / Class7.ParseDoubleValue(row["qty"].ToString());
             oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { 
                 "IF EXISTS(Select goods_id from tblStockInfo WHERE  goods_id = '", row["goods_id"], "' and id = '", row["imp_id"], "')UPDATE  tblStockInfo SET averimppr = CASE ((begin_qty + imp_qty + ", row["qty"], ") - exp_qty) WHEN 0 THEN 0 ELSE ((begin_amt + imp_amt + ", row["amount"], ") - exp_amt)/((begin_qty + imp_qty + ", row["qty"], ") - exp_qty)  END WHERE  goods_id = '", row["goods_id"], "' and id = '", row["imp_id"], "' Else INSERT INTO tblStockInfo(id, goods_id, averimppr) VALUES('", row["imp_id"], 
                 "','", row["goods_id"], "',", num, ")"
@@ -260,7 +260,7 @@ internal class Class6
         oleDbConnection_0.Close();
         foreach (DataRow row in dataTable.Rows)
         {
-            double num = Class7.smethod_0(row["amount"].ToString()) / Class7.smethod_0(row["qty"].ToString());
+            double num = Class7.ParseDoubleValue(row["amount"].ToString()) / Class7.ParseDoubleValue(row["qty"].ToString());
             oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { 
                 "IF EXISTS(Select goods_id from tblStockInfo WHERE  goods_id = '", row["goods_id"], "' and id = '", row["exp_id"], "')UPDATE  tblStockInfo SET averimppr = CASE ((begin_qty + imp_qty - ", row["qty"], ") - exp_qty) WHEN 0 THEN 0 ELSE ((begin_amt + imp_amt - ", row["amount"], ") - exp_amt)/((begin_qty + imp_qty - ", row["qty"], ") - exp_qty)  END WHERE  goods_id = '", row["goods_id"], "' and id = '", row["exp_id"], "' Else INSERT INTO tblStockInfo(id, goods_id, averimppr) VALUES('", row["exp_id"], 
                 "','", row["goods_id"], "',", num, ")"
@@ -321,7 +321,7 @@ internal class Class6
         oleDbDataAdapter_0.Fill(dataSet);
         if (dataSet.Tables[0].Rows.Count != 0)
         {
-            return Class7.smethod_0(dataSet.Tables[0].Rows[0][0].ToString());
+            return Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0][0].ToString());
         }
         return 0.0;
     }
@@ -516,7 +516,7 @@ internal class Class6
         {
             return (str + "00000001");
         }
-        double num = Class7.smethod_0(dataSet.Tables[0].Rows[0]["last_num"].ToString()) + 1.0;
+        double num = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["last_num"].ToString()) + 1.0;
         return (str + string.Format("{0:00000000}", num));
     }
 

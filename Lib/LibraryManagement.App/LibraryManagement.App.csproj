@@ -107,6 +107,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonForm\FrmGetAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForm\FrmGetAmount.Designer.cs">
+      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForm\FrmMsgbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForm\FrmMsgbox.Designer.cs">
+      <DependentUpon>FrmMsgbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataProvider.cs" />
     <Compile Include="Misc\CardPrintForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,24 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SingletonUser.cs" />
+    <Compile Include="Stock\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FrmLibraryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FrmLibraryInfo.Designer.cs">
+      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FrmSuppInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FrmSuppInfo.Designer.cs">
+      <DependentUpon>FrmSuppInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock\Report\v_frsupp.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -125,113 +155,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils.cs" />
-    <Compile Include="ZFormOld\FrmCashIO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCashIO.Designer.cs">
-      <DependentUpon>FrmCashIO.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\ChangePassForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\ChangePassForm.Designer.cs">
       <DependentUpon>ChangePassForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmChangePrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmChangePrice.Designer.cs">
-      <DependentUpon>FrmChangePrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmChangeSysDate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmChangeSysDate.Designer.cs">
-      <DependentUpon>FrmChangeSysDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCreateTran.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCreateTran.Designer.cs">
-      <DependentUpon>FrmCreateTran.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCsCard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCsCard.Designer.cs">
-      <DependentUpon>FrmCsCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCsCardInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCsCardInfo.Designer.cs">
-      <DependentUpon>FrmCsCardInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCurrency.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCurrency.Designer.cs">
-      <DependentUpon>FrmCurrency.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmCustomer.Designer.cs">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmDiscInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmDiscInfo.Designer.cs">
-      <DependentUpon>FrmDiscInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmDiscount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmDiscount.Designer.cs">
-      <DependentUpon>FrmDiscount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmEncyptCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmEncyptCode.Designer.cs">
-      <DependentUpon>FrmEncyptCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFastSlow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFastSlow.Designer.cs">
-      <DependentUpon>FrmFastSlow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAdjust_grp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAdjust_grp.Designer.cs">
-      <DependentUpon>FrmAdjust_grp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAtrCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAtrCode.Designer.cs">
-      <DependentUpon>FrmAtrCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAtrList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAtrList.Designer.cs">
-      <DependentUpon>FrmAtrList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAutoOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAutoOrder.Designer.cs">
-      <DependentUpon>FrmAutoOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmBalance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmBalance.Designer.cs">
-      <DependentUpon>FrmBalance.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill\ReturnBookForm.cs">
       <SubType>Form</SubType>
@@ -257,59 +185,17 @@
     <Compile Include="Stock\FrmBookView.Designer.cs">
       <DependentUpon>FrmBookView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmFromDealer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFromDealer.Designer.cs">
-      <DependentUpon>FrmFromDealer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Stock\FrmFromSupp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stock\FrmFromSupp.Designer.cs">
       <DependentUpon>FrmFromSupp.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmFromSuppNoVat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFromSuppNoVat.Designer.cs">
-      <DependentUpon>FrmFromSuppNoVat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFromSuppOd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFromSuppOd.Designer.cs">
-      <DependentUpon>FrmFromSuppOd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFrPromotion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmFrPromotion.Designer.cs">
-      <DependentUpon>FrmFrPromotion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetAmount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetAmount.Designer.cs">
-      <DependentUpon>FrmGetAmount.cs</DependentUpon>
-    </Compile>
     <Compile Include="CommonForm\FrmGetDates.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CommonForm\FrmGetDates.Designer.cs">
       <DependentUpon>FrmGetDates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetDay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetDay.Designer.cs">
-      <DependentUpon>FrmGetDay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAcountList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAcountList.Designer.cs">
-      <DependentUpon>FrmAcountList.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill\BookListForm.cs">
       <SubType>Form</SubType>
@@ -335,48 +221,6 @@
     <Compile Include="Help\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmAccountInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmAccountInfo.Designer.cs">
-      <DependentUpon>FrmAccountInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetPercent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmGetPercent.Designer.cs">
-      <DependentUpon>FrmGetPercent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmHisPrice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmHisPrice.Designer.cs">
-      <DependentUpon>FrmHisPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmImportMerc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmImportMerc.Designer.cs">
-      <DependentUpon>FrmImportMerc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitDef.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitDef.Designer.cs">
-      <DependentUpon>FrmKitDef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitLabelPrn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitLabelPrn.Designer.cs">
-      <DependentUpon>FrmKitLabelPrn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmKitList.Designer.cs">
-      <DependentUpon>FrmKitList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Misc\FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,12 +232,6 @@
     </Compile>
     <Compile Include="Misc\FrmLibraryDef.Designer.cs">
       <DependentUpon>FrmLibraryDef.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmLibraryInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmLibraryInfo.Designer.cs">
-      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\LibraryLocationForm.cs">
       <SubType>Form</SubType>
@@ -425,47 +263,11 @@
     <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmMap_01.cs">
+    <Compile Include="Stock\FrmBookLost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ZFormOld\FrmMap_01.Designer.cs">
-      <DependentUpon>FrmMap_01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMap_02.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMap_02.Designer.cs">
-      <DependentUpon>FrmMap_02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMap_03.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMap_03.Designer.cs">
-      <DependentUpon>FrmMap_03.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercDisc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercDisc.Designer.cs">
-      <DependentUpon>FrmMercDisc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercList.Designer.cs">
-      <DependentUpon>FrmMercList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercLost.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercLost.Designer.cs">
-      <DependentUpon>FrmMercLost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercMove.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercMove.Designer.cs">
-      <DependentUpon>FrmMercMove.cs</DependentUpon>
+    <Compile Include="Stock\FrmBookLost.Designer.cs">
+      <DependentUpon>FrmBookLost.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock\FrmMercOrder.cs">
       <SubType>Form</SubType>
@@ -473,77 +275,11 @@
     <Compile Include="Stock\FrmMercOrder.Designer.cs">
       <DependentUpon>FrmMercOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmMercPosView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMercPosView.Designer.cs">
-      <DependentUpon>FrmMercPosView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMessageQue.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMessageQue.Designer.cs">
-      <DependentUpon>FrmMessageQue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmNoteLabelPrn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmNoteLabelPrn.Designer.cs">
-      <DependentUpon>FrmNoteLabelPrn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmOpen_Acc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmOpen_Acc.Designer.cs">
-      <DependentUpon>FrmOpen_Acc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmOrderList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmOrderList.Designer.cs">
-      <DependentUpon>FrmOrderList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bill\OverDueForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bill\OverDueForm.Designer.cs">
       <DependentUpon>OverDueForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPayment.Designer.cs">
-      <DependentUpon>FrmPayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPaymentOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPaymentOrder.Designer.cs">
-      <DependentUpon>FrmPaymentOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPosSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPosSale.Designer.cs">
-      <DependentUpon>FrmPosSale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrDelete.Designer.cs">
-      <DependentUpon>FrmPtrDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrList.Designer.cs">
-      <DependentUpon>FrmPtrList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrReturn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmPtrReturn.Designer.cs">
-      <DependentUpon>FrmPtrReturn.cs</DependentUpon>
     </Compile>
     <Compile Include="BookReader\ReaderForm.cs">
       <SubType>Form</SubType>
@@ -569,65 +305,11 @@
     <Compile Include="Stock\FrmReports.Designer.cs">
       <DependentUpon>FrmReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmStations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmStations.Designer.cs">
-      <DependentUpon>FrmStations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmStationView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmStationView.Designer.cs">
-      <DependentUpon>FrmStationView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSTK_GL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSTK_GL.Designer.cs">
-      <DependentUpon>FrmSTK_GL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmStore.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmStore.Designer.cs">
-      <DependentUpon>FrmStore.cs</DependentUpon>
-    </Compile>
     <Compile Include="Stock\FrmStrList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stock\FrmStrList.Designer.cs">
       <DependentUpon>FrmStrList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSuppInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSuppInfo.Designer.cs">
-      <DependentUpon>FrmSuppInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSuspendTrans.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSuspendTrans.Designer.cs">
-      <DependentUpon>FrmSuspendTrans.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSystemConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSystemConfig.Designer.cs">
-      <DependentUpon>FrmSystemConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSystemInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmSystemInfo.Designer.cs">
-      <DependentUpon>FrmSystemInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmToDealer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmToDealer.Designer.cs">
-      <DependentUpon>FrmToDealer.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock\FrmToSupp.cs">
       <SubType>Form</SubType>
@@ -635,83 +317,17 @@
     <Compile Include="Stock\FrmToSupp.Designer.cs">
       <DependentUpon>FrmToSupp.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmToSuppByTr.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmToSuppByTr.Designer.cs">
-      <DependentUpon>FrmToSuppByTr.cs</DependentUpon>
-    </Compile>
     <Compile Include="Stock\FrmTransCode.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Stock\FrmTransCode.Designer.cs">
       <DependentUpon>FrmTransCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZFormOld\FrmTran_0_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_0_1.Designer.cs">
-      <DependentUpon>FrmTran_0_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_1_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_1_1.Designer.cs">
-      <DependentUpon>FrmTran_1_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_1_n.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_1_n.Designer.cs">
-      <DependentUpon>FrmTran_1_n.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_n_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmTran_n_1.Designer.cs">
-      <DependentUpon>FrmTran_n_1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Misc\UnitsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Misc\UnitsForm.Designer.cs">
       <DependentUpon>UnitsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUser.Designer.cs">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserGrp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserGrp.Designer.cs">
-      <DependentUpon>FrmUserGrp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserGrpMng.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserGrpMng.Designer.cs">
-      <DependentUpon>FrmUserGrpMng.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserMng.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserMng.Designer.cs">
-      <DependentUpon>FrmUserMng.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmUserReport.Designer.cs">
-      <DependentUpon>FrmUserReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZFormOld\FrmVatCorrect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmVatCorrect.Designer.cs">
-      <DependentUpon>FrmVatCorrect.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\KitLabelsA4.cs">
       <SubType>Component</SubType>
@@ -720,9 +336,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\lst_stktransbycs.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\NoteA4.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NotProcess\Class0.cs" />
@@ -740,12 +353,6 @@
     <Compile Include="NotProcess\Class7.cs" />
     <Compile Include="NotProcess\Class8.cs" />
     <Compile Include="NotProcess\Class9.cs" />
-    <Compile Include="ZFormOld\FrmMsgbox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZFormOld\FrmMsgbox.Designer.cs">
-      <DependentUpon>FrmMsgbox.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bill\BookListForm.resx">
@@ -755,6 +362,10 @@
     <EmbeddedResource Include="BookReader\ReaderForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonForm\FrmGetAmount.resx">
+      <DependentUpon>FrmGetAmount.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonForm\FrmGetDates.resx">
       <SubType>Designer</SubType>
@@ -772,77 +383,29 @@
       <SubType>Designer</SubType>
       <DependentUpon>CardPrintForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FrmLibraryInfo.resx">
+      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmReports.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FrmSuppInfo.resx">
+      <DependentUpon>FrmSuppInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\Report\mercinstock_supp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>mercinstock_supp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmCashIO.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmCashIO.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\ChangePassForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ChangePassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmCreateTran.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmCreateTran.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmDiscInfo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmDiscInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFromDealer.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmFromDealer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmFromSupp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmFromSupp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFromSuppNoVat.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmFromSuppNoVat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFromSuppOd.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmFromSuppOd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFrPromotion.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmFrPromotion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmGetAmount.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmGetAmount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmGetDay.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmGetDay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmFastSlow.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmFastSlow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmAdjust_grp.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmAdjust_grp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmAtrCode.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmAtrCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmAtrList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmAtrList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmBalance.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill\ReturnBookForm.resx">
       <SubType>Designer</SubType>
@@ -860,33 +423,9 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmBookView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmHisPrice.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmHisPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmImportMerc.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmImportMerc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmKitDef.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmKitDef.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmKitLabelPrn.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmKitLabelPrn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmKitList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmKitList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Misc\FrmLibraryDef.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmLibraryDef.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmLibraryInfo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmLibraryInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Misc\LibraryLocationForm.resx">
       <SubType>Designer</SubType>
@@ -908,85 +447,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMap_01.resx">
+    <EmbeddedResource Include="Stock\FrmBookLost.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>FrmMap_01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMap_02.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMap_02.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMap_03.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMap_03.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercDisc.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMercDisc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMercList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercLost.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMercLost.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercMove.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMercMove.cs</DependentUpon>
+      <DependentUpon>FrmBookLost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmMercOrder.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmMercOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMercPosView.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMercPosView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmMessageQue.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmMessageQue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmNoteLabelPrn.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmNoteLabelPrn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmOpen_Acc.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmOpen_Acc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmOrderList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmOrderList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bill\OverDueForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>OverDueForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPayment.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPaymentOrder.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPaymentOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPosSale.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPosSale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPtrDelete.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPtrDelete.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPtrList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPtrList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmPtrReturn.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmPtrReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookReader\FrmReaderInfo.resx">
       <SubType>Designer</SubType>
@@ -996,97 +467,17 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmReaderList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmStations.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmStations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmStationView.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmStationView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmSTK_GL.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmSTK_GL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmStore.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmStore.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmStrList.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmStrList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmSuppInfo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmSuppInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmSuspendTrans.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmSuspendTrans.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmSystemConfig.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmSystemConfig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmSystemInfo.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmSystemInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmToDealer.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmToDealer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmToSupp.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmToSupp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmToSuppByTr.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmToSuppByTr.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Stock\FrmTransCode.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmTransCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmTran_0_1.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmTran_0_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmTran_1_1.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmTran_1_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmTran_1_n.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmTran_1_n.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmTran_n_1.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmTran_n_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUser.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUserGrp.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUserGrp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUserGrpMng.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUserGrpMng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUserMng.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUserMng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmUserReport.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmUserReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZFormOld\FrmVatCorrect.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmVatCorrect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Help\AboutForm.resx">
       <SubType>Designer</SubType>

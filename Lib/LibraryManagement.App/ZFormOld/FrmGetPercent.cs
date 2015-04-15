@@ -46,7 +46,7 @@ namespace LibraryManagement.App
                 }
                 else
                 {
-                    Class10.double_0 = Class7.smethod_0(this.Txt_Percent.EditValue.ToString()) / 100.0;
+                    Class10.double_0 = Class7.ParseDoubleValue(this.Txt_Percent.EditValue.ToString()) / 100.0;
                     base.Close();
                 }
             }

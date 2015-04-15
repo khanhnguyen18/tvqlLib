@@ -162,9 +162,9 @@ namespace LibraryManagement.App
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = this.Txt_ExpID.Text.Trim();
                 string str3 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.smethod_0(this.Txt_Qty.Text);
-                double num2 = Class7.smethod_0(this.Txt_DiscPc.Text);
-                double num3 = Class7.smethod_0(this.Txt_Price.Text);
+                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
+                double num2 = Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
+                double num3 = Class7.ParseDoubleValue(this.Txt_Price.Text);
                 string str4 = this.Cmb_Unit.Text.Trim();
                 Class6 class2 = new Class6();
                 if (!class2.method_22() && (class2.method_21(str, str2) < num))
@@ -172,7 +172,7 @@ namespace LibraryManagement.App
                     Class7.ShowMessageBox("Số lượng tồn kh\x00f4ng đủ để xuất kho !", 1);
                     this.Txt_Qty.Focus();
                 }
-                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -242,9 +242,9 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
-                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "surplus").ToString());
-                double num = Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "disc_rate").ToString());
+                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "surplus").ToString());
+                double num = Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "disc_rate").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_DiscPc.Text = num.ToString();
@@ -368,8 +368,8 @@ namespace LibraryManagement.App
             foreach (DataRow row in dataTable.Rows)
             {
                 new Class6();
-                double num = Class7.smethod_0(row["qty"].ToString());
-                double num2 = Class7.smethod_0(row["amount"].ToString()) / num;
+                double num = Class7.ParseDoubleValue(row["qty"].ToString());
+                double num2 = Class7.ParseDoubleValue(row["amount"].ToString()) / num;
                 string selectCommandText = string.Concat(new object[] { 
                     "IF NOT EXISTS (SELECT goods_id from tblCust_info where cust_id = '", str, "' and goods_id = '", row["goods_id"], "') INSERT INTO tblCust_info(Cust_id, goods_id, imp_qty,imp_amt, exp_qty, exp_amt,lastwspr, last_date) VALUES ('", str, "','", row["goods_id"], "',", num, ",", row["amount"], ",0,0, ", num2, ",'", str2, 
                     "') Else UPDATE tblCust_info SET  imp_qty = imp_qty + ", num, ", imp_amt = imp_amt + ", row["amount"], ", lastwspr = ", num2, ", last_date = '", str2, "' where cust_id = '", str, "' and goods_id = '", row["goods_id"], "'"
@@ -392,8 +392,8 @@ namespace LibraryManagement.App
             foreach (DataRow row in dataTable.Rows)
             {
                 new Class6();
-                double num = Class7.smethod_0(row["qty"].ToString());
-                double num1 = Class7.smethod_0(row["amount"].ToString()) / num;
+                double num = Class7.ParseDoubleValue(row["qty"].ToString());
+                double num1 = Class7.ParseDoubleValue(row["amount"].ToString()) / num;
                 string selectCommandText = string.Concat(new object[] { "UPDATE tblCust_info SET  imp_qty = imp_qty - ", num, ", imp_amt = imp_amt - ", row["amount"], "where cust_id = '", row["imp_id"], "' and goods_id = '", row["goods_id"], "'" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
@@ -415,7 +415,7 @@ namespace LibraryManagement.App
             string str2 = string.Format("{0:d}", Class6.string_13);
             foreach (DataRow row in dataTable.Rows)
             {
-                double num = Class7.smethod_0(row["qty"].ToString());
+                double num = Class7.ParseDoubleValue(row["qty"].ToString());
                 double num2 = class2.method_16(str, row["goods_id"].ToString()) * num;
                 object obj2 = string.Concat(new object[] { "IF EXISTS (SELECT id FROM tblStockInfo WHERE id = '", str, "' AND goods_id = '", row["goods_id"], "') " });
                 obj2 = string.Concat(new object[] { obj2, "UPDATE  tblStockInfo SET exp_qty = exp_qty + ", row["qty"], " ," });
@@ -509,7 +509,7 @@ namespace LibraryManagement.App
                 if (dataSet.Tables[0].Rows.Count != 0)
                 {
                     this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                    this.Txt_Price.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["wsprice"].ToString());
+                    this.Txt_Price.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["wsprice"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                     this.Cmb_Unit.SelectedIndex = 0;

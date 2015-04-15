@@ -101,7 +101,7 @@ namespace LibraryManagement.App
                 this.oleDbConnection_0.Close();
                 foreach (DataRow row in table.Rows)
                 {
-                    double num13 = class2.method_16(str2, row["goods_id"].ToString()) * Class7.smethod_0(row["qty"].ToString());
+                    double num13 = class2.method_16(str2, row["goods_id"].ToString()) * Class7.ParseDoubleValue(row["qty"].ToString());
                     this.string_1 = string.Concat(new object[] { 
                         "IF EXISTS (SELECT id FROM tblStockInfo WHERE id = '", str2, "' AND goods_id = '", row["goods_id"], "') UPDATE  tblStockInfo SET exp_qty = exp_qty + ", row["qty"], " , exp_amt = exp_amt + ", num13, ", last_date ='", str5, "' WHERE id = '", str2, "' AND goods_id = '", row["goods_id"], "' Else INSERT INTO tblStockInfo(id,goods_id, exp_qty,exp_amt,last_date ) VALUES('", str2, 
                         "','", row["goods_id"], "',", row["qty"], ",", num13, ",'", str5, "')"
@@ -116,7 +116,7 @@ namespace LibraryManagement.App
                 this.string_2 = "D";
                 if (Class10.double_2 != 0.0)
                 {
-                    double num = Class7.smethod_0(this.Lbl_LastAmount.Text);
+                    double num = Class7.ParseDoubleValue(this.Lbl_LastAmount.Text);
                     this.string_1 = string.Concat(new object[] { "INSERT INTO tblTransValue([trans_num],[amount],[frcustomer]) VALUES('", Class6.transNum, "',", num, ",", Class10.double_2, ")" });
                     this.oleDbDataAdapter_0 = new OleDbDataAdapter(this.string_1, this.oleDbConnection_0);
                     using (DataSet set = new DataSet())
@@ -239,8 +239,8 @@ namespace LibraryManagement.App
             Class7.smethod_17("description", "tblCurrency", "Id", str, "", Class7.oleDbConnection_1, ref str2);
             Class7.smethod_17("exchange", "tblCurrency", "Id", str, "", Class7.oleDbConnection_1, ref str3);
             this.Lbl_CurrencyName.Text = str2;
-            this.Lbl_Exchange.Text = string.Format("{0:n0}", Class7.smethod_0(str3));
-            this.Lbl_Foreign.Text = string.Format("{0:n2}", Math.Round((double)(Class7.smethod_0(this.Lbl_PayAmt.Text) / Class7.smethod_0(str3)), 2));
+            this.Lbl_Exchange.Text = string.Format("{0:n0}", Class7.ParseDoubleValue(str3));
+            this.Lbl_Foreign.Text = string.Format("{0:n2}", Math.Round((double)(Class7.ParseDoubleValue(this.Lbl_PayAmt.Text) / Class7.ParseDoubleValue(str3)), 2));
             this.Lbl_CurrencyCap.Text = str;
         }
 
@@ -284,7 +284,7 @@ namespace LibraryManagement.App
         private void FrmPosSale_KeyDown(object sender, KeyEventArgs e)
         {
             DataSet set;
-            double num = Class7.smethod_0(this.Txt_Qty.Text);
+            double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
             string str = this.Txt_Barcode.Text.Trim();
             switch (e.KeyCode)
             {
@@ -483,7 +483,7 @@ namespace LibraryManagement.App
             this.oleDbConnection_0.Close();
             this.Lbl_TotalAmount.Text = string.Format("{0:n0}", set2.Tables[0].Rows[0]["amount"]);
             this.Lbl_Discount.Text = string.Format("{0:n0}", set2.Tables[0].Rows[0]["discamt"]);
-            double num = Class7.smethod_0(set2.Tables[0].Rows[0]["totalamt"].ToString());
+            double num = Class7.ParseDoubleValue(set2.Tables[0].Rows[0]["totalamt"].ToString());
             this.Lbl_LastAmount.Text = string.Format("{0:n0}", num);
             this.Lbl_PayAmt.Text = string.Format("{0:n0}", num);
             if (this.Lbl_PayAmt.Text == string.Empty)
@@ -496,8 +496,8 @@ namespace LibraryManagement.App
             Class7.smethod_17("description", "tblCurrency", "Id", str, "and status = 1", Class7.oleDbConnection_1, ref str2);
             Class7.smethod_17("exchange", "tblCurrency", "Id", str, "and status = 1", Class7.oleDbConnection_1, ref str3);
             this.Lbl_CurrencyName.Text = str2;
-            this.Lbl_Exchange.Text = string.Format("{0:n0}", Class7.smethod_0(str3));
-            this.Lbl_Foreign.Text = string.Format("{0:n2}", Math.Round((double) (num / Class7.smethod_0(str3)), 2));
+            this.Lbl_Exchange.Text = string.Format("{0:n0}", Class7.ParseDoubleValue(str3));
+            this.Lbl_Foreign.Text = string.Format("{0:n2}", Math.Round((double) (num / Class7.ParseDoubleValue(str3)), 2));
             this.Lbl_CurrencyCap.Text = str;
             StyleFormatCondition condition = null;
             condition = new StyleFormatCondition(FormatConditionEnum.NotEqual, this.Sales_View.Columns["M\x00e3 g\x00f3i/b\x00f3"], null, "");
@@ -525,9 +525,9 @@ namespace LibraryManagement.App
                         this.Lbl_MercName.Text = set.Tables[0].Rows[0]["full_name"].ToString();
                         this.Txt_Rtprice.Text = set.Tables[0].Rows[0]["rtprice"].ToString();
                         this.Txt_Unit.Text = set.Tables[0].Rows[0]["piceunit"].ToString();
-                        double num = Class7.smethod_0(this.Txt_Qty.Text);
+                        double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
                         string str2 = this.Txt_Barcode.Text.Trim();
-                        double num2 = Class7.smethod_0(this.Txt_Rtprice.Text);
+                        double num2 = Class7.ParseDoubleValue(this.Txt_Rtprice.Text);
                         string str3 = this.Lbl_MercName.Text.Trim();
                         string str4 = this.Txt_Unit.Text.Trim();
                         Class6 class2 = new Class6();
@@ -568,7 +568,7 @@ namespace LibraryManagement.App
             this.Txt_Barcode.Text.Trim();
             double num = 1.0;
             string str = this.Txt_Barcode.Text.Trim();
-            double num2 = Class7.smethod_0(this.Txt_Rtprice.Text);
+            double num2 = Class7.ParseDoubleValue(this.Txt_Rtprice.Text);
             string str2 = this.Lbl_MercName.Text.Trim();
             string str3 = this.Txt_Unit.Text.Trim();
             Class6 class2 = new Class6();
@@ -612,7 +612,7 @@ namespace LibraryManagement.App
                         DataSet set2;
                         this.Lbl_MercName.Text = set.Tables[0].Rows[0]["description"].ToString();
                         this.Txt_Rtprice.Text = set.Tables[0].Rows[0]["rtprice"].ToString();
-                        double num = Class7.smethod_0(this.Txt_Qty.Text);
+                        double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
                         double num2 = 0.0;
                         string str2 = this.Lbl_MercName.Text.Trim();
                         string str3 = "";
@@ -696,7 +696,7 @@ namespace LibraryManagement.App
                 this.btn_New.Focus();
             }
             this.Lbl_ReceivAmt.Text = string.Format("{0:n0}", Class10.double_2);
-            double num = Class7.smethod_0(this.Lbl_ReceivAmt.Text) - Class7.smethod_0(this.Lbl_LastAmount.Text);
+            double num = Class7.ParseDoubleValue(this.Lbl_ReceivAmt.Text) - Class7.ParseDoubleValue(this.Lbl_LastAmount.Text);
             if (num > 0.0)
             {
                 this.Lbl_PaybackAmt.Text = string.Format("{0:n0}", num);
@@ -796,7 +796,7 @@ namespace LibraryManagement.App
                             Class7.smethod_17("full_name", "tblGoods", "goods_id", this.Txt_Barcode.Text.Trim(), "", Class7.oleDbConnection_1, ref str4);
                             this.Lbl_MercName.Text = str4;
                             Class7.smethod_17("rtprice", "tblPrice", "goods_id", this.Txt_Barcode.Text.Trim(), "", Class7.oleDbConnection_1, ref str5);
-                            this.Txt_Rtprice.EditValue = Class7.smethod_0(str5);
+                            this.Txt_Rtprice.EditValue = Class7.ParseDoubleValue(str5);
                             this.oleDbConnection_0.Close();
                             this.Txt_Qty.Focus();
                             goto Label_02BE;

@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace LibraryManagement.App
 {
-    partial class FrmMercLost
+    partial class FrmBookLost
     {
         /// <summary>
         /// Required designer variable.
@@ -41,11 +41,10 @@ namespace LibraryManagement.App
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private ComponentResourceManager manager;
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMercLost));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookLost));
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.LabelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_Remark = new DevExpress.XtraEditors.TextEdit();
@@ -483,7 +482,7 @@ namespace LibraryManagement.App
             this.labelControl19.TabIndex = 406;
             this.labelControl19.Text = "Hiện tồn";
             // 
-            // FrmMercLost
+            // FrmBookLost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -518,9 +517,9 @@ namespace LibraryManagement.App
             this.Controls.Add(this.Cmb_Unit);
             this.Controls.Add(this.GrdTran);
             this.Controls.Add(this.btnAdd);
-            this.Name = "FrmMercLost";
+            this.Name = "FrmBookLost";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMercLost";
+            this.Text = "Thanh lý sách";
             this.Load += new System.EventHandler(this.FrmMercLost_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMercLost_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Remark.Properties)).EndInit();

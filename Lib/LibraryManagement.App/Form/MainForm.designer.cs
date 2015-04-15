@@ -57,8 +57,8 @@ namespace LibraryManagement.App
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem6 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.blbiSupplierReturn = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.blbiBuyOld = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiChangePass = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
@@ -91,6 +91,7 @@ namespace LibraryManagement.App
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -122,12 +123,13 @@ namespace LibraryManagement.App
             this.barLargeButtonItem2,
             this.barLargeButtonItem3,
             this.barLargeButtonItem4,
-            this.barLargeButtonItem5,
-            this.barLargeButtonItem6,
-            this.blbiChangePass});
+            this.blbiSupplierReturn,
+            this.blbiBuyOld,
+            this.blbiChangePass,
+            this.barLargeButtonItem5});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 19;
+            this.barManager_0.MaxItemId = 20;
             this.barManager_0.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.barManager_0.StatusBar = this.statusBar;
@@ -179,9 +181,10 @@ namespace LibraryManagement.App
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.blbiChangePass)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiSupplierReturn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiBuyOld),
+            new DevExpress.XtraBars.LinkPersistInfo(this.blbiChangePass),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem5)});
             this.bar_2.OptionsBar.MultiLine = true;
             this.bar_2.OptionsBar.UseWholeRow = true;
             this.bar_2.Text = "Custom 5";
@@ -234,19 +237,21 @@ namespace LibraryManagement.App
             this.barLargeButtonItem4.Name = "barLargeButtonItem4";
             this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
             // 
-            // barLargeButtonItem5
+            // blbiSupplierReturn
             // 
-            this.barLargeButtonItem5.Caption = "Trả hàng NCC";
-            this.barLargeButtonItem5.Id = 16;
-            this.barLargeButtonItem5.LargeImageIndex = 9;
-            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
+            this.blbiSupplierReturn.Caption = "Trả hàng NCC";
+            this.blbiSupplierReturn.Id = 16;
+            this.blbiSupplierReturn.LargeImageIndex = 9;
+            this.blbiSupplierReturn.Name = "blbiSupplierReturn";
+            this.blbiSupplierReturn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiSupplierReturn_ItemClick);
             // 
-            // barLargeButtonItem6
+            // blbiBuyOld
             // 
-            this.barLargeButtonItem6.Caption = "Thanh lý sách";
-            this.barLargeButtonItem6.Id = 17;
-            this.barLargeButtonItem6.LargeImageIndex = 8;
-            this.barLargeButtonItem6.Name = "barLargeButtonItem6";
+            this.blbiBuyOld.Caption = "Thanh lý sách";
+            this.blbiBuyOld.Id = 17;
+            this.blbiBuyOld.LargeImageIndex = 8;
+            this.blbiBuyOld.Name = "blbiBuyOld";
+            this.blbiBuyOld.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiBuyOld_ItemClick);
             // 
             // blbiChangePass
             // 
@@ -261,14 +266,14 @@ namespace LibraryManagement.App
             this.barDockControl_0.CausesValidation = false;
             this.barDockControl_0.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl_0.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl_0.Size = new System.Drawing.Size(836, 87);
+            this.barDockControl_0.Size = new System.Drawing.Size(942, 87);
             // 
             // barDockControl_1
             // 
             this.barDockControl_1.CausesValidation = false;
             this.barDockControl_1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControl_1.Location = new System.Drawing.Point(0, 489);
-            this.barDockControl_1.Size = new System.Drawing.Size(836, 26);
+            this.barDockControl_1.Size = new System.Drawing.Size(942, 26);
             // 
             // barDockControl_2
             // 
@@ -281,7 +286,7 @@ namespace LibraryManagement.App
             // 
             this.barDockControl_3.CausesValidation = false;
             this.barDockControl_3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl_3.Location = new System.Drawing.Point(836, 87);
+            this.barDockControl_3.Location = new System.Drawing.Point(942, 87);
             this.barDockControl_3.Size = new System.Drawing.Size(0, 402);
             // 
             // imageList_0
@@ -355,6 +360,7 @@ namespace LibraryManagement.App
             this.imageCollection_0.Images.SetKeyName(8, "1428956435_palet03.png");
             this.imageCollection_0.Images.SetKeyName(9, "32truck_red.png");
             this.imageCollection_0.Images.SetKeyName(10, "32key.png");
+            this.imageCollection_0.Images.SetKeyName(11, "32gear.png");
             // 
             // repositoryItemTextEdit1
             // 
@@ -531,11 +537,18 @@ namespace LibraryManagement.App
             // 
             this.defaultLookAndFeel_0.LookAndFeel.SkinName = "DevExpress Style";
             // 
+            // barLargeButtonItem5
+            // 
+            this.barLargeButtonItem5.Caption = "Backup";
+            this.barLargeButtonItem5.Id = 19;
+            this.barLargeButtonItem5.LargeImageIndex = 11;
+            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 515);
+            this.ClientSize = new System.Drawing.Size(942, 515);
             this.Controls.Add(this.cnvLekth7);
             this.Controls.Add(this.barDockControl_4);
             this.Controls.Add(this.barDockControl_2);
@@ -605,10 +618,11 @@ namespace LibraryManagement.App
         private BarLargeButtonItem barLargeButtonItem2;
         private BarLargeButtonItem barLargeButtonItem3;
         private BarLargeButtonItem barLargeButtonItem4;
-        private BarLargeButtonItem barLargeButtonItem5;
-        private BarLargeButtonItem barLargeButtonItem6;
+        private BarLargeButtonItem blbiSupplierReturn;
+        private BarLargeButtonItem blbiBuyOld;
         private BarLargeButtonItem blbiChangePass;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private BarLargeButtonItem barLargeButtonItem5;
 
     }
 }

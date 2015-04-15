@@ -150,11 +150,11 @@ namespace LibraryManagement.App
             {
                 this.Txt_GoodsId.Text.Trim();
                 this.Lbl_MercName.Text.Trim();
-                Class7.smethod_0(this.Txt_Qty.Text);
-                Class7.smethod_0(this.Txt_DiscPc.Text);
-                Class7.smethod_0(this.Txt_Price.Text);
+                Class7.ParseDoubleValue(this.Txt_Qty.Text);
+                Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
+                Class7.ParseDoubleValue(this.Txt_Price.Text);
                 this.Cmb_Unit.Text.Trim();
-                if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
+                if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -198,7 +198,7 @@ namespace LibraryManagement.App
             DataSet dataSet = new DataSet();
             this.oleDbDataAdapter_0.Fill(dataSet);
             this.oleDbConnection_1.Close();
-            double num = Class7.smethod_0(this.Txt_Qty.Text);
+            double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
             double num2 = Class7.smethod_2(dataSet.Tables[0].Rows[0]["amount"]) / Class7.smethod_2(dataSet.Tables[0].Rows[0]["qty"]);
             double num3 = num * num2;
             double num4 = Class7.smethod_2(dataSet.Tables[0].Rows[0]["amount"]);
@@ -254,8 +254,8 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                double num = Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
-                double num2 = (Class7.smethod_0(this.Txt_DiscAmt.Text) / num) * 100.0;
+                double num = Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                double num2 = (Class7.ParseDoubleValue(this.Txt_DiscAmt.Text) / num) * 100.0;
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_DiscPc.Text = num2.ToString();
@@ -322,8 +322,8 @@ namespace LibraryManagement.App
             foreach (DataRow row in dataTable.Rows)
             {
                 new Class6();
-                double num = Class7.smethod_0(row["qty"].ToString());
-                double num2 = Class7.smethod_0(row["totalamt"].ToString()) / num;
+                double num = Class7.ParseDoubleValue(row["qty"].ToString());
+                double num2 = Class7.ParseDoubleValue(row["totalamt"].ToString()) / num;
                 string selectCommandText = string.Concat(new object[] { 
                     "IF NOT EXISTS (SELECT goods_id from tblCust_info where cust_id = '", str, "' and goods_id = '", row["goods_id"], "') INSERT INTO tblCust_info(Cust_id, goods_id,  exp_qty, exp_amt,imp_qty,imp_amt,lastwspr, last_date) VALUES ('", str, "','", row["goods_id"], "',", num, ",", row["totalamt"], ",0,0, ", num2, ",'", str2, 
                     "') Else UPDATE tblCust_info SET  imp_qty = exp_qty + ", num, ", exp_amt = exp_amt + ", row["totalamt"], ",  last_date = '", str2, "' where cust_id = '", str, "' and goods_id = '", row["goods_id"], "'"
@@ -346,8 +346,8 @@ namespace LibraryManagement.App
             foreach (DataRow row in dataTable.Rows)
             {
                 new Class6();
-                double num = Class7.smethod_0(row["qty"].ToString());
-                double num1 = Class7.smethod_0(row["amount"].ToString()) / num;
+                double num = Class7.ParseDoubleValue(row["qty"].ToString());
+                double num1 = Class7.ParseDoubleValue(row["amount"].ToString()) / num;
                 string selectCommandText = string.Concat(new object[] { "UPDATE tblCust_info SET  exp_qty = exp_qty - ", num, ", exp_amt = exp_amt - ", row["amount"], "where cust_id = '", row["exp_id"], "' and goods_id = '", row["goods_id"], "'" });
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (DataSet set = new DataSet())
