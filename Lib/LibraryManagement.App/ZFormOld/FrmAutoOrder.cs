@@ -26,11 +26,11 @@ namespace LibraryManagement.App
             DataSet set2;
             string str = this.Txt_GoodsId.Text.Trim();
             string text = this.Lbl_MercName.Text;
-            double num = Class7.smethod_0(this.Txt_Price.Text);
-            double num2 = Class7.smethod_0(this.Txt_Qty.Text);
+            double num = Class7.ParseDoubleValue(this.Txt_Price.Text);
+            double num2 = Class7.ParseDoubleValue(this.Txt_Qty.Text);
             string str3 = this.Lbl_Unit.Text;
             string str4 = this.Txt_ExpID.Text.Trim();
-            double num3 = Class7.smethod_0(this.CwwJoLjYp.Text);
+            double num3 = Class7.ParseDoubleValue(this.CwwJoLjYp.Text);
             if (this.Lbl_MercName.Text == string.Empty)
             {
                 Class7.ShowMessageBox("Bạn chưa chọn m\x00e3 h\x00e0ng cần đặt", 1);
@@ -305,7 +305,7 @@ namespace LibraryManagement.App
             if (dataSet.Tables[0].Rows.Count != 0)
             {
                 this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                this.Txt_Price.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["lastimppr"].ToString());
+                this.Txt_Price.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["lastimppr"].ToString());
                 this.Txt_Qty.Text = "1";
                 this.Lbl_Unit.Text = dataSet.Tables[0].Rows[0]["piceunit"].ToString();
                 this.Txt_ExpID.Text = dataSet.Tables[0].Rows[0]["supp_id"].ToString();

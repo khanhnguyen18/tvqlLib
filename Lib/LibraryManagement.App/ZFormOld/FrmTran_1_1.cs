@@ -81,7 +81,7 @@ namespace LibraryManagement.App
                 Class7.ShowMessageBox("Bạn chưa khai b\x00e1o diễn giải giao dịch", 1);
                 this.Txt_Remark.Focus();
             }
-            else if (Class7.smethod_0(this.Txt_Amount.Text) <= 0.0)
+            else if (Class7.ParseDoubleValue(this.Txt_Amount.Text) <= 0.0)
             {
                 Class7.ShowMessageBox("Số tiền kh\x00f4ng hợp lệ", 1);
                 this.Txt_Amount.Focus();
@@ -91,8 +91,8 @@ namespace LibraryManagement.App
                 string str3 = string.Format("{0:MM/dd/yyyy}", this.Txt_TranDate.EditValue);
                 string str4 = this.Txt_Voucher.Text.Trim();
                 string str5 = this.Txt_DbAccId.EditValue.ToString();
-                double num = Class7.smethod_0(this.Txt_Amount.Text);
-                double num2 = Class7.smethod_0(this.Txt_Amount.Text);
+                double num = Class7.ParseDoubleValue(this.Txt_Amount.Text);
+                double num2 = Class7.ParseDoubleValue(this.Txt_Amount.Text);
                 string str6 = this.Txt_CreAccId.EditValue.ToString();
                 string str7 = this.Txt_Remark.Text.Trim();
                 string str2 = this.Txt_TransNum.Text.Trim();

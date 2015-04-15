@@ -196,16 +196,16 @@ namespace LibraryManagement.App
             {
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = this.Lbl_MercName.Text.Trim();
-                double num = Class7.smethod_0(this.Txt_Qty.Text);
-                double num2 = Class7.smethod_0(this.Txt_Price.Text);
-                double num3 = Class7.smethod_0(this.Txt_DiscPc.Text);
+                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
+                double num2 = Class7.ParseDoubleValue(this.Txt_Price.Text);
+                double num3 = Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
                 string str3 = this.Cmb_Unit.Text.Trim();
                 if (num2 <= 0.0)
                 {
                     Class7.ShowMessageBox("Gi\x00e1 nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Price.Focus();
                 }
-                else if (Class7.smethod_0(this.Txt_Qty.Text) < 0.0)
+                else if (Class7.ParseDoubleValue(this.Txt_Qty.Text) < 0.0)
                 {
                     Class7.ShowMessageBox("Số lượng nhập đăng k\x00fd kh\x00f4ng hợp lệ", 1);
                     this.Txt_Qty.Focus();
@@ -341,7 +341,7 @@ namespace LibraryManagement.App
         {
             if (this.TransDetail.RowCount != 0)
             {
-                Class7.smethod_0(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
+                Class7.ParseDoubleValue(this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Th\x00e0nh tiền").ToString());
                 this.Txt_GoodsId.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "M\x00e3 h\x00e0ng").ToString();
                 this.Txt_Qty.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Số lượng").ToString();
                 this.Txt_DiscPc.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "% CK").ToString();
@@ -410,8 +410,8 @@ namespace LibraryManagement.App
         {
             DataSet set2;
             DataSet set3;
-            double num = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
-            Class7.smethod_0(this.Txt_DiscPc.Text);
+            double num = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
+            Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
             string text = this.CgeIdZyqWF.Text;
             if (text != null)
             {
@@ -507,20 +507,20 @@ namespace LibraryManagement.App
             double num4 = 0.0;
             if (dataSet.Tables[0].Rows.Count != 0)
             {
-                num2 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["a_amt"].ToString());
-                num3 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["d_amt"].ToString());
-                num4 = Class7.smethod_0(dataSet.Tables[0].Rows[0]["v_amt"].ToString());
+                num2 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["a_amt"].ToString());
+                num3 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["d_amt"].ToString());
+                num4 = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["v_amt"].ToString());
                 if (this.chk_inclVat.Checked)
                 {
                     this.Txt_TotalAmt.EditValue = num2 + num4;
-                    this.Txt_ImpAmt.EditValue = Class7.smethod_0(this.Txt_TotalAmt.Text) - num4;
+                    this.Txt_ImpAmt.EditValue = Class7.ParseDoubleValue(this.Txt_TotalAmt.Text) - num4;
                     this.Txt_VatAmt.EditValue = num4;
                     this.Txt_DiscAmt.EditValue = num3;
                 }
                 else
                 {
                     this.Txt_TotalAmt.EditValue = num2 + num4;
-                    this.Txt_ImpAmt.EditValue = Class7.smethod_0(this.Txt_TotalAmt.Text) + num4;
+                    this.Txt_ImpAmt.EditValue = Class7.ParseDoubleValue(this.Txt_TotalAmt.Text) + num4;
                     this.Txt_VatAmt.EditValue = num4;
                     this.Txt_DiscAmt.EditValue = num3;
                 }
@@ -594,7 +594,7 @@ namespace LibraryManagement.App
             int num = this.Chk_includedisc.Checked ? 1 : 0;
             int num2 = this.Chk_discpervat.Checked ? 1 : 0;
             string str8 = this.CgeIdZyqWF.Text.Trim();
-            double num3 = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
+            double num3 = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
             this.oleDbDataAdapter_0 = new OleDbDataAdapter("SELECT goods_id,qty,price,amount,idx,unitsymb, disc_amt,vat_amt,surplus,merc_type,disc_pc FROM " + this.string_0, this.oleDbConnection_0);
             DataTable dataTable = new DataTable();
             this.oleDbDataAdapter_0.Fill(dataTable);
@@ -655,7 +655,7 @@ namespace LibraryManagement.App
             this.Txt_TotalAmt.EditValue = 0;
             this.Txt_VatAmt.EditValue = 0;
             this.Txt_DiscAmt.EditValue = 0;
-            double num = Class7.smethod_0(this.Txt_Vatrate.Text) / 100.0;
+            double num = Class7.ParseDoubleValue(this.Txt_Vatrate.Text) / 100.0;
             string text = this.CgeIdZyqWF.Text;
             if (text != null)
             {
@@ -799,7 +799,7 @@ namespace LibraryManagement.App
             if (dataSet.Tables[0].Rows.Count != 0)
             {
                 this.Lbl_MercName.Text = dataSet.Tables[0].Rows[0]["full_name"].ToString();
-                this.Txt_Price.EditValue = Class7.smethod_0(dataSet.Tables[0].Rows[0]["prefprice"].ToString());
+                this.Txt_Price.EditValue = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0]["prefprice"].ToString());
                 this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                 this.Cmb_Unit.Properties.Items.Add(dataSet.Tables[0].Rows[0]["piceunit"].ToString());
                 this.Cmb_Unit.SelectedIndex = 0;

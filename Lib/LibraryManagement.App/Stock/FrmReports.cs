@@ -462,7 +462,7 @@ namespace LibraryManagement.App
             new FrmGetDates().ShowDialog();
             if (Class7.IsInputDate)
             {
-                new FrmFastSlow().ShowDialog();
+                //new FrmFastSlow().ShowDialog();
             }
         }
 

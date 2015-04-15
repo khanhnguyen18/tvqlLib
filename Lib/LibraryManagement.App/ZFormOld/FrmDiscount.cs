@@ -25,7 +25,7 @@ namespace LibraryManagement.App
                 DataSet set;
                 string str = string.Format("{0:d}", this.Txt_FrDate.EditValue);
                 string str2 = string.Format("{0:d}", this.Txt_ToDate.EditValue);
-                double num = Class7.smethod_0(this.Txt_DiscPercent.EditValue.ToString());
+                double num = Class7.ParseDoubleValue(this.Txt_DiscPercent.EditValue.ToString());
                 switch (this.radioGroup1.SelectedIndex)
                 {
                     case 0:

@@ -25,7 +25,7 @@ namespace LibraryManagement.App
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (!((Class7.smethod_0(this.Txt_Qty.Text) <= 0.0) | (this.Lbl_FullName.Text == string.Empty)))
+            if (!((Class7.ParseDoubleValue(this.Txt_Qty.Text) <= 0.0) | (this.Lbl_FullName.Text == string.Empty)))
             {
                 string str = this.Txt_PosId.Text.Trim();
                 string str2 = this.Txt_GoodsId.Text.Trim();
@@ -33,11 +33,11 @@ namespace LibraryManagement.App
                 string str4 = this.Lbl_FullName.Text.Trim();
                 string str5 = this.Lbl_GrpId.Text.Trim();
                 string str6 = this.Lbl_SuppId.Text.Trim();
-                double num = Class7.smethod_0(this.Lbl_Rtprice.Text);
+                double num = Class7.ParseDoubleValue(this.Lbl_Rtprice.Text);
                 string str7 = this.Txt_Remark.Text.Trim();
                 string text = this.Lbl_Barcode.Text;
                 string str9 = DateTime.Now.ToString("HH:mm:ss");
-                double num2 = Class7.smethod_0(this.Txt_Qty.Text);
+                double num2 = Class7.ParseDoubleValue(this.Txt_Qty.Text);
                 string selectCommandText = string.Concat(new object[] { 
                     "IF NOT EXISTS(select goods_id from ", base.Tag.ToString(), " where goods_id = '", str2, "' and user_id = ", Class7.GetUserId(), ") INSERT INTO ", base.Tag.ToString(), "([timeinput],[pos_id],[goods_id],[barcode],[shortname],[fullname],[grp_id],[supp_id],[rtprice],[qty],[remark],user_id) VALUES('", str9, "', '", str, "' ,'", str2, "','", text, 
                     "' ,N'", str3, "',N'", str4, "','", str5, "','", str6, "','", num, "',", num2, ",'", str7, "', ", Class7.GetUserId(), 
@@ -74,9 +74,9 @@ namespace LibraryManagement.App
 
         private void btn_Move_Click(object sender, EventArgs e)
         {
-            if ((this.Labels_View.RowCount != 0) && (Class7.smethod_0(this.Txt_Qty.Text) > 0.0))
+            if ((this.Labels_View.RowCount != 0) && (Class7.ParseDoubleValue(this.Txt_Qty.Text) > 0.0))
             {
-                double num = Class7.smethod_0(this.Txt_Qty.Text);
+                double num = Class7.ParseDoubleValue(this.Txt_Qty.Text);
                 string str = this.Txt_GoodsId.Text.Trim();
                 string str2 = DateTime.Now.ToString("HH:mm:ss");
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(string.Concat(new object[] { "update ", base.Tag.ToString(), " set qty = qty - ", num, ", timeinput = '", str2, "' where goods_id = '", str, "' and user_id = ", Class7.GetUserId() }), this.oleDbConnection_1);
@@ -407,7 +407,7 @@ namespace LibraryManagement.App
             Class7.smethod_17("supp_id", "tblGoods", "goods_id", str3, "", Class7.oleDbConnection_1, ref str7);
             this.Lbl_SuppId.Text = str7;
             Class7.smethod_17("rtprice", "tblPrice", "goods_id", str3, "", Class7.oleDbConnection_1, ref str8);
-            this.Lbl_Rtprice.Text = string.Format("{0:n0}", Class7.smethod_0(str8));
+            this.Lbl_Rtprice.Text = string.Format("{0:n0}", Class7.ParseDoubleValue(str8));
         }
 
         private void Txt_PosId_EditValueChanged(object sender, EventArgs e)

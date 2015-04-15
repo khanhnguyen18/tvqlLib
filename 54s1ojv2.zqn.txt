@@ -1,0 +1,86 @@
+﻿Revert "Revert "Near finish""
+
+This reverts commit 3ec59c4d598f68b4fad65ed521766c0011808418, reversing
+changes made to 374ebdf810553601cec69bd4391ee1a74eb37bf5.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 2 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   Lib/LibraryManagement.App/Bill/LoanInvListForm.Designer.cs
+#	modified:   Lib/LibraryManagement.App/Bill/LoanInvListForm.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetAmount.Designer.cs -> Lib/LibraryManagement.App/CommonForm/FrmGetAmount.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetAmount.cs -> Lib/LibraryManagement.App/CommonForm/FrmGetAmount.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetAmount.resx -> Lib/LibraryManagement.App/CommonForm/FrmGetAmount.resx
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetDay.Designer.cs -> Lib/LibraryManagement.App/CommonForm/FrmGetDay.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetDay.cs -> Lib/LibraryManagement.App/CommonForm/FrmGetDay.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmGetDay.resx -> Lib/LibraryManagement.App/CommonForm/FrmGetDay.resx
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmMsgbox.Designer.cs -> Lib/LibraryManagement.App/CommonForm/FrmMsgbox.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmMsgbox.cs -> Lib/LibraryManagement.App/CommonForm/FrmMsgbox.cs
+#	modified:   Lib/LibraryManagement.App/Form/MainForm.cs
+#	modified:   Lib/LibraryManagement.App/Form/MainForm.designer.cs
+#	modified:   Lib/LibraryManagement.App/Form/MainForm.resx
+#	modified:   Lib/LibraryManagement.App/LibraryManagement.App.csproj
+#	modified:   Lib/LibraryManagement.App/LibraryManagement.App.csproj.user
+#	modified:   Lib/LibraryManagement.App/Misc/BookForm.cs
+#	modified:   Lib/LibraryManagement.App/Misc/CardPrintForm.Designer.cs
+#	modified:   Lib/LibraryManagement.App/NotProcess/Class12.cs
+#	modified:   Lib/LibraryManagement.App/NotProcess/Class17.cs
+#	modified:   Lib/LibraryManagement.App/NotProcess/Class6.cs
+#	modified:   Lib/LibraryManagement.App/NotProcess/Class7.cs
+#	modified:   Lib/LibraryManagement.App/Properties/AssemblyInfo.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmMercLost.Designer.cs -> Lib/LibraryManagement.App/Stock/FrmBookLost.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmMercLost.cs -> Lib/LibraryManagement.App/Stock/FrmBookLost.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmMercLost.resx -> Lib/LibraryManagement.App/Stock/FrmBookLost.resx
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmCustomer.Designer.cs -> Lib/LibraryManagement.App/Stock/FrmCustomer.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmCustomer.cs -> Lib/LibraryManagement.App/Stock/FrmCustomer.cs
+#	modified:   Lib/LibraryManagement.App/Stock/FrmFromSupp.Designer.cs
+#	modified:   Lib/LibraryManagement.App/Stock/FrmFromSupp.cs
+#	modified:   Lib/LibraryManagement.App/Stock/FrmFromSupp.resx
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmLibraryInfo.Designer.cs -> Lib/LibraryManagement.App/Stock/FrmLibraryInfo.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmLibraryInfo.cs -> Lib/LibraryManagement.App/Stock/FrmLibraryInfo.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmLibraryInfo.resx -> Lib/LibraryManagement.App/Stock/FrmLibraryInfo.resx
+#	modified:   Lib/LibraryManagement.App/Stock/FrmMercOrder.cs
+#	modified:   Lib/LibraryManagement.App/Stock/FrmReports.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmSuppInfo.Designer.cs -> Lib/LibraryManagement.App/Stock/FrmSuppInfo.Designer.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmSuppInfo.cs -> Lib/LibraryManagement.App/Stock/FrmSuppInfo.cs
+#	renamed:    Lib/LibraryManagement.App/ZFormOld/FrmSuppInfo.resx -> Lib/LibraryManagement.App/Stock/FrmSuppInfo.resx
+#	modified:   Lib/LibraryManagement.App/Stock/FrmToSupp.cs
+#	modified:   Lib/LibraryManagement.App/Stock/Report/v_tosupp.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmAdjust_grp.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmAtrCode.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmAutoOrder.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmBalance.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmCashIO.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmChangePrice.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmCsCard.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmCurrency.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmDiscInfo.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmDiscount.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmFrPromotion.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmFromDealer.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmFromSuppNoVat.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmFromSuppOd.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmGetPercent.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmImportMerc.Designer.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmImportMerc.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmKitDef.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmKitLabelPrn.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmMercDisc.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmMercMove.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmNoteLabelPrn.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmPaymentOrder.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmPosSale.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmPtrReturn.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmToDealer.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmToSuppByTr.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmTran_0_1.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmTran_1_1.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmTran_1_n.cs
+#	modified:   Lib/LibraryManagement.App/ZFormOld/FrmTran_n_1.cs
+#	modified:   Lib/LibraryManagement.suo
+#
+

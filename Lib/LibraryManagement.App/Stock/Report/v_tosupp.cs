@@ -100,8 +100,8 @@ namespace LibraryManagement.App
 
         private void detailBand_0_BeforePrint(object sender, PrintEventArgs e)
         {
-            this.kCnalMegv += Class7.smethod_0(base.GetCurrentColumnValue("amount").ToString()) + Class7.smethod_0(base.GetCurrentColumnValue("discount").ToString());
-            this.double_0 += Class7.smethod_0(base.GetCurrentColumnValue("amount").ToString());
+            this.kCnalMegv += Class7.ParseDoubleValue(base.GetCurrentColumnValue("amount").ToString()) + Class7.ParseDoubleValue(base.GetCurrentColumnValue("discount").ToString());
+            this.double_0 += Class7.ParseDoubleValue(base.GetCurrentColumnValue("amount").ToString());
         }
 
         protected override void Dispose(bool disposing)
@@ -796,12 +796,12 @@ namespace LibraryManagement.App
 
         private void xrtableCell_12_BeforePrint(object sender, PrintEventArgs e)
         {
-            this.xrtableCell_12.Text = string.Format("{0:n2}", (Class7.smethod_0(base.GetCurrentColumnValue("amount").ToString()) + Class7.smethod_0(base.GetCurrentColumnValue("discount").ToString())) / Class7.smethod_0(base.GetCurrentColumnValue("qty").ToString()));
+            this.xrtableCell_12.Text = string.Format("{0:n2}", (Class7.ParseDoubleValue(base.GetCurrentColumnValue("amount").ToString()) + Class7.ParseDoubleValue(base.GetCurrentColumnValue("discount").ToString())) / Class7.ParseDoubleValue(base.GetCurrentColumnValue("qty").ToString()));
         }
 
         private void xrtableCell_13_BeforePrint(object sender, PrintEventArgs e)
         {
-            this.xrtableCell_13.Text = string.Format("{0:n2}", Class7.smethod_0(base.GetCurrentColumnValue("amount").ToString()) + Class7.smethod_0(base.GetCurrentColumnValue("discount").ToString()));
+            this.xrtableCell_13.Text = string.Format("{0:n2}", Class7.ParseDoubleValue(base.GetCurrentColumnValue("amount").ToString()) + Class7.ParseDoubleValue(base.GetCurrentColumnValue("discount").ToString()));
         }
     }
 }

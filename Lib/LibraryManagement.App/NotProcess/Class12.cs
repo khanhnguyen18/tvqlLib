@@ -41,7 +41,7 @@ internal class Class12
         DataSet dataSet = new DataSet();
         oleDbDataAdapter_0.Fill(dataSet);
         Class7.oleDbConnection_1.Close();
-        double num = Class7.smethod_0(dataSet.Tables[0].Rows[0][0].ToString());
+        double num = Class7.ParseDoubleValue(dataSet.Tables[0].Rows[0][0].ToString());
         if (string_1.Contains(string_6))
         {
             this.method_4(string_5, num);
@@ -127,7 +127,7 @@ internal class Class12
             oleDbConnection_0.Close();
             if (set.Tables[0].Rows.Count != 0)
             {
-                return Class7.smethod_0(set.Tables[0].Rows[0][0].ToString());
+                return Class7.ParseDoubleValue(set.Tables[0].Rows[0][0].ToString());
             }
             return 0.0;
         }

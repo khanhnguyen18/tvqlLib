@@ -87,10 +87,10 @@ namespace LibraryManagement.App
                 string str8 = this.Txt_Address.Text.Trim();
                 string str9 = this.Txt_Phone.Text.Trim();
                 string str10 = this.Txt_Email.Text.Trim();
-                double num3 = Class7.smethod_0(this.Txt_DiscPc.Text);
+                double num3 = Class7.ParseDoubleValue(this.Txt_DiscPc.Text);
                 string str11 = string.Format("{0:d}", this.Txt_DueDate.EditValue);
                 string str12 = this.Txt_Remark.Text.Trim();
-                double num4 = Class7.smethod_0(this.Txt_BegMark.Text);
+                double num4 = Class7.ParseDoubleValue(this.Txt_BegMark.Text);
                 switch (this.string_1)
                 {
                     case "N":

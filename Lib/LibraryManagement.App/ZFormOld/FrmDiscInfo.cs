@@ -173,11 +173,11 @@ namespace LibraryManagement.App
             Class7.smethod_17("supp_id", "tblGoods", "goods_id", str3, "", Class7.oleDbConnection_1, ref str6);
             this.Lbl_SuppId.Text = str6;
             Class7.smethod_17("rtprice", "tblPrice", "goods_id", str3, "", Class7.oleDbConnection_1, ref str7);
-            this.Lbl_Rtprice.Text = string.Format("{0:n0}", Class7.smethod_0(str7));
+            this.Lbl_Rtprice.Text = string.Format("{0:n0}", Class7.ParseDoubleValue(str7));
             Class7.smethod_17("wsprice", "tblPrice", "goods_id", str3, "", Class7.oleDbConnection_1, ref str8);
-            this.Lbl_WsPrice.Text = string.Format("{0:n2}", Class7.smethod_0(str8));
+            this.Lbl_WsPrice.Text = string.Format("{0:n2}", Class7.ParseDoubleValue(str8));
             Class7.smethod_17("lastimppr", "tblPrice", "goods_id", str3, "", Class7.oleDbConnection_1, ref str9);
-            this.Lbl_Lastimppr.Text = string.Format("{0:n2}", Class7.smethod_0(str9));
+            this.Lbl_Lastimppr.Text = string.Format("{0:n2}", Class7.ParseDoubleValue(str9));
             Class7.smethod_17("prefprice", "tblPrice", "goods_id", str3, "", Class7.oleDbConnection_1, ref str10);
             if (this.Lbl_MercName.Text != string.Empty)
             {
