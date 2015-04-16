@@ -107,6 +107,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonForm\FrmGetAmount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +376,10 @@
     <EmbeddedResource Include="CommonForm\FrmGetDates.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmGetDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\BackupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BackupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Misc\BookForm.resx">
       <SubType>Designer</SubType>

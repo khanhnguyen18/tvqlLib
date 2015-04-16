@@ -65,5 +65,44 @@ namespace SuperKnuth
                 return "";
             }
         }
+
+        public static byte[] Hash(byte[] input)
+        {
+            try
+            {
+                if (input.Length == 0) return null;
+
+                string s = CreateKey();
+                TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
+                provider.Key = new MD5CryptoServiceProvider().ComputeHash(Encoding.Unicode.GetBytes(s));
+                provider.Mode = CipherMode.ECB;
+                ICryptoTransform transform = provider.CreateEncryptor();
+                return transform.TransformFinalBlock(input, 0, input.Length);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static byte[] DeHash(byte[] input)
+        {
+            try
+            {
+                if (input.Length == 0) return null;
+
+                TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
+                MD5CryptoServiceProvider provider2 = new MD5CryptoServiceProvider();
+                string s = CreateKey();
+                provider.Key = provider2.ComputeHash(Encoding.Unicode.GetBytes(s));
+                provider.Mode = CipherMode.ECB;
+                ICryptoTransform transform = provider.CreateDecryptor();
+                return transform.TransformFinalBlock(input, 0, input.Length);
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }
