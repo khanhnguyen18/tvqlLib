@@ -42,7 +42,7 @@
             this.LabelControl14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.LabelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelControl14.Appearance.Options.UseFont = true;
-            this.LabelControl14.Location = new System.Drawing.Point(21, 23);
+            this.LabelControl14.Location = new System.Drawing.Point(23, 23);
             this.LabelControl14.Name = "LabelControl14";
             this.LabelControl14.Size = new System.Drawing.Size(53, 13);
             this.LabelControl14.TabIndex = 397;
@@ -53,18 +53,18 @@
             this.Txt_UserName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Txt_UserName.EditValue = "";
             this.Txt_UserName.EnterMoveNextControl = true;
-            this.Txt_UserName.Location = new System.Drawing.Point(101, 20);
+            this.Txt_UserName.Location = new System.Drawing.Point(82, 20);
             this.Txt_UserName.Name = "Txt_UserName";
             this.Txt_UserName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_UserName.Properties.Appearance.Options.UseFont = true;
             this.Txt_UserName.Properties.MaxLength = 26;
-            this.Txt_UserName.Size = new System.Drawing.Size(207, 20);
+            this.Txt_UserName.Size = new System.Drawing.Size(455, 20);
             this.Txt_UserName.TabIndex = 392;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(-180, 71);
+            this.groupBox1.Location = new System.Drawing.Point(-92, 71);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(762, 5);
             this.groupBox1.TabIndex = 396;
@@ -74,7 +74,7 @@
             // 
             this.btn_Exit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Exit.Location = new System.Drawing.Point(235, 81);
+            this.btn_Exit.Location = new System.Drawing.Point(323, 81);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(80, 23);
             this.btn_Exit.TabIndex = 395;
@@ -84,7 +84,7 @@
             // btnBackup
             // 
             this.btnBackup.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBackup.Location = new System.Drawing.Point(101, 81);
+            this.btnBackup.Location = new System.Drawing.Point(189, 81);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(80, 23);
             this.btnBackup.TabIndex = 394;
@@ -94,7 +94,7 @@
             // btnBrowse
             // 
             this.btnBrowse.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBrowse.Location = new System.Drawing.Point(314, 17);
+            this.btnBrowse.Location = new System.Drawing.Point(543, 17);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(23, 23);
             this.btnBrowse.TabIndex = 398;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 111);
+            this.ClientSize = new System.Drawing.Size(578, 111);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.LabelControl14);
             this.Controls.Add(this.Txt_UserName);
