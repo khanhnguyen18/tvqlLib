@@ -35,7 +35,14 @@ namespace LibraryManagement.App
             this.Txt_Vatrate.Properties.ReadOnly = true;
             try
             {
-                string selectCommandText = "CREATE TABLE " + this.tempTable + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[merc_type] [nvarchar](2) DEFAULT (('')))";
+
+                string selectCommandText = string.Format(@"IF (Not EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '{0}')) CREATE TABLE {0}
+                                                    ([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),
+                                                    [Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),
+                                                    [amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[vat_amt] [decimal](18, 2) DEFAULT ((0)),
+                                                    [surplus] [decimal](18, 2) DEFAULT ((0)),[disc_pc] [decimal](8, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),
+                                                    [merc_type] [nvarchar](2) DEFAULT (('')))", this.tempTable);
+
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_0);
                 using (DataSet set = new DataSet())
                 {
@@ -291,7 +298,7 @@ namespace LibraryManagement.App
                     this.Txt_GoodsId.SelectAll();
                 }
             }
-        } 
+        }
         #endregion
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -377,7 +384,7 @@ namespace LibraryManagement.App
             }
         }
 
-    
+
         private void GrdTran_Click(object sender, EventArgs e)
         {
             if (this.TransDetail.RowCount != 0)
@@ -697,7 +704,7 @@ namespace LibraryManagement.App
                 this.string_2 = this.string_2 + "goods_id, qty, unit_symb, amount, discount, vat_amt, surplus, commis_amt, user_id, cs_id, ";
                 this.string_2 = this.string_2 + "remark, updated, merc_type, tax_code, vat_incl, discpervat, disc_incl, copies, recnum, Status,station) ";
                 string str8 = this.string_2;
-                this.string_2 = str8 + "VALUES('" + this.string_6.Date+ "','" + str3 + "','" + str + "','" + this.string_1 + "','" + str7 + "','',0,'" + str4 + "',";
+                this.string_2 = str8 + "VALUES('" + this.string_6.Date + "','" + str3 + "','" + str + "','" + this.string_1 + "','" + str7 + "','',0,'" + str4 + "',";
                 object obj2 = this.string_2;
                 this.string_2 = string.Concat(new object[] { obj2, "'", str5, "','", row["goods_id"], "', ", row["qty"], ", '", row["unitsymb"], "',", num3, ", " });
                 obj2 = this.string_2;

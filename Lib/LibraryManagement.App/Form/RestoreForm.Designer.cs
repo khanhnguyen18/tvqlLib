@@ -111,8 +111,10 @@
             // 
             // txtPass
             // 
+            this.txtPass.EditValue = "";
             this.txtPass.Location = new System.Drawing.Point(82, 37);
             this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(250, 20);
             this.txtPass.TabIndex = 399;
             // 
@@ -164,6 +166,7 @@
             this.btnList.Size = new System.Drawing.Size(80, 23);
             this.btnList.TabIndex = 404;
             this.btnList.Text = "Xem danh sách";
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // RestoreForm
             // 

@@ -25,8 +25,6 @@ namespace LibraryManagement.App
             this.string_0 = "TOSUPP_" + Class6.smethod_0(SystemInformation.ComputerName);
         }
 
-
-
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             if (Class11.string_0 == "F")
@@ -79,6 +77,7 @@ namespace LibraryManagement.App
             Class11.smethod_5(this, "T");
             this.Txt_TransNum.Text = new Class6().method_5("K");
             this.Txt_ExpID.Focus();
+            this.Lbl_Date.DateTime = DateTime.Now;
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -192,7 +191,6 @@ namespace LibraryManagement.App
             }
         }
 
-
         private void FrmToSupp_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.oleDbDataAdapter_0 = new OleDbDataAdapter("DROP TABLE " + this.string_0, this.oleDbConnection_1);
@@ -204,12 +202,17 @@ namespace LibraryManagement.App
         private void FrmToSupp_Load(object sender, EventArgs e)
         {
             DataSet set;
-            this.Text = Class6.string_1.ToString();
-            this.Lbl_Date.Text = string.Format("{0:dd/MM/yyy}", DateTime.Parse(Class7.smethod_19().ToString()));
+            this.Lbl_Date.DateTime = DateTime.Now;
+
             this.btn_Skip_Click(this, new EventArgs());
             try
             {
-                string selectCommandText = "CREATE TABLE " + this.string_0 + "([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),[amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),[vat_amt] [decimal](18, 2) DEFAULT ((0)),[merc_type] [nvarchar](2) DEFAULT (('')),[surplus] [decimal](18, 2) DEFAULT ((0)))";
+                string selectCommandText =string.Format(@"IF (Not EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '{0}'))
+                                                        CREATE TABLE {0} ([autoid] [int] IDENTITY(1,1) ,[idx] [decimal](8, 0) DEFAULT ((1)),[goods_id] 
+                                                        [nvarchar](6) DEFAULT (''),[Name] [nvarchar](80) DEFAULT (''),[qty] [decimal](8, 2) DEFAULT ((1)),[price] [decimal](18, 2) DEFAULT ((0)),
+                                                        [amount] [decimal](18, 2) DEFAULT ((0)),[disc_amt] [decimal](18, 2) DEFAULT ((0)),[unitsymb] [nvarchar](3) DEFAULT (('')),
+                                                        [vat_amt] [decimal](18, 2) DEFAULT ((0)),[merc_type] [nvarchar](2) DEFAULT (('')),[surplus] [decimal](18, 2) DEFAULT ((0)))", this.string_0);
+
                 this.oleDbDataAdapter_0 = new OleDbDataAdapter(selectCommandText, this.oleDbConnection_1);
                 using (set = new DataSet())
                 {
@@ -242,8 +245,6 @@ namespace LibraryManagement.App
                 this.Cmb_Unit.Text = this.TransDetail.GetRowCellValue(this.TransDetail.FocusedRowHandle, "Đơn vị").ToString();
             }
         }
-
-
 
         private void kCnalMegv(object sender, KeyEventArgs e)
         {

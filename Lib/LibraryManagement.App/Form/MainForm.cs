@@ -29,11 +29,30 @@ namespace LibraryManagement.App
         #region LOAD FORM
         private void FrmMain1_Load(object sender, EventArgs e)
         {
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            string code = Decode.DecodeCode(config.AppSettings.Settings["free"].Value);
+            SysvarService ser = new SysvarService();
+            Sysvar sysV = ser.GetByMCode("Themes");
+            if (sysV != null && !string.IsNullOrEmpty(sysV.MValue))
+            {
+                defaultLookAndFeel_0.LookAndFeel.SkinName = sysV.MValue;
 
-            if (!string.IsNullOrEmpty(code))
-                defaultLookAndFeel_0.LookAndFeel.SkinName = code;
+                bool find = false;
+                foreach (BarSubItemLink itemLink in barSubItem1.ItemLinks)
+                {
+                    foreach (BarItemLink styleMenu in itemLink.Item.ItemLinks)
+                    {
+                        BarCheckItem checkItem = styleMenu.Item as BarCheckItem;
+                        if (checkItem != null && checkItem.Caption == sysV.MValue)
+                        {
+                            checkItem.Checked = true;
+                            find = true;
+                            break;
+                        }
+                    }
+
+                    if (find)
+                        break;
+                }
+            }
 
 
             BuildMenu();
@@ -246,6 +265,29 @@ namespace LibraryManagement.App
         {
             try
             {
+
+                if (e.Item.GetType() == typeof(BarCheckItem))
+                {
+                    BarCheckItem checkItem = e.Item as BarCheckItem;
+                    if (checkItem != null && checkItem.GroupIndex == 1)
+                    {
+                        defaultLookAndFeel_0.LookAndFeel.SkinName = e.Item.Caption;
+                        SysvarService ser = new SysvarService();
+                        Sysvar sysV = ser.GetByMCode("Themes");
+                        if (sysV == null)
+                        {
+                            sysV = new Sysvar();
+                            sysV.MCode = "Themes";
+                            sysV.Type = "G";
+                        }
+
+                        sysV.MValue = checkItem.Caption;
+                        ser.Save(sysV);
+                    }
+
+                    return;
+                }
+
                 switch (e.Item.Tag.ToString())
                 {
                     case "PREPORTS":
@@ -368,7 +410,7 @@ namespace LibraryManagement.App
 
 
             }
-            catch (Exception)
+            catch
             {
             }
         }
@@ -408,7 +450,7 @@ namespace LibraryManagement.App
         private void blbiChangePass_ItemClick(object sender, ItemClickEventArgs e)
         {
             ToolsGui.BindToParentForm(new ChangePassForm(), this);
-            
+
         }
 
         private void blbiSupplierReturn_ItemClick(object sender, ItemClickEventArgs e)

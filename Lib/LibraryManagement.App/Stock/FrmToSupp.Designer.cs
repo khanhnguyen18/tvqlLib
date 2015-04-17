@@ -52,7 +52,6 @@ namespace LibraryManagement.App
             this.Lbl_MercName = new DevExpress.XtraEditors.LabelControl();
             this.Lbl_ImpName = new DevExpress.XtraEditors.LabelControl();
             this.Lbl_ExpName = new DevExpress.XtraEditors.LabelControl();
-            this.Lbl_Date = new DevExpress.XtraEditors.LabelControl();
             this.Txt_TransNum = new DevExpress.XtraEditors.TextEdit();
             this.LabelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_ExpID = new DevExpress.XtraEditors.TextEdit();
@@ -83,6 +82,7 @@ namespace LibraryManagement.App
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_EndQty = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.Lbl_Date = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Remark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_TransNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_ExpID.Properties)).BeginInit();
@@ -95,6 +95,8 @@ namespace LibraryManagement.App
             ((System.ComponentModel.ISupportInitialize)(this.TransDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Voucher.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_EndQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lbl_Date.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lbl_Date.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox3
@@ -199,16 +201,6 @@ namespace LibraryManagement.App
             this.Lbl_ExpName.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.Lbl_ExpName.Size = new System.Drawing.Size(421, 17);
             this.Lbl_ExpName.TabIndex = 378;
-            // 
-            // Lbl_Date
-            // 
-            this.Lbl_Date.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Date.Appearance.Options.UseFont = true;
-            this.Lbl_Date.Location = new System.Drawing.Point(281, 6);
-            this.Lbl_Date.Name = "Lbl_Date";
-            this.Lbl_Date.Size = new System.Drawing.Size(56, 13);
-            this.Lbl_Date.TabIndex = 377;
-            this.Lbl_Date.Text = "01/01/2008";
             // 
             // Txt_TransNum
             // 
@@ -564,11 +556,29 @@ namespace LibraryManagement.App
             this.labelControl7.TabIndex = 396;
             this.labelControl7.Text = "Hiện tồn";
             // 
+            // Lbl_Date
+            // 
+            this.Lbl_Date.DateTime = DateTime.Now;
+            this.Lbl_Date.Location = new System.Drawing.Point(277, 3);
+            this.Lbl_Date.Name = "Lbl_Date";
+            this.Lbl_Date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Lbl_Date.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.Lbl_Date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.Lbl_Date.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.Lbl_Date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.Lbl_Date.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.Lbl_Date.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.Lbl_Date.Size = new System.Drawing.Size(100, 20);
+            this.Lbl_Date.TabIndex = 421;
+            // 
             // FrmToSupp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 416);
+            this.Controls.Add(this.Lbl_Date);
             this.Controls.Add(this.Txt_EndQty);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
@@ -588,7 +598,6 @@ namespace LibraryManagement.App
             this.Controls.Add(this.Lbl_MercName);
             this.Controls.Add(this.Lbl_ImpName);
             this.Controls.Add(this.Lbl_ExpName);
-            this.Controls.Add(this.Lbl_Date);
             this.Controls.Add(this.Txt_TransNum);
             this.Controls.Add(this.LabelControl9);
             this.Controls.Add(this.Txt_ExpID);
@@ -622,6 +631,8 @@ namespace LibraryManagement.App
             ((System.ComponentModel.ISupportInitialize)(this.TransDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Voucher.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_EndQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lbl_Date.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lbl_Date.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,7 +662,6 @@ namespace LibraryManagement.App
         internal LabelControl labelControl6;
         internal LabelControl labelControl7;
         internal LabelControl LabelControl9;
-        internal LabelControl Lbl_Date;
         internal LabelControl Lbl_ExpName;
         internal LabelControl Lbl_ImpName;
         internal LabelControl Lbl_MercName;
@@ -674,6 +684,8 @@ namespace LibraryManagement.App
         internal TextEdit Txt_Voucher;
 
         #endregion
+        private DateEdit Lbl_Date;
+
 
     }
 }

@@ -50,6 +50,45 @@ namespace LibraryManagement.App
             this.statusBar = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.menuBar = new DevExpress.XtraBars.Bar();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem3 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem4 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem5 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem6 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem7 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem8 = new DevExpress.XtraBars.BarCheckItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem18 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem17 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem19 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem20 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem21 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem22 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem23 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem24 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem25 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem26 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem27 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem28 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem29 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem30 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem31 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem32 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem33 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem34 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem35 = new DevExpress.XtraBars.BarCheckItem();
+            this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+            this.barCheckItem9 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem10 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem11 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem12 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem13 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem14 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem15 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItem16 = new DevExpress.XtraBars.BarCheckItem();
             this.bar_2 = new DevExpress.XtraBars.Bar();
             this.blbiBook = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiPrintCard = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -60,6 +99,7 @@ namespace LibraryManagement.App
             this.blbiSupplierReturn = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiBuyOld = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiChangePass = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControl_0 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl_2 = new DevExpress.XtraBars.BarDockControl();
@@ -68,6 +108,14 @@ namespace LibraryManagement.App
             this.iPass = new DevExpress.XtraBars.BarButtonItem();
             this.Txt_Date = new DevExpress.XtraBars.BarStaticItem();
             this.iMail = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem6 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem8 = new DevExpress.XtraBars.BarStaticItem();
+            this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
             this.imageCollection_0 = new DevExpress.Utils.ImageCollection(this.components);
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.bar_3 = new DevExpress.XtraBars.Bar();
@@ -91,7 +139,6 @@ namespace LibraryManagement.App
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.cnvLekth7 = new DevExpress.XtraEditors.PanelControl();
             this.defaultLookAndFeel_0 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -126,10 +173,57 @@ namespace LibraryManagement.App
             this.blbiSupplierReturn,
             this.blbiBuyOld,
             this.blbiChangePass,
-            this.barLargeButtonItem5});
+            this.barLargeButtonItem5,
+            this.barSubItem1,
+            this.barSubItem2,
+            this.barSubItem3,
+            this.barSubItem4,
+            this.barStaticItem2,
+            this.barStaticItem3,
+            this.barStaticItem4,
+            this.barStaticItem5,
+            this.barStaticItem6,
+            this.barStaticItem7,
+            this.barStaticItem8,
+            this.barCheckItem1,
+            this.barCheckItem2,
+            this.barCheckItem3,
+            this.barSubItem5,
+            this.barCheckItem4,
+            this.barCheckItem5,
+            this.barCheckItem6,
+            this.barCheckItem7,
+            this.barCheckItem8,
+            this.barCheckItem9,
+            this.barCheckItem10,
+            this.barCheckItem11,
+            this.barCheckItem12,
+            this.barCheckItem13,
+            this.barCheckItem14,
+            this.barCheckItem15,
+            this.barCheckItem16,
+            this.barCheckItem17,
+            this.barCheckItem18,
+            this.barCheckItem19,
+            this.barCheckItem20,
+            this.barCheckItem21,
+            this.barCheckItem22,
+            this.barCheckItem23,
+            this.barCheckItem24,
+            this.barCheckItem25,
+            this.barCheckItem26,
+            this.barCheckItem27,
+            this.barCheckItem28,
+            this.barCheckItem29,
+            this.barCheckItem30,
+            this.barCheckItem31,
+            this.barCheckItem32,
+            this.barCheckItem33,
+            this.barCheckItem34,
+            this.barCheckItem35});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 20;
+            this.barManager_0.MaxItemId = 68;
             this.barManager_0.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.barManager_0.StatusBar = this.statusBar;
@@ -163,10 +257,324 @@ namespace LibraryManagement.App
             this.menuBar.DockCol = 0;
             this.menuBar.DockRow = 0;
             this.menuBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.menuBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1)});
             this.menuBar.OptionsBar.AllowQuickCustomization = false;
             this.menuBar.OptionsBar.MultiLine = true;
             this.menuBar.OptionsBar.UseWholeRow = true;
             this.menuBar.Text = "Custom 4";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Giao diện";
+            this.barSubItem1.Id = 20;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barSubItem3
+            // 
+            this.barSubItem3.Caption = "Skin";
+            this.barSubItem3.Id = 22;
+            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem8)});
+            this.barSubItem3.Name = "barSubItem3";
+            // 
+            // barCheckItem2
+            // 
+            this.barCheckItem2.Caption = "Black";
+            this.barCheckItem2.GroupIndex = 1;
+            this.barCheckItem2.Id = 32;
+            this.barCheckItem2.Name = "barCheckItem2";
+            // 
+            // barCheckItem3
+            // 
+            this.barCheckItem3.Caption = "Blue";
+            this.barCheckItem3.GroupIndex = 1;
+            this.barCheckItem3.Id = 33;
+            this.barCheckItem3.Name = "barCheckItem3";
+            // 
+            // barCheckItem4
+            // 
+            this.barCheckItem4.Caption = "Caramel";
+            this.barCheckItem4.GroupIndex = 1;
+            this.barCheckItem4.Id = 35;
+            this.barCheckItem4.Name = "barCheckItem4";
+            // 
+            // barCheckItem5
+            // 
+            this.barCheckItem5.Caption = "iMaginary";
+            this.barCheckItem5.GroupIndex = 1;
+            this.barCheckItem5.Id = 36;
+            this.barCheckItem5.Name = "barCheckItem5";
+            // 
+            // barCheckItem6
+            // 
+            this.barCheckItem6.Caption = "Lilian";
+            this.barCheckItem6.GroupIndex = 1;
+            this.barCheckItem6.Id = 37;
+            this.barCheckItem6.Name = "barCheckItem6";
+            // 
+            // barCheckItem7
+            // 
+            this.barCheckItem7.Caption = "Money Twins";
+            this.barCheckItem7.GroupIndex = 1;
+            this.barCheckItem7.Id = 38;
+            this.barCheckItem7.Name = "barCheckItem7";
+            // 
+            // barCheckItem8
+            // 
+            this.barCheckItem8.Caption = "The Asphalt World";
+            this.barCheckItem8.GroupIndex = 1;
+            this.barCheckItem8.Id = 39;
+            this.barCheckItem8.Name = "barCheckItem8";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Bonus skin";
+            this.barSubItem2.Id = 21;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem18),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem17),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem19),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem20),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem21),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem22),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem23),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem24),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem25),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem26),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem27),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem28),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem29),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem30),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem31),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem32),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem33),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem34),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem35)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.Caption = "Summer 2008";
+            this.barCheckItem1.GroupIndex = 1;
+            this.barCheckItem1.Id = 31;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // barCheckItem18
+            // 
+            this.barCheckItem18.Caption = "Coffee";
+            this.barCheckItem18.GroupIndex = 1;
+            this.barCheckItem18.Id = 50;
+            this.barCheckItem18.Name = "barCheckItem18";
+            // 
+            // barCheckItem17
+            // 
+            this.barCheckItem17.Caption = "Dark Side";
+            this.barCheckItem17.GroupIndex = 1;
+            this.barCheckItem17.Id = 49;
+            this.barCheckItem17.Name = "barCheckItem17";
+            // 
+            // barCheckItem19
+            // 
+            this.barCheckItem19.Caption = "Darkroom";
+            this.barCheckItem19.GroupIndex = 1;
+            this.barCheckItem19.Id = 51;
+            this.barCheckItem19.Name = "barCheckItem19";
+            // 
+            // barCheckItem20
+            // 
+            this.barCheckItem20.Caption = "DevExpress Style";
+            this.barCheckItem20.GroupIndex = 1;
+            this.barCheckItem20.Id = 52;
+            this.barCheckItem20.Name = "barCheckItem20";
+            // 
+            // barCheckItem21
+            // 
+            this.barCheckItem21.Caption = "Foggy";
+            this.barCheckItem21.GroupIndex = 1;
+            this.barCheckItem21.Id = 53;
+            this.barCheckItem21.Name = "barCheckItem21";
+            // 
+            // barCheckItem22
+            // 
+            this.barCheckItem22.Caption = "Glass Oceans";
+            this.barCheckItem22.GroupIndex = 1;
+            this.barCheckItem22.Id = 54;
+            this.barCheckItem22.Name = "barCheckItem22";
+            // 
+            // barCheckItem23
+            // 
+            this.barCheckItem23.Caption = "High Contrast";
+            this.barCheckItem23.GroupIndex = 1;
+            this.barCheckItem23.Id = 55;
+            this.barCheckItem23.Name = "barCheckItem23";
+            // 
+            // barCheckItem24
+            // 
+            this.barCheckItem24.Caption = "Liquid Sky";
+            this.barCheckItem24.GroupIndex = 1;
+            this.barCheckItem24.Id = 56;
+            this.barCheckItem24.Name = "barCheckItem24";
+            // 
+            // barCheckItem25
+            // 
+            this.barCheckItem25.Caption = "London Liquid Sky";
+            this.barCheckItem25.GroupIndex = 1;
+            this.barCheckItem25.Id = 57;
+            this.barCheckItem25.Name = "barCheckItem25";
+            // 
+            // barCheckItem26
+            // 
+            this.barCheckItem26.Caption = "McSkin";
+            this.barCheckItem26.GroupIndex = 1;
+            this.barCheckItem26.Id = 58;
+            this.barCheckItem26.Name = "barCheckItem26";
+            // 
+            // barCheckItem27
+            // 
+            this.barCheckItem27.Caption = "Pumpkin";
+            this.barCheckItem27.GroupIndex = 1;
+            this.barCheckItem27.Id = 59;
+            this.barCheckItem27.Name = "barCheckItem27";
+            // 
+            // barCheckItem28
+            // 
+            this.barCheckItem28.Caption = "Seven";
+            this.barCheckItem28.GroupIndex = 1;
+            this.barCheckItem28.Id = 60;
+            this.barCheckItem28.Name = "barCheckItem28";
+            // 
+            // barCheckItem29
+            // 
+            this.barCheckItem29.Caption = "Seven Classic";
+            this.barCheckItem29.GroupIndex = 1;
+            this.barCheckItem29.Id = 61;
+            this.barCheckItem29.Name = "barCheckItem29";
+            // 
+            // barCheckItem30
+            // 
+            this.barCheckItem30.Caption = "Sharp";
+            this.barCheckItem30.GroupIndex = 1;
+            this.barCheckItem30.Id = 62;
+            this.barCheckItem30.Name = "barCheckItem30";
+            // 
+            // barCheckItem31
+            // 
+            this.barCheckItem31.Caption = "Sharp Plus";
+            this.barCheckItem31.GroupIndex = 1;
+            this.barCheckItem31.Id = 63;
+            this.barCheckItem31.Name = "barCheckItem31";
+            // 
+            // barCheckItem32
+            // 
+            this.barCheckItem32.Caption = "Springtime";
+            this.barCheckItem32.GroupIndex = 1;
+            this.barCheckItem32.Id = 64;
+            this.barCheckItem32.Name = "barCheckItem32";
+            // 
+            // barCheckItem33
+            // 
+            this.barCheckItem33.Caption = "Stardust";
+            this.barCheckItem33.GroupIndex = 1;
+            this.barCheckItem33.Id = 65;
+            this.barCheckItem33.Name = "barCheckItem33";
+            // 
+            // barCheckItem34
+            // 
+            this.barCheckItem34.Caption = "Valentine";
+            this.barCheckItem34.GroupIndex = 1;
+            this.barCheckItem34.Id = 66;
+            this.barCheckItem34.Name = "barCheckItem34";
+            // 
+            // barCheckItem35
+            // 
+            this.barCheckItem35.Caption = "Xmas 2008 Blue";
+            this.barCheckItem35.GroupIndex = 1;
+            this.barCheckItem35.Id = 67;
+            this.barCheckItem35.Name = "barCheckItem35";
+            // 
+            // barSubItem4
+            // 
+            this.barSubItem4.Caption = "Office";
+            this.barSubItem4.Id = 23;
+            this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem9),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem10),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem11),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem12),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem13),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem14),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem15),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barCheckItem16)});
+            this.barSubItem4.Name = "barSubItem4";
+            this.barSubItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // barCheckItem9
+            // 
+            this.barCheckItem9.Caption = "Office 2007 Black";
+            this.barCheckItem9.GroupIndex = 1;
+            this.barCheckItem9.Id = 40;
+            this.barCheckItem9.Name = "barCheckItem9";
+            // 
+            // barCheckItem10
+            // 
+            this.barCheckItem10.Caption = "Office 2007 Blue";
+            this.barCheckItem10.GroupIndex = 1;
+            this.barCheckItem10.Id = 41;
+            this.barCheckItem10.Name = "barCheckItem10";
+            // 
+            // barCheckItem11
+            // 
+            this.barCheckItem11.Caption = "Office 2007 Green";
+            this.barCheckItem11.GroupIndex = 1;
+            this.barCheckItem11.Id = 42;
+            this.barCheckItem11.Name = "barCheckItem11";
+            // 
+            // barCheckItem12
+            // 
+            this.barCheckItem12.Caption = "Office 2007 Black Pink";
+            this.barCheckItem12.GroupIndex = 1;
+            this.barCheckItem12.Id = 43;
+            this.barCheckItem12.Name = "barCheckItem12";
+            // 
+            // barCheckItem13
+            // 
+            this.barCheckItem13.Caption = "Office 2007 Silver";
+            this.barCheckItem13.GroupIndex = 1;
+            this.barCheckItem13.Id = 44;
+            this.barCheckItem13.Name = "barCheckItem13";
+            // 
+            // barCheckItem14
+            // 
+            this.barCheckItem14.Caption = "Office 2010 Black";
+            this.barCheckItem14.GroupIndex = 1;
+            this.barCheckItem14.Id = 45;
+            this.barCheckItem14.Name = "barCheckItem14";
+            // 
+            // barCheckItem15
+            // 
+            this.barCheckItem15.Caption = "Office 2010 Blue";
+            this.barCheckItem15.GroupIndex = 1;
+            this.barCheckItem15.Id = 46;
+            this.barCheckItem15.Name = "barCheckItem15";
+            // 
+            // barCheckItem16
+            // 
+            this.barCheckItem16.Caption = "Office 2010 Silver";
+            this.barCheckItem16.GroupIndex = 1;
+            this.barCheckItem16.Id = 48;
+            this.barCheckItem16.Name = "barCheckItem16";
             // 
             // bar_2
             // 
@@ -261,6 +669,13 @@ namespace LibraryManagement.App
             this.blbiChangePass.Name = "blbiChangePass";
             this.blbiChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.blbiChangePass_ItemClick);
             // 
+            // barLargeButtonItem5
+            // 
+            this.barLargeButtonItem5.Caption = "Backup";
+            this.barLargeButtonItem5.Id = 19;
+            this.barLargeButtonItem5.LargeImageIndex = 11;
+            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
+            // 
             // barDockControl_0
             // 
             this.barDockControl_0.CausesValidation = false;
@@ -344,6 +759,61 @@ namespace LibraryManagement.App
             this.iMail.ImageIndex = 15;
             this.iMail.Name = "iMail";
             this.iMail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.iMail_ItemClick);
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "Black";
+            this.barStaticItem2.Id = 24;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "Blue";
+            this.barStaticItem3.Id = 25;
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "Caramel";
+            this.barStaticItem4.Id = 26;
+            this.barStaticItem4.Name = "barStaticItem4";
+            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem5
+            // 
+            this.barStaticItem5.Caption = "iMaginary";
+            this.barStaticItem5.Id = 27;
+            this.barStaticItem5.Name = "barStaticItem5";
+            this.barStaticItem5.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem6
+            // 
+            this.barStaticItem6.Caption = "Lilian";
+            this.barStaticItem6.Id = 28;
+            this.barStaticItem6.Name = "barStaticItem6";
+            this.barStaticItem6.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem7
+            // 
+            this.barStaticItem7.Caption = "Money twins";
+            this.barStaticItem7.Id = 29;
+            this.barStaticItem7.Name = "barStaticItem7";
+            this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem8
+            // 
+            this.barStaticItem8.Caption = "Summer 2008";
+            this.barStaticItem8.Id = 30;
+            this.barStaticItem8.Name = "barStaticItem8";
+            this.barStaticItem8.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barSubItem5
+            // 
+            this.barSubItem5.Caption = "Caramel";
+            this.barSubItem5.Id = 34;
+            this.barSubItem5.Name = "barSubItem5";
             // 
             // imageCollection_0
             // 
@@ -537,13 +1007,6 @@ namespace LibraryManagement.App
             // 
             this.defaultLookAndFeel_0.LookAndFeel.SkinName = "DevExpress Style";
             // 
-            // barLargeButtonItem5
-            // 
-            this.barLargeButtonItem5.Caption = "Backup";
-            this.barLargeButtonItem5.Id = 19;
-            this.barLargeButtonItem5.LargeImageIndex = 11;
-            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +1086,53 @@ namespace LibraryManagement.App
         private BarLargeButtonItem blbiChangePass;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private BarLargeButtonItem barLargeButtonItem5;
+        private BarSubItem barSubItem1;
+        private BarSubItem barSubItem2;
+        private BarSubItem barSubItem3;
+        private BarSubItem barSubItem4;
+        private BarStaticItem barStaticItem2;
+        private BarStaticItem barStaticItem3;
+        private BarStaticItem barStaticItem4;
+        private BarStaticItem barStaticItem5;
+        private BarStaticItem barStaticItem6;
+        private BarStaticItem barStaticItem7;
+        private BarStaticItem barStaticItem8;
+        private BarCheckItem barCheckItem2;
+        private BarCheckItem barCheckItem1;
+        private BarCheckItem barCheckItem3;
+        private BarCheckItem barCheckItem4;
+        private BarCheckItem barCheckItem5;
+        private BarCheckItem barCheckItem6;
+        private BarCheckItem barCheckItem7;
+        private BarSubItem barSubItem5;
+        private BarCheckItem barCheckItem8;
+        private BarCheckItem barCheckItem18;
+        private BarCheckItem barCheckItem17;
+        private BarCheckItem barCheckItem19;
+        private BarCheckItem barCheckItem20;
+        private BarCheckItem barCheckItem21;
+        private BarCheckItem barCheckItem22;
+        private BarCheckItem barCheckItem23;
+        private BarCheckItem barCheckItem24;
+        private BarCheckItem barCheckItem25;
+        private BarCheckItem barCheckItem9;
+        private BarCheckItem barCheckItem10;
+        private BarCheckItem barCheckItem11;
+        private BarCheckItem barCheckItem12;
+        private BarCheckItem barCheckItem13;
+        private BarCheckItem barCheckItem14;
+        private BarCheckItem barCheckItem15;
+        private BarCheckItem barCheckItem16;
+        private BarCheckItem barCheckItem26;
+        private BarCheckItem barCheckItem27;
+        private BarCheckItem barCheckItem28;
+        private BarCheckItem barCheckItem29;
+        private BarCheckItem barCheckItem30;
+        private BarCheckItem barCheckItem31;
+        private BarCheckItem barCheckItem32;
+        private BarCheckItem barCheckItem33;
+        private BarCheckItem barCheckItem34;
+        private BarCheckItem barCheckItem35;
 
     }
 }
