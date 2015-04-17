@@ -13,8 +13,10 @@ namespace LibraryManagement.App
 {
     public partial class BackupForm : DevExpress.XtraEditors.XtraForm
     {
-        private string folderPath = Environment.CurrentDirectory;
-        private string fileName = "LibraryManagement";
+        private string folderPath;
+        private string fileNameWithoutExt;
+        private readonly string dbName = "LibraryManagement";
+
         public BackupForm()
         {
             InitializeComponent();
@@ -32,24 +34,21 @@ namespace LibraryManagement.App
 
         public void BackupDatabase()
         {
-            string databaseName = "[" + fileName + "]";
+            string backUpFileName = this.fileNameWithoutExt + ".bak";
+            string fullBackupPath = this.folderPath + backUpFileName;
 
+            string SQLBackUp =string.Format(@"BACKUP DATABASE {0} TO DISK = N'{1}'", dbName, fullBackupPath);
 
-            string BackUpFileName = fileName + ".bak";
-            string SQLBackUp = @"BACKUP DATABASE " + fileName + " TO DISK = N'" + folderPath + @"\" + BackUpFileName + @"'";
-
-            SqlConnection cnBk = new SqlConnection(DataProvider.GetSqlConnectionString());
-            SqlCommand cmdBkUp = new SqlCommand(SQLBackUp, cnBk);
+            SqlConnection cn = new SqlConnection(DataProvider.GetSqlConnectionString());
+            SqlCommand cmdBkUp = new SqlCommand(SQLBackUp, cn);
 
             try
             {
-                cnBk.Open();
+                cn.Open();
                 cmdBkUp.ExecuteNonQuery();
 
-                string bakFile = folderPath + "\\" + BackUpFileName;
-                FileStream fs = File.OpenRead(bakFile);
-                byte[] buffer = new byte[fs.Length - 1];
-
+                FileStream fs = File.OpenRead(fullBackupPath);
+                byte[] buffer = new byte[fs.Length];
 
                 fs.Read(buffer, 0, buffer.Length);
                 fs.Close();
@@ -58,11 +57,12 @@ namespace LibraryManagement.App
                 byte[] buffer1 = SuperKnuth.KnuthTools.Hash(buffer);
 
                 //Save file
-                File.WriteAllBytes(bakFile.Replace(".bak", ".lib"), buffer1);
+                File.WriteAllBytes(fullBackupPath.Replace(".bak", ".Klib"), buffer1);
 
-                File.Delete(bakFile);
+                File.Delete(fullBackupPath);
 
                 MessageBox.Show("Done");
+                this.Close();
             }
 
             catch (Exception ex)
@@ -72,10 +72,9 @@ namespace LibraryManagement.App
 
             finally
             {
-                if (cnBk.State == ConnectionState.Open)
+                if (cn.State == ConnectionState.Open)
                 {
-
-                    cnBk.Close();
+                    cn.Close();
                 }
             }
         }
@@ -83,19 +82,24 @@ namespace LibraryManagement.App
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFD = new SaveFileDialog();
-            saveFD.Filter = "Zip files (*.lib)|*.lib";
-            saveFD.FileName = string.Format("{0}_{1}_{2}_{3}", fileName, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            saveFD.Filter = "Klib files (*.Klib)|*.Klib";
+            saveFD.FileName = string.Format("{0}_{1}_{2}_{3}", fileNameWithoutExt, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             saveFD.InitialDirectory = folderPath;
             if (saveFD.ShowDialog() == DialogResult.OK)
             {
-                Txt_UserName.Text = saveFD.FileName;
+                txtBackupPath.Text = saveFD.FileName;
+                this.folderPath = Path.GetDirectoryName(saveFD.FileName);
+                this.fileNameWithoutExt = Path.GetFileNameWithoutExtension(saveFD.FileName);
+
             }
         }
 
         private void BackupForm_Load(object sender, EventArgs e)
         {
+            fileNameWithoutExt = string.Format("LibraryManagement_{0}_{1}_{2}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            folderPath = Environment.CurrentDirectory;
 
-            Txt_UserName.Text = folderPath + "\\" + string.Format("LibraryManagement_{0}_{1}_{2}.lib", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            txtBackupPath.Text = folderPath + "\\" + fileNameWithoutExt+ ".Klib";
         }
     }
 }
