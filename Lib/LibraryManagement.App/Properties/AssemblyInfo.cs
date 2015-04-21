@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LibraryManagement.App")]
+[assembly: AssemblyTitle("Change pass")]
 [assembly: AssemblyDescription("2015-04-12 11:09 AM")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Nam Trang")]
-[assembly: AssemblyProduct("LibraryManagement.App")]
+[assembly: AssemblyProduct("Change pass")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.51")]
-[assembly: AssemblyFileVersion("1.0.0.51")]
+[assembly: AssemblyVersion("1.0.0.52")]
+[assembly: AssemblyFileVersion("1.0.0.52")]

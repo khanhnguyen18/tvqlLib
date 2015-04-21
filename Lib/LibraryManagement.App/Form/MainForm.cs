@@ -465,5 +465,17 @@ namespace LibraryManagement.App
             ToolsGui.BindToParentForm(new FrmBookLost(), this);
         }
 
+        private void barLargeButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            BackupForm frm = new BackupForm();
+            frm.Show();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RestoreForm frm = new RestoreForm();
+            frm.Show();
+        }
+
     }
 }

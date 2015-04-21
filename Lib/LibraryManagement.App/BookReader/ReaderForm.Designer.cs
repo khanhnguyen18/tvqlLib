@@ -195,9 +195,9 @@ namespace LibraryManagement.App
             this.LabelControl1.Appearance.Options.UseFont = true;
             this.LabelControl1.Location = new System.Drawing.Point(152, 61);
             this.LabelControl1.Name = "LabelControl1";
-            this.LabelControl1.Size = new System.Drawing.Size(32, 13);
+            this.LabelControl1.Size = new System.Drawing.Size(17, 13);
             this.LabelControl1.TabIndex = 337;
-            this.LabelControl1.Text = "Địa chỉ";
+            this.LabelControl1.Text = "Lớp";
             // 
             // LabelControl2
             // 

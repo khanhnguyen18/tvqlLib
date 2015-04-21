@@ -89,6 +89,7 @@ namespace LibraryManagement.App
             this.barCheckItem14 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem15 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem16 = new DevExpress.XtraBars.BarCheckItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.bar_2 = new DevExpress.XtraBars.Bar();
             this.blbiBook = new DevExpress.XtraBars.BarLargeButtonItem();
             this.blbiPrintCard = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -220,10 +221,11 @@ namespace LibraryManagement.App
             this.barCheckItem32,
             this.barCheckItem33,
             this.barCheckItem34,
-            this.barCheckItem35});
+            this.barCheckItem35,
+            this.barButtonItem1});
             this.barManager_0.LargeImages = this.imageCollection_0;
             this.barManager_0.MainMenu = this.menuBar;
-            this.barManager_0.MaxItemId = 68;
+            this.barManager_0.MaxItemId = 72;
             this.barManager_0.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.barManager_0.StatusBar = this.statusBar;
@@ -271,7 +273,8 @@ namespace LibraryManagement.App
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
             this.barSubItem1.Name = "barSubItem1";
             // 
             // barSubItem3
@@ -576,6 +579,13 @@ namespace LibraryManagement.App
             this.barCheckItem16.Id = 48;
             this.barCheckItem16.Name = "barCheckItem16";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Phục hồi";
+            this.barButtonItem1.Id = 71;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // bar_2
             // 
             this.bar_2.BarName = "Custom 5";
@@ -675,6 +685,7 @@ namespace LibraryManagement.App
             this.barLargeButtonItem5.Id = 19;
             this.barLargeButtonItem5.LargeImageIndex = 11;
             this.barLargeButtonItem5.Name = "barLargeButtonItem5";
+            this.barLargeButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem5_ItemClick);
             // 
             // barDockControl_0
             // 
@@ -1133,6 +1144,7 @@ namespace LibraryManagement.App
         private BarCheckItem barCheckItem33;
         private BarCheckItem barCheckItem34;
         private BarCheckItem barCheckItem35;
+        private BarButtonItem barButtonItem1;
 
     }
 }

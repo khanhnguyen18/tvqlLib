@@ -26,19 +26,20 @@ namespace SuperKnuth
         {
             try
             {
-                if (pOut == "")
-                {
-                    return pOut;
-                }
-                string s = "";
-                TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
+                if (pOut == "") return pOut;
+
                 MD5CryptoServiceProvider provider2 = new MD5CryptoServiceProvider();
-                s = CreateKey();
+                string s = CreateKey();
+
+                TripleDESCryptoServiceProvider provider = new TripleDESCryptoServiceProvider();
                 provider.Key = provider2.ComputeHash(Encoding.Unicode.GetBytes(s));
                 provider.Mode = CipherMode.ECB;
                 ICryptoTransform transform = provider.CreateDecryptor();
+
                 byte[] inputBuffer = Convert.FromBase64String(pOut);
-                return Encoding.Unicode.GetString(transform.TransformFinalBlock(inputBuffer, 0, inputBuffer.Length));
+                byte[] output = transform.TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
+
+                return Encoding.Unicode.GetString(output);
             }
             catch
             {

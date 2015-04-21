@@ -120,15 +120,21 @@ namespace LibraryManagement.App
                 return;
             }
 
-            string sqlBackUp = string.Format(@"DROP DATABASE {0}", txtDB.Text);
+            string sqlAlter = string.Format("alter database {0} set single_user with rollback immediate", txtDB.Text);
+            string sqlDelete = string.Format("DROP DATABASE {0}", txtDB.Text);
+            string cnString = DataProvider.GetSqlConnectionString();
+            cnString = cnString.Replace(txtDB.Text, "master");
 
-
-            using (SqlConnection cn = new SqlConnection(DataProvider.GetSqlConnectionString()))
+            using (SqlConnection cn = new SqlConnection(cnString))
             {
-                SqlCommand cmdBkUp = new SqlCommand(sqlBackUp, cn);
+                SqlCommand cmdBkUp = new SqlCommand(sqlAlter, cn);
                 try
                 {
+
                     cn.Open();
+                    cmdBkUp.ExecuteNonQuery();
+
+                    cmdBkUp = new SqlCommand(sqlDelete, cn);
                     cmdBkUp.ExecuteNonQuery();
 
                     MessageBox.Show("Xóa thành công");

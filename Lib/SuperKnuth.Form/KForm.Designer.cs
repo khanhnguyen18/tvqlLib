@@ -56,7 +56,7 @@ namespace SuperKnuthForm
             this.txtOriginal.Name = "txtOriginal";
             this.txtOriginal.Size = new System.Drawing.Size(165, 20);
             this.txtOriginal.TabIndex = 1;
-            this.txtOriginal.Text = "ndkhanh";
+            this.txtOriginal.Text = "1";
             // 
             // txtDecode
             // 
@@ -114,7 +114,7 @@ namespace SuperKnuthForm
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 20);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "B9CCCCD6C9B9D0";
+            this.textBox2.Text = "mgjmUugUk1A=";
             // 
             // btnDecode
             // 
@@ -126,7 +126,7 @@ namespace SuperKnuthForm
             this.btnDecode.UseVisualStyleBackColor = true;
             this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
             // 
-            // Form1
+            // KForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +141,7 @@ namespace SuperKnuthForm
             this.Controls.Add(this.txtDecode);
             this.Controls.Add(this.txtOriginal);
             this.Controls.Add(this.btnEncode);
-            this.Name = "Form1";
+            this.Name = "KForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
